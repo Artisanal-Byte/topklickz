@@ -81,38 +81,45 @@ export default config({
         // =========================
         // Hero Section
         // =========================
-        hero: fields.object({
-          title: fields.text({
-            label: "Title",
-          }),
+        hero: fields.object(
+          {
+            title: fields.text({
+              label: "Title",
+            }),
 
-          subtitle: fields.text({
-            label: "Subtitle",
-          }),
+            subtitle: fields.text({
+              label: "Subtitle",
+            }),
 
-          description: fields.text({
-            label: "Description",
-            multiline: true,
-          }),
+            description: fields.text({
+              label: "Description",
+              multiline: true,
+            }),
 
-          buttonText: fields.text({
-            label: "Button Text",
-          }),
+            buttonText: fields.text({
+              label: "Button Text",
+            }),
 
-          buttonLink: fields.text({
-            label: "Button Link",
-          }),
+            buttonLink: fields.text({
+              label: "Button Link",
+            }),
 
-          image: fields.image({
-            label: "Hero Image",
-            directory: "public/uploads/hero",
-            publicPath: "/uploads/hero",
-          }),
-        },
-        {
+            buttonIcon: fields.image({
+              label: "Button Icon",
+              directory: "public/uploads/icons",
+              publicPath: "/uploads/icons",
+            }),
+
+            image: fields.image({
+              label: "Hero Image",
+              directory: "public/uploads/hero",
+              publicPath: "/uploads/hero",
+            }),
+          },
+          {
             label: "========== HERO SECTION ==========",
           }
-        ),
+        )
       },
     }),
   },

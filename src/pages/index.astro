@@ -1,11 +1,16 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Header from '../components/Header.astro';
-import Hero from '../components/Hero.astro';
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Hero from "../components/Hero.astro";
+
+import { createReader } from "@keystatic/core/reader";
+import config from "../../keystatic.config";
+
+const reader = createReader(process.cwd(), config);
+const site = await reader.singletons.site.read();
 ---
 
 <Layout title="Topklickz | Creative Digital Studio">
-  <Header />
-  <Hero />
-  
+  <Header navbar={site?.navbar} />
+  <Hero hero={site?.hero} />
 </Layout>

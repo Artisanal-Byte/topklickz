@@ -13,4 +13,8 @@ navbar:
   buttonText: Get in Touch
   buttonLink: '#contact'
 hero:
-  title: hello
+  title: WE CRAFT
+  subtitle: DISTINCTIVE BRANDS
+  description: FOR A DIGITAL WORLD.
+  buttonText: Scroll to Explore
+  image: /uploads/hero/hero/image.png
