@@ -5,6 +5,8 @@ import Hero from "../components/Hero.astro";
 
 import { createReader } from "@keystatic/core/reader";
 import config from "../../keystatic.config";
+import Studio from "../components/Studio.astro";
+import Services from "../components/Services.astro";
 
 const reader = createReader(process.cwd(), config);
 const site = await reader.singletons.site.read();
@@ -13,4 +15,6 @@ const site = await reader.singletons.site.read();
 <Layout title="Topklickz | Creative Digital Studio">
   <Header navbar={site?.navbar} />
   <Hero hero={site?.hero} />
+  <Studio studio={site?.studio} />
+  <Services services={site?.services} />
 </Layout>

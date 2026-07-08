@@ -118,7 +118,140 @@ export default config({
           {
             label: "========== HERO SECTION ==========",
           }
-        )
+        ),
+
+        // =========================
+        // Studio Section
+        // =========================
+        studio: fields.object(
+          {
+            sectionNumber: fields.text({
+              label: "Section Number",
+            }),
+
+            sectionTitle: fields.text({
+              label: "Section Title",
+            }),
+
+            title: fields.text({
+              label: "Main Title",
+              multiline: true,
+            }),
+
+            description: fields.text({
+              label: "Description",
+              multiline: true,
+            }),
+
+            clientTitle: fields.text({
+              label: "Client Title",
+            }),
+
+            clients: fields.array(
+              fields.object({
+                logo: fields.image({
+                  label: "Client Logo",
+                  directory: "public/uploads/clients",
+                  publicPath: "/uploads/clients",
+                }),
+                alt: fields.text({
+                  label: "Logo Alt",
+                }),
+              }),
+              {
+                label: "Client Logos",
+                itemLabel: (props) => props.fields.alt.value,
+              }
+            ),
+
+            buttonText: fields.text({
+              label: "Button Text",
+            }),
+
+            buttonLink: fields.text({
+              label: "Button Link",
+            }),
+
+            // buttonIcon: fields.text({
+            //   label: "Button Icon (Iconify)",
+            // }),
+          },
+          {
+            label: "========== STUDIO SECTION ==========",
+          }
+        ),
+
+        // =========================
+        // Services Section
+        // =========================
+        services: fields.object(
+          {
+            title: fields.text({
+              label: "Title",
+            }),
+
+            gradientTitle: fields.text({
+              label: "Gradient Title",
+            }),
+
+            endTitle: fields.text({
+              label: "End Title",
+            }),
+
+            items: fields.array(
+              fields.object({
+                number: fields.text({
+                  label: "Number",
+                }),
+
+                title: fields.text({
+                  label: "Service Title",
+                }),
+
+                description: fields.text({
+                  label: "Description",
+                  multiline: true,
+                }),
+
+                features: fields.array(
+                  fields.text({
+                    label: "Feature",
+                  }),
+                  {
+                    label: "Features",
+                  }
+                ),
+
+                image: fields.image({
+                  label: "Service Image",
+                  directory: "public/uploads/services",
+                  publicPath: "/uploads/services",
+                }),
+
+                buttonText: fields.text({
+                  label: "Button Text",
+                }),
+
+                buttonLink: fields.text({
+                  label: "Button Link",
+                }),
+
+                buttonIcon: fields.text({
+                  label: "Button Icon (Iconify)",
+                }),
+              }),
+              {
+                label: "Services",
+                itemLabel: (props) => props.fields.title.value,
+              }
+            ),
+          },
+          {
+            label: "========== SERVICES SECTION ==========",
+          }
+        ),
+
+
       },
     }),
   },

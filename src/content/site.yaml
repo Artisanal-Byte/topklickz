@@ -19,3 +19,55 @@ hero:
   buttonText: Scroll to Explore
   buttonIcon: mdi:arrow-down
   image: /uploads/hero/hero/image.png
+studio:
+  sectionNumber: '02'
+  sectionTitle: Studio
+  title: >-
+    TOPKLICKZ is a branding, website and content studio helping ambitious
+    businesses create meaningful connections through strategy, design and
+    digital execution.
+  description: >-
+    We partner with founders, startups and growing businesses to create brands,
+    websites and content systems that remain relevant, recognizable and
+    impactful.
+  clientTitle: Selected clients
+  clients:
+    - logo: /uploads/clients/studio/clients/0/logo.png
+    - logo: /uploads/clients/studio/clients/1/logo.png
+    - logo: /uploads/clients/studio/clients/2/logo.png
+    - logo: /uploads/clients/studio/clients/3/logo.png
+    - logo: /uploads/clients/studio/clients/4/logo.png
+  buttonText: About US
+services:
+  title: Six disciplines.
+  gradientTitle: 'one creative '
+  endTitle: practice.
+  items:
+    - number: '01'
+      title: Brand Strategy
+      description: >-
+        We help brands discover their voice, define their position and create a
+        foundation for sustainable growth.
+      features:
+        - Research
+        - Positioning
+        - Messaging
+        - Brand Architecture
+        - Customer Insights
+      image: /uploads/services/services/items/0/image.png
+      buttonText: Explore Strategy
+      buttonIcon: mdi:arrow-top-right
+    - number: '02'
+      title: Visual Identity
+      description: >-
+        We create memorable visual identities that express your brand with
+        clarity and consistency.
+      features:
+        - Logo Design
+        - Color Palette
+        - Typography
+        - Brand Guidelines
+        - Icon System
+      image: /uploads/services/services/items/1/image.png
+      buttonText: Explore Identity
+      buttonIcon: mdi:arrow-top-right

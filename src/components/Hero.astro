@@ -1,6 +1,7 @@
 ---
 const { hero } = Astro.props;
 import { Icon } from "astro-icon/components";
+import { Image } from "astro:assets";
 ---
 
 <section class="relative overflow-hidden">
@@ -48,9 +49,11 @@ import { Icon } from "astro-icon/components";
             <div class="flex justify-center lg:justify-end">
                 {
                     hero?.image && (
-                        <img
+                        <Image
                             src={hero.image}
                             alt={hero?.title}
+                            width={620}
+                            height={620}
                             class="w-full max-w-[620px] rounded-3xl shadow-2xl"
                         />
                     )
