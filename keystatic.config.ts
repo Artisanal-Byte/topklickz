@@ -33,42 +33,86 @@ export default config({
 
   singletons: {
     site: singleton({
-      label: "Navbar",
+      label: "Home Page",
       path: "src/content/site",
 
       schema: {
-        // Logo
-        logo: fields.image({
-          label: "Logo",
-          directory: "public/uploads/logo",
-          publicPath: "/uploads/logo",
-        }),
-
-        // Navigation Menu
-        navigation: fields.array(
-          fields.object({
-            title: fields.text({
-              label: "Menu Title",
-            }),
-
-            href: fields.text({
-              label: "Link",
-            }),
+        // =========================
+        // Navbar
+        // =========================
+        navbar: fields.object({
+          logo: fields.image({
+            label: "Logo",
+            directory: "public/uploads/logo",
+            publicPath: "/uploads/logo",
           }),
+
+          navigation: fields.array(
+            fields.object({
+              title: fields.text({
+                label: "Menu Title",
+              }),
+
+              href: fields.text({
+                label: "Link",
+              }),
+            }),
+            {
+              label: "Navigation",
+              itemLabel: (props) => props.fields.title.value,
+            }
+          ),
+
+          buttonText: fields.text({
+            label: "Button Text",
+          }),
+
+          buttonLink: fields.text({
+            label: "Button Link",
+          }),
+
+        },
           {
-            label: "Navigation",
-            itemLabel: (props) => props.fields.title.value,
+            label: "========== NAVBAR ==========",
           }
         ),
 
-        // CTA Button
-        buttonText: fields.text({
-          label: "Button Text",
-        }),
 
-        buttonLink: fields.text({
-          label: "Button Link",
-        }),
+        // =========================
+        // Hero Section
+        // =========================
+        hero: fields.object({
+          title: fields.text({
+            label: "Title",
+          }),
+
+          subtitle: fields.text({
+            label: "Subtitle",
+          }),
+
+          description: fields.text({
+            label: "Description",
+            multiline: true,
+          }),
+
+          buttonText: fields.text({
+            label: "Button Text",
+          }),
+
+          buttonLink: fields.text({
+            label: "Button Link",
+          }),
+
+          image: fields.image({
+            label: "Hero Image",
+            directory: "public/uploads/hero",
+            publicPath: "/uploads/hero",
+          }),
+        },
+        {
+            label: "========== HERO SECTION ==========",
+          }
+        ),
       },
     }),
   },

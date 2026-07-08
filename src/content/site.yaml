@@ -1,14 +1,15 @@
-logo: /uploads/logo/logo.png
-navigation:
-  - title: About
-    href: "#about"
-  - title: Services
-    href: "#services"
-  - title: Work
-    href: "#work"
-  - title: Insights
-    href: "#insights"
-  - title: Careers
-    href: "#careers"
-buttonText: Get in Touch
-buttonLink: "#contact"
+navbar:
+  logo: /uploads/logo/navbar/logo.png
+  navigation:
+    - title: About
+      href: '#about'
+    - title: Services
+      href: '#services'
+    - title: Work
+      href: '#work'
+    - title: Insights
+      href: '#insights'
+    - title: Careers
+  buttonText: Get in Touch
+  buttonLink: '#contact'
+hero: {}
