@@ -12,4 +12,5 @@ navbar:
     - title: Careers
   buttonText: Get in Touch
   buttonLink: '#contact'
-hero: {}
+hero:
+  title: hello
