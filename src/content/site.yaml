@@ -17,4 +17,5 @@ hero:
   subtitle: DISTINCTIVE BRANDS
   description: FOR A DIGITAL WORLD.
   buttonText: Scroll to Explore
+  buttonIcon: mdi:arrow-down
   image: /uploads/hero/hero/image.png

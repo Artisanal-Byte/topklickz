@@ -1,76 +1,61 @@
 ---
 const { hero } = Astro.props;
+import { Icon } from "astro-icon/components";
 ---
 
 <section class="relative overflow-hidden">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="grid min-h-[85vh] items-center gap-16 lg:grid-cols-2">
+            <!-- LEFT -->
 
-  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+            <div>
+                <h1
+                    class="text-6xl lg:text-[70px] font-black leading-[0.9] text-black"
+                >
+                    {hero?.title}
+                </h1>
 
-    <div class="grid min-h-[85vh] items-center gap-16 lg:grid-cols-2">
-
-      <!-- LEFT -->
-
-      <div>
-
-        <h1 class="text-6xl lg:text-[70px] font-black leading-[0.9] text-black">
-          {hero?.title}
-        </h1>
-
-        <h2
-          class="text-6xl lg:text-[70px] font-black leading-[0.9]
+                <h2
+                    class="text-6xl lg:text-[70px] font-black leading-[0.9]
           bg-gradient-to-r
           from-orange-500
           via-pink-500
           to-violet-600
           bg-clip-text
           text-transparent"
-        >
-          {hero?.subtitle}
-        </h2>
+                >
+                    {hero?.subtitle}
+                </h2>
 
-        <h3 class="text-6xl lg:text-[70px] font-black leading-[0.9] text-black">
-          {hero?.description}
-        </h3>
+                <h3
+                    class="text-6xl lg:text-[70px] font-black leading-[0.9] text-black"
+                >
+                    {hero?.description}
+                </h3>
 
-        <a
-          href={hero?.buttonLink}
-          class="mt-20 inline-flex items-center gap-4 text-xl font-medium group"
-        >
+                <a
+                    href={hero?.buttonLink}
+                    class="mt-20 inline-flex items-center gap-4 text-xl font-medium group"
+                >
+                    {hero?.buttonText}
 
-          {hero?.buttonText}
+                    <Icon name={hero.buttonIcon} class="w-6 h-6" />
+                </a>
+            </div>
 
-          {hero?.buttonIcon && (
+            <!-- RIGHT -->
 
-            <img
-              src={hero.buttonIcon}
-              class="w-6 transition group-hover:translate-y-1"
-              alt=""
-            />
-
-          )}
-
-        </a>
-
-      </div>
-
-      <!-- RIGHT -->
-
-      <div class="flex justify-center lg:justify-end">
-
-        {hero?.image && (
-
-          <img
-            src={hero.image}
-            alt={hero?.title}
-            class="w-full max-w-[620px] rounded-3xl shadow-2xl"
-          />
-
-        )}
-
-      </div>
-
+            <div class="flex justify-center lg:justify-end">
+                {
+                    hero?.image && (
+                        <img
+                            src={hero.image}
+                            alt={hero?.title}
+                            class="w-full max-w-[620px] rounded-3xl shadow-2xl"
+                        />
+                    )
+                }
+            </div>
+        </div>
     </div>
-
-  </div>
-
 </section>

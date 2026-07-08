@@ -104,10 +104,9 @@ export default config({
               label: "Button Link",
             }),
 
-            buttonIcon: fields.image({
-              label: "Button Icon",
-              directory: "public/uploads/icons",
-              publicPath: "/uploads/icons",
+            buttonIcon: fields.text({
+              label: "Button Icon (Iconify)",
+              description: "Example: mdi:arrow-down or lucide:arrow-down",
             }),
 
             image: fields.image({
