@@ -251,6 +251,210 @@ export default config({
           }
         ),
 
+        // =========================
+        // Selected Work Section
+        // =========================
+        work: fields.object(
+          {
+            title: fields.text({
+              label: "Section Title",
+            }),
+
+            description: fields.text({
+              label: "Section Description",
+              multiline: true,
+            }),
+
+            buttonText: fields.text({
+              label: "Button Text",
+            }),
+
+            buttonLink: fields.text({
+              label: "Button Link",
+            }),
+
+            buttonIcon: fields.text({
+              label: "Button Icon (Iconify)",
+            }),
+
+            projects: fields.array(
+              fields.object({
+                image: fields.image({
+                  label: "Project Image",
+                  directory: "public/uploads/work",
+                  publicPath: "/uploads/work",
+                }),
+
+                title: fields.text({
+                  label: "Project Title",
+                }),
+
+                category: fields.text({
+                  label: "Categories",
+                  description: "Example: Brand Identity • Packaging • Website",
+                }),
+
+                description: fields.text({
+                  label: "Short Description",
+                  multiline: true,
+                }),
+
+                link: fields.text({
+                  label: "Project Link",
+                }),
+              }),
+              {
+                label: "Projects",
+                itemLabel: (props) => props.fields.title.value,
+              }
+            ),
+          },
+          {
+            label: "========== SELECTED WORK ==========",
+          }
+        ),
+
+
+        // Trusted Brands Section
+        trustedBrands: fields.object({
+          title: fields.text({
+            label: "Title",
+          }),
+
+          highlight: fields.text({
+            label: "Highlighted Word",
+          }),
+
+          description: fields.text({
+            label: "Description",
+            multiline: true,
+          }),
+
+          logos: fields.array(
+            fields.object({
+              image: fields.image({
+                label: "Logo",
+                directory: "public/uploads/clients",
+                publicPath: "/uploads/clients/",
+              }),
+
+              alt: fields.text({
+                label: "Alt Text",
+              }),
+
+              url: fields.url({
+                label: "Website URL",
+              }),
+            }),
+            {
+              label: "Client Logos",
+              itemLabel: (props) => props.fields.alt.value || "Logo",
+            }
+          ),
+        },
+          {
+            label: "========== TRUSTED BRANDS ==========",
+          }
+        ),
+
+        // Testimonials Section
+        testimonials: fields.object({
+          title: fields.text({
+            label: "Section Title",
+          }),
+
+          highlight: fields.text({
+            label: "Highlighted Word",
+          }),
+
+          items: fields.array(
+            fields.object({
+              quote: fields.text({
+                label: "Quote",
+                multiline: true,
+              }),
+
+              image: fields.image({
+                label: "Founder Image",
+                directory: "public/uploads/testimonials",
+                publicPath: "/uploads/testimonials/",
+              }),
+
+              name: fields.text({
+                label: "Founder Name",
+              }),
+
+              designation: fields.text({
+                label: "Designation",
+              }),
+
+              // company: fields.text({
+              //   label: "Company",
+              // }),
+            }),
+            {
+              label: "Testimonials",
+              itemLabel: (props) => props.fields.name.value || "Testimonial",
+            }
+          ),
+        },
+          {
+            label: "========== TESTIMONIALS ==========",
+          }
+        ),
+
+
+        // fieldNotes Section
+        fieldNotes: fields.object({
+          title: fields.text({
+            label: "Title",
+          }),
+
+          highlight: fields.text({
+            label: "Highlighted Word",
+          }),
+
+          buttonText: fields.text({
+            label: "Button Text",
+          }),
+          buttonIcon: fields.text({
+            label: "Button Icon (Iconify)",
+            description: "Example: mdi:arrow-down or lucide:arrow-down",
+          }),
+
+          buttonLink: fields.url({
+            label: "Button Link",
+          }),
+
+          posts: fields.array(
+            fields.object({
+              image: fields.image({
+                label: "Cover Image",
+                directory: "public/uploads/blogs",
+                publicPath: "/uploads/blogs/",
+              }),
+              alt: fields.text({
+                label: "Alt Text",
+              }),
+
+              title: fields.text({
+                label: "Blog Title",
+              }),
+
+              description: fields.text({
+                label: "Short Description",
+                multiline: true,
+              }),
+
+
+            }),
+
+          ),
+        },
+          {
+            label: "========== FIELDNOTES ==========",
+          }
+        ),
 
       },
     }),

@@ -71,3 +71,75 @@ services:
       image: /uploads/services/services/items/1/image.png
       buttonText: Explore Identity
       buttonIcon: mdi:arrow-top-right
+work:
+  title: Selected Work
+  description: ' Creating a premium hospitality experience through strategy, design and storytelling.'
+  buttonText: See All
+  buttonIcon: mdi:arrow-right
+  projects:
+    - image: /uploads/work/work/projects/0/image.png
+      title: Afro Cafe
+      category: Brand Identity • Packaging • Website
+      description: ' Creating a premium hospitality experience through strategy, design and storytelling.'
+    - image: /uploads/work/work/projects/1/image.png
+      title: Bainbridge
+      category: Brand Identity • Website • Social Media
+      description: ' Creating a premium hospitality experience through strategy, design and storytelling.'
+trustedBrands:
+  title: Trusted by
+  highlight: ambitious brands.
+  description: >-
+    From startups to established businesses, we collaborate with organizations
+    looking to create stronger brands and more meaningful customer experiences.
+  logos:
+    - image: /uploads/clients/trustedBrands/logos/0/image.png
+      alt: Neujin Solutions Logo
+      url: https://neujinsolutions.com/
+    - image: /uploads/clients/trustedBrands/logos/1/image.png
+      alt: IPA Logo
+    - image: /uploads/clients/trustedBrands/logos/2/image.png
+      alt: Sawaca Enterprises Ltd Logo
+      url: https://sawacaenterprises.com/
+    - image: /uploads/clients/trustedBrands/logos/3/image.png
+      alt: Mahaa Rajaa Logo
+      url: https://mahaarajaa.life/
+testimonials:
+  title: WHAT FOUNDERS
+  highlight: SAY
+  items:
+    - quote: >-
+        "TOPKLICKZ transformed the way our brand communicates. Their strategic
+        thinking and attention to detail made a lasting impact."
+      image: /uploads/testimonials/testimonials/items/0/image.png
+      name: Aurum Cafe
+      designation: Founder
+    - quote: >-
+        "The team helped us build a clear identity and digital presence that
+        truly represents who we are."
+      image: /uploads/testimonials/testimonials/items/1/image.png
+      name: Pickleball Community
+      designation: Founder
+fieldNotes:
+  title: "FIELD NOTES\L"
+  highlight: FROM THE STUDIO.
+  buttonText: See All
+  buttonIcon: mdi:arrow-right
+  posts:
+    - image: /uploads/blogs/fieldNotes/posts/0/image.png
+      alt: Brand identity stationery and packaging mockup displayed on a desk.
+      title: The Art of Building Brands That Endure
+      description: >-
+        How strategic positioning, visual identity and consistency create brands
+        that remain relevant over time.
+    - image: /uploads/blogs/fieldNotes/posts/1/image.png
+      alt: Modern brand guideline displayed on a desktop monitor.
+      title: Design Systems That Scale
+      description: >-
+        Learn how structured design systems improve collaboration and create
+        consistent digital experiences.
+    - image: /uploads/blogs/fieldNotes/posts/2/image.png
+      alt: UI design process and wireframes arranged on a workspace.
+      title: Creating Meaningful Digital Experiences
+      description: >-
+        Discover how research, strategy and design come together to build
+        user-focused digital products.

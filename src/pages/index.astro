@@ -7,6 +7,10 @@ import { createReader } from "@keystatic/core/reader";
 import config from "../../keystatic.config";
 import Studio from "../components/Studio.astro";
 import Services from "../components/Services.astro";
+import Work from "../components/Work.astro";
+import TrustedBrands from "../components/trustedBrands.astro";
+import Testimonials from "../components/Testimonials.astro";
+import FieldNotes from "../components/FieldNotes.astro";
 
 const reader = createReader(process.cwd(), config);
 const site = await reader.singletons.site.read();
@@ -17,4 +21,8 @@ const site = await reader.singletons.site.read();
   <Hero hero={site?.hero} />
   <Studio studio={site?.studio} />
   <Services services={site?.services} />
+  <Work work={site?.work} />
+  <TrustedBrands trustedBrands={site?.trustedBrands} />
+  <Testimonials testimonials={site?.testimonials} />
+  <FieldNotes fieldNotes={site?.fieldNotes} />
 </Layout>

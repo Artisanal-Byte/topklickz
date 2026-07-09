@@ -1,0 +1,57 @@
+---
+import { Image } from "astro:assets";
+
+const { testimonials } = Astro.props;
+---
+
+<section>
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+
+    <h2 class="text-5xl font-bold uppercase">
+      {testimonials.title}
+      <span class="text-violet-600">
+        {" "}
+        {testimonials.highlight}
+      </span>
+    </h2>
+
+    <div class="mt-16 grid gap-12 lg:grid-cols-2">
+
+      {
+        testimonials.items.map((item) => (
+          <article>
+
+            <p class="text-3xl leading-relaxed">
+              {item.quote}
+            </p>
+
+            <div class="mt-12 flex items-center gap-5">
+
+              <Image
+                src={item.image}
+                alt={item.name}
+                width={80}
+                height={80}
+                class="h-20 w-20 rounded-full object-cover"
+              />
+
+              <div>
+                <h3 class="text-3xl font-medium">
+                  {item.name}
+                </h3>
+
+                <p class="text-lg text-gray-500">
+                  {item.designation}
+                </p>
+              </div>
+
+            </div>
+
+          </article>
+        ))
+      }
+
+    </div>
+
+  </div>
+</section>

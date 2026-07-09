@@ -1,0 +1,60 @@
+---
+import { Image } from "astro:assets";
+
+const { trustedBrands } = Astro.props;
+---
+
+<section class="border-y-2 border-transparent bg-white py-20">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+
+    <div class="grid gap-16 lg:grid-cols-2 lg:items-center">
+
+      <!-- Left -->
+
+      <div>
+
+        <h2 class="max-w-xl text-5xl font-bold leading-tight">
+
+          {trustedBrands.title}
+
+          <span
+            class="bg-gradient-to-r from-pink-600 via-purple-500 to-indigo-500 bg-clip-text text-transparent"
+          >
+            {" "}
+            {trustedBrands.highlight}
+          </span>
+
+        </h2>
+
+        <p class="mt-8 max-w-xl text-xl text-gray-600">
+          {trustedBrands.description}
+        </p>
+
+      </div>
+
+      <!-- Right -->
+
+      <div
+        class="grid grid-cols-3 items-center justify-items-center gap-x-10 gap-y-12"
+      >
+        {
+          trustedBrands.logos.map((logo) => (
+            <a href={logo.url} target="_blank">
+
+              <Image
+                src={logo.image}
+                alt={logo.alt}
+                width={180}
+                height={90}
+                class="h-16 w-auto object-contain opacity-80 transition hover:opacity-100"
+              />
+
+            </a>
+          ))
+        }
+      </div>
+
+    </div>
+
+  </div>
+</section>
