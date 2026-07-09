@@ -456,6 +456,115 @@ export default config({
           }
         ),
 
+
+        // Team Culture Section 
+        teamCulture: fields.object({
+          title: fields.text({
+            label: "Title",
+          }),
+
+          highlight: fields.text({
+            label: "Highlighted Text",
+          }),
+
+          descriptionOne: fields.text({
+            label: "Description One",
+            multiline: true,
+          }),
+
+          descriptionTwo: fields.text({
+            label: "Description Two",
+            multiline: true,
+          }),
+
+          image: fields.image({
+            label: "Section Image",
+            directory: "public/uploads/creative",
+            publicPath: "/uploads/creative/",
+          }),
+
+          imageAlt: fields.text({
+            label: "Image Alt Text",
+          }),
+        },
+          {
+            label: "========== TEAM CULTURE ==========",
+          }
+        ),
+
+
+        // FAQ Section
+        faq: fields.object({
+          title: fields.text({
+            label: "Title",
+          }),
+
+          highlight: fields.text({
+            label: "Highlighted Text",
+          }),
+
+          items: fields.array(
+            fields.object({
+              question: fields.text({
+                label: "Question",
+              }),
+
+              answer: fields.text({
+                label: "Answer",
+                multiline: true,
+              }),
+
+              defaultOpen: fields.checkbox({
+                label: "Open by Default",
+                defaultValue: false,
+              }),
+            }),
+            {
+              label: "FAQ Items",
+              itemLabel: (props) => props.fields.question.value || "FAQ",
+            }
+          ),
+        },
+          {
+            label: "========== FAQ ==========",
+          }
+        ),
+
+        // CTA Section
+        cta: fields.object({
+          title: fields.text({
+            label: "Title",
+          }),
+
+          highlight: fields.text({
+            label: "Highlighted Text",
+          }),
+
+          description: fields.text({
+            label: "Description",
+            multiline: true,
+          }),
+
+          button: fields.object({
+            text: fields.text({
+              label: "Button Text",
+            }),
+
+            link: fields.url({
+              label: "Button Link",
+            }),
+
+            icon: fields.text({
+              label: "Button Icon (Iconify)",
+              defaultValue: "lucide:arrow-right",
+            }),
+          }),
+        },
+          {
+            label: "========== CTA ==========",
+          }
+        ),
+
       },
     }),
   },

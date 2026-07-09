@@ -1,0 +1,45 @@
+---
+import { Image } from "astro:assets";
+
+const { teamCulture } = Astro.props;
+---
+
+<section class="">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="grid grid-cols-1 items-center gap-16 lg:grid-cols-2">
+            <!-- Left Content -->
+            <div>
+                <h2
+                    class="max-w-2xl text-5xl font-bold lg:text-5xl"
+                >
+                    {teamCulture.title}
+                    <span
+                        class="bg-gradient-to-r from-pink-500 to-purple-600 bg-clip-text text-transparent"
+                    >
+                        {" "}
+                        {teamCulture.highlight}
+                    </span>
+                </h2>
+
+                <p class="mt-10 text-xl leading-relaxed text-neutral-700">
+                    {teamCulture.descriptionOne}
+                </p>
+
+                <p class="mt-8 text-xl leading-relaxed text-neutral-700">
+                    {teamCulture.descriptionTwo}
+                </p>
+            </div>
+
+            <!-- Right Image -->
+            <div>
+                <Image
+                    src={teamCulture.image}
+                    alt={teamCulture.imageAlt}
+                    width={900}
+                    height={700}
+                    class="w-full rounded-lg object-cover"
+                />
+            </div>
+        </div>
+    </div>
+</section>

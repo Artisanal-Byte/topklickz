@@ -1,0 +1,43 @@
+---
+const { faq } = Astro.props;
+---
+
+<section class="py-24">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+
+    <h2 class="text-5xl font-bold">
+      {faq.title}
+      <span class="bg-gradient-to-r from-orange-500 via-pink-500 to-purple-600 bg-clip-text text-transparent">
+        {" "}
+        {faq.highlight}
+      </span>
+    </h2>
+
+    <div class="mt-5 divide-y divide-neutral-200">
+      {
+        faq.items.map((faq) => (
+          <details
+            class="group py-6"
+            open={faq.defaultOpen}
+          >
+            <summary class="flex cursor-pointer list-none items-center justify-between text-2xl font-semibold">
+
+              <span>{faq.question}</span>
+
+              <span class="text-2xl transition group-open:rotate-45">
+                +
+              </span>
+
+            </summary>
+
+            <p class="mt-5 max-w-3xl text-lg leading-8 text-neutral-600">
+              {faq.answer}
+            </p>
+
+          </details>
+        ))
+      }
+    </div>
+
+  </div>
+</section>

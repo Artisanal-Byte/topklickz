@@ -11,6 +11,9 @@ import Work from "../components/Work.astro";
 import TrustedBrands from "../components/trustedBrands.astro";
 import Testimonials from "../components/Testimonials.astro";
 import FieldNotes from "../components/FieldNotes.astro";
+import TeamCulture from "../components/TeamCulture.astro";
+import Faq from "../components/Faq.astro";
+import Cta from "../components/Cta.astro";
 
 const reader = createReader(process.cwd(), config);
 const site = await reader.singletons.site.read();
@@ -25,4 +28,7 @@ const site = await reader.singletons.site.read();
   <TrustedBrands trustedBrands={site?.trustedBrands} />
   <Testimonials testimonials={site?.testimonials} />
   <FieldNotes fieldNotes={site?.fieldNotes} />
+  <TeamCulture teamCulture={site?.teamCulture} />
+  <Faq faq={site?.faq} />
+  <Cta cta={site?.cta} />
 </Layout>

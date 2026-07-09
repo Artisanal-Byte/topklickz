@@ -143,3 +143,53 @@ fieldNotes:
       description: >-
         Discover how research, strategy and design come together to build
         user-focused digital products.
+teamCulture:
+  title: Passion, curiosity and craftsmanship power everything
+  highlight: we create.
+  descriptionOne: >-
+    We believe meaningful brands are built through thoughtful strategy,
+    purposeful design and consistent execution.
+  descriptionTwo: >-
+    Our approach combines creativity, collaboration and clarity to create
+    experiences that connect with people and support business growth.
+  image: /uploads/creative/teamCulture/image.png
+  imageAlt: TOPKLICKZ team celebrating together at the studio.
+faq:
+  title: FREQUENTLY
+  highlight: ASKED
+  items:
+    - question: What services does TOPKLICKZ offer?
+      answer: >-
+        We offer Brand Strategy, Brand Identity, Website Design, Social Media
+        Systems, Performance Marketing, and Creative Production — six
+        disciplines under one creative practice.
+      defaultOpen: true
+    - question: Who do you work with?
+      answer: >-
+        We partner with startups, growing businesses, established companies, and
+        organizations looking to strengthen their brand and digital presence.
+      defaultOpen: false
+    - question: How long does a typical project take?
+      answer: >-
+        Most branding and website projects take between 4–8 weeks depending on
+        the scope, requirements, and feedback cycle.
+      defaultOpen: false
+    - question: How do we get started?
+      answer: >-
+        Simply contact us through our website or schedule a discovery call.
+        We'll discuss your goals and recommend the best approach.
+      defaultOpen: false
+    - question: Do you work with international clients?
+      answer: >-
+        Yes. We collaborate with clients worldwide using online meetings,
+        project management tools, and regular communication.
+      defaultOpen: false
+cta:
+  title: LET'S CREATE SOMETHING
+  highlight: MEMORABLE.
+  description: >-
+    Whether you're launching a new venture, evolving an existing brand or
+    improving your digital presence, we'd love to hear from you.
+  button:
+    text: START A PROJECT
+    icon: mdi:arrow-right
