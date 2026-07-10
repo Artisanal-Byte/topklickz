@@ -565,6 +565,98 @@ export default config({
           }
         ),
 
+        // footer Section
+
+        footer: fields.object({
+          logo: fields.image({
+            label: "Footer Logo",
+            directory: "public/uploads/footer",
+            publicPath: "/uploads/footer",
+          }),
+
+          email: fields.text({
+            label: "Email",
+          }),
+
+          phone: fields.text({
+            label: "Phone",
+          }),
+
+          address: fields.text({
+            label: "Address",
+            multiline: true,
+          }),
+
+          policyText: fields.text({
+            label: "Policy Text",
+          }),
+
+          copyright: fields.text({
+            label: "Copyright",
+          }),
+
+          companyLinks: fields.array(
+            fields.object({
+              title: fields.text({
+                label: "Title",
+              }),
+
+              href: fields.text({
+                label: "Link",
+              }),
+            }),
+            {
+              label: "Company Links",
+              itemLabel: (props) => props.fields.title.value || "Company Link",
+            }
+          ),
+
+          serviceLinks: fields.array(
+            fields.object({
+              title: fields.text({
+                label: "Title",
+              }),
+
+              href: fields.text({
+                label: "Link",
+              }),
+            }),
+            {
+              label: "Service Links",
+              itemLabel: (props) => props.fields.title.value || "Service Link",
+            }
+          ),
+
+          socialLinks: fields.array(
+            fields.object({
+              title: fields.text({
+                label: "Platform",
+              }),
+
+              href: fields.url({
+                label: "URL",
+              }),
+            }),
+            {
+              label: "Social Links",
+              itemLabel: (props) => props.fields.title.value || "Social Link",
+            }
+          ),
+
+          marqueeImage: fields.image({
+            label: "Bottom Large Image",
+            directory: "public/uploads/footer",
+            publicPath: "/uploads/footer",
+          }),
+
+          tagline: fields.text({
+            label: "Bottom Tagline",
+          }),
+        },
+          {
+            label: "========== FOOTER ==========",
+          }),
+
       },
     }),
   },

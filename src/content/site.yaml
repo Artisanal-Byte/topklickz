@@ -193,3 +193,23 @@ cta:
   button:
     text: START A PROJECT
     icon: mdi:arrow-right
+footer:
+  logo: /uploads/footer/footer/logo.png
+  email: hello@topklickz.com
+  phone: +91 XXXXX XXXXX
+  address: Ahmedabad, India
+  copyright: © 2026 TOPKLICKZ
+  companyLinks:
+    - title: About
+    - title: Work
+    - title: Careers
+    - title: Contact
+  serviceLinks:
+    - title: Brand Strategy
+    - title: Brand Identity
+    - title: Website Design
+  socialLinks:
+    - title: Instagram
+    - title: Instagram
+  marqueeImage: /uploads/footer/footer/marqueeImage.png
+  tagline: CLICK. GROW. RELISH.
