@@ -36,7 +36,37 @@ export default config({
       label: "Home Page",
       path: "src/content/site",
 
+      seoTitle: fields.text({
+        label: "SEO Title",
+      }),
+
+      seoDescription: fields.text({
+        label: "SEO Description",
+        multiline: true,
+      }),
+
+
       schema: {
+
+        // =========================
+        // SEO
+        // =========================
+        seo: fields.object({
+          title: fields.text({
+            label: "Title",
+          }),
+          description: fields.text({
+            label: "Description",
+            multiline: true,
+          }),
+          keywords: fields.text({
+            label: "Keywords",
+            description: "Comma-separated keywords for SEO",
+          }),
+        },
+          {
+            label:  "========== SEO ==========",
+          }),
         // =========================
         // Navbar
         // =========================
