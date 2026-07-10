@@ -36,16 +36,6 @@ export default config({
       label: "Home Page",
       path: "src/content/site",
 
-      seoTitle: fields.text({
-        label: "SEO Title",
-      }),
-
-      seoDescription: fields.text({
-        label: "SEO Description",
-        multiline: true,
-      }),
-
-
       schema: {
 
         // =========================
@@ -54,18 +44,28 @@ export default config({
         seo: fields.object({
           title: fields.text({
             label: "Title",
+            validation: {
+              isRequired: true,
+              length: { min: 10, max: 60 },
+            },
           }),
           description: fields.text({
             label: "Description",
             multiline: true,
+            validation: {
+              isRequired: true,
+              length: { min: 50, max: 200 },
+            },
           }),
           keywords: fields.text({
             label: "Keywords",
-            description: "Comma-separated keywords for SEO",
+            validation: {
+              isRequired: true,
+            },
           }),
         },
           {
-            label:  "========== SEO ==========",
+            label: "========== SEO ==========",
           }),
         // =========================
         // Navbar
