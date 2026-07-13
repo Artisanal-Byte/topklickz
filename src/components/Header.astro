@@ -4,8 +4,10 @@ import { Image } from "astro:assets";
 const { navbar } = Astro.props;
 ---
 
-<header class="relative z-20 px-4 pt-4 sm:px-6 lg:px-8 lg:pt-6">
-  <div class="mx-auto max-w-7xl px-4 py-3 backdrop-blur-md sm:px-5 sm:py-4">
+<header class="relative">
+  <div
+    class="mx-auto max-w-7xl px-4 py-3 backdrop-blur-md sm:px-5 sm:py-4 mt-3"
+  >
     <div
       class="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between lg:gap-8"
     >
@@ -13,13 +15,7 @@ const { navbar } = Astro.props;
       <a href="/" class="shrink-0">
         {
           navbar?.logo && (
-            <Image
-              src={navbar.logo}
-              alt="Logo"
-              width={180}
-              height={56}
-              class="h-12 w-auto sm:h-14"
-            />
+            <Image src={navbar.logo} alt="Logo" width={80} height={80} />
           )
         }
       </a>
@@ -30,10 +26,8 @@ const { navbar } = Astro.props;
             <a
               href={item.href}
               class:list={[
-                "rounded-full px-5 py-2 font-medium transition",
-                index === 0
-                  ? "bg-gradient-to-r from-orange-500 via-pink-500 to-violet-600 text-white"
-                  : "hover:bg-gray-100",
+                "rounded-full px-5 py-2 font-clash text-[18px] font-bold leading-none tracking-normal transition",
+                index === 0 ? "gradient-bg text-white" : "hover:bg-gray-100",
               ]}
             >
               {item.title}
@@ -45,13 +39,14 @@ const { navbar } = Astro.props;
       <!-- Button -->
       <a
         href={navbar?.buttonLink}
-        class="hidden lg:flex items-center gap-3 border rounded-full px-5 py-2"
+        class="hidden lg:inline-flex rounded-full p-[1px] bg-[radial-gradient(50%_83.67%_at_50%_50%,#FEC053_0%,#F2203E_33%,#B729A8_65%,#5342D6_100%)]"
       >
         <span
-          class="w-7 h-7 rounded-full bg-gradient-to-r from-orange-500 via-pink-500 to-violet-600"
-        ></span>
-
-        {navbar?.buttonText}
+          class="flex h-[45px] w-[170px] items-center justify-center gap-2 rounded-full bg-white px-3 font-clash text-[17px] font-medium leading-none tracking-normal"
+        >
+          <span class="w-7 h-7 rounded-full gradient-bg"></span>
+          {navbar?.buttonText}
+        </span>
       </a>
     </div>
   </div>

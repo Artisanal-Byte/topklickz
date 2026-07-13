@@ -1,1 +1,32 @@
 @import "tailwindcss";
+
+
+@font-face {
+    font-family: "Clash Grotesk";
+    src: url("/fonts/ClashGrotesk-Medium.woff2") format("woff2");
+    font-weight: 500;
+    font-style: normal;
+}
+
+@theme {
+    --font-clash: "Clash Grotesk", sans-serif;
+}
+
+.gradient-bg {
+    background: linear-gradient(48.89deg,
+            #FEC053 14.5%,
+            #F2203E 37.57%,
+            #B729A8 59.94%,
+            #5342D6 84.41%);
+}
+
+.gradient-border {
+    border: 1px solid transparent;
+    border-radius: px;
+
+    border-image: radial-gradient(50% 83.67% at 50% 50%,
+            #FEC053 0%,
+            #F2203E 33%,
+            #B729A8 65%,
+            #5342D6 100%) 1;
+}
