@@ -1,6 +1,6 @@
 import { makeGenericAPIRouteHandler } from '@keystatic/core/api/generic';
 import { parseString } from 'set-cookie-parser';
-import { c as config } from './keystatic.config_C9tfA-VQ.mjs';
+import { c as config } from './keystatic.config_xfHJDDw6.mjs';
 
 function makeHandler(_config) {
   return async function keystaticAPIRoute(context) {

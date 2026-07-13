@@ -10,6 +10,37 @@ const config = config$1({
       path: "src/content/site",
       schema: {
         // =========================
+        // SEO
+        // =========================
+        seo: fields.object(
+          {
+            title: fields.text({
+              label: "Title",
+              validation: {
+                isRequired: true,
+                length: { min: 10, max: 60 }
+              }
+            }),
+            description: fields.text({
+              label: "Description",
+              multiline: true,
+              validation: {
+                isRequired: true,
+                length: { min: 50, max: 200 }
+              }
+            }),
+            keywords: fields.text({
+              label: "Keywords",
+              validation: {
+                isRequired: true
+              }
+            })
+          },
+          {
+            label: "========== SEO =========="
+          }
+        ),
+        // =========================
         // Navbar
         // =========================
         navbar: fields.object(
