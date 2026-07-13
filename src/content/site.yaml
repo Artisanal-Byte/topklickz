@@ -32,6 +32,7 @@ hero:
   description: FOR A DIGITAL WORLD.
   buttonText: Scroll to Explore
   buttonIcon: mdi:arrow-down
+  videoUrl:
   image: /uploads/hero/hero/image.png
 studio:
   sectionNumber: '02'

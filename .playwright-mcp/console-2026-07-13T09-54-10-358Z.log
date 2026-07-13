@@ -1,0 +1,2 @@
+[    4464ms] [ERROR] Failed to load resource: net::ERR_BLOCKED_BY_RESPONSE.NotSameOrigin @ https://widget.clutch.co/static/js/widget.js:0
+[    4465ms] [ERROR] Failed to load Clutch widget script. @ https://decorelse.com/cdn/shop/t/15/assets/main.js:0

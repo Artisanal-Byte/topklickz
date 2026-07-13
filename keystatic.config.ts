@@ -139,6 +139,11 @@ export default config({
               description: "Example: mdi:arrow-down or lucide:arrow-down",
             }),
 
+            videoUrl: fields.text({
+              label: "Hero Video URL",
+              description: "Optional MP4 or WebM path, for example /uploads/hero/hero/video.mp4",
+            }),
+
             image: fields.image({
               label: "Hero Image",
               directory: "public/uploads/hero",
