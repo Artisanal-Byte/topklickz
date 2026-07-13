@@ -30,3 +30,22 @@
             #B729A8 65%,
             #5342D6 100%) 1;
 }
+
+/* studio component client logo  */
+@keyframes marquee {
+  from {
+    transform: translateX(0%);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 20s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
