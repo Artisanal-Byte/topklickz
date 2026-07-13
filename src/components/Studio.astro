@@ -4,11 +4,11 @@ import { Icon } from "astro-icon/components";
 import { Image } from "astro:assets";
 ---
 
-<section class="bg-white py-12 lg:py-20">
+<section class="py-12 lg:py-0 bg-black">
   <div class="mx-auto max-w-7xl px-6 lg:px-8">
-    <div class="rounded-sm bg-black px-6 py-10 lg:px-14 lg:py-16">
+    <div class="rounded-sm px-6 py-10 lg:px-14 lg:py-8">
       <!-- Top -->
-      <div class="mb-16">
+      <div class="mb-10">
         <span class="text-sm text-gray-400">
           {studio.sectionNumber}/{studio.sectionTitle}
         </span>
@@ -17,19 +17,20 @@ import { Image } from "astro:assets";
       <!-- Heading -->
       <div class="mx-auto max-w-5xl text-center">
         <h2
-          class="text-3xl font-bold leading-tight text-white
-          text-xl lg:text-4xl"
+          class="font-clash text-[32px] font-semibold leading-[114%] tracking-normal text-center text-white"
         >
           {studio.title}
         </h2>
 
-        <p class="mx-auto mt-8 max-w-4xl text-lg leading-relaxed text-gray-300">
+        <p
+          class="mx-auto mt-8 max-w-3xl font-clash text-[20px] leading-[140%] tracking-normal text-center text-white/70"
+        >
           {studio.description}
         </p>
       </div>
 
       <!-- Clients -->
-      <div class="mt-20">
+      <div class="mt-14">
         <h3 class="mb-8 text-center text-3xl font-medium text-white">
           {studio.clientTitle}
         </h3>
@@ -50,22 +51,24 @@ import { Image } from "astro:assets";
       </div>
 
       <!-- Button -->
-      <div class="mt-16 flex justify-center">
-        <a
+      <div class="mt-10 flex justify-center">
+        <!-- <a
           href={studio.buttonLink}
-          class="inline-flex items-center gap-4 rounded-full border border-violet-600 bg-[#171717] px-6 py-4 text-xl text-white transition hover:bg-[#202020]"
+          class="inline-flex items-center gap-4 rounded-full  px-6 py-2 text-xl text-white transition gradient-bg"
         >
-          <!-- <span
-            class="flex h-10 w-10 items-center justify-center rounded-full
-            bg-gradient-to-r from-orange-500 via-pink-500 to-violet-600"
-          >
-            <Icon
-              name={studio.buttonIcon}
-              class="h-5 w-5 text-white"
-            />
-          </span> -->
-
           <span>{studio.buttonText}</span>
+        </a> -->
+
+        <a
+          href={studio?.buttonLink}
+          class="hidden lg:inline-flex rounded-full p-[1px] bg-[radial-gradient(50%_83.67%_at_50%_50%,#FEC053_0%,#F2203E_33%,#B729A8_65%,#5342D6_100%)]"
+        >
+          <span
+            class="flex h-[45px] w-[170px] items-center justify-center gap-2 rounded-full px-2 font-clash text-[17px] bg-black text-white font-medium leading-none tracking-normal"
+          >
+            <span class="h-6 w-6 rounded-full gradient-bg"></span>
+            {studio?.buttonText}
+          </span>
         </a>
       </div>
     </div>
