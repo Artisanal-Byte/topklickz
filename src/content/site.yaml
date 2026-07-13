@@ -32,7 +32,6 @@ hero:
   description: FOR A DIGITAL WORLD.
   buttonText: Scroll to Explore
   buttonIcon: mdi:arrow-down
-  videoUrl:
   image: /uploads/hero/hero/image.png
 studio:
   sectionNumber: '02'
@@ -52,6 +51,11 @@ studio:
     - logo: /uploads/clients/studio/clients/2/logo.png
     - logo: /uploads/clients/studio/clients/3/logo.png
     - logo: /uploads/clients/studio/clients/4/logo.png
+    - logo: /uploads/clients/studio/clients/5/logo.png
+    - logo: /uploads/clients/studio/clients/6/logo.png
+    - logo: /uploads/clients/studio/clients/7/logo.png
+    - logo: /uploads/clients/studio/clients/8/logo.png
+    - logo: /uploads/clients/studio/clients/9/logo.png
   buttonText: About US
 services:
   title: Six disciplines.
