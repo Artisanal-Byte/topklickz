@@ -15,6 +15,7 @@ seo:
 navbar:
   logo: /uploads/logo/navbar/logo.png
   navigation:
+    - title: Home
     - title: About
       href: '#about'
     - title: Services
@@ -23,7 +24,6 @@ navbar:
       href: '#work'
     - title: Insights
       href: '#insights'
-    - title: Careers
   buttonText: Get in Touch
   buttonLink: '#contact'
 hero:
