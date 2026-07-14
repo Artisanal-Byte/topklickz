@@ -4,142 +4,453 @@ import { Image } from "astro:assets";
 const { services } = Astro.props;
 ---
 
-<section class="py-20 bg-white">
-  <div class="mx-auto max-w-7xl px-6 lg:px-8">
-
-    <!-- Section Heading -->
-   <div class="mb-16">
-  <h2
-    class="font-clash text-[61.64px] font-semibold leading-[90%] tracking-[0]"
+<section
+  class="relative overflow-visible bg-white"
+  data-services-section
+>
+  <!-- Section Heading -->
+  <div
+    class="mx-auto max-w-7xl px-5 pb-14 pt-16 sm:px-6 md:pb-20 md:pt-24 lg:px-8"
   >
-    {services.title}
-  </h2>
+    <h2
+      class="font-clash text-[40px] font-semibold leading-[90%] text-black lg:text-[61.64px]"
+    >
+      {services.title}
+    </h2>
 
-  <h2
-    class="font-clash text-[61.64px] font-semibold leading-[90%] tracking-[0] mt-3"
+    <h2
+      class="mt-3 font-clash text-[40px] font-semibold leading-[90%] sm:text-[50px] lg:text-[61.64px]"
+    >
+      <span
+        class="bg-gradient-to-r from-orange-500 via-pink-500 to-violet-600 bg-clip-text text-transparent"
+      >
+        {services.gradientTitle}
+      </span>
+
+      <span class="text-black">
+        {services.endTitle}
+      </span>
+    </h2>
+  </div>
+
+  <!-- Services -->
+  <div
+    class="relative w-full overflow-visible"
+    data-services-stack
   >
-    <span class="bg-gradient-to-r from-orange-500 via-pink-500 to-violet-600 bg-clip-text text-transparent">
-      {services.gradientTitle}
-    </span>
-
-    <span class="text-black">
-      {services.endTitle}
-    </span>
-  </h2>
-</div>
-
-    <!-- Services -->
     {
-      services.items.map((service) => (
-        <div class="border-t border-gray-200 py-14">
-
-          <div class="grid gap-12 lg:grid-cols-2">
-
-            <!-- Left -->
+      services.items.map((service, serviceIndex) => (
+        <article
+          class:list={[
+            "relative isolate w-full bg-white",
+            "border-t border-gray-200",
+            "md:sticky md:top-0",
+          ]}
+          style={`z-index: ${serviceIndex + 10};`}
+          data-service-panel
+        >
+          <div
+            class:list={[
+              "mx-auto grid w-full max-w-7xl gap-12",
+              "px-5 py-14",
+              "lg:px-6 lg:py-16",
+              " md:content-center",
+              "md:will-change-transform",
+              "lg:grid-cols-2 lg:gap-8 lg:px-8",
+            ]}
+            data-service-content
+          >
+            <!-- Left Content -->
             <div>
-
-              <div class="flex items-start gap-8">
-
+              <div
+                class="flex items-start gap-4 sm:gap-7 lg:gap-8"
+              >
                 <span
-                  class="text-4xl font-light text-gray-400 w-12"
+                  class:list={[
+                    "w-10 shrink-0",
+                    "font-clash text-2xl font-light text-gray-400",
+                    "sm:w-12 sm:text-3xl",
+                    "lg:text-4xl",
+                  ]}
                 >
                   {service.number}
                 </span>
 
-                <div>
-                <h3
-                  class="font-clash text-[36px] md:text-[48px] lg:text-[50px] font-medium leading-[93%] tracking-[0]"
-                >
-                  {service.title}
-                </h3>
-<ul id="features" class="mt-8 space-y-3">
-  {
-    service.features.map((feature, index) => (
-      <li
-        class:list={[
-          "feature-item flex items-center gap-3 cursor-pointer font-clash text-[32px] font-normal leading-[106%] transition-all duration-300",
-          index === 0 ? "active" : "",
-        ]}
-      >
-        <span class="indicator"></span>
+                <div class="min-w-0 flex-1">
+                  <h3
+                    class:list={[
+                      "font-clash text-[34px] font-bold",
+                      "leading-[93%] text-black",
+                      "lg:text-[48px]",
+                    ]}
+                  >
+                    {service.title}
+                  </h3>
 
-        <span>{feature}</span>
-      </li>
-    ))
-  }
-</ul>
+                  <!-- Features -->
+                  <ul
+                    class="mt-7 space-y-3 sm:mt-8"
+                    aria-label={`${service.title} features`}
+                    data-features-list
+                  >
+                    {
+                      service.features?.map(
+                        (feature, featureIndex) => (
+                          <li
+                            class:list={[
+                              "group flex cursor-pointer items-center gap-3",
+                              "font-clash text-[23px] font-normal leading-[106%]",
+                              "text-gray-400 outline-none",
+                              "transition-all duration-300 ease-out",
+                              "hover:translate-x-0.5 hover:text-black",
+                              "focus-visible:translate-x-0.5",
+                              "focus-visible:text-black",
+                              "focus-visible:outline-none",
+                              "data-[active=true]:translate-x-0.5",
+                              "data-[active=true]:text-black",
+                              "sm:text-[27px]",
+                              "lg:text-[32px]",
+                            ]}
+                            data-feature-item
+                            data-active={
+                              featureIndex === 0
+                                ? "true"
+                                : "false"
+                            }
+                            tabindex="0"
+                          >
+                            <span
+                              class:list={[
+                                "block h-[5px] w-0 shrink-0 rounded-full",
+                                "bg-gradient-to-r",
+                                "from-orange-500 via-pink-500 to-violet-600",
+                                "opacity-0",
+                                "transition-all duration-300 ease-out",
+                                "group-hover:w-[18px]",
+                                "group-hover:opacity-100",
+                                "group-focus-visible:w-[18px]",
+                                "group-focus-visible:opacity-100",
+                                "group-data-[active=true]:w-[18px]",
+                                "group-data-[active=true]:opacity-100",
+                              ]}
+                              aria-hidden="true"
+                            />
+
+                            <span>{feature}</span>
+                          </li>
+                        ),
+                      )
+                    }
+                  </ul>
+
+                  <!-- Button -->
                   <a
                     href={service.buttonLink}
-                    class="mt-16 inline-flex items-center gap-4 rounded-full border border-violet-600 px-6 py-2 text-xl font-semibold transition hover:bg-gray-50"
+                    class:list={[
+                      "group mt-10 inline-flex items-center gap-3",
+                      "rounded-full border border-violet-600",
+                      "px-4 py-2",
+                      "font-clash text-base font-semibold text-black",
+                      "transition-colors duration-300 ease-out",
+                      "hover:bg-violet-50",
+                      "focus-visible:outline-none",
+                      "focus-visible:ring-2",
+                      "focus-visible:ring-violet-500",
+                      "focus-visible:ring-offset-2",
+                      "sm:mt-14 sm:gap-4 sm:px-6 sm:text-xl",
+                      "lg:mt-16",
+                    ]}
                   >
-
                     <span
-                      class="flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-r from-orange-500 via-pink-500 to-violet-600 text-white"
+                      class:list={[
+                        "flex h-10 w-10 shrink-0",
+                        "items-center justify-center",
+                        "rounded-full",
+                        "bg-gradient-to-r",
+                        "from-orange-500 via-pink-500 to-violet-600",
+                        "text-xl text-white",
+                        "transition-transform duration-300 ease-out",
+                        "group-hover:rotate-45",
+                        "sm:h-12 sm:w-12",
+                      ]}
+                      aria-hidden="true"
                     >
                       ↗
                     </span>
 
-                    {service.buttonText}
-
+                    <span>{service.buttonText}</span>
                   </a>
-
                 </div>
-
               </div>
-
             </div>
 
-            <!-- Right -->
-
-            <div>
-
-              <p class="max-w-xl text-2xl leading-relaxed text-gray-800">
+            <!-- Right Content -->
+            <div class="lg:pt-1">
+              <p
+                class:list={[
+                  "max-w-xl",
+                  "font-clash text-lg leading-relaxed text-gray-800",
+                  "sm:text-xl",
+                  "lg:text-2xl lg:leading-relaxed",
+                ]}
+              >
                 {service.description}
               </p>
 
               {
                 service.image && (
-    <Image
-      src={service.image}
-      alt={service.title}
-      width={800}
-      height={500}
-      class="mt-10 w-full h-auto rounded-xl object-cover shadow-lg"
-    />
-  )
-}
-
+                  <div
+                    class:list={[
+                      "group mt-8 overflow-hidden",
+                      "rounded-xl bg-gray-100",
+                      "sm:mt-10",
+                    ]}
+                  >
+                    <Image
+                      src={service.image}
+                      alt={service.title}
+                      width={800}
+                      height={500}
+                      loading={
+                        serviceIndex === 0
+                          ? "eager"
+                          : "lazy"
+                      }
+                      decoding="async"
+                      class:list={[
+                        "h-auto w-full object-cover",
+                        "transition-transform duration-700 ease-out",
+                        "group-hover:scale-[1.025]",
+                      ]}
+                    />
+                  </div>
+                )
+              }
             </div>
-
           </div>
-
-        </div>
+        </article>
       ))
     }
-
   </div>
 </section>
 
 <script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const list = document.getElementById("features");
-    if (!list) return;
+  const clamp = (value, min, max) => {
+    return Math.min(Math.max(value, min), max);
+  };
 
-    const items = list.querySelectorAll(".feature-item");
+  const initializeFeatureLists = () => {
+    const featureLists = document.querySelectorAll(
+      "[data-features-list]",
+    );
 
-    items.forEach((item) => {
-      item.addEventListener("mouseenter", () => {
-        items.forEach((el) => el.classList.remove("active"));
-        item.classList.add("active");
+    featureLists.forEach((list) => {
+      if (list.dataset.initialized === "true") {
+        return;
+      }
+
+      list.dataset.initialized = "true";
+
+      const items = Array.from(
+        list.querySelectorAll("[data-feature-item]"),
+      );
+
+      if (!items.length) {
+        return;
+      }
+
+      const setActiveItem = (selectedItem) => {
+        items.forEach((item) => {
+          item.dataset.active =
+            item === selectedItem
+              ? "true"
+              : "false";
+        });
+      };
+
+      list.addEventListener("pointerover", (event) => {
+        if (!(event.target instanceof Element)) {
+          return;
+        }
+
+        const item = event.target.closest(
+          "[data-feature-item]",
+        );
+
+        if (item && list.contains(item)) {
+          setActiveItem(item);
+        }
+      });
+
+      list.addEventListener("focusin", (event) => {
+        if (!(event.target instanceof Element)) {
+          return;
+        }
+
+        const item = event.target.closest(
+          "[data-feature-item]",
+        );
+
+        if (item && list.contains(item)) {
+          setActiveItem(item);
+        }
+      });
+
+      list.addEventListener("pointerleave", () => {
+        setActiveItem(items[0]);
+      });
+
+      list.addEventListener("focusout", (event) => {
+        const nextElement = event.relatedTarget;
+
+        if (
+          !(nextElement instanceof Node) ||
+          !list.contains(nextElement)
+        ) {
+          setActiveItem(items[0]);
+        }
       });
     });
+  };
 
-    list.addEventListener("mouseleave", () => {
-      items.forEach((el) => el.classList.remove("active"));
+  const resetServicePanels = () => {
+    const contents = document.querySelectorAll(
+      "[data-service-content]",
+    );
 
-      if (items.length > 0) {
-        items[0].classList.add("active");
-      }
+    contents.forEach((content) => {
+      content.style.transform =
+        "translate3d(0, 0, 0) scale(1)";
+
+      content.style.opacity = "1";
     });
-  });
+  };
+
+  const updateServicePanels = () => {
+    const isDesktop = window.matchMedia(
+      "(min-width: 768px)",
+    ).matches;
+
+    const reducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)",
+    ).matches;
+
+    if (!isDesktop || reducedMotion) {
+      resetServicePanels();
+      return;
+    }
+
+    const sections = document.querySelectorAll(
+      "[data-services-section]",
+    );
+
+    const viewportHeight =
+      window.innerHeight ||
+      document.documentElement.clientHeight;
+
+    sections.forEach((section) => {
+      const panels = Array.from(
+        section.querySelectorAll(
+          "[data-service-panel]",
+        ),
+      );
+
+      panels.forEach((panel, index) => {
+        const content = panel.querySelector(
+          "[data-service-content]",
+        );
+
+        const nextPanel = panels[index + 1];
+
+        if (!content) {
+          return;
+        }
+
+        if (!nextPanel) {
+          content.style.transform =
+            "translate3d(0, 0, 0) scale(1)";
+
+          content.style.opacity = "1";
+
+          return;
+        }
+
+        const nextPanelTop =
+          nextPanel.getBoundingClientRect().top;
+
+        const progress = clamp(
+          (viewportHeight - nextPanelTop) /
+            (viewportHeight * 0.68),
+          0,
+          1,
+        );
+
+        const translateY = progress * -16;
+        const scale = 1 - progress * 0.01;
+        const opacity = 1 - progress * 0.2;
+
+        content.style.transform = `
+          translate3d(
+            0,
+            ${translateY.toFixed(2)}px,
+            0
+          )
+          scale(${scale.toFixed(4)})
+        `;
+
+        content.style.opacity =
+          opacity.toFixed(3);
+      });
+    });
+  };
+
+  let animationFrameId = null;
+
+  const requestServiceUpdate = () => {
+    if (animationFrameId) {
+      return;
+    }
+
+    animationFrameId =
+      window.requestAnimationFrame(() => {
+        updateServicePanels();
+        animationFrameId = null;
+      });
+  };
+
+  const initializeServices = () => {
+    initializeFeatureLists();
+    requestServiceUpdate();
+  };
+
+  initializeServices();
+
+  if (
+    document.documentElement.dataset
+      .servicesEventsBound !== "true"
+  ) {
+    document.documentElement.dataset
+      .servicesEventsBound = "true";
+
+    window.addEventListener(
+      "scroll",
+      requestServiceUpdate,
+      {
+        passive: true,
+      },
+    );
+
+    window.addEventListener(
+      "resize",
+      requestServiceUpdate,
+      {
+        passive: true,
+      },
+    );
+
+    document.addEventListener(
+      "astro:page-load",
+      initializeServices,
+    );
+  }
 </script>
