@@ -77,18 +77,59 @@ services:
       buttonText: Explore Strategy
       buttonIcon: mdi:arrow-top-right
     - number: '02'
-      title: Visual Identity
+      title: Brand Identity
       description: >-
-        We create memorable visual identities that express your brand with
-        clarity and consistency.
+        We create visual identities that build recognition, consistency and
+        trust across every customer touchpoint.
       features:
-        - Logo Design
-        - Color Palette
-        - Typography
-        - Brand Guidelines
-        - Icon System
+        - 'Logo Systems '
+        - 'Visual Language '
+        - 'Guidelines '
+        - 'Creative Direction '
+        - Marketing Assets
       image: /uploads/services/services/items/1/image.png
-      buttonText: Explore Identity
+      buttonText: See Brand Systems
+      buttonIcon: mdi:arrow-top-right
+    - number: '03'
+      title: Website Design
+      description: >-
+        We design digital experiences that communicate clearly, perform
+        effectively and leave lasting impressions.
+      features:
+        - 'UX Strategy '
+        - 'UI Design '
+        - 'Webflow Development '
+        - WordPress Development
+        - ' Landing Pages'
+      image: /uploads/services/services/items/2/image.png
+      buttonText: Explore Digital Experiences
+      buttonIcon: mdi:arrow-top-right
+    - number: '04'
+      title: Social Media Systems
+      description: >-
+        We create visual identities that build recognition, consistency and
+        trust across every customer touchpoint.
+      features:
+        - 'Content Strategy '
+        - Campaign Design
+        - ' Creative Direction'
+        - ' Reels & Short-form Content'
+        - ' Community Building'
+      image: /uploads/services/services/items/3/image.png
+      buttonText: Explore Campaign Work
+      buttonIcon: mdi:arrow-top-right
+    - number: '05'
+      title: Performance Marketing
+      description: >-
+        We help businesses connect with the right audience through strategic and
+        measurable marketing initiatives.
+      features:
+        - 'Meta Advertising '
+        - 'Google Advertising '
+        - Lead Generation
+        - ' Conversion Optimization '
+        - Analytics
+      buttonText: Explore Digital Experiences
       buttonIcon: mdi:arrow-top-right
 work:
   title: Selected Work

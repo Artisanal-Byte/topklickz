@@ -4,8 +4,8 @@
 @font-face {
     font-family: "Clash Grotesk";
     src: url("/fonts/ClashGrotesk-Medium.woff2") format("woff2");
-    font-weight: 500;
-    font-style: normal;
+    /* font-weight: 500; */
+    /* font-style: normal; */
 }
 
 @theme {
@@ -49,3 +49,31 @@
 .animate-marquee:hover {
   animation-play-state: paused;
 }
+
+/* service */
+.feature-item {
+    color: #a3a3a3;
+  }
+
+  .feature-item .indicator {
+    width: 24px;
+    height: 12px;
+    border-radius: 9999px;
+    flex-shrink: 0;
+    opacity: 0;
+    transition: all 0.3s ease;
+    background: linear-gradient(
+      90deg,
+      #ff7a18 0%,
+      #ff4d8d 50%,
+      #7b61ff 100%
+    );
+  }
+
+  .feature-item.active {
+    color: #000;
+  }
+
+  .feature-item.active .indicator {
+    opacity: 1;
+  }
