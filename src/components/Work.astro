@@ -1,93 +1,144 @@
 ---
-const { work } = Astro.props;
 import { Icon } from "astro-icon/components";
 import { Image } from "astro:assets";
+
+const { work } = Astro.props;
 ---
 
-<section class="py-20">
+<section class="relative bg-white py-18">
   <div class="mx-auto max-w-7xl px-6 lg:px-8">
-
     <!-- Header -->
     <div
-      class="mb-12 flex flex-col gap-6 border-b border-gray-200 pb-8 lg:flex-row lg:items-start lg:justify-between"
+      class="
+        mb-12 flex flex-col gap-6 pb-8
+        lg:flex-row lg:items-start lg:justify-between
+      "
     >
-
-      <h2 class="text-4xl font-black lg:text-6xl">
+      <h2
+        class="
+          font-clash text-[36px] font-semibold
+          leading-[93%] tracking-[0]
+          md:text-[48px]
+          lg:text-[61.64px]
+        "
+      >
         {work.title}
       </h2>
 
-      <p class="max-w-xl text-lg leading-relaxed text-gray-700">
+      <p
+        class="
+          max-w-xl
+          font-geist text-[20px]
+          leading-[134%] tracking-[0]
+          lg:text-[22px]
+        "
+      >
         {work.description}
       </p>
 
       <a
         href={work.buttonLink}
-        class="flex items-center gap-2 text-lg font-medium hover:text-violet-600 transition"
+        class="
+          group mt-2 inline-flex items-center gap-2
+          font-geist text-[27px] font-light
+          leading-[114%] tracking-[0]
+          text-black
+          transition-colors duration-300
+          hover:text-violet-600
+        "
       >
-        {work.buttonText}
+        <span>{work.buttonText}</span>
 
         <Icon
           name={work.buttonIcon}
-          class="h-5 w-5"
+          class="
+            h-5 w-5
+            transition-transform duration-300
+            group-hover:translate-x-1
+          "
         />
       </a>
-
     </div>
 
     <!-- Projects -->
-
     <div class="grid gap-12 md:grid-cols-2">
-
       {
         work.projects.map((project) => (
-
           <a
             href={project.link}
             class="group block"
           >
-
             <!-- Image -->
-
             <div class="overflow-hidden rounded-md">
-
-             <Image
-  src={project.image}
-  alt={project.title}
-  width={700}
-  height={500}
-  class="h-[320px] w-full object-cover"
-/>
-
+              <Image
+                src={project.image}
+                alt={project.title}
+                width={700}
+                height={500}
+                class="
+                  h-[260px] w-full object-cover
+                  transition-transform duration-700 ease-out
+                  group-hover:scale-[1.03]
+                  sm:h-[300px]
+                  lg:h-[320px]
+                "
+              />
             </div>
 
             <!-- Content -->
-
             <div class="mt-4">
-
               <h3
-                class="text-4xl font-bold transition group-hover:text-violet-600"
+                class="
+                  font-clash text-[28px] font-semibold
+                  leading-[93%] tracking-[0]
+                  transition-colors duration-300
+                  group-hover:text-violet-600
+                  md:text-[34px]
+                  lg:text-[35px]
+                "
               >
                 {project.title}
               </h3>
 
-              <p class="mt-1 text-lg text-gray-700">
+              <p
+                class="
+                  mt-3
+                  font-clash text-[20px] font-normal
+                  leading-[93%] tracking-[0]
+                  text-black
+                "
+              >
                 {project.category}
               </p>
 
               <p
-                class="mt-3 max-w-md text-sm leading-6 text-gray-500"
+                class="
+                  mt-3 max-w-md
+                  font-clash text-[16px] font-medium
+                  leading-[140%] tracking-[0]
+                  text-gray-500
+                "
               >
                 {project.description}
               </p>
-
             </div>
-
           </a>
-
         ))
       }
-
     </div>
-
   </div>
+
+  <!-- Full-width Bottom Gradient Border -->
+  <div
+    class="
+      pointer-events-none
+      absolute inset-x-0 bottom-0
+      h-[2px]
+      bg-gradient-to-r
+      from-orange-500
+      via-pink-500
+      to-violet-600
+    "
+    aria-hidden="true"
+  ></div>
 </section>
