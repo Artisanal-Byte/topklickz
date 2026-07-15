@@ -7,34 +7,29 @@ const { trustedBrands } = Astro.props;
 <section class="relative bg-white py-14">
   <div class="mx-auto max-w-7xl px-6 lg:px-8">
     <div
-      class="
-        grid gap-12
+      class="grid gap-12
         lg:grid-cols-2
         lg:items-center
-        lg:gap-16
-      "
+        lg:gap-16"
     >
       <!-- Left Content -->
       <div>
         <h2
-          class="
-            max-w-xl
-            text-[40px] font-bold
+          class="max-w-xl
+            text-[36px] font-bold
             leading-tight text-black
-            sm:text-5xl
-          "
+             md:text-[48px]
+          lg:text-[58px]"
         >
           {trustedBrands.title}
 
           <span
-            class="
-              bg-gradient-to-r
+            class="bg-gradient-to-r
               from-pink-600
               via-purple-500
               to-indigo-500
               bg-clip-text
-              text-transparent
-            "
+              text-transparent"
           >
             {" "}
             {trustedBrands.highlight}
@@ -42,13 +37,11 @@ const { trustedBrands } = Astro.props;
         </h2>
 
         <p
-          class="
-            mt-6 max-w-xl
+          class="mt-6 max-w-xl
             text-lg leading-relaxed
             text-gray-600
             sm:mt-8
-            sm:text-xl
-          "
+            sm:text-xl"
         >
           {trustedBrands.description}
         </p>
@@ -56,15 +49,13 @@ const { trustedBrands } = Astro.props;
 
       <!-- Brand Logos -->
       <div
-        class="
-          grid grid-cols-2
+        class="grid grid-cols-2
           items-center
           justify-items-center
           gap-x-8 gap-y-10
           sm:grid-cols-3
           sm:gap-x-10
-          sm:gap-y-12
-        "
+          sm:gap-y-12"
       >
         {
           trustedBrands.logos.map((logo) => (
@@ -104,15 +95,14 @@ const { trustedBrands } = Astro.props;
 
   <!-- Full-width Bottom Gradient Border -->
   <div
-    class="
-      pointer-events-none
+    class="pointer-events-none
       absolute inset-x-0 bottom-0
-      h-[2px]
+      h-[3px]
       bg-gradient-to-r
       from-orange-500
       via-pink-500
-      to-violet-600
-    "
+      to-violet-600"
     aria-hidden="true"
-  ></div>
+  >
+  </div>
 </section>
