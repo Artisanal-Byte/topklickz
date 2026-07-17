@@ -1,8 +1,8 @@
-import { c as createComponent } from './astro-component_BM1dqPu_.mjs';
+import { c as createComponent } from './astro-component_D9yIx5BK.mjs';
 import 'piccolore';
-import { e as addAttribute, f as renderHead, g as renderSlot, d as renderTemplate, c as renderComponent, m as maybeRenderHead, s as spreadAttributes, F as Fragment, u as unescapeHTML } from './server_BhvRaIKe.mjs';
+import { e as addAttribute, f as renderHead, g as renderSlot, d as renderTemplate, c as renderComponent, m as maybeRenderHead, s as spreadAttributes, F as Fragment, u as unescapeHTML } from './server_CNDmPvxF.mjs';
 import 'clsx';
-import { $ as $$Image } from './_astro_assets_ZnZpeYLH.mjs';
+import { $ as $$Image } from './_astro_assets_Cj9XIepa.mjs';
 import { getIconData, iconToSVG } from '@iconify/utils';
 import { createReader } from '@keystatic/core/reader';
 import { c as config } from './keystatic.config_Df-6VW00.mjs';
@@ -153,87 +153,376 @@ const $$Icon = createComponent(($$result, $$props, $$slots) => {
   return renderTemplate`${maybeRenderHead()}<svg${spreadAttributes(normalizedProps)}${addAttribute(name, "data-icon")}> ${title && renderTemplate`<title>${title}</title>`} ${desc && renderTemplate`<desc>${desc}</desc>`} ${inline ? renderTemplate`${renderComponent($$result, "Fragment", Fragment, { "id": id }, { "default": ($$result2) => renderTemplate`${unescapeHTML(normalizedBody)}` })}` : renderTemplate`${renderComponent($$result, "Fragment", Fragment, {}, { "default": ($$result2) => renderTemplate`${includeSymbol && renderTemplate`<symbol${addAttribute(id, "id")}${addAttribute(viewBox, "viewBox")}>${unescapeHTML(normalizedBody)}</symbol>`}<use${addAttribute(`#${id}`, "href")}></use> ` })}`} </svg>`;
 }, "D:/D Drive/artisanal-byte/topklickz/node_modules/astro-icon/components/Icon.astro", void 0);
 
-var __freeze = Object.freeze;
-var __defProp = Object.defineProperty;
-var __template = (cooked, raw) => __freeze(__defProp(cooked, "raw", { value: __freeze(raw || cooked.slice()) }));
-var _a;
 const $$Hero = createComponent(($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$props, $$slots);
   Astro2.self = $$Hero;
   const { hero } = Astro2.props;
-  return renderTemplate(_a || (_a = __template(["", '<section class="relative isolate overflow-hidden" data-hero-section style="--hero-progress: 0;" data-astro-cid-bbe6dxrz> <div class="mx-auto max-w-7xl px-6 lg:px-8" data-astro-cid-bbe6dxrz> <div class="min-h-[165svh] lg:min-h-[215svh]" data-astro-cid-bbe6dxrz> <div class="sticky top-0 min-h-[100svh] py-8 lg:py-12" data-astro-cid-bbe6dxrz> <div class="relative flex min-h-[calc(100svh-4rem)] flex-col justify-between gap-8 lg:min-h-[calc(100svh-6rem)]" data-astro-cid-bbe6dxrz> <!-- Left --> <div class="relative z-10 max-w-4xl lg:max-w-[58rem]" data-hero-copy data-astro-cid-bbe6dxrz> <div class="space-y-4 lg:space-y-5" data-astro-cid-bbe6dxrz> <p class="font-clash text-xs font-medium uppercase tracking-[0.38em] text-black/45" data-hero-reveal data-astro-cid-bbe6dxrz>\nSince 2016\n</p> <div class="space-y-2 lg:space-y-3" data-astro-cid-bbe6dxrz> <h1 class="font-clash text-4xl font-bold leading-[0.92] tracking-normal text-black lg:text-[72px]" data-hero-reveal data-astro-cid-bbe6dxrz> ', ' </h1> <h2 class="max-w-5xl bg-gradient-to-r from-orange-500 via-pink-500 to-violet-600 bg-clip-text font-clash text-4xl font-semibold leading-[0.92] tracking-normal text-transparent lg:text-[72px]" data-hero-reveal data-astro-cid-bbe6dxrz> ', ' </h2> <h3 class="max-w-4xl font-clash text-4xl font-bold leading-[0.92] tracking-normal text-black lg:text-[72px]" data-hero-reveal data-astro-cid-bbe6dxrz> ', " </h3> </div> </div> </div> <!-- Scroll CTA --> <a", ' class="group relative z-10 inline-flex items-center gap-4 self-start font-clash text-[18px] font-medium leading-none tracking-normal text-black transition-transform duration-300 hover:translate-x-1 lg:text-[24px]" data-hero-reveal data-astro-cid-bbe6dxrz> ', " ", ' </a> <!-- Media --> <div class="mt-6 lg:mt-0 lg:pointer-events-none lg:absolute lg:inset-x-0 lg:bottom-0 lg:flex lg:justify-end" data-astro-cid-bbe6dxrz> <div class="pointer-events-auto w-full origin-bottom-right transition-[transform,width,box-shadow] duration-150 ease-linear lg:w-auto" data-hero-media-shell style="width: min(100%, calc(28% + (72% * var(--hero-progress)))); transform: translateY(calc((1 - var(--hero-progress)) * 28px));" data-astro-cid-bbe6dxrz> <div class="relative aspect-[4/5] overflow-hidden rounded-[2rem] border border-white/60 bg-black/5 shadow-[0_24px_80px_rgba(15,15,17,0.18)] lg:aspect-[5/6]" data-hero-media data-astro-cid-bbe6dxrz> ', " ", ' <div class="absolute inset-0 bg-gradient-to-t from-black/18 via-transparent to-transparent" data-astro-cid-bbe6dxrz></div> <div class="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-white/25 to-transparent" data-astro-cid-bbe6dxrz></div> </div> <p class="mt-4 font-clash text-xs uppercase tracking-[0.3em] text-black/45 lg:text-[13px]" data-hero-reveal data-astro-cid-bbe6dxrz>\nScroll to explore\n</p> </div> </div> </div> </div> </div> </div> </section> <script>\n  const section = document.querySelector("[data-hero-section]");\n\n  if (section) {\n    const copy = section.querySelector("[data-hero-copy]");\n    const mediaShell = section.querySelector("[data-hero-media-shell]");\n    const image = section.querySelector("[data-hero-image]");\n    const video = section.querySelector("[data-hero-video]");\n    const revealables = section.querySelectorAll("[data-hero-reveal]");\n\n    let ticking = false;\n\n    const clamp = (value, min, max) => Math.min(Math.max(value, min), max);\n\n    const setProgress = () => {\n      const rect = section.getBoundingClientRect();\n      const viewportHeight = window.innerHeight || 1;\n      const total = Math.max(section.offsetHeight - viewportHeight, 1);\n      const scrolled = clamp(-rect.top, 0, total);\n      const progress = clamp(scrolled / total, 0, 1);\n\n      section.style.setProperty("--hero-progress", String(progress));\n\n      if (copy instanceof HTMLElement) {\n        copy.style.opacity = String(1 - progress * 0.1);\n        copy.style.transform = `translateY(${(1 - progress) * 10}px)`;\n      }\n\n      if (mediaShell instanceof HTMLElement) {\n        mediaShell.style.boxShadow =\n          progress > 0.75\n            ? "0 36px 120px rgba(15, 15, 17, 0.22)"\n            : "0 24px 80px rgba(15, 15, 17, 0.18)";\n      }\n\n      const videoOpacity = clamp((progress - 0.14) / 0.22, 0, 1);\n\n      if (image instanceof HTMLElement) {\n        image.style.opacity = String(1 - videoOpacity);\n        image.style.transform = `scale(${1.04 - videoOpacity * 0.04})`;\n      }\n\n      if (video instanceof HTMLVideoElement) {\n        video.style.opacity = String(videoOpacity);\n        video.style.transform = `scale(${1.02 - videoOpacity * 0.02})`;\n\n        if (videoOpacity > 0.05) {\n          video.play().catch(() => {});\n        } else {\n          video.pause();\n        }\n      }\n\n      revealables.forEach((node, index) => {\n        if (!(node instanceof HTMLElement)) return;\n        const delay = index * 0.06;\n        const revealProgress = clamp((progress - delay) / 0.28, 0, 1);\n        node.style.opacity = String(revealProgress);\n        node.style.transform = `translateY(${(1 - revealProgress) * 18}px)`;\n      });\n    };\n\n    const requestTick = () => {\n      if (ticking) return;\n      ticking = true;\n      window.requestAnimationFrame(() => {\n        ticking = false;\n        setProgress();\n      });\n    };\n\n    const observer = new IntersectionObserver(\n      ([entry]) => {\n        if (entry.isIntersecting) {\n          setProgress();\n        }\n      },\n      { threshold: 0.08 }\n    );\n\n    observer.observe(section);\n    window.addEventListener("scroll", requestTick, { passive: true });\n    window.addEventListener("resize", requestTick);\n    setProgress();\n  }\n<\/script>'], ["", '<section class="relative isolate overflow-hidden" data-hero-section style="--hero-progress: 0;" data-astro-cid-bbe6dxrz> <div class="mx-auto max-w-7xl px-6 lg:px-8" data-astro-cid-bbe6dxrz> <div class="min-h-[165svh] lg:min-h-[215svh]" data-astro-cid-bbe6dxrz> <div class="sticky top-0 min-h-[100svh] py-8 lg:py-12" data-astro-cid-bbe6dxrz> <div class="relative flex min-h-[calc(100svh-4rem)] flex-col justify-between gap-8 lg:min-h-[calc(100svh-6rem)]" data-astro-cid-bbe6dxrz> <!-- Left --> <div class="relative z-10 max-w-4xl lg:max-w-[58rem]" data-hero-copy data-astro-cid-bbe6dxrz> <div class="space-y-4 lg:space-y-5" data-astro-cid-bbe6dxrz> <p class="font-clash text-xs font-medium uppercase tracking-[0.38em] text-black/45" data-hero-reveal data-astro-cid-bbe6dxrz>\nSince 2016\n</p> <div class="space-y-2 lg:space-y-3" data-astro-cid-bbe6dxrz> <h1 class="font-clash text-4xl font-bold leading-[0.92] tracking-normal text-black lg:text-[72px]" data-hero-reveal data-astro-cid-bbe6dxrz> ', ' </h1> <h2 class="max-w-5xl bg-gradient-to-r from-orange-500 via-pink-500 to-violet-600 bg-clip-text font-clash text-4xl font-semibold leading-[0.92] tracking-normal text-transparent lg:text-[72px]" data-hero-reveal data-astro-cid-bbe6dxrz> ', ' </h2> <h3 class="max-w-4xl font-clash text-4xl font-bold leading-[0.92] tracking-normal text-black lg:text-[72px]" data-hero-reveal data-astro-cid-bbe6dxrz> ', " </h3> </div> </div> </div> <!-- Scroll CTA --> <a", ' class="group relative z-10 inline-flex items-center gap-4 self-start font-clash text-[18px] font-medium leading-none tracking-normal text-black transition-transform duration-300 hover:translate-x-1 lg:text-[24px]" data-hero-reveal data-astro-cid-bbe6dxrz> ', " ", ' </a> <!-- Media --> <div class="mt-6 lg:mt-0 lg:pointer-events-none lg:absolute lg:inset-x-0 lg:bottom-0 lg:flex lg:justify-end" data-astro-cid-bbe6dxrz> <div class="pointer-events-auto w-full origin-bottom-right transition-[transform,width,box-shadow] duration-150 ease-linear lg:w-auto" data-hero-media-shell style="width: min(100%, calc(28% + (72% * var(--hero-progress)))); transform: translateY(calc((1 - var(--hero-progress)) * 28px));" data-astro-cid-bbe6dxrz> <div class="relative aspect-[4/5] overflow-hidden rounded-[2rem] border border-white/60 bg-black/5 shadow-[0_24px_80px_rgba(15,15,17,0.18)] lg:aspect-[5/6]" data-hero-media data-astro-cid-bbe6dxrz> ', " ", ' <div class="absolute inset-0 bg-gradient-to-t from-black/18 via-transparent to-transparent" data-astro-cid-bbe6dxrz></div> <div class="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-white/25 to-transparent" data-astro-cid-bbe6dxrz></div> </div> <p class="mt-4 font-clash text-xs uppercase tracking-[0.3em] text-black/45 lg:text-[13px]" data-hero-reveal data-astro-cid-bbe6dxrz>\nScroll to explore\n</p> </div> </div> </div> </div> </div> </div> </section> <script>\n  const section = document.querySelector("[data-hero-section]");\n\n  if (section) {\n    const copy = section.querySelector("[data-hero-copy]");\n    const mediaShell = section.querySelector("[data-hero-media-shell]");\n    const image = section.querySelector("[data-hero-image]");\n    const video = section.querySelector("[data-hero-video]");\n    const revealables = section.querySelectorAll("[data-hero-reveal]");\n\n    let ticking = false;\n\n    const clamp = (value, min, max) => Math.min(Math.max(value, min), max);\n\n    const setProgress = () => {\n      const rect = section.getBoundingClientRect();\n      const viewportHeight = window.innerHeight || 1;\n      const total = Math.max(section.offsetHeight - viewportHeight, 1);\n      const scrolled = clamp(-rect.top, 0, total);\n      const progress = clamp(scrolled / total, 0, 1);\n\n      section.style.setProperty("--hero-progress", String(progress));\n\n      if (copy instanceof HTMLElement) {\n        copy.style.opacity = String(1 - progress * 0.1);\n        copy.style.transform = \\`translateY(\\${(1 - progress) * 10}px)\\`;\n      }\n\n      if (mediaShell instanceof HTMLElement) {\n        mediaShell.style.boxShadow =\n          progress > 0.75\n            ? "0 36px 120px rgba(15, 15, 17, 0.22)"\n            : "0 24px 80px rgba(15, 15, 17, 0.18)";\n      }\n\n      const videoOpacity = clamp((progress - 0.14) / 0.22, 0, 1);\n\n      if (image instanceof HTMLElement) {\n        image.style.opacity = String(1 - videoOpacity);\n        image.style.transform = \\`scale(\\${1.04 - videoOpacity * 0.04})\\`;\n      }\n\n      if (video instanceof HTMLVideoElement) {\n        video.style.opacity = String(videoOpacity);\n        video.style.transform = \\`scale(\\${1.02 - videoOpacity * 0.02})\\`;\n\n        if (videoOpacity > 0.05) {\n          video.play().catch(() => {});\n        } else {\n          video.pause();\n        }\n      }\n\n      revealables.forEach((node, index) => {\n        if (!(node instanceof HTMLElement)) return;\n        const delay = index * 0.06;\n        const revealProgress = clamp((progress - delay) / 0.28, 0, 1);\n        node.style.opacity = String(revealProgress);\n        node.style.transform = \\`translateY(\\${(1 - revealProgress) * 18}px)\\`;\n      });\n    };\n\n    const requestTick = () => {\n      if (ticking) return;\n      ticking = true;\n      window.requestAnimationFrame(() => {\n        ticking = false;\n        setProgress();\n      });\n    };\n\n    const observer = new IntersectionObserver(\n      ([entry]) => {\n        if (entry.isIntersecting) {\n          setProgress();\n        }\n      },\n      { threshold: 0.08 }\n    );\n\n    observer.observe(section);\n    window.addEventListener("scroll", requestTick, { passive: true });\n    window.addEventListener("resize", requestTick);\n    setProgress();\n  }\n<\/script>'])), maybeRenderHead(), hero?.title, hero?.subtitle, hero?.description, addAttribute(hero?.buttonLink, "href"), hero?.buttonText, renderComponent($$result, "Icon", $$Icon, { "name": hero.buttonIcon, "class": "h-8 w-8 transition-transform duration-300 group-hover:translate-y-1", "data-astro-cid-bbe6dxrz": true }), hero?.image && renderTemplate`${renderComponent($$result, "Image", $$Image, { "src": hero.image, "alt": hero?.title, "width": 900, "height": 1100, "class": "absolute inset-0 h-full w-full object-cover transition-[opacity,transform] duration-300 ease-out", "data-hero-image": true, "data-astro-cid-bbe6dxrz": true })}`, hero?.videoUrl && renderTemplate`<video${addAttribute(hero.videoUrl, "src")} class="absolute inset-0 h-full w-full object-cover opacity-0 transition-[opacity,transform] duration-300 ease-out" muted playsinline loop preload="metadata" data-hero-video data-astro-cid-bbe6dxrz></video>`);
+  return renderTemplate`${maybeRenderHead()}<section class="relative overflow-hidden"> <div class="mx-auto max-w-7xl px-6 lg:px-8 lg:py-20 py-10"> <div class="grid items-center gap-0 lg:grid-row-3"> <!-- LEFT --> <div class="lg:col-row-2 mt-3"> <h1 class="font-clash text-4xl font-bold leading-[93%] tracking-normal text-black lg:text-[70px]"> ${hero?.title} </h1> <h2 class="mt-3 font-clash text-4xl font-semibold leading-[93%] tracking-normal
+        bg-gradient-to-r
+        from-orange-500
+        via-pink-500
+        to-violet-600
+        bg-clip-text
+        text-transparent
+        lg:text-[70px]"> ${hero?.subtitle} </h2> <h3 class="mt-3 font-clash text-4xl font-bold leading-[93%] tracking-normal text-black lg:text-[68px]"> ${hero?.description} </h3> <a${addAttribute(hero?.buttonLink, "href")} class="group mt-5 lg:mt-16 inline-flex items-center gap-4 font-geist text-[28px] font-normal leading-[114%] tracking-normal"> ${hero?.buttonText} ${renderComponent($$result, "Icon", $$Icon, { "name": hero.buttonIcon, "class": "h-8 w-8 transition-transform duration-300 group-hover:translate-x-1" })} </a> </div> <!-- RIGHT --> <div class="flex items-start justify-end lg:-mt-10 mt-5"> ${hero?.image && renderTemplate`${renderComponent($$result, "Image", $$Image, { "src": hero.image, "alt": hero?.title, "width": 380, "height": 420 })}`} </div> </div> </div> </section>`;
 }, "D:/D Drive/artisanal-byte/topklickz/src/components/Hero.astro", void 0);
 
 const $$Studio = createComponent(($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$props, $$slots);
   Astro2.self = $$Studio;
   const { studio } = Astro2.props;
-  return renderTemplate`${maybeRenderHead()}<section class="bg-white py-12 lg:py-20"> <div class="mx-auto max-w-7xl px-6 lg:px-8"> <div class="rounded-sm bg-black px-6 py-10 lg:px-14 lg:py-16"> <!-- Top --> <div class="mb-16"> <span class="text-sm text-gray-400"> ${studio.sectionNumber}/${studio.sectionTitle} </span> </div> <!-- Heading --> <div class="mx-auto max-w-5xl text-center"> <h2 class="text-3xl font-bold leading-tight text-white
-          text-xl lg:text-4xl"> ${studio.title} </h2> <p class="mx-auto mt-8 max-w-4xl text-lg leading-relaxed text-gray-300"> ${studio.description} </p> </div> <!-- Clients --> <div class="mt-20"> <h3 class="mb-8 text-center text-3xl font-medium text-white"> ${studio.clientTitle} </h3> <div class="flex flex-wrap items-center justify-center gap-8 lg:gap-10"> ${studio.clients.map((client) => renderTemplate`${renderComponent($$result, "Image", $$Image, { "src": client.logo, "alt": client.alt, "width": 160, "height": 60, "class": "h-10 w-auto object-contain opacity-90 transition hover:opacity-100" })}`)} </div> </div> <!-- Button --> <div class="mt-16 flex justify-center"> <a${addAttribute(studio.buttonLink, "href")} class="inline-flex items-center gap-4 rounded-full border border-violet-600 bg-[#171717] px-6 py-4 text-xl text-white transition hover:bg-[#202020]"> <!-- <span
-            class="flex h-10 w-10 items-center justify-center rounded-full
-            bg-gradient-to-r from-orange-500 via-pink-500 to-violet-600"
-          >
-            <Icon
-              name={studio.buttonIcon}
-              class="h-5 w-5 text-white"
-            />
-          </span> --> <span>${studio.buttonText}</span> </a> </div> </div> </div> </section>`;
+  return renderTemplate`${maybeRenderHead()}<section class="bg-black py-12 lg:py-0"> <div class="mx-auto max-w-7xl px-6 lg:px-8"> <div class="rounded-sm px-0 py-0 lg:px-14 lg:py-8"> <!-- Top --> <div class="mb-10"> <span class="text-sm text-gray-400"> ${studio.sectionNumber}/${studio.sectionTitle} </span> </div> <!-- Heading --> <div class="mx-auto max-w-5xl text-center"> <h2 class="font-clash text-[20px] lg:text-[32px] font-semibold leading-[114%] text-center text-white"> ${studio.title} </h2> <p class="mx-auto mt-8 max-w-3xl font-clash text-[20px] leading-[140%] text-center text-white/70"> ${studio.description} </p> </div> <!-- Clients --> <div class="mt-14 overflow-hidden"> <h3 class="mb-8 text-center text-3xl font-medium text-white"> ${studio.clientTitle} </h3> <div class="relative overflow-hidden mx-auto max-w-2xl"> <div class="flex w-max animate-marquee gap-12"> <!-- First Set --> ${studio.clients.map((client) => renderTemplate`<div class="flex h-16 w-30 shrink-0 items-center justify-center"> ${renderComponent($$result, "Image", $$Image, { "src": client.logo, "alt": client.alt, "width": 160, "height": 60, "class": "h-10 w-auto object-contain opacity-90 transition hover:opacity-100" })} </div>`)} <!-- Duplicate Set --> ${studio.clients.map((client) => renderTemplate`<div class="flex h-16 w-48 shrink-0 items-center justify-center"> ${renderComponent($$result, "Image", $$Image, { "src": client.logo, "alt": client.alt, "width": 160, "height": 60, "class": "h-10 w-auto object-contain opacity-90 transition hover:opacity-100" })} </div>`)} </div> </div> </div> <!-- Button --> <div class="mt-10 flex justify-center"> <a${addAttribute(studio?.buttonLink, "href")} class="hidden lg:inline-flex rounded-full p-[1px] bg-[radial-gradient(50%_83.67%_at_50%_50%,#FEC053_0%,#F2203E_33%,#B729A8_65%,#5342D6_100%)]"> <span class="flex h-[45px] w-[170px] items-center justify-center gap-2 rounded-full bg-black px-2 font-clash text-[17px] font-medium leading-none text-white"> <span class="h-6 w-6 rounded-full gradient-bg"></span> ${studio?.buttonText} </span> </a> </div> </div> </div> </section>`;
 }, "D:/D Drive/artisanal-byte/topklickz/src/components/Studio.astro", void 0);
 
+var __freeze = Object.freeze;
+var __defProp = Object.defineProperty;
+var __template = (cooked, raw) => __freeze(__defProp(cooked, "raw", { value: __freeze(raw || cooked.slice()) }));
+var _a;
 const $$Services = createComponent(($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$props, $$slots);
   Astro2.self = $$Services;
   const { services } = Astro2.props;
-  return renderTemplate`${maybeRenderHead()}<section class="py-20 bg-white"> <div class="mx-auto max-w-7xl px-6 lg:px-8"> <!-- Section Heading --> <div class="mb-16"> <h2 class="text-5xl lg:text-7xl font-black leading-tight"> ${services.title} </h2> <h2 class="text-5xl lg:text-7xl font-black leading-tight"> <!-- <span class="text-black">One </span> --> <span class="bg-gradient-to-r from-orange-500 via-pink-500 to-violet-600 bg-clip-text text-transparent"> ${services.gradientTitle} </span> <span class="text-black"> ${" "}${services.endTitle} </span> </h2> </div> <!-- Services --> ${services.items.map((service) => renderTemplate`<div class="border-t border-gray-200 py-14"> <div class="grid gap-12 lg:grid-cols-2"> <!-- Left --> <div> <div class="flex items-start gap-8"> <span class="text-4xl font-light text-gray-400 w-12"> ${service.number} </span> <div> <h3 class="text-5xl font-bold"> ${service.title} </h3> <ul class="mt-8 space-y-3"> ${service.features.map((feature, index) => renderTemplate`<li${addAttribute([
-    "text-3xl",
-    index === 0 ? "flex items-center gap-3 text-black" : "text-gray-400"
-  ], "class:list")}> ${index === 0 && renderTemplate`<span class="h-3 w-6 rounded-full bg-gradient-to-r from-orange-500 via-pink-500 to-violet-600"></span>`} ${feature} </li>`)} </ul> <a${addAttribute(service.buttonLink, "href")} class="mt-16 inline-flex items-center gap-4 rounded-full border border-violet-600 px-6 py-2 text-xl font-semibold transition hover:bg-gray-50"> <span class="flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-r from-orange-500 via-pink-500 to-violet-600 text-white">
-↗
-</span> ${service.buttonText} </a> </div> </div> </div> <!-- Right --> <div> <p class="max-w-xl text-2xl leading-relaxed text-gray-800"> ${service.description} </p> ${service.image && renderTemplate`${renderComponent($$result, "Image", $$Image, { "src": service.image, "alt": service.title, "width": 800, "height": 500, "class": "mt-10 w-full h-auto rounded-xl object-cover shadow-lg" })}`} </div> </div> </div>`)} </div> </section>`;
+  return renderTemplate(_a || (_a = __template(["", '<section class="relative overflow-visible bg-white" data-services-section> <!-- Section Heading --> <div class="mx-auto max-w-7xl px-5 pb-14 pt-16 sm:px-6 md:pb-20 md:pt-24 lg:px-8"> <h2 class="font-clash text-[32px] font-semibold leading-[90%] text-black lg:text-[50px] uppercase"> ', ' </h2> <h2 class="mt-4 font-clash text-[32px] font-semibold leading-[90%] lg:text-[50px] uppercase"> <span class="gradient-text"> ', ' </span> <span class="text-black"> ', ' </span> </h2> </div> <!-- Services --> <div class="relative w-full overflow-visible" data-services-stack> ', ' </div> </section> <script>\n  // @ts-nocheck\n\n  (() => {\n    let serviceGroups = [];\n    let animationFrameId = 0;\n\n    const clamp = (value, minimum, maximum) => {\n      return Math.min(\n        Math.max(value, minimum),\n        maximum,\n      );\n    };\n\n    const collectServicePanels = () => {\n      const sections = document.querySelectorAll(\n        "[data-services-section]",\n      );\n\n      serviceGroups = Array.from(sections).map(\n        (section) => {\n          const panels = Array.from(\n            section.querySelectorAll(\n              "[data-service-panel]",\n            ),\n          )\n            .map((panel) => {\n              const content = panel.querySelector(\n                "[data-service-content]",\n              );\n\n              if (!content) {\n                return null;\n              }\n\n              return {\n                panel,\n                content,\n              };\n            })\n            .filter(Boolean);\n\n          return {\n            section,\n            panels,\n          };\n        },\n      );\n    };\n\n    const initializeFeatureLists = () => {\n      const featureLists =\n        document.querySelectorAll(\n          "[data-features-list]",\n        );\n\n      featureLists.forEach((list) => {\n        if (\n          list.dataset.initialized === "true"\n        ) {\n          return;\n        }\n\n        list.dataset.initialized = "true";\n\n        const items = Array.from(\n          list.querySelectorAll(\n            "[data-feature-item]",\n          ),\n        );\n\n        if (!items.length) {\n          return;\n        }\n\n        const setActiveItem = (selectedItem) => {\n          items.forEach((item) => {\n            item.dataset.active =\n              item === selectedItem\n                ? "true"\n                : "false";\n          });\n        };\n\n        const getFeatureItem = (event) => {\n          if (\n            !(event.target instanceof Element)\n          ) {\n            return null;\n          }\n\n          const item = event.target.closest(\n            "[data-feature-item]",\n          );\n\n          if (\n            !item ||\n            !list.contains(item)\n          ) {\n            return null;\n          }\n\n          return item;\n        };\n\n        list.addEventListener(\n          "pointerover",\n          (event) => {\n            if (\n              !window.matchMedia(\n                "(hover: hover)",\n              ).matches\n            ) {\n              return;\n            }\n\n            const item = getFeatureItem(event);\n\n            if (item) {\n              setActiveItem(item);\n            }\n          },\n        );\n\n        list.addEventListener(\n          "click",\n          (event) => {\n            const item = getFeatureItem(event);\n\n            if (item) {\n              setActiveItem(item);\n            }\n          },\n        );\n\n        list.addEventListener(\n          "focusin",\n          (event) => {\n            const item = getFeatureItem(event);\n\n            if (item) {\n              setActiveItem(item);\n            }\n          },\n        );\n\n        list.addEventListener(\n          "pointerleave",\n          () => {\n            if (\n              window.matchMedia(\n                "(hover: hover)",\n              ).matches\n            ) {\n              setActiveItem(items[0]);\n            }\n          },\n        );\n\n        list.addEventListener(\n          "focusout",\n          (event) => {\n            const nextElement =\n              event.relatedTarget;\n\n            if (\n              !(nextElement instanceof Node) ||\n              !list.contains(nextElement)\n            ) {\n              setActiveItem(items[0]);\n            }\n          },\n        );\n      });\n    };\n\n    const resetServicePanels = () => {\n      serviceGroups.forEach((group) => {\n        group.panels.forEach((entry) => {\n          entry.content.style.transform =\n            "translate3d(0, 0, 0) scale(1)";\n\n          entry.content.style.opacity = "1";\n        });\n      });\n    };\n\n    const updateServicePanels = () => {\n      const reducedMotion =\n        window.matchMedia(\n          "(prefers-reduced-motion: reduce)",\n        ).matches;\n\n      if (reducedMotion) {\n        resetServicePanels();\n        return;\n      }\n\n      const viewportHeight =\n        window.innerHeight ||\n        document.documentElement.clientHeight;\n\n      const isMobile =\n        window.innerWidth < 768;\n\n      serviceGroups.forEach((group) => {\n        group.panels.forEach(\n          (entry, index) => {\n            const nextEntry =\n              group.panels[index + 1];\n\n            if (!nextEntry) {\n              entry.content.style.transform =\n                "translate3d(0, 0, 0) scale(1)";\n\n              entry.content.style.opacity = "1";\n              return;\n            }\n\n            const nextPanelTop =\n              nextEntry.panel\n                .getBoundingClientRect()\n                .top;\n\n            const animationRange =\n              viewportHeight *\n              (isMobile ? 0.55 : 0.68);\n\n            const progress = clamp(\n              (viewportHeight - nextPanelTop) /\n                animationRange,\n              0,\n              1,\n            );\n\n            const translateY =\n              progress *\n              (isMobile ? -10 : -18);\n\n            const scale =\n              1 -\n              progress *\n                (isMobile ? 0.006 : 0.012);\n\n            const opacity =\n              1 -\n              progress *\n                (isMobile ? 0.12 : 0.22);\n\n            entry.content.style.transform = `\n              translate3d(\n                0,\n                ${translateY.toFixed(2)}px,\n                0\n              )\n              scale(${scale.toFixed(4)})\n            `;\n\n            entry.content.style.opacity =\n              opacity.toFixed(3);\n          },\n        );\n      });\n    };\n\n    const requestServiceUpdate = () => {\n      if (animationFrameId) {\n        return;\n      }\n\n      animationFrameId =\n        window.requestAnimationFrame(() => {\n          updateServicePanels();\n          animationFrameId = 0;\n        });\n    };\n\n    const initializeServices = () => {\n      collectServicePanels();\n      initializeFeatureLists();\n      requestServiceUpdate();\n    };\n\n    initializeServices();\n\n    if (\n      document.documentElement.dataset\n        .servicesEventsBound !== "true"\n    ) {\n      document.documentElement.dataset\n        .servicesEventsBound = "true";\n\n      window.addEventListener(\n        "scroll",\n        requestServiceUpdate,\n        {\n          passive: true,\n        },\n      );\n\n      window.addEventListener(\n        "resize",\n        () => {\n          collectServicePanels();\n          requestServiceUpdate();\n        },\n        {\n          passive: true,\n        },\n      );\n\n      document.addEventListener(\n        "astro:page-load",\n        initializeServices,\n      );\n    }\n  })();\n<\/script>'], ["", '<section class="relative overflow-visible bg-white" data-services-section> <!-- Section Heading --> <div class="mx-auto max-w-7xl px-5 pb-14 pt-16 sm:px-6 md:pb-20 md:pt-24 lg:px-8"> <h2 class="font-clash text-[32px] font-semibold leading-[90%] text-black lg:text-[50px] uppercase"> ', ' </h2> <h2 class="mt-4 font-clash text-[32px] font-semibold leading-[90%] lg:text-[50px] uppercase"> <span class="gradient-text"> ', ' </span> <span class="text-black"> ', ' </span> </h2> </div> <!-- Services --> <div class="relative w-full overflow-visible" data-services-stack> ', ' </div> </section> <script>\n  // @ts-nocheck\n\n  (() => {\n    let serviceGroups = [];\n    let animationFrameId = 0;\n\n    const clamp = (value, minimum, maximum) => {\n      return Math.min(\n        Math.max(value, minimum),\n        maximum,\n      );\n    };\n\n    const collectServicePanels = () => {\n      const sections = document.querySelectorAll(\n        "[data-services-section]",\n      );\n\n      serviceGroups = Array.from(sections).map(\n        (section) => {\n          const panels = Array.from(\n            section.querySelectorAll(\n              "[data-service-panel]",\n            ),\n          )\n            .map((panel) => {\n              const content = panel.querySelector(\n                "[data-service-content]",\n              );\n\n              if (!content) {\n                return null;\n              }\n\n              return {\n                panel,\n                content,\n              };\n            })\n            .filter(Boolean);\n\n          return {\n            section,\n            panels,\n          };\n        },\n      );\n    };\n\n    const initializeFeatureLists = () => {\n      const featureLists =\n        document.querySelectorAll(\n          "[data-features-list]",\n        );\n\n      featureLists.forEach((list) => {\n        if (\n          list.dataset.initialized === "true"\n        ) {\n          return;\n        }\n\n        list.dataset.initialized = "true";\n\n        const items = Array.from(\n          list.querySelectorAll(\n            "[data-feature-item]",\n          ),\n        );\n\n        if (!items.length) {\n          return;\n        }\n\n        const setActiveItem = (selectedItem) => {\n          items.forEach((item) => {\n            item.dataset.active =\n              item === selectedItem\n                ? "true"\n                : "false";\n          });\n        };\n\n        const getFeatureItem = (event) => {\n          if (\n            !(event.target instanceof Element)\n          ) {\n            return null;\n          }\n\n          const item = event.target.closest(\n            "[data-feature-item]",\n          );\n\n          if (\n            !item ||\n            !list.contains(item)\n          ) {\n            return null;\n          }\n\n          return item;\n        };\n\n        list.addEventListener(\n          "pointerover",\n          (event) => {\n            if (\n              !window.matchMedia(\n                "(hover: hover)",\n              ).matches\n            ) {\n              return;\n            }\n\n            const item = getFeatureItem(event);\n\n            if (item) {\n              setActiveItem(item);\n            }\n          },\n        );\n\n        list.addEventListener(\n          "click",\n          (event) => {\n            const item = getFeatureItem(event);\n\n            if (item) {\n              setActiveItem(item);\n            }\n          },\n        );\n\n        list.addEventListener(\n          "focusin",\n          (event) => {\n            const item = getFeatureItem(event);\n\n            if (item) {\n              setActiveItem(item);\n            }\n          },\n        );\n\n        list.addEventListener(\n          "pointerleave",\n          () => {\n            if (\n              window.matchMedia(\n                "(hover: hover)",\n              ).matches\n            ) {\n              setActiveItem(items[0]);\n            }\n          },\n        );\n\n        list.addEventListener(\n          "focusout",\n          (event) => {\n            const nextElement =\n              event.relatedTarget;\n\n            if (\n              !(nextElement instanceof Node) ||\n              !list.contains(nextElement)\n            ) {\n              setActiveItem(items[0]);\n            }\n          },\n        );\n      });\n    };\n\n    const resetServicePanels = () => {\n      serviceGroups.forEach((group) => {\n        group.panels.forEach((entry) => {\n          entry.content.style.transform =\n            "translate3d(0, 0, 0) scale(1)";\n\n          entry.content.style.opacity = "1";\n        });\n      });\n    };\n\n    const updateServicePanels = () => {\n      const reducedMotion =\n        window.matchMedia(\n          "(prefers-reduced-motion: reduce)",\n        ).matches;\n\n      if (reducedMotion) {\n        resetServicePanels();\n        return;\n      }\n\n      const viewportHeight =\n        window.innerHeight ||\n        document.documentElement.clientHeight;\n\n      const isMobile =\n        window.innerWidth < 768;\n\n      serviceGroups.forEach((group) => {\n        group.panels.forEach(\n          (entry, index) => {\n            const nextEntry =\n              group.panels[index + 1];\n\n            if (!nextEntry) {\n              entry.content.style.transform =\n                "translate3d(0, 0, 0) scale(1)";\n\n              entry.content.style.opacity = "1";\n              return;\n            }\n\n            const nextPanelTop =\n              nextEntry.panel\n                .getBoundingClientRect()\n                .top;\n\n            const animationRange =\n              viewportHeight *\n              (isMobile ? 0.55 : 0.68);\n\n            const progress = clamp(\n              (viewportHeight - nextPanelTop) /\n                animationRange,\n              0,\n              1,\n            );\n\n            const translateY =\n              progress *\n              (isMobile ? -10 : -18);\n\n            const scale =\n              1 -\n              progress *\n                (isMobile ? 0.006 : 0.012);\n\n            const opacity =\n              1 -\n              progress *\n                (isMobile ? 0.12 : 0.22);\n\n            entry.content.style.transform = \\`\n              translate3d(\n                0,\n                \\${translateY.toFixed(2)}px,\n                0\n              )\n              scale(\\${scale.toFixed(4)})\n            \\`;\n\n            entry.content.style.opacity =\n              opacity.toFixed(3);\n          },\n        );\n      });\n    };\n\n    const requestServiceUpdate = () => {\n      if (animationFrameId) {\n        return;\n      }\n\n      animationFrameId =\n        window.requestAnimationFrame(() => {\n          updateServicePanels();\n          animationFrameId = 0;\n        });\n    };\n\n    const initializeServices = () => {\n      collectServicePanels();\n      initializeFeatureLists();\n      requestServiceUpdate();\n    };\n\n    initializeServices();\n\n    if (\n      document.documentElement.dataset\n        .servicesEventsBound !== "true"\n    ) {\n      document.documentElement.dataset\n        .servicesEventsBound = "true";\n\n      window.addEventListener(\n        "scroll",\n        requestServiceUpdate,\n        {\n          passive: true,\n        },\n      );\n\n      window.addEventListener(\n        "resize",\n        () => {\n          collectServicePanels();\n          requestServiceUpdate();\n        },\n        {\n          passive: true,\n        },\n      );\n\n      document.addEventListener(\n        "astro:page-load",\n        initializeServices,\n      );\n    }\n  })();\n<\/script>'])), maybeRenderHead(), services.title, services.gradientTitle, services.endTitle, services.items.map((service, serviceIndex) => renderTemplate`<article class="
+            sticky top-0 isolate w-full lg:py-8 py-0
+            border-t border-gray-200
+            bg-white
+          "${addAttribute(`z-index: ${serviceIndex + 10};`, "style")} data-service-panel> <div class="
+              mx-auto grid w-full max-w-7xl content-center gap-10 px-5 pt-12 transition-[transform,opacity] duration-300 ease-out
+              will-change-transform
+              lg:grid-cols-2
+              lg:gap-16
+              lg:px-8
+              lg:pt-16
+            " data-service-content> <!-- Left Content --> <div> <div class="
+                  flex items-start
+                  gap-4
+                  sm:gap-7
+                  lg:gap-8
+                "> <!-- Service Number --> <span class="
+                    w-9 shrink-0
+                    font-clash text-2xl
+                    font-light text-gray-400
+
+                    sm:w-12 sm:text-3xl
+                    lg:text-4xl
+                  "> ${service.number} </span> <div class="min-w-0 flex-1"> <!-- Service Title --> <h3 class="
+                      font-clash
+                      text-[32px] font-bold
+                      leading-[93%] text-black
+
+                      sm:text-[40px]
+                      lg:text-[48px]
+                    "> ${service.title} </h3> <!-- Features --> <ul class="
+                      mt-7 space-y-3
+                      sm:mt-8
+                    "${addAttribute(`${service.title} features`, "aria-label")} data-features-list> ${service.features?.map(
+    (feature, featureIndex) => renderTemplate`<li class="
+                              group flex cursor-pointer
+                              items-center gap-3
+
+                              font-clash
+                              text-[21px] font-normal
+                              leading-[106%]
+                              text-gray-400
+
+                              outline-none
+
+                              transition-all
+                              duration-300 ease-out
+
+                              hover:translate-x-0.5
+                              hover:text-black
+
+                              focus-visible:translate-x-0.5
+                              focus-visible:text-black
+                              focus-visible:outline-none
+
+                              data-[active=true]:translate-x-0.5
+                              data-[active=true]:text-black
+
+                              sm:text-[27px]
+                              lg:text-[32px]
+                            " data-feature-item${addAttribute(
+      featureIndex === 0 ? "true" : "false",
+      "data-active"
+    )} tabindex="0"> <!-- Gradient Indicator --> <span class="
+                                block h-[5px] w-0
+                                shrink-0 rounded-full
+
+                                bg-gradient-to-r
+                                from-orange-500
+                                via-pink-500
+                                to-violet-600
+
+                                opacity-0
+
+                                transition-all
+                                duration-300 ease-out
+
+                                group-hover:w-[18px]
+                                group-hover:opacity-100
+
+                                group-focus-visible:w-[18px]
+                                group-focus-visible:opacity-100
+
+                                group-data-[active=true]:w-[18px]
+                                group-data-[active=true]:opacity-100
+                              " aria-hidden="true"></span> <span>${feature}</span> </li>`
+  )} </ul> <!-- Button --> <a${addAttribute(service.buttonLink, "href")} class="group mt-14 inline-flex rounded-full bg-[radial-gradient(circle_at_center,#FEC053_0%,#F2203E_33%,#B729A8_65%,#5342D6_100%)] p-[1.5px] transition-all duration-300"> <span class="flex items-center gap-4 rounded-full bg-white px-2 py-2 pr-6 transition-colors duration-300 group-hover:bg-violet-50"> <!-- Icon --> <span class="flex h-10 w-10 items-center justify-center rounded-full gradient-bg transition-transform duration-300 group-hover:rotate-45"> ${renderComponent($$result, "Icon", $$Icon, { "name": service.buttonIcon, "class": "h-5 w-5 text-white" })} </span> <!-- Text --> <span class="font-clash text-[20px] font-medium leading-[100%] tracking-[0] text-black whitespace-nowrap"> ${service.buttonText} </span> </span> </a> </div> </div> </div> <!-- Right Content --> <div class="lg:pt-1"> <!-- Description --> <p class="
+                  max-w-xl
+                  font-clash
+                  text-lg leading-relaxed
+                  text-gray-800
+
+                  sm:text-xl
+
+                  lg:text-2xl
+                  lg:leading-relaxed
+                "> ${service.description} </p> <!-- Image --> ${service.image && renderTemplate`<div class="
+                      group mt-8
+                      overflow-hidden
+                      rounded-xl
+                      bg-gray-100
+
+                      sm:mt-10
+                    "> ${renderComponent($$result, "Image", $$Image, { "src": service.image, "alt": service.title, "width": 800, "height": 500, "loading": serviceIndex === 0 ? "eager" : "lazy", "decoding": "async", "class": "\r\n                        h-auto w-full\r\n                        object-cover\r\n\r\n                        transition-transform\r\n                        duration-700 ease-out\r\n\r\n                        group-hover:scale-[1.025]\r\n                      " })} </div>`} </div> </div> </article>`));
 }, "D:/D Drive/artisanal-byte/topklickz/src/components/Services.astro", void 0);
 
 const $$Work = createComponent(($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$props, $$slots);
   Astro2.self = $$Work;
   const { work } = Astro2.props;
-  return renderTemplate`${maybeRenderHead()}<section class="py-20"> <div class="mx-auto max-w-7xl px-6 lg:px-8"> <!-- Header --> <div class="mb-12 flex flex-col gap-6 border-b border-gray-200 pb-8 lg:flex-row lg:items-start lg:justify-between"> <h2 class="text-4xl font-black lg:text-6xl"> ${work.title} </h2> <p class="max-w-xl text-lg leading-relaxed text-gray-700"> ${work.description} </p> <a${addAttribute(work.buttonLink, "href")} class="flex items-center gap-2 text-lg font-medium hover:text-violet-600 transition"> ${work.buttonText} ${renderComponent($$result, "Icon", $$Icon, { "name": work.buttonIcon, "class": "h-5 w-5" })} </a> </div> <!-- Projects --> <div class="grid gap-12 md:grid-cols-2"> ${work.projects.map((project) => renderTemplate`<a${addAttribute(project.link, "href")} class="group block"> <!-- Image --> <div class="overflow-hidden rounded-md"> ${renderComponent($$result, "Image", $$Image, { "src": project.image, "alt": project.title, "width": 700, "height": 500, "class": "h-[320px] w-full object-cover" })} </div> <!-- Content --> <div class="mt-4"> <h3 class="text-4xl font-bold transition group-hover:text-violet-600"> ${project.title} </h3> <p class="mt-1 text-lg text-gray-700"> ${project.category} </p> <p class="mt-3 max-w-md text-sm leading-6 text-gray-500"> ${project.description} </p> </div> </a>`)} </div> </div> </section>`;
+  return renderTemplate`${maybeRenderHead()}<section class="relative bg-white py-18"> <div class="mx-auto max-w-7xl px-6 lg:px-8"> <!-- Header --> <div class="
+        mb-12 flex flex-col gap-6 pb-8
+        lg:flex-row lg:items-start lg:justify-between
+      "> <h2 class="
+          font-clash text-[36px] font-semibold
+          leading-[93%] tracking-[0]
+          md:text-[48px]
+          lg:text-[50px] uppercase
+        "> ${work.title} </h2> <p class="
+          max-w-xl
+          font-geist text-[20px]
+          leading-[134%] tracking-[0]
+          lg:text-[22px]
+        "> ${work.description} </p> <a${addAttribute(work.buttonLink, "href")} class="
+          group mt-2 inline-flex items-center gap-2
+          font-geist text-[27px] font-light
+          leading-[114%] tracking-[0]
+          text-black
+          transition-colors duration-300
+          hover:text-violet-600
+        "> <span>${work.buttonText}</span> ${renderComponent($$result, "Icon", $$Icon, { "name": work.buttonIcon, "class": "\r\n            h-5 w-5\r\n            transition-transform duration-300\r\n            group-hover:translate-x-1\r\n          " })} </a> </div> <!-- Projects --> <div class="grid gap-12 md:grid-cols-2"> ${work.projects.map((project) => renderTemplate`<a${addAttribute(project.link, "href")} class="group block"> <!-- Image --> <div class="overflow-hidden rounded-md"> ${renderComponent($$result, "Image", $$Image, { "src": project.image, "alt": project.title, "width": 700, "height": 500, "class": "\r\n                  h-[260px] w-full object-cover\r\n                  transition-transform duration-700 ease-out\r\n                  group-hover:scale-[1.03]\r\n                  sm:h-[300px]\r\n                  lg:h-[320px]\r\n                " })} </div> <!-- Content --> <div class="mt-4"> <h3 class="
+                  font-clash text-[28px] font-semibold
+                  leading-[93%] tracking-[0]
+                  transition-colors duration-300
+                  group-hover:text-violet-600
+                  md:text-[34px]
+                  lg:text-[35px]
+                "> ${project.title} </h3> <p class="
+                  mt-3
+                  font-clash text-[20px] font-normal
+                  leading-[93%] tracking-[0]
+                  text-black
+                "> ${project.category} </p> <p class="
+                  mt-3 max-w-md
+                  font-clash text-[16px] font-medium
+                  leading-[140%] tracking-[0]
+                  text-gray-500
+                "> ${project.description} </p> </div> </a>`)} </div> </div> <!-- Full-width Bottom Gradient Border --> <div class="
+      pointer-events-none
+      absolute inset-x-0 bottom-0
+      h-[3px]
+      bg-gradient-to-r
+      from-orange-500
+      via-pink-500
+      to-violet-600
+    " aria-hidden="true"></div> </section>`;
 }, "D:/D Drive/artisanal-byte/topklickz/src/components/Work.astro", void 0);
 
 const $$TrustedBrands = createComponent(($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$props, $$slots);
   Astro2.self = $$TrustedBrands;
   const { trustedBrands } = Astro2.props;
-  return renderTemplate`${maybeRenderHead()}<section class="border-y-2 border-transparent bg-white py-20"> <div class="mx-auto max-w-7xl px-6 lg:px-8"> <div class="grid gap-16 lg:grid-cols-2 lg:items-center"> <!-- Left --> <div> <h2 class="max-w-xl text-5xl font-bold leading-tight"> ${trustedBrands.title} <span class="bg-gradient-to-r from-pink-600 via-purple-500 to-indigo-500 bg-clip-text text-transparent"> ${" "} ${trustedBrands.highlight} </span> </h2> <p class="mt-8 max-w-xl text-xl text-gray-600"> ${trustedBrands.description} </p> </div> <!-- Right --> <div class="grid grid-cols-3 items-center justify-items-center gap-x-10 gap-y-12"> ${trustedBrands.logos.map((logo) => renderTemplate`<a${addAttribute(logo.url, "href")} target="_blank"> ${renderComponent($$result, "Image", $$Image, { "src": logo.image, "alt": logo.alt, "width": 180, "height": 90, "class": "h-16 w-auto object-contain opacity-80 transition hover:opacity-100" })} </a>`)} </div> </div> </div> </section>`;
+  return renderTemplate`${maybeRenderHead()}<section class="relative bg-white py-14"> <div class="mx-auto max-w-7xl px-6 lg:px-8"> <div class="grid grid-cols-1
+    gap-12
+    lg:grid-cols-[1.7fr_1fr]
+    lg:items-center
+    lg:gap-16"> <!-- Left Content --> <div class="w-full"> <h2 class="font-clash
+        text-[36px] font-semibold
+        leading-[93%] tracking-[0]
+        md:text-[48px]
+        lg:text-[50px] uppercase"> ${trustedBrands.title} <span class="gradient-text"> ${" "} ${trustedBrands.highlight} </span> </h2> <p class="mt-3 font-geist text-[25px] leading-[114%] tracking-[0] text-black"> ${trustedBrands.description} </p> </div> <!-- Brand Logos --> <div class="grid grid-cols-2
+      items-center justify-items-center
+      gap-x-6 gap-y-10
+      sm:grid-cols-3
+      sm:gap-x-8 sm:gap-y-12"> ${trustedBrands.logos.map((logo) => renderTemplate`<a${addAttribute(logo.url, "href")} target="_blank" rel="noopener noreferrer" class="
+            group
+            flex min-h-20 w-full
+            items-center justify-center
+          "${addAttribute(logo.alt, "aria-label")}> ${renderComponent($$result, "Image", $$Image, { "src": logo.image, "alt": logo.alt, "width": 180, "height": 90, "class": "\r\n              h-14 w-auto\r\n              max-w-full\r\n              object-contain\r\n              transition-opacity duration-300\r\n              group-hover:opacity-100\r\n              sm:h-16\r\n            " })} </a>`)} </div> </div> </div> <!-- Full-width Bottom Gradient Border --> <div class="pointer-events-none
+      absolute inset-x-0 bottom-0
+      h-[3px]
+      bg-gradient-to-r
+      from-orange-500
+      via-pink-500
+      to-violet-600" aria-hidden="true"></div> </section>`;
 }, "D:/D Drive/artisanal-byte/topklickz/src/components/trustedBrands.astro", void 0);
 
 const $$Testimonials = createComponent(($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$props, $$slots);
   Astro2.self = $$Testimonials;
   const { testimonials } = Astro2.props;
-  return renderTemplate`${maybeRenderHead()}<section> <div class="mx-auto max-w-7xl px-6 lg:px-8"> <h2 class="text-5xl font-bold uppercase"> ${testimonials.title} <span class="text-violet-600"> ${" "} ${testimonials.highlight} </span> </h2> <div class="mt-16 grid gap-12 lg:grid-cols-2"> ${testimonials.items.map((item) => renderTemplate`<article> <p class="text-3xl leading-relaxed"> ${item.quote} </p> <div class="mt-12 flex items-center gap-5"> ${renderComponent($$result, "Image", $$Image, { "src": item.image, "alt": item.name, "width": 80, "height": 80, "class": "h-20 w-20 rounded-full object-cover" })} <div> <h3 class="text-3xl font-medium"> ${item.name} </h3> <p class="text-lg text-gray-500"> ${item.designation} </p> </div> </div> </article>`)} </div> </div> </section>`;
+  return renderTemplate`${maybeRenderHead()}<section class="relative bg-white"> <div class="
+      mx-auto max-w-7xl
+      px-6 py-14
+      lg:px-8
+    "> <!-- Section Heading --> <h2 class="
+        font-clash
+        text-[36px] font-semibold
+        leading-[93%] tracking-[0]
+        md:text-[48px]
+        lg:text-[50px]
+      "> ${testimonials.title} <span class="
+        gradient-text
+        "> ${" "} ${testimonials.highlight} </span> </h2> <!-- Testimonials --> <div class="
+        mt-8 grid gap-12
+        lg:grid-cols-2
+        lg:gap-16
+      "> ${testimonials.items.map((item) => renderTemplate`<article> <!-- Quote --> <p class="
+                font-geist
+                text-[28px]
+                leading-[114%]
+                tracking-normal
+                text-black
+              "> ${item.quote} </p> <!-- User --> <div class="
+                mt-10 flex
+                items-center gap-5
+                sm:mt-12
+              "> ${renderComponent($$result, "Image", $$Image, { "src": item.image, "alt": item.name, "width": 80, "height": 80, "class": "\r\n                  h-16 w-16\r\n                  shrink-0 rounded-full\r\n                  object-cover\r\n                  sm:h-20 sm:w-20\r\n                " })} <div> <h3 class="
+                    font-geist
+                    text-[25px]
+                    leading-[114%]
+                    tracking-normal
+                    text-black
+                  "> ${item.name} </h3> <p class="
+                    mt-1
+                    font-geist
+                    text-[16px]
+                    font-light
+                    leading-[114%]
+                    tracking-normal
+                    
+                  "> ${item.designation} </p> </div> </div> </article>`)} </div> </div> <!-- Full-width Bottom Gradient Border --> <div class="
+      pointer-events-none
+      absolute inset-x-0 bottom-0
+      h-[3px]
+      bg-gradient-to-r
+      from-orange-500
+      via-pink-500
+      to-violet-600
+    " aria-hidden="true"></div> </section>`;
 }, "D:/D Drive/artisanal-byte/topklickz/src/components/Testimonials.astro", void 0);
 
 const $$FieldNotes = createComponent(($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$props, $$slots);
   Astro2.self = $$FieldNotes;
   const { fieldNotes } = Astro2.props;
-  return renderTemplate`${maybeRenderHead()}<section class="py-24"> <div class="mx-auto max-w-7xl px-6 lg:px-8"> <div class="flex items-end justify-between"> <div> <h2 class="text-6xl font-bold"> ${fieldNotes.title} <br> <span class="text-pink-500"> ${fieldNotes.highlight} </span> </h2> <!-- <p class="text-6xl font-bold">FROM THE STUDIO.</p> --> </div> <a${addAttribute(fieldNotes?.buttonLink, "href")} class="mt-20 inline-flex items-center gap-4 text-xl font-medium group"> ${fieldNotes?.buttonText} ${renderComponent($$result, "Icon", $$Icon, { "name": fieldNotes.buttonIcon, "class": "w-6 h-6" })} </a> </div> <div class="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-3"> ${fieldNotes.posts.map((post) => renderTemplate`<a${addAttribute(`/blog/${post.slug}`, "href")}> ${renderComponent($$result, "Image", $$Image, { "src": post.image, "alt": post.title, "width": 500, "height": 350, "class": "rounded-lg object-cover" })} <h3 class="mt-5 text-2xl font-semibold"> ${post.title} </h3> <p class="mt-3 text-gray-600">${post.description}</p> </a>`)} </div> </div> </section>`;
+  return renderTemplate`${maybeRenderHead()}<section class="py-14"> <div class="mx-auto max-w-7xl px-6 lg:px-8"> <div class="flex items-end justify-between"> <div> <h2 class="font-clash
+        text-[36px] font-semibold
+        leading-[100%] tracking-[0]
+        md:text-[48px]
+        lg:text-[50px]"> ${fieldNotes.title} <br> <span class="gradient-text mt-2"> ${fieldNotes.highlight} </span> </h2> <!-- <p class="text-6xl font-bold">FROM THE STUDIO.</p> --> </div> <a${addAttribute(fieldNotes?.buttonLink, "href")} class="mt-20 inline-flex items-center gap-4 text-xl font-medium group"> ${fieldNotes?.buttonText} ${renderComponent($$result, "Icon", $$Icon, { "name": fieldNotes.buttonIcon, "class": "w-6 h-6" })} </a> </div> <div class="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-3"> ${fieldNotes.posts.map((post) => renderTemplate`<a${addAttribute(`/blog/${post.slug}`, "href")} class="group block cursor-pointer"> <div class="
+                                overflow-hidden
+                                rounded-[18px]
+                                bg-black/5
+                                shadow-[0_0_0_1px_rgba(0,0,0,0.04)]
+                                transition-[box-shadow,background-color]
+                                duration-500
+                                ease-out
+                                group-hover:bg-black/[0.03]
+                                group-hover:shadow-[0_18px_50px_rgba(15,15,17,0.12)]
+                            "> <div class="
+                                    transform-gpu
+                                    transition-transform
+                                    duration-700
+                                    ease-out
+                                    group-hover:translate-y-3
+                                "> ${renderComponent($$result, "Image", $$Image, { "src": post.image, "alt": post.title, "width": 500, "height": 350, "class": "\n                                    h-auto\n                                    w-full\n                                    object-cover\n                                    grayscale\n                                    contrast-110\n                                    saturate-0\n                                    transition-[filter,opacity]\n                                    duration-700\n                                    ease-out\n                                    group-hover:grayscale-0\n                                    group-hover:contrast-100\n                                    group-hover:saturate-100\n                                " })} </div> </div> <div class="
+                                mt-5
+                                transition-transform
+                                duration-500
+                                ease-out
+                                group-hover:translate-y-3
+                            "> <h3 class="
+                                    font-geist
+                                    text-[24px]
+                                    font-bold
+                                    leading-[114%]
+                                    tracking-normal
+                                    text-black
+                                    transition-colors
+                                    duration-300
+                                    group-hover:text-black/95
+                                "> ${post.title} </h3> <p class="
+                                    mt-3
+                                    font-geist
+                                    text-[16px]
+                                    leading-[114%]
+                                    tracking-normal
+                                    text-black/75
+                                    transition-colors
+                                    duration-300
+                                    group-hover:text-black/90
+                                "> ${post.description} </p> </div> </a>`)} </div> </div> </section>`;
 }, "D:/D Drive/artisanal-byte/topklickz/src/components/FieldNotes.astro", void 0);
 
 const $$TeamCulture = createComponent(($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$props, $$slots);
   Astro2.self = $$TeamCulture;
   const { teamCulture } = Astro2.props;
-  return renderTemplate`${maybeRenderHead()}<section class=""> <div class="mx-auto max-w-7xl px-6 lg:px-8"> <div class="grid grid-cols-1 items-center gap-16 lg:grid-cols-2"> <!-- Left Content --> <div> <h2 class="max-w-2xl text-5xl font-bold lg:text-5xl"> ${teamCulture.title} <span class="bg-gradient-to-r from-pink-500 to-purple-600 bg-clip-text text-transparent"> ${" "} ${teamCulture.highlight} </span> </h2> <p class="mt-10 text-xl leading-relaxed text-neutral-700"> ${teamCulture.descriptionOne} </p> <p class="mt-8 text-xl leading-relaxed text-neutral-700"> ${teamCulture.descriptionTwo} </p> </div> <!-- Right Image --> <div> ${renderComponent($$result, "Image", $$Image, { "src": teamCulture.image, "alt": teamCulture.imageAlt, "width": 900, "height": 700, "class": "w-full rounded-lg object-cover" })} </div> </div> </div> </section>`;
+  return renderTemplate`${maybeRenderHead()}<section class=""> <div class="mx-auto max-w-7xl px-6 lg:px-8"> <div class="grid grid-cols-1 items-center gap-16 lg:grid-cols-2"> <!-- Left Content --> <div> <h2 class="font-clash
+                        text-[40px]
+                        font-semibold
+                        leading-[114%]
+                        tracking-normal uppercase"> ${teamCulture.title} <span class="gradient-text"> ${" "} ${teamCulture.highlight} </span> </h2> <p class="mt-6
+                        font-geist
+                        text-[20px]
+                        leading-[120%]
+                        tracking-normal"> ${teamCulture.descriptionOne} </p> <p class="mt-4
+                    font-geist
+                    text-[20px]
+                    leading-[120%]
+                    tracking-normal"> ${teamCulture.descriptionTwo} </p> </div> <!-- Right Image --> <div> ${renderComponent($$result, "Image", $$Image, { "src": teamCulture.image, "alt": teamCulture.imageAlt, "width": 900, "height": 700, "class": "w-full rounded-lg object-cover" })} </div> </div> </div> </section>`;
 }, "D:/D Drive/artisanal-byte/topklickz/src/components/TeamCulture.astro", void 0);
 
 const $$Faq = createComponent(($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$props, $$slots);
   Astro2.self = $$Faq;
   const { faq } = Astro2.props;
-  return renderTemplate`${maybeRenderHead()}<section class="py-24"> <div class="mx-auto max-w-7xl px-6 lg:px-8"> <h2 class="text-5xl font-bold"> ${faq.title} <span class="bg-gradient-to-r from-orange-500 via-pink-500 to-purple-600 bg-clip-text text-transparent"> ${" "} ${faq.highlight} </span> </h2> <div class="mt-5 divide-y divide-neutral-200"> ${faq.items.map((faq2) => renderTemplate`<details class="group py-6"${addAttribute(faq2.defaultOpen, "open")}> <summary class="flex cursor-pointer list-none items-center justify-between text-2xl font-semibold"> <span>${faq2.question}</span> <span class="text-2xl transition group-open:rotate-45">
-+
-</span> </summary> <p class="mt-5 max-w-3xl text-lg leading-8 text-neutral-600"> ${faq2.answer} </p> </details>`)} </div> </div> </section>`;
+  return renderTemplate`${maybeRenderHead()}<section class="py-10"> <div class="mx-auto max-w-7xl px-6 lg:px-8"> <h2 class="font-clash text-[36px] font-semibold
+          leading-[93%] tracking-[0]
+          md:text-[48px]
+          lg:text-[50px] uppercase"> ${faq.title} <span class="gradient-text"> ${" "} ${faq.highlight} </span> </h2> <div class="mt-5 divide-y divide-neutral-200"> ${faq.items.map((faq2) => renderTemplate`<details class="group py-6"${addAttribute(faq2.defaultOpen, "open")}> <summary class="
+                  flex
+                  cursor-pointer
+                  list-none
+                  items-center
+                  justify-between
+                  font-clash
+                  text-[24px]
+                  font-medium
+                  leading-[28.8px]
+                  tracking-normal
+                "> <span>${faq2.question}</span> <span class="text-[24px] transition group-open:rotate-45">+</span> </summary> <p class="
+                  mt-5
+                  max-w-3xl
+                  font-geist
+                  text-[18px]
+                  leading-[28.8px]
+                  tracking-normal
+                  text-[#010101]
+                "> ${faq2.answer} </p> </details>`)} </div> </div> </section>`;
 }, "D:/D Drive/artisanal-byte/topklickz/src/components/Faq.astro", void 0);
 
 const $$Cta = createComponent(($$result, $$props, $$slots) => {
@@ -260,10 +549,10 @@ const $$file = "D:/D Drive/artisanal-byte/topklickz/src/pages/index.astro";
 const $$url = "";
 
 const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
-    __proto__: null,
-    default: $$Index,
-    file: $$file,
-    url: $$url
+  __proto__: null,
+  default: $$Index,
+  file: $$file,
+  url: $$url
 }, Symbol.toStringTag, { value: 'Module' }));
 
 const page = () => _page;
