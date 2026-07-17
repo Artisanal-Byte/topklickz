@@ -15,22 +15,18 @@ const { testimonials } = Astro.props;
     <!-- Section Heading -->
     <h2
       class="
-        text-[40px] font-bold
-        uppercase leading-tight
-        text-black
-        sm:text-5xl
+        font-clash
+        text-[36px] font-semibold
+        leading-[93%] tracking-[0]
+        md:text-[48px]
+        lg:text-[50px]
       "
     >
       {testimonials.title}
 
       <span
         class="
-          bg-gradient-to-r
-          from-orange-500
-          via-pink-500
-          to-violet-600
-          bg-clip-text
-          text-transparent
+        gradient-text
         "
       >
         {" "}
@@ -50,17 +46,17 @@ const { testimonials } = Astro.props;
         testimonials.items.map((item) => (
           <article>
             <!-- Quote -->
-            <p
+           <p
               class="
-                text-[24px]
-                leading-relaxed
+                font-geist
+                text-[28px]
+                leading-[114%]
+                tracking-normal
                 text-black
-                sm:text-3xl
               "
             >
               {item.quote}
             </p>
-
             <!-- User -->
             <div
               class="
@@ -83,21 +79,26 @@ const { testimonials } = Astro.props;
               />
 
               <div>
-                <h3
+               <h3
                   class="
-                    text-2xl font-medium
-                    leading-tight text-black
-                    sm:text-3xl
+                    font-geist
+                    text-[25px]
+                    leading-[114%]
+                    tracking-normal
+                    text-black
                   "
                 >
                   {item.name}
                 </h3>
-
                 <p
                   class="
-                    mt-1 text-base
-                    text-gray-500
-                    sm:text-lg
+                    mt-1
+                    font-geist
+                    text-[16px]
+                    font-light
+                    leading-[114%]
+                    tracking-normal
+                    
                   "
                 >
                   {item.designation}

@@ -175,6 +175,10 @@ trustedBrands:
     - image: /uploads/clients/trustedBrands/logos/3/image.png
       alt: Mahaa Rajaa Logo
       url: https://mahaarajaa.life/
+    - image: /uploads/clients/trustedBrands/logos/4/image.png
+      alt: globofarm
+    - image: /uploads/clients/trustedBrands/logos/5/image.png
+      alt: veer prabhu
 testimonials:
   title: WHAT FOUNDERS
   highlight: SAY

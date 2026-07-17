@@ -19,6 +19,10 @@
             #B729A8 59.94%,
             #5342D6 84.41%);
 }
+/* global.css */
+.gradient-text {
+  @apply bg-gradient-to-r from-orange-500 via-pink-500 to-violet-600 bg-clip-text text-transparent;
+}
 
 .gradient-border {
     border: 1px solid transparent;

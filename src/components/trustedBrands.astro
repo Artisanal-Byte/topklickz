@@ -7,29 +7,25 @@ const { trustedBrands } = Astro.props;
 <section class="relative bg-white py-14">
   <div class="mx-auto max-w-7xl px-6 lg:px-8">
     <div
-      class="grid gap-12
-        lg:grid-cols-2
-        lg:items-center
-        lg:gap-16"
+      class="grid grid-cols-1
+    gap-12
+    lg:grid-cols-[1.7fr_1fr]
+    lg:items-center
+    lg:gap-16"
     >
       <!-- Left Content -->
-      <div>
+      <div class="w-full">
         <h2
-          class="max-w-xl
-            text-[36px] font-bold
-            leading-tight text-black
-             md:text-[48px]
-          lg:text-[58px]"
+          class="font-clash
+        text-[36px] font-semibold
+        leading-[93%] tracking-[0]
+        md:text-[48px]
+        lg:text-[61.64px]"
         >
           {trustedBrands.title}
 
           <span
-            class="bg-gradient-to-r
-              from-pink-600
-              via-purple-500
-              to-indigo-500
-              bg-clip-text
-              text-transparent"
+            class="gradient-text"
           >
             {" "}
             {trustedBrands.highlight}
@@ -37,11 +33,7 @@ const { trustedBrands } = Astro.props;
         </h2>
 
         <p
-          class="mt-6 max-w-xl
-            text-lg leading-relaxed
-            text-gray-600
-            sm:mt-8
-            sm:text-xl"
+          class="mt-3 font-geist text-[25px] leading-[114%] tracking-[0] text-black"
         >
           {trustedBrands.description}
         </p>
@@ -50,12 +42,10 @@ const { trustedBrands } = Astro.props;
       <!-- Brand Logos -->
       <div
         class="grid grid-cols-2
-          items-center
-          justify-items-center
-          gap-x-8 gap-y-10
-          sm:grid-cols-3
-          sm:gap-x-10
-          sm:gap-y-12"
+      items-center justify-items-center
+      gap-x-6 gap-y-10
+      sm:grid-cols-3
+      sm:gap-x-8 sm:gap-y-12"
       >
         {
           trustedBrands.logos.map((logo) => (
@@ -64,10 +54,10 @@ const { trustedBrands } = Astro.props;
               target="_blank"
               rel="noopener noreferrer"
               class="
-                group flex min-h-20
-                w-full items-center
-                justify-center
-              "
+            group
+            flex min-h-20 w-full
+            items-center justify-center
+          "
               aria-label={logo.alt}
             >
               <Image
@@ -76,15 +66,13 @@ const { trustedBrands } = Astro.props;
                 width={180}
                 height={90}
                 class="
-                  h-14 w-auto
-                  max-w-full
-                  object-contain
-                  opacity-80
-                  transition-opacity
-                  duration-300
-                  group-hover:opacity-100
-                  sm:h-16
-                "
+              h-14 w-auto
+              max-w-full
+              object-contain
+              transition-opacity duration-300
+              group-hover:opacity-100
+              sm:h-16
+            "
               />
             </a>
           ))
