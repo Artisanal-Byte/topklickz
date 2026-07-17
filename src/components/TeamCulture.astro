@@ -10,31 +10,36 @@ const { teamCulture } = Astro.props;
             <!-- Left Content -->
             <div>
                 <h2
-                    class="
-                        font-clash
-                        text-[50px]
+                    class="font-clash
+                        text-[40px]
                         font-semibold
                         leading-[114%]
-                        tracking-normal"
+                        tracking-normal uppercase"
                 >
                     {teamCulture.title}
-                    <span
-                        class="bg-gradient-to-r
-                                from-pink-500
-                                to-purple-600
-                                bg-clip-text
-                                text-transparent"
-                    >
+                    <span class="gradient-text">
                         {" "}
                         {teamCulture.highlight}
                     </span>
                 </h2>
 
-                <p class="mt-10 text-xl leading-relaxed text-neutral-700">
+                <p
+                    class="mt-6
+                        font-geist
+                        text-[20px]
+                        leading-[120%]
+                        tracking-normal"
+                >
                     {teamCulture.descriptionOne}
                 </p>
 
-                <p class="mt-8 text-xl leading-relaxed text-neutral-700">
+                <p
+                    class="mt-4
+                    font-geist
+                    text-[20px]
+                    leading-[120%]
+                    tracking-normal"
+                >
                     {teamCulture.descriptionTwo}
                 </p>
             </div>
