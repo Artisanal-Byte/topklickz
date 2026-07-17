@@ -1,11 +1,25 @@
-import { c as createComponent } from './astro-component_D9yIx5BK.mjs';
+import { c as createComponent } from './astro-component_DJVmOVpN.mjs';
 import 'piccolore';
-import { e as addAttribute, f as renderHead, g as renderSlot, d as renderTemplate, c as renderComponent, m as maybeRenderHead, s as spreadAttributes, F as Fragment, u as unescapeHTML } from './server_CNDmPvxF.mjs';
+import { e as createRenderInstruction, f as addAttribute, g as renderHead, h as renderSlot, d as renderTemplate, c as renderComponent, m as maybeRenderHead, s as spreadAttributes, F as Fragment, u as unescapeHTML } from './server_ADDhUkRF.mjs';
 import 'clsx';
-import { $ as $$Image } from './_astro_assets_Cj9XIepa.mjs';
+import { $ as $$Image } from './_astro_assets_DeiME8wJ.mjs';
 import { getIconData, iconToSVG } from '@iconify/utils';
 import { createReader } from '@keystatic/core/reader';
 import { c as config } from './keystatic.config_Df-6VW00.mjs';
+
+async function renderScript(result, id) {
+  const inlined = result.inlinedScripts.get(id);
+  let content = "";
+  if (inlined != null) {
+    if (inlined) {
+      content = `<script type="module">${inlined}</script>`;
+    }
+  } else {
+    const resolved = await result.resolve(id);
+    content = `<script type="module" src="${result.userAssetsBase ? (result.base === "/" ? "" : result.base) + result.userAssetsBase : ""}${resolved}"></script>`;
+  }
+  return createRenderInstruction({ type: "script", id, content });
+}
 
 const $$Layout = createComponent(($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$props, $$slots);
@@ -448,7 +462,7 @@ const $$FieldNotes = createComponent(($$result, $$props, $$slots) => {
                                     duration-700
                                     ease-out
                                     group-hover:translate-y-3
-                                "> ${renderComponent($$result, "Image", $$Image, { "src": post.image, "alt": post.title, "width": 500, "height": 350, "class": "\n                                    h-auto\n                                    w-full\n                                    object-cover\n                                    grayscale\n                                    contrast-110\n                                    saturate-0\n                                    transition-[filter,opacity]\n                                    duration-700\n                                    ease-out\n                                    group-hover:grayscale-0\n                                    group-hover:contrast-100\n                                    group-hover:saturate-100\n                                " })} </div> </div> <div class="
+                                "> ${renderComponent($$result, "Image", $$Image, { "src": post.image, "alt": post.title, "width": 500, "height": 350, "class": "\r\n                                    h-auto\r\n                                    w-full\r\n                                    object-cover\r\n                                    grayscale\r\n                                    contrast-110\r\n                                    saturate-0\r\n                                    transition-[filter,opacity]\r\n                                    duration-700\r\n                                    ease-out\r\n                                    group-hover:grayscale-0\r\n                                    group-hover:contrast-100\r\n                                    group-hover:saturate-100\r\n                                " })} </div> </div> <div class="
                                 mt-5
                                 transition-transform
                                 duration-500
@@ -500,29 +514,35 @@ const $$Faq = createComponent(($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$props, $$slots);
   Astro2.self = $$Faq;
   const { faq } = Astro2.props;
+  const items = faq.items.map((item, index) => ({
+    ...item,
+    isDefaultOpen: item.defaultOpen || index === 0
+  }));
   return renderTemplate`${maybeRenderHead()}<section class="py-10"> <div class="mx-auto max-w-7xl px-6 lg:px-8"> <h2 class="font-clash text-[36px] font-semibold
           leading-[93%] tracking-[0]
           md:text-[48px]
-          lg:text-[50px] uppercase"> ${faq.title} <span class="gradient-text"> ${" "} ${faq.highlight} </span> </h2> <div class="mt-5 divide-y divide-neutral-200"> ${faq.items.map((faq2) => renderTemplate`<details class="group py-6"${addAttribute(faq2.defaultOpen, "open")}> <summary class="
-                  flex
-                  cursor-pointer
-                  list-none
-                  items-center
-                  justify-between
-                  font-clash
-                  text-[24px]
-                  font-medium
-                  leading-[28.8px]
-                  tracking-normal
-                "> <span>${faq2.question}</span> <span class="text-[24px] transition group-open:rotate-45">+</span> </summary> <p class="
-                  mt-5
-                  max-w-3xl
-                  font-geist
-                  text-[18px]
-                  leading-[28.8px]
-                  tracking-normal
-                  text-[#010101]
-                "> ${faq2.answer} </p> </details>`)} </div> </div> </section>`;
+          lg:text-[50px] uppercase"> ${faq.title} <span class="gradient-text"> ${" "} ${faq.highlight} </span> </h2> <div class="mt-8"> <div class="h-px w-full bg-gradient-to-r from-[#FEC053] via-[#F2203E] via-50% to-[#5342D6] opacity-90"></div> ${items.map((faq2, index) => renderTemplate`${renderComponent($$result, "Fragment", Fragment, {}, { "default": ($$result2) => renderTemplate` <details class="group py-6"${addAttribute(faq2.isDefaultOpen, "open")} data-faq-item> <summary class="
+                    flex
+                    cursor-pointer
+                    list-none
+                    items-center
+                    justify-between
+                    font-clash
+                    text-[24px]
+                    font-medium
+                    leading-[28.8px]
+                    tracking-normal
+                  "> <span>${faq2.question}</span> <span class="text-[24px] transition group-open:rotate-45">
++
+</span> </summary> <p class="
+                    mt-5
+                    max-w-3xl
+                    font-geist
+                    text-[18px]
+                    leading-[28.8px]
+                    tracking-normal
+                    text-[#010101]
+                  "> ${faq2.answer} </p> </details> ${index < items.length - 1 && renderTemplate`<div class="h-px w-full bg-gradient-to-r from-[#FEC053] via-[#F2203E] via-50% to-[#5342D6] opacity-90"></div>`}` })}`)} <div class="h-px w-full bg-gradient-to-r from-[#FEC053] via-[#F2203E] via-50% to-[#5342D6] opacity-90"></div> </div> </div> </section> ${renderScript($$result, "D:/D Drive/artisanal-byte/topklickz/src/components/Faq.astro?astro&type=script&index=0&lang.ts")}`;
 }, "D:/D Drive/artisanal-byte/topklickz/src/components/Faq.astro", void 0);
 
 const $$Cta = createComponent(($$result, $$props, $$slots) => {

@@ -1,5 +1,9 @@
 ---
 const { faq } = Astro.props;
+const items = faq.items.map((item, index) => ({
+  ...item,
+  isDefaultOpen: item.defaultOpen || index === 0,
+}));
 ---
 
 <section class="py-10">
@@ -17,45 +21,73 @@ const { faq } = Astro.props;
       </span>
     </h2>
 
-    <div class="mt-5 divide-y divide-neutral-200">
+    <div class="mt-8">
+      <div class="h-px w-full bg-gradient-to-r from-[#FEC053] via-[#F2203E] via-50% to-[#5342D6] opacity-90"></div>
+
       {
-        faq.items.map((faq) => (
-          <details class="group py-6" open={faq.defaultOpen}>
-            <summary
-              class="
-                  flex
-                  cursor-pointer
-                  list-none
-                  items-center
-                  justify-between
-                  font-clash
-                  text-[24px]
-                  font-medium
-                  leading-[28.8px]
-                  tracking-normal
-                "
-            >
-              <span>{faq.question}</span>
+        items.map((faq, index) => (
+          <>
+            <details class="group py-6" open={faq.isDefaultOpen} data-faq-item>
+              <summary
+                class="
+                    flex
+                    cursor-pointer
+                    list-none
+                    items-center
+                    justify-between
+                    font-clash
+                    text-[24px]
+                    font-medium
+                    leading-[28.8px]
+                    tracking-normal
+                  "
+              >
+                <span>{faq.question}</span>
 
-              <span class="text-[24px] transition group-open:rotate-45">+</span>
-            </summary>
+                <span class="text-[24px] transition group-open:rotate-45">
+                  +
+                </span>
+              </summary>
 
-            <p
-              class="
-                  mt-5
-                  max-w-3xl
-                  font-geist
-                  text-[18px]
-                  leading-[28.8px]
-                  tracking-normal
-                  text-[#010101]
-                "
-            >
-              {faq.answer}
-            </p>
-          </details>
+              <p
+                class="
+                    mt-5
+                    max-w-3xl
+                    font-geist
+                    text-[18px]
+                    leading-[28.8px]
+                    tracking-normal
+                    text-[#010101]
+                  "
+              >
+                {faq.answer}
+              </p>
+            </details>
+
+            {index < items.length - 1 && (
+              <div class="h-px w-full bg-gradient-to-r from-[#FEC053] via-[#F2203E] via-50% to-[#5342D6] opacity-90"></div>
+            )}
+          </>
         ))
       }
+
+      <div class="h-px w-full bg-gradient-to-r from-[#FEC053] via-[#F2203E] via-50% to-[#5342D6] opacity-90"></div>
     </div>
   </div>
 </section>
+
+<script>
+  const accordionItems = document.querySelectorAll("[data-faq-item]");
+
+  accordionItems.forEach((item) => {
+    item.addEventListener("toggle", () => {
+      if (!item.open) return;
+
+      accordionItems.forEach((otherItem) => {
+        if (otherItem !== item) {
+          otherItem.open = false;
+        }
+      });
+    });
+  });
+</script>
