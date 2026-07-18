@@ -12,6 +12,15 @@
     --font-clash: "Clash Grotesk", sans-serif;
 }
 
+html,
+body {
+  width: 100%;
+}
+
+body {
+  overflow-x: hidden;
+}
+
 .gradient-bg {
     background: linear-gradient(48.89deg,
             #FEC053 14.5%,

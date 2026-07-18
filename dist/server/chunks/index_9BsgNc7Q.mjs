@@ -1,8 +1,8 @@
-import { c as createComponent } from './astro-component_BEu_3S7O.mjs';
+import { c as createComponent } from './astro-component_DccjjqGf.mjs';
 import 'piccolore';
-import { e as createRenderInstruction, f as addAttribute, g as renderHead, h as renderSlot, d as renderTemplate, c as renderComponent, m as maybeRenderHead, s as spreadAttributes, F as Fragment, u as unescapeHTML } from './server_Riy8XVv5.mjs';
+import { e as createRenderInstruction, f as addAttribute, g as renderHead, h as renderSlot, d as renderTemplate, c as renderComponent, m as maybeRenderHead, s as spreadAttributes, F as Fragment, u as unescapeHTML } from './server_JAP4CgGH.mjs';
 import 'clsx';
-import { $ as $$Image } from './_astro_assets_Bm7QHWk6.mjs';
+import { $ as $$Image } from './_astro_assets_XJzQlDLW.mjs';
 import { getIconData, iconToSVG } from '@iconify/utils';
 import { createReader } from '@keystatic/core/reader';
 import { c as config } from './keystatic.config_Df-6VW00.mjs';
@@ -29,7 +29,7 @@ const $$Layout = createComponent(($$result, $$props, $$slots) => {
     description = "Topklickz - Astro",
     keywords = ""
   } = Astro2.props;
-  return renderTemplate`<html lang="en" class="scroll-smooth bg-white"> <head><meta charset="UTF-8"><meta name="description"${addAttribute(description, "content")}><meta name="keywords"${addAttribute(keywords, "content")}><meta name="viewport" content="width=device-width"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="generator"${addAttribute(Astro2.generator, "content")}><title>${title}</title><!-- schema -->${renderHead()}</head> <body class="min-h-screen bg-[radial-gradient(circle_at_top_left,rgba(255,132,0,0.08),transparent_30%),radial-gradient(circle_at_85%_18%,rgba(124,58,237,0.08),transparent_28%),#ffffff] text-[#0f0f11] antialiased"> ${renderSlot($$result, $$slots["default"])} </body></html>`;
+  return renderTemplate`<html lang="en" class="scroll-smooth bg-white"> <head><meta charset="UTF-8"><meta name="description"${addAttribute(description, "content")}><meta name="keywords"${addAttribute(keywords, "content")}><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="generator"${addAttribute(Astro2.generator, "content")}><title>${title}</title><!-- schema -->${renderHead()}</head> <body class="min-h-screen overflow-x-hidden bg-[radial-gradient(circle_at_top_left,rgba(255,132,0,0.08),transparent_30%),radial-gradient(circle_at_85%_18%,rgba(124,58,237,0.08),transparent_28%),#ffffff] text-[#0f0f11] antialiased"> ${renderSlot($$result, $$slots["default"])} </body></html>`;
 }, "D:/D Drive/artisanal-byte/topklickz/src/layouts/Layout.astro", void 0);
 
 var __freeze$1 = Object.freeze;
@@ -95,7 +95,7 @@ const $$Header = createComponent(($$result, $$props, $$slots) => {
       }
     });
   }
-<\/script>`])), maybeRenderHead(), navbar?.logo && renderTemplate`${renderComponent($$result, "Image", $$Image, { "src": navbar.logo, "alt": "Logo", "width": 80, "height": 80 })}`, navbar?.navigation?.map((item, index) => renderTemplate`<a${addAttribute(item.href, "href")}${addAttribute([
+<\/script>`])), maybeRenderHead(), navbar?.logo && renderTemplate`${renderComponent($$result, "Image", $$Image, { "src": navbar.logo, "alt": "Logo", "width": 80, "height": 80, "class": "h-12 w-auto sm:h-14 lg:h-16" })}`, navbar?.navigation?.map((item, index) => renderTemplate`<a${addAttribute(item.href, "href")}${addAttribute([
     "rounded-full px-5 py-2 font-clash text-[18px] font-bold leading-none tracking-normal transition",
     index === 0 ? "gradient-bg text-white" : "hover:bg-gray-100"
   ], "class:list")}> ${item.title} </a>`), addAttribute(navbar?.buttonLink, "href"), navbar?.buttonText, navbar?.navigation?.map((item, index) => renderTemplate`<a${addAttribute(item.href, "href")}${addAttribute([
@@ -171,21 +171,14 @@ const $$Hero = createComponent(($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$props, $$slots);
   Astro2.self = $$Hero;
   const { hero } = Astro2.props;
-  return renderTemplate`${maybeRenderHead()}<section class="relative overflow-hidden"> <div class="mx-auto max-w-7xl px-6 lg:px-8 lg:py-20 py-10"> <div class="grid items-center gap-0 lg:grid-row-3"> <!-- LEFT --> <div class="lg:col-row-2 mt-3"> <h1 class="font-clash text-4xl font-bold leading-[93%] tracking-normal text-black lg:text-[70px]"> ${hero?.title} </h1> <h2 class="mt-3 font-clash text-4xl font-semibold leading-[93%] tracking-normal
-        bg-gradient-to-r
-        from-orange-500
-        via-pink-500
-        to-violet-600
-        bg-clip-text
-        text-transparent
-        lg:text-[70px]"> ${hero?.subtitle} </h2> <h3 class="mt-3 font-clash text-4xl font-bold leading-[93%] tracking-normal text-black lg:text-[68px]"> ${hero?.description} </h3> <a${addAttribute(hero?.buttonLink, "href")} class="group mt-5 lg:mt-16 inline-flex items-center gap-4 font-geist text-[28px] font-normal leading-[114%] tracking-normal"> ${hero?.buttonText} ${renderComponent($$result, "Icon", $$Icon, { "name": hero.buttonIcon, "class": "h-8 w-8 transition-transform duration-300 group-hover:translate-x-1" })} </a> </div> <!-- RIGHT --> <div class="flex items-start justify-end lg:-mt-10 mt-5"> ${hero?.image && renderTemplate`${renderComponent($$result, "Image", $$Image, { "src": hero.image, "alt": hero?.title, "width": 380, "height": 420 })}`} </div> </div> </div> </section>`;
+  return renderTemplate`${maybeRenderHead()}<section class="relative overflow-hidden"> <div class="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8 lg:py-20"> <div class="grid items-center gap-8 lg:grid-cols-[minmax(0,1.2fr)_minmax(0,0.8fr)] lg:gap-10"> <!-- LEFT --> <div class="mt-2"> <h1 class="font-clash text-4xl font-bold leading-[93%] tracking-normal text-black sm:text-5xl lg:text-[70px]"> ${hero?.title} </h1> <h2 class="mt-3 bg-gradient-to-r from-orange-500 via-pink-500 to-violet-600 bg-clip-text font-clash text-4xl font-semibold leading-[93%] tracking-normal text-transparent sm:text-5xl lg:text-[70px]"> ${hero?.subtitle} </h2> <h3 class="mt-3 font-clash text-4xl font-bold leading-[93%] tracking-normal text-black sm:text-5xl lg:text-[68px]"> ${hero?.description} </h3> <a${addAttribute(hero?.buttonLink, "href")} class="group mt-6 inline-flex items-center gap-3 font-geist text-lg font-normal leading-[114%] tracking-normal sm:mt-8 sm:text-2xl lg:mt-16 lg:text-[28px]"> ${hero?.buttonText} ${renderComponent($$result, "Icon", $$Icon, { "name": hero.buttonIcon, "class": "h-6 w-6 transition-transform duration-300 group-hover:translate-x-1 sm:h-7 sm:w-7 lg:h-8 lg:w-8" })} </a> </div> <!-- RIGHT --> <div class="flex justify-center lg:-mt-10 lg:justify-end"> ${hero?.image && renderTemplate`${renderComponent($$result, "Image", $$Image, { "src": hero.image, "alt": hero?.title, "width": 420, "height": 520, "class": "h-auto w-full max-w-[320px] sm:max-w-[380px] lg:max-w-[420px]" })}`} </div> </div> </div> </section>`;
 }, "D:/D Drive/artisanal-byte/topklickz/src/components/Hero.astro", void 0);
 
 const $$Studio = createComponent(($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$props, $$slots);
   Astro2.self = $$Studio;
   const { studio } = Astro2.props;
-  return renderTemplate`${maybeRenderHead()}<section class="bg-black py-12 lg:py-0"> <div class="mx-auto max-w-7xl px-6 lg:px-8"> <div class="rounded-sm px-0 py-0 lg:px-14 lg:py-8"> <!-- Top --> <div class="mb-10"> <span class="text-sm text-gray-400"> ${studio.sectionNumber}/${studio.sectionTitle} </span> </div> <!-- Heading --> <div class="mx-auto max-w-5xl text-center"> <h2 class="font-clash text-[20px] lg:text-[32px] font-semibold leading-[114%] text-center text-white"> ${studio.title} </h2> <p class="mx-auto mt-8 max-w-3xl font-clash text-[20px] leading-[140%] text-center text-white/70"> ${studio.description} </p> </div> <!-- Clients --> <div class="mt-14 overflow-hidden"> <h3 class="mb-8 text-center text-3xl font-medium text-white"> ${studio.clientTitle} </h3> <div class="relative overflow-hidden mx-auto max-w-2xl"> <div class="flex w-max animate-marquee gap-12"> <!-- First Set --> ${studio.clients.map((client) => renderTemplate`<div class="flex h-16 w-30 shrink-0 items-center justify-center"> ${renderComponent($$result, "Image", $$Image, { "src": client.logo, "alt": client.alt, "width": 160, "height": 60, "class": "h-10 w-auto object-contain opacity-90 transition hover:opacity-100" })} </div>`)} <!-- Duplicate Set --> ${studio.clients.map((client) => renderTemplate`<div class="flex h-16 w-48 shrink-0 items-center justify-center"> ${renderComponent($$result, "Image", $$Image, { "src": client.logo, "alt": client.alt, "width": 160, "height": 60, "class": "h-10 w-auto object-contain opacity-90 transition hover:opacity-100" })} </div>`)} </div> </div> </div> <!-- Button --> <div class="mt-10 flex justify-center"> <a${addAttribute(studio?.buttonLink, "href")} class="hidden lg:inline-flex rounded-full p-[1px] bg-[radial-gradient(50%_83.67%_at_50%_50%,#FEC053_0%,#F2203E_33%,#B729A8_65%,#5342D6_100%)]"> <span class="flex h-[45px] w-[170px] items-center justify-center gap-2 rounded-full bg-black px-2 font-clash text-[17px] font-medium leading-none text-white"> <span class="h-6 w-6 rounded-full gradient-bg"></span> ${studio?.buttonText} </span> </a> </div> </div> </div> </section>`;
+  return renderTemplate`${maybeRenderHead()}<section class="bg-black py-12 lg:py-0"> <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"> <div class="rounded-sm px-0 py-0 lg:px-14 lg:py-8"> <!-- Top --> <div class="mb-8 sm:mb-10"> <span class="text-sm text-gray-400"> ${studio.sectionNumber}/${studio.sectionTitle} </span> </div> <!-- Heading --> <div class="mx-auto max-w-5xl text-center"> <h2 class="font-clash text-lg font-semibold leading-[114%] text-center text-white sm:text-2xl lg:text-[32px]"> ${studio.title} </h2> <p class="mx-auto mt-6 max-w-3xl font-clash text-base leading-[150%] text-center text-white/70 sm:mt-8 sm:text-lg lg:text-[20px]"> ${studio.description} </p> </div> <!-- Clients --> <div class="mt-12 overflow-hidden sm:mt-14"> <h3 class="mb-6 text-center text-xl font-medium text-white sm:mb-8 sm:text-2xl"> ${studio.clientTitle} </h3> <div class="relative mx-auto overflow-hidden max-w-2xl"> <div class="flex w-max animate-marquee gap-8 sm:gap-12"> <!-- First Set --> ${studio.clients.map((client) => renderTemplate`<div class="flex h-14 w-28 shrink-0 items-center justify-center sm:h-16 sm:w-30"> ${renderComponent($$result, "Image", $$Image, { "src": client.logo, "alt": client.alt, "width": 160, "height": 60, "class": "h-8 w-auto object-contain opacity-90 transition hover:opacity-100 sm:h-10" })} </div>`)} <!-- Duplicate Set --> ${studio.clients.map((client) => renderTemplate`<div class="flex h-14 w-36 shrink-0 items-center justify-center sm:h-16 sm:w-48"> ${renderComponent($$result, "Image", $$Image, { "src": client.logo, "alt": client.alt, "width": 160, "height": 60, "class": "h-8 w-auto object-contain opacity-90 transition hover:opacity-100 sm:h-10" })} </div>`)} </div> </div> </div> <!-- Button --> <div class="mt-8 flex justify-center sm:mt-10"> <a${addAttribute(studio?.buttonLink, "href")} class="inline-flex w-full max-w-sm rounded-full p-[1px] bg-[radial-gradient(50%_83.67%_at_50%_50%,#FEC053_0%,#F2203E_33%,#B729A8_65%,#5342D6_100%)] lg:w-auto"> <span class="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-black px-4 font-clash text-base font-medium leading-none text-white sm:h-[45px] sm:w-[170px] sm:px-2 sm:text-[17px]"> <span class="h-6 w-6 rounded-full gradient-bg"></span> ${studio?.buttonText} </span> </a> </div> </div> </div> </section>`;
 }, "D:/D Drive/artisanal-byte/topklickz/src/components/Studio.astro", void 0);
 
 var __freeze = Object.freeze;
@@ -196,40 +189,45 @@ const $$Services = createComponent(($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$props, $$slots);
   Astro2.self = $$Services;
   const { services } = Astro2.props;
-  return renderTemplate(_a || (_a = __template(["", '<section class="relative overflow-visible bg-white" data-services-section> <!-- Section Heading --> <div class="mx-auto max-w-7xl px-5 pb-14 pt-16 sm:px-6 md:pb-20 md:pt-24 lg:px-8"> <h2 class="font-clash text-[32px] font-semibold leading-[90%] text-black lg:text-[50px] uppercase"> ', ' </h2> <h2 class="mt-4 font-clash text-[32px] font-semibold leading-[90%] lg:text-[50px] uppercase"> <span class="gradient-text"> ', ' </span> <span class="text-black"> ', ' </span> </h2> </div> <!-- Services --> <div class="relative w-full overflow-visible" data-services-stack> ', ' </div> </section> <script>\n  // @ts-nocheck\n\n  (() => {\n    let serviceGroups = [];\n    let animationFrameId = 0;\n\n    const clamp = (value, minimum, maximum) => {\n      return Math.min(\n        Math.max(value, minimum),\n        maximum,\n      );\n    };\n\n    const collectServicePanels = () => {\n      const sections = document.querySelectorAll(\n        "[data-services-section]",\n      );\n\n      serviceGroups = Array.from(sections).map(\n        (section) => {\n          const panels = Array.from(\n            section.querySelectorAll(\n              "[data-service-panel]",\n            ),\n          )\n            .map((panel) => {\n              const content = panel.querySelector(\n                "[data-service-content]",\n              );\n\n              if (!content) {\n                return null;\n              }\n\n              return {\n                panel,\n                content,\n              };\n            })\n            .filter(Boolean);\n\n          return {\n            section,\n            panels,\n          };\n        },\n      );\n    };\n\n    const initializeFeatureLists = () => {\n      const featureLists =\n        document.querySelectorAll(\n          "[data-features-list]",\n        );\n\n      featureLists.forEach((list) => {\n        if (\n          list.dataset.initialized === "true"\n        ) {\n          return;\n        }\n\n        list.dataset.initialized = "true";\n\n        const items = Array.from(\n          list.querySelectorAll(\n            "[data-feature-item]",\n          ),\n        );\n\n        if (!items.length) {\n          return;\n        }\n\n        const setActiveItem = (selectedItem) => {\n          items.forEach((item) => {\n            item.dataset.active =\n              item === selectedItem\n                ? "true"\n                : "false";\n          });\n        };\n\n        const getFeatureItem = (event) => {\n          if (\n            !(event.target instanceof Element)\n          ) {\n            return null;\n          }\n\n          const item = event.target.closest(\n            "[data-feature-item]",\n          );\n\n          if (\n            !item ||\n            !list.contains(item)\n          ) {\n            return null;\n          }\n\n          return item;\n        };\n\n        list.addEventListener(\n          "pointerover",\n          (event) => {\n            if (\n              !window.matchMedia(\n                "(hover: hover)",\n              ).matches\n            ) {\n              return;\n            }\n\n            const item = getFeatureItem(event);\n\n            if (item) {\n              setActiveItem(item);\n            }\n          },\n        );\n\n        list.addEventListener(\n          "click",\n          (event) => {\n            const item = getFeatureItem(event);\n\n            if (item) {\n              setActiveItem(item);\n            }\n          },\n        );\n\n        list.addEventListener(\n          "focusin",\n          (event) => {\n            const item = getFeatureItem(event);\n\n            if (item) {\n              setActiveItem(item);\n            }\n          },\n        );\n\n        list.addEventListener(\n          "pointerleave",\n          () => {\n            if (\n              window.matchMedia(\n                "(hover: hover)",\n              ).matches\n            ) {\n              setActiveItem(items[0]);\n            }\n          },\n        );\n\n        list.addEventListener(\n          "focusout",\n          (event) => {\n            const nextElement =\n              event.relatedTarget;\n\n            if (\n              !(nextElement instanceof Node) ||\n              !list.contains(nextElement)\n            ) {\n              setActiveItem(items[0]);\n            }\n          },\n        );\n      });\n    };\n\n    const resetServicePanels = () => {\n      serviceGroups.forEach((group) => {\n        group.panels.forEach((entry) => {\n          entry.content.style.transform =\n            "translate3d(0, 0, 0) scale(1)";\n\n          entry.content.style.opacity = "1";\n        });\n      });\n    };\n\n    const updateServicePanels = () => {\n      const reducedMotion =\n        window.matchMedia(\n          "(prefers-reduced-motion: reduce)",\n        ).matches;\n\n      if (reducedMotion) {\n        resetServicePanels();\n        return;\n      }\n\n      const viewportHeight =\n        window.innerHeight ||\n        document.documentElement.clientHeight;\n\n      const isMobile =\n        window.innerWidth < 768;\n\n      serviceGroups.forEach((group) => {\n        group.panels.forEach(\n          (entry, index) => {\n            const nextEntry =\n              group.panels[index + 1];\n\n            if (!nextEntry) {\n              entry.content.style.transform =\n                "translate3d(0, 0, 0) scale(1)";\n\n              entry.content.style.opacity = "1";\n              return;\n            }\n\n            const nextPanelTop =\n              nextEntry.panel\n                .getBoundingClientRect()\n                .top;\n\n            const animationRange =\n              viewportHeight *\n              (isMobile ? 0.55 : 0.68);\n\n            const progress = clamp(\n              (viewportHeight - nextPanelTop) /\n                animationRange,\n              0,\n              1,\n            );\n\n            const translateY =\n              progress *\n              (isMobile ? -16 : -18);\n\n            const scale =\n              1 -\n              progress *\n                (isMobile ? 0.008 : 0.012);\n\n            const opacity =\n              1 -\n              progress *\n                (isMobile ? 0.14 : 0.22);\n\n            entry.content.style.transform = `\n              translate3d(\n                0,\n                ${translateY.toFixed(2)}px,\n                0\n              )\n              scale(${scale.toFixed(4)})\n            `;\n\n            entry.content.style.opacity =\n              opacity.toFixed(3);\n          },\n        );\n      });\n    };\n\n    const requestServiceUpdate = () => {\n      if (animationFrameId) {\n        return;\n      }\n\n      animationFrameId =\n        window.requestAnimationFrame(() => {\n          updateServicePanels();\n          animationFrameId = 0;\n        });\n    };\n\n    const initializeServices = () => {\n      collectServicePanels();\n      initializeFeatureLists();\n      requestServiceUpdate();\n    };\n\n    initializeServices();\n\n    if (\n      document.documentElement.dataset\n        .servicesEventsBound !== "true"\n    ) {\n      document.documentElement.dataset\n        .servicesEventsBound = "true";\n\n      window.addEventListener(\n        "scroll",\n        requestServiceUpdate,\n        {\n          passive: true,\n        },\n      );\n\n      window.addEventListener(\n        "resize",\n        () => {\n          collectServicePanels();\n          requestServiceUpdate();\n        },\n        {\n          passive: true,\n        },\n      );\n\n      document.addEventListener(\n        "astro:page-load",\n        initializeServices,\n      );\n    }\n  })();\n<\/script>'], ["", '<section class="relative overflow-visible bg-white" data-services-section> <!-- Section Heading --> <div class="mx-auto max-w-7xl px-5 pb-14 pt-16 sm:px-6 md:pb-20 md:pt-24 lg:px-8"> <h2 class="font-clash text-[32px] font-semibold leading-[90%] text-black lg:text-[50px] uppercase"> ', ' </h2> <h2 class="mt-4 font-clash text-[32px] font-semibold leading-[90%] lg:text-[50px] uppercase"> <span class="gradient-text"> ', ' </span> <span class="text-black"> ', ' </span> </h2> </div> <!-- Services --> <div class="relative w-full overflow-visible" data-services-stack> ', ' </div> </section> <script>\n  // @ts-nocheck\n\n  (() => {\n    let serviceGroups = [];\n    let animationFrameId = 0;\n\n    const clamp = (value, minimum, maximum) => {\n      return Math.min(\n        Math.max(value, minimum),\n        maximum,\n      );\n    };\n\n    const collectServicePanels = () => {\n      const sections = document.querySelectorAll(\n        "[data-services-section]",\n      );\n\n      serviceGroups = Array.from(sections).map(\n        (section) => {\n          const panels = Array.from(\n            section.querySelectorAll(\n              "[data-service-panel]",\n            ),\n          )\n            .map((panel) => {\n              const content = panel.querySelector(\n                "[data-service-content]",\n              );\n\n              if (!content) {\n                return null;\n              }\n\n              return {\n                panel,\n                content,\n              };\n            })\n            .filter(Boolean);\n\n          return {\n            section,\n            panels,\n          };\n        },\n      );\n    };\n\n    const initializeFeatureLists = () => {\n      const featureLists =\n        document.querySelectorAll(\n          "[data-features-list]",\n        );\n\n      featureLists.forEach((list) => {\n        if (\n          list.dataset.initialized === "true"\n        ) {\n          return;\n        }\n\n        list.dataset.initialized = "true";\n\n        const items = Array.from(\n          list.querySelectorAll(\n            "[data-feature-item]",\n          ),\n        );\n\n        if (!items.length) {\n          return;\n        }\n\n        const setActiveItem = (selectedItem) => {\n          items.forEach((item) => {\n            item.dataset.active =\n              item === selectedItem\n                ? "true"\n                : "false";\n          });\n        };\n\n        const getFeatureItem = (event) => {\n          if (\n            !(event.target instanceof Element)\n          ) {\n            return null;\n          }\n\n          const item = event.target.closest(\n            "[data-feature-item]",\n          );\n\n          if (\n            !item ||\n            !list.contains(item)\n          ) {\n            return null;\n          }\n\n          return item;\n        };\n\n        list.addEventListener(\n          "pointerover",\n          (event) => {\n            if (\n              !window.matchMedia(\n                "(hover: hover)",\n              ).matches\n            ) {\n              return;\n            }\n\n            const item = getFeatureItem(event);\n\n            if (item) {\n              setActiveItem(item);\n            }\n          },\n        );\n\n        list.addEventListener(\n          "click",\n          (event) => {\n            const item = getFeatureItem(event);\n\n            if (item) {\n              setActiveItem(item);\n            }\n          },\n        );\n\n        list.addEventListener(\n          "focusin",\n          (event) => {\n            const item = getFeatureItem(event);\n\n            if (item) {\n              setActiveItem(item);\n            }\n          },\n        );\n\n        list.addEventListener(\n          "pointerleave",\n          () => {\n            if (\n              window.matchMedia(\n                "(hover: hover)",\n              ).matches\n            ) {\n              setActiveItem(items[0]);\n            }\n          },\n        );\n\n        list.addEventListener(\n          "focusout",\n          (event) => {\n            const nextElement =\n              event.relatedTarget;\n\n            if (\n              !(nextElement instanceof Node) ||\n              !list.contains(nextElement)\n            ) {\n              setActiveItem(items[0]);\n            }\n          },\n        );\n      });\n    };\n\n    const resetServicePanels = () => {\n      serviceGroups.forEach((group) => {\n        group.panels.forEach((entry) => {\n          entry.content.style.transform =\n            "translate3d(0, 0, 0) scale(1)";\n\n          entry.content.style.opacity = "1";\n        });\n      });\n    };\n\n    const updateServicePanels = () => {\n      const reducedMotion =\n        window.matchMedia(\n          "(prefers-reduced-motion: reduce)",\n        ).matches;\n\n      if (reducedMotion) {\n        resetServicePanels();\n        return;\n      }\n\n      const viewportHeight =\n        window.innerHeight ||\n        document.documentElement.clientHeight;\n\n      const isMobile =\n        window.innerWidth < 768;\n\n      serviceGroups.forEach((group) => {\n        group.panels.forEach(\n          (entry, index) => {\n            const nextEntry =\n              group.panels[index + 1];\n\n            if (!nextEntry) {\n              entry.content.style.transform =\n                "translate3d(0, 0, 0) scale(1)";\n\n              entry.content.style.opacity = "1";\n              return;\n            }\n\n            const nextPanelTop =\n              nextEntry.panel\n                .getBoundingClientRect()\n                .top;\n\n            const animationRange =\n              viewportHeight *\n              (isMobile ? 0.55 : 0.68);\n\n            const progress = clamp(\n              (viewportHeight - nextPanelTop) /\n                animationRange,\n              0,\n              1,\n            );\n\n            const translateY =\n              progress *\n              (isMobile ? -16 : -18);\n\n            const scale =\n              1 -\n              progress *\n                (isMobile ? 0.008 : 0.012);\n\n            const opacity =\n              1 -\n              progress *\n                (isMobile ? 0.14 : 0.22);\n\n            entry.content.style.transform = \\`\n              translate3d(\n                0,\n                \\${translateY.toFixed(2)}px,\n                0\n              )\n              scale(\\${scale.toFixed(4)})\n            \\`;\n\n            entry.content.style.opacity =\n              opacity.toFixed(3);\n          },\n        );\n      });\n    };\n\n    const requestServiceUpdate = () => {\n      if (animationFrameId) {\n        return;\n      }\n\n      animationFrameId =\n        window.requestAnimationFrame(() => {\n          updateServicePanels();\n          animationFrameId = 0;\n        });\n    };\n\n    const initializeServices = () => {\n      collectServicePanels();\n      initializeFeatureLists();\n      requestServiceUpdate();\n    };\n\n    initializeServices();\n\n    if (\n      document.documentElement.dataset\n        .servicesEventsBound !== "true"\n    ) {\n      document.documentElement.dataset\n        .servicesEventsBound = "true";\n\n      window.addEventListener(\n        "scroll",\n        requestServiceUpdate,\n        {\n          passive: true,\n        },\n      );\n\n      window.addEventListener(\n        "resize",\n        () => {\n          collectServicePanels();\n          requestServiceUpdate();\n        },\n        {\n          passive: true,\n        },\n      );\n\n      document.addEventListener(\n        "astro:page-load",\n        initializeServices,\n      );\n    }\n  })();\n<\/script>'])), maybeRenderHead(), services.title, services.gradientTitle, services.endTitle, services.items.map((service, serviceIndex) => renderTemplate`<article class="
-            sticky top-4 isolate w-full bg-white py-8
-            border-t border-gray-200
-            sm:top-6
-            lg:top-0 lg:py-8
+  return renderTemplate(_a || (_a = __template(["", '<section class="relative overflow-visible bg-white" data-services-section> <!-- Section Heading --> <div class="mx-auto max-w-7xl px-4 pb-14 pt-16 sm:px-6 md:pb-20 md:pt-24 lg:px-8"> <h2 class="font-clash text-3xl font-semibold leading-[90%] text-black uppercase sm:text-4xl lg:text-[50px]"> ', ' </h2> <h2 class="mt-4 font-clash text-3xl font-semibold leading-[90%] uppercase sm:text-4xl lg:text-[50px]"> <span class="gradient-text"> ', ' </span> <span class="text-black"> ', ' </span> </h2> </div> <!-- Services --> <div class="relative w-full overflow-visible" data-services-stack> ', ' </div> </section> <script>\n  // @ts-nocheck\n\n  (() => {\n    let serviceGroups = [];\n    let animationFrameId = 0;\n\n    const clamp = (value, minimum, maximum) => {\n      return Math.min(\n        Math.max(value, minimum),\n        maximum,\n      );\n    };\n\n    const collectServicePanels = () => {\n      const sections = document.querySelectorAll(\n        "[data-services-section]",\n      );\n\n      serviceGroups = Array.from(sections).map(\n        (section) => {\n          const panels = Array.from(\n            section.querySelectorAll(\n              "[data-service-panel]",\n            ),\n          )\n            .map((panel) => {\n              const content = panel.querySelector(\n                "[data-service-content]",\n              );\n\n              if (!content) {\n                return null;\n              }\n\n              return {\n                panel,\n                content,\n              };\n            })\n            .filter(Boolean);\n\n          return {\n            section,\n            panels,\n          };\n        },\n      );\n    };\n\n    const initializeFeatureLists = () => {\n      const featureLists =\n        document.querySelectorAll(\n          "[data-features-list]",\n        );\n\n      featureLists.forEach((list) => {\n        if (\n          list.dataset.initialized === "true"\n        ) {\n          return;\n        }\n\n        list.dataset.initialized = "true";\n\n        const items = Array.from(\n          list.querySelectorAll(\n            "[data-feature-item]",\n          ),\n        );\n\n        if (!items.length) {\n          return;\n        }\n\n        const setActiveItem = (selectedItem) => {\n          items.forEach((item) => {\n            item.dataset.active =\n              item === selectedItem\n                ? "true"\n                : "false";\n          });\n        };\n\n        const getFeatureItem = (event) => {\n          if (\n            !(event.target instanceof Element)\n          ) {\n            return null;\n          }\n\n          const item = event.target.closest(\n            "[data-feature-item]",\n          );\n\n          if (\n            !item ||\n            !list.contains(item)\n          ) {\n            return null;\n          }\n\n          return item;\n        };\n\n        list.addEventListener(\n          "pointerover",\n          (event) => {\n            if (\n              !window.matchMedia(\n                "(hover: hover)",\n              ).matches\n            ) {\n              return;\n            }\n\n            const item = getFeatureItem(event);\n\n            if (item) {\n              setActiveItem(item);\n            }\n          },\n        );\n\n        list.addEventListener(\n          "click",\n          (event) => {\n            const item = getFeatureItem(event);\n\n            if (item) {\n              setActiveItem(item);\n            }\n          },\n        );\n\n        list.addEventListener(\n          "focusin",\n          (event) => {\n            const item = getFeatureItem(event);\n\n            if (item) {\n              setActiveItem(item);\n            }\n          },\n        );\n\n        list.addEventListener(\n          "pointerleave",\n          () => {\n            if (\n              window.matchMedia(\n                "(hover: hover)",\n              ).matches\n            ) {\n              setActiveItem(items[0]);\n            }\n          },\n        );\n\n        list.addEventListener(\n          "focusout",\n          (event) => {\n            const nextElement =\n              event.relatedTarget;\n\n            if (\n              !(nextElement instanceof Node) ||\n              !list.contains(nextElement)\n            ) {\n              setActiveItem(items[0]);\n            }\n          },\n        );\n      });\n    };\n\n    const resetServicePanels = () => {\n      serviceGroups.forEach((group) => {\n        group.panels.forEach((entry) => {\n          entry.content.style.transform =\n            "translate3d(0, 0, 0) scale(1)";\n\n          entry.content.style.opacity = "1";\n        });\n      });\n    };\n\n    const updateServicePanels = () => {\n      const reducedMotion =\n        window.matchMedia(\n          "(prefers-reduced-motion: reduce)",\n        ).matches;\n\n      if (reducedMotion) {\n        resetServicePanels();\n        return;\n      }\n\n      const viewportHeight =\n        window.innerHeight ||\n        document.documentElement.clientHeight;\n\n      serviceGroups.forEach((group) => {\n        group.panels.forEach(\n          (entry, index) => {\n            const nextEntry =\n              group.panels[index + 1];\n\n            if (!nextEntry) {\n              entry.content.style.transform =\n                "translate3d(0, 0, 0) scale(1)";\n\n              entry.content.style.opacity = "1";\n              return;\n            }\n\n            const nextPanelTop =\n              nextEntry.panel\n                .getBoundingClientRect()\n                .top;\n\n            const animationRange =\n              viewportHeight * 0.68;\n\n            const progress = clamp(\n              (viewportHeight - nextPanelTop) /\n                animationRange,\n              0,\n              1,\n            );\n\n            const translateY = progress * -18;\n            const scale = 1 - progress * 0.012;\n            const opacity = 1 - progress * 0.22;\n\n            entry.content.style.transform = `\n              translate3d(\n                0,\n                ${translateY.toFixed(2)}px,\n                0\n              )\n              scale(${scale.toFixed(4)})\n            `;\n\n            entry.content.style.opacity =\n              opacity.toFixed(3);\n          },\n        );\n      });\n    };\n\n    const requestServiceUpdate = () => {\n      if (animationFrameId) {\n        return;\n      }\n\n      animationFrameId =\n        window.requestAnimationFrame(() => {\n          updateServicePanels();\n          animationFrameId = 0;\n        });\n    };\n\n    const initializeServices = () => {\n      collectServicePanels();\n      initializeFeatureLists();\n      requestServiceUpdate();\n    };\n\n    initializeServices();\n\n    if (\n      document.documentElement.dataset\n        .servicesEventsBound !== "true"\n    ) {\n      document.documentElement.dataset\n        .servicesEventsBound = "true";\n\n      window.addEventListener(\n        "scroll",\n        requestServiceUpdate,\n        {\n          passive: true,\n        },\n      );\n\n      window.addEventListener(\n        "resize",\n        () => {\n          collectServicePanels();\n          requestServiceUpdate();\n        },\n        {\n          passive: true,\n        },\n      );\n\n      document.addEventListener(\n        "astro:page-load",\n        initializeServices,\n      );\n    }\n  })();\n<\/script>'], ["", '<section class="relative overflow-visible bg-white" data-services-section> <!-- Section Heading --> <div class="mx-auto max-w-7xl px-4 pb-14 pt-16 sm:px-6 md:pb-20 md:pt-24 lg:px-8"> <h2 class="font-clash text-3xl font-semibold leading-[90%] text-black uppercase sm:text-4xl lg:text-[50px]"> ', ' </h2> <h2 class="mt-4 font-clash text-3xl font-semibold leading-[90%] uppercase sm:text-4xl lg:text-[50px]"> <span class="gradient-text"> ', ' </span> <span class="text-black"> ', ' </span> </h2> </div> <!-- Services --> <div class="relative w-full overflow-visible" data-services-stack> ', ' </div> </section> <script>\n  // @ts-nocheck\n\n  (() => {\n    let serviceGroups = [];\n    let animationFrameId = 0;\n\n    const clamp = (value, minimum, maximum) => {\n      return Math.min(\n        Math.max(value, minimum),\n        maximum,\n      );\n    };\n\n    const collectServicePanels = () => {\n      const sections = document.querySelectorAll(\n        "[data-services-section]",\n      );\n\n      serviceGroups = Array.from(sections).map(\n        (section) => {\n          const panels = Array.from(\n            section.querySelectorAll(\n              "[data-service-panel]",\n            ),\n          )\n            .map((panel) => {\n              const content = panel.querySelector(\n                "[data-service-content]",\n              );\n\n              if (!content) {\n                return null;\n              }\n\n              return {\n                panel,\n                content,\n              };\n            })\n            .filter(Boolean);\n\n          return {\n            section,\n            panels,\n          };\n        },\n      );\n    };\n\n    const initializeFeatureLists = () => {\n      const featureLists =\n        document.querySelectorAll(\n          "[data-features-list]",\n        );\n\n      featureLists.forEach((list) => {\n        if (\n          list.dataset.initialized === "true"\n        ) {\n          return;\n        }\n\n        list.dataset.initialized = "true";\n\n        const items = Array.from(\n          list.querySelectorAll(\n            "[data-feature-item]",\n          ),\n        );\n\n        if (!items.length) {\n          return;\n        }\n\n        const setActiveItem = (selectedItem) => {\n          items.forEach((item) => {\n            item.dataset.active =\n              item === selectedItem\n                ? "true"\n                : "false";\n          });\n        };\n\n        const getFeatureItem = (event) => {\n          if (\n            !(event.target instanceof Element)\n          ) {\n            return null;\n          }\n\n          const item = event.target.closest(\n            "[data-feature-item]",\n          );\n\n          if (\n            !item ||\n            !list.contains(item)\n          ) {\n            return null;\n          }\n\n          return item;\n        };\n\n        list.addEventListener(\n          "pointerover",\n          (event) => {\n            if (\n              !window.matchMedia(\n                "(hover: hover)",\n              ).matches\n            ) {\n              return;\n            }\n\n            const item = getFeatureItem(event);\n\n            if (item) {\n              setActiveItem(item);\n            }\n          },\n        );\n\n        list.addEventListener(\n          "click",\n          (event) => {\n            const item = getFeatureItem(event);\n\n            if (item) {\n              setActiveItem(item);\n            }\n          },\n        );\n\n        list.addEventListener(\n          "focusin",\n          (event) => {\n            const item = getFeatureItem(event);\n\n            if (item) {\n              setActiveItem(item);\n            }\n          },\n        );\n\n        list.addEventListener(\n          "pointerleave",\n          () => {\n            if (\n              window.matchMedia(\n                "(hover: hover)",\n              ).matches\n            ) {\n              setActiveItem(items[0]);\n            }\n          },\n        );\n\n        list.addEventListener(\n          "focusout",\n          (event) => {\n            const nextElement =\n              event.relatedTarget;\n\n            if (\n              !(nextElement instanceof Node) ||\n              !list.contains(nextElement)\n            ) {\n              setActiveItem(items[0]);\n            }\n          },\n        );\n      });\n    };\n\n    const resetServicePanels = () => {\n      serviceGroups.forEach((group) => {\n        group.panels.forEach((entry) => {\n          entry.content.style.transform =\n            "translate3d(0, 0, 0) scale(1)";\n\n          entry.content.style.opacity = "1";\n        });\n      });\n    };\n\n    const updateServicePanels = () => {\n      const reducedMotion =\n        window.matchMedia(\n          "(prefers-reduced-motion: reduce)",\n        ).matches;\n\n      if (reducedMotion) {\n        resetServicePanels();\n        return;\n      }\n\n      const viewportHeight =\n        window.innerHeight ||\n        document.documentElement.clientHeight;\n\n      serviceGroups.forEach((group) => {\n        group.panels.forEach(\n          (entry, index) => {\n            const nextEntry =\n              group.panels[index + 1];\n\n            if (!nextEntry) {\n              entry.content.style.transform =\n                "translate3d(0, 0, 0) scale(1)";\n\n              entry.content.style.opacity = "1";\n              return;\n            }\n\n            const nextPanelTop =\n              nextEntry.panel\n                .getBoundingClientRect()\n                .top;\n\n            const animationRange =\n              viewportHeight * 0.68;\n\n            const progress = clamp(\n              (viewportHeight - nextPanelTop) /\n                animationRange,\n              0,\n              1,\n            );\n\n            const translateY = progress * -18;\n            const scale = 1 - progress * 0.012;\n            const opacity = 1 - progress * 0.22;\n\n            entry.content.style.transform = \\`\n              translate3d(\n                0,\n                \\${translateY.toFixed(2)}px,\n                0\n              )\n              scale(\\${scale.toFixed(4)})\n            \\`;\n\n            entry.content.style.opacity =\n              opacity.toFixed(3);\n          },\n        );\n      });\n    };\n\n    const requestServiceUpdate = () => {\n      if (animationFrameId) {\n        return;\n      }\n\n      animationFrameId =\n        window.requestAnimationFrame(() => {\n          updateServicePanels();\n          animationFrameId = 0;\n        });\n    };\n\n    const initializeServices = () => {\n      collectServicePanels();\n      initializeFeatureLists();\n      requestServiceUpdate();\n    };\n\n    initializeServices();\n\n    if (\n      document.documentElement.dataset\n        .servicesEventsBound !== "true"\n    ) {\n      document.documentElement.dataset\n        .servicesEventsBound = "true";\n\n      window.addEventListener(\n        "scroll",\n        requestServiceUpdate,\n        {\n          passive: true,\n        },\n      );\n\n      window.addEventListener(\n        "resize",\n        () => {\n          collectServicePanels();\n          requestServiceUpdate();\n        },\n        {\n          passive: true,\n        },\n      );\n\n      document.addEventListener(\n        "astro:page-load",\n        initializeServices,\n      );\n    }\n  })();\n<\/script>'])), maybeRenderHead(), services.title, services.gradientTitle, services.endTitle, services.items.map((service, serviceIndex) => renderTemplate`<article class="
+            sticky top-0 isolate w-full border-t border-gray-200 bg-white py-6 sm:py-7 lg:py-8
           "${addAttribute(`z-index: ${serviceIndex + 10};`, "style")} data-service-panel> <div class="
-              mx-auto grid w-full max-w-7xl content-center gap-7 px-5 pt-8 transition-[transform,opacity] duration-500 ease-out
+              mx-auto grid w-full max-w-7xl content-center gap-10 px-5 pt-12 transition-[transform,opacity] duration-300 ease-out
               will-change-transform
-              lg:gap-16
+              sm:px-6
               lg:grid-cols-2
+              lg:gap-16
               lg:px-8
               lg:pt-16
             " data-service-content> <!-- Left Content --> <div> <div class="
-                  flex items-start gap-4 sm:gap-7 lg:gap-8
+                  flex items-start
+                  gap-4
+                  sm:gap-7
+                  lg:gap-8
                 "> <!-- Service Number --> <span class="
-                    w-8 shrink-0 font-clash text-xl
+                    w-9 shrink-0
+                    font-clash text-2xl
                     font-light text-gray-400
 
                     sm:w-12 sm:text-3xl
                     lg:text-4xl
                   "> ${service.number} </span> <div class="min-w-0 flex-1"> <!-- Service Title --> <h3 class="
-                      font-clash text-[22px] font-bold
+                      font-clash
+                      text-3xl font-bold
                       leading-[93%] text-black
 
                       sm:text-[40px]
                       lg:text-[48px]
                     "> ${service.title} </h3> <!-- Features --> <ul class="
-                      mt-5 space-y-2
-                      sm:mt-8 sm:space-y-3
+                      mt-7 space-y-3
+                      sm:mt-8
                     "${addAttribute(`${service.title} features`, "aria-label")} data-features-list> ${service.features?.map(
     (feature, featureIndex) => renderTemplate`<li class="
-                              group flex cursor-pointer items-center gap-3
+                              group flex cursor-pointer
+                              items-center gap-3
 
-                              font-clash text-[15px] font-normal
+                              font-clash
+                              text-lg font-normal
                               leading-[106%]
                               text-gray-400
 
@@ -254,7 +252,7 @@ const $$Services = createComponent(($$result, $$props, $$slots) => {
       featureIndex === 0 ? "true" : "false",
       "data-active"
     )} tabindex="0"> <!-- Gradient Indicator --> <span class="
-                                block h-[4px] w-0
+                                block h-[5px] w-0
                                 shrink-0 rounded-full
 
                                 bg-gradient-to-r
@@ -267,59 +265,63 @@ const $$Services = createComponent(($$result, $$props, $$slots) => {
                                 transition-all
                                 duration-300 ease-out
 
-                                group-hover:w-[14px]
+                                group-hover:w-[18px]
                                 group-hover:opacity-100
 
-                                group-focus-visible:w-[14px]
+                                group-focus-visible:w-[18px]
                                 group-focus-visible:opacity-100
 
-                                group-data-[active=true]:w-[14px]
+                                group-data-[active=true]:w-[18px]
                                 group-data-[active=true]:opacity-100
                               " aria-hidden="true"></span> <span>${feature}</span> </li>`
-  )} </ul> <!-- Button --> <a${addAttribute(service.buttonLink, "href")} class="group mt-8 inline-flex w-full max-w-[320px] rounded-full bg-[radial-gradient(circle_at_center,#FEC053_0%,#F2203E_33%,#B729A8_65%,#5342D6_100%)] p-[1.5px] transition-all duration-300 sm:mt-10 sm:w-auto"> <span class="flex w-full items-center justify-between gap-4 rounded-full bg-white px-3 py-2.5 pr-4 transition-colors duration-300 group-hover:bg-violet-50 sm:w-auto sm:justify-start sm:px-2 sm:pr-6"> <!-- Icon --> <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full gradient-bg transition-transform duration-300 group-hover:rotate-45 sm:h-10 sm:w-10"> ${renderComponent($$result, "Icon", $$Icon, { "name": service.buttonIcon, "class": "h-5 w-5 text-white" })} </span> <!-- Text --> <span class="whitespace-nowrap font-clash text-[15px] font-medium leading-[100%] tracking-[0] text-black sm:text-[20px]"> ${service.buttonText} </span> </span> </a> </div> </div> </div> <!-- Right Content --> <div class="lg:pt-1"> <!-- Description --> <p class="
-                  max-w-xl font-clash text-[15px] leading-[1.55]
+  )} </ul> <!-- Button --> <a${addAttribute(service.buttonLink, "href")} class="group mt-10 inline-flex max-w-full rounded-full bg-[radial-gradient(circle_at_center,#FEC053_0%,#F2203E_33%,#B729A8_65%,#5342D6_100%)] p-[1.5px] transition-all duration-300 sm:mt-14"> <span class="flex w-full items-center gap-2 rounded-full bg-white px-2 py-2 pr-4 transition-colors duration-300 group-hover:bg-violet-50 sm:w-auto sm:gap-4 sm:px-2 sm:pr-6"> <!-- Icon --> <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full gradient-bg transition-transform duration-300 group-hover:rotate-45 sm:h-10 sm:w-10"> ${renderComponent($$result, "Icon", $$Icon, { "name": service.buttonIcon, "class": "h-4 w-4 text-white sm:h-5 sm:w-5" })} </span> <!-- Text --> <span class="whitespace-nowrap font-clash text-sm font-medium leading-[100%] tracking-[0] text-black sm:text-[20px]"> ${service.buttonText} </span> </span> </a> </div> </div> </div> <!-- Right Content --> <div class="lg:pt-1"> <!-- Description --> <p class="
+                  max-w-xl
+                  font-clash
+                  text-sm leading-relaxed
                   text-gray-800
 
-                  sm:text-xl
+                  sm:text-base
 
                   lg:text-2xl
                   lg:leading-relaxed
                 "> ${service.description} </p> <!-- Image --> ${service.image && renderTemplate`<div class="
-                      group mt-6
-                      overflow-hidden
+                      group mt-6 overflow-hidden
                       rounded-xl
                       bg-gray-100
 
                       sm:mt-10
-                    "> ${renderComponent($$result, "Image", $$Image, { "src": service.image, "alt": service.title, "width": 800, "height": 500, "loading": serviceIndex === 0 ? "eager" : "lazy", "decoding": "async", "class": "\n                        h-auto w-full\n                        object-cover\n                        transition-transform\n                        duration-700 ease-out\n                        lg:group-hover:scale-[1.025]\n                      " })} </div>`} </div> </div> </article>`));
+                      md:mt-12
+                    "> ${renderComponent($$result, "Image", $$Image, { "src": service.image, "alt": service.title, "width": 800, "height": 500, "loading": serviceIndex === 0 ? "eager" : "lazy", "decoding": "async", "class": "\r\n                        h-auto w-full max-h-[220px]\n                        object-cover\n\n                        transition-transform\n                        duration-700 ease-out\n\n                        sm:max-h-none\n                        group-hover:scale-[1.025]\n                      " })} </div>`} </div> </div> </article>`));
 }, "D:/D Drive/artisanal-byte/topklickz/src/components/Services.astro", void 0);
 
 const $$Work = createComponent(($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$props, $$slots);
   Astro2.self = $$Work;
   const { work } = Astro2.props;
-  return renderTemplate`${maybeRenderHead()}<section class="relative bg-white py-18"> <div class="mx-auto max-w-7xl px-6 lg:px-8"> <!-- Header --> <div class="
+  return renderTemplate`${maybeRenderHead()}<section class="relative bg-white py-16 sm:py-20 lg:py-24"> <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"> <!-- Header --> <div class="
         mb-12 flex flex-col gap-6 pb-8
         lg:flex-row lg:items-start lg:justify-between
       "> <h2 class="
-          font-clash text-[36px] font-semibold
+          font-clash text-4xl font-semibold
           leading-[93%] tracking-[0]
           md:text-[48px]
           lg:text-[50px] uppercase
         "> ${work.title} </h2> <p class="
           max-w-xl
-          font-geist text-[20px]
+          font-geist text-base
           leading-[134%] tracking-[0]
+          sm:text-lg
           lg:text-[22px]
         "> ${work.description} </p> <a${addAttribute(work.buttonLink, "href")} class="
           group mt-2 inline-flex items-center gap-2
-          font-geist text-[27px] font-light
+          font-geist text-lg font-light
           leading-[114%] tracking-[0]
           text-black
           transition-colors duration-300
           hover:text-violet-600
-        "> <span>${work.buttonText}</span> ${renderComponent($$result, "Icon", $$Icon, { "name": work.buttonIcon, "class": "\r\n            h-5 w-5\r\n            transition-transform duration-300\r\n            group-hover:translate-x-1\r\n          " })} </a> </div> <!-- Projects --> <div class="grid gap-12 md:grid-cols-2"> ${work.projects.map((project) => renderTemplate`<a${addAttribute(project.link, "href")} class="group block"> <!-- Image --> <div class="overflow-hidden rounded-md"> ${renderComponent($$result, "Image", $$Image, { "src": project.image, "alt": project.title, "width": 700, "height": 500, "class": "\r\n                  h-[260px] w-full object-cover\r\n                  transition-transform duration-700 ease-out\r\n                  group-hover:scale-[1.03]\r\n                  sm:h-[300px]\r\n                  lg:h-[320px]\r\n                " })} </div> <!-- Content --> <div class="mt-4"> <h3 class="
-                  font-clash text-[28px] font-semibold
+          sm:text-[22px]
+        "> <span>${work.buttonText}</span> ${renderComponent($$result, "Icon", $$Icon, { "name": work.buttonIcon, "class": "\r\n            h-5 w-5\r\n            transition-transform duration-300\r\n            group-hover:translate-x-1\r\n          " })} </a> </div> <!-- Projects --> <div class="grid gap-12 md:grid-cols-2"> ${work.projects.map((project) => renderTemplate`<a${addAttribute(project.link, "href")} class="group block"> <!-- Image --> <div class="overflow-hidden rounded-md"> ${renderComponent($$result, "Image", $$Image, { "src": project.image, "alt": project.title, "width": 700, "height": 500, "class": "\r\n                  h-[240px] w-full object-cover\n                  transition-transform duration-700 ease-out\n                  group-hover:scale-[1.03]\n                  sm:h-[280px]\n                  lg:h-[320px]\n                " })} </div> <!-- Content --> <div class="mt-4"> <h3 class="
+                  font-clash text-[26px] font-semibold
                   leading-[93%] tracking-[0]
                   transition-colors duration-300
                   group-hover:text-violet-600
@@ -327,14 +329,16 @@ const $$Work = createComponent(($$result, $$props, $$slots) => {
                   lg:text-[35px]
                 "> ${project.title} </h3> <p class="
                   mt-3
-                  font-clash text-[20px] font-normal
+                  font-clash text-lg font-normal
                   leading-[93%] tracking-[0]
                   text-black
+                  sm:text-[20px]
                 "> ${project.category} </p> <p class="
                   mt-3 max-w-md
-                  font-clash text-[16px] font-medium
+                  font-clash text-sm font-medium
                   leading-[140%] tracking-[0]
                   text-gray-500
+                  sm:text-base
                 "> ${project.description} </p> </div> </a>`)} </div> </div> <!-- Full-width Bottom Gradient Border --> <div class="
       pointer-events-none
       absolute inset-x-0 bottom-0
@@ -350,23 +354,15 @@ const $$TrustedBrands = createComponent(($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$props, $$slots);
   Astro2.self = $$TrustedBrands;
   const { trustedBrands } = Astro2.props;
-  return renderTemplate`${maybeRenderHead()}<section class="relative bg-white py-14"> <div class="mx-auto max-w-7xl px-6 lg:px-8"> <div class="grid grid-cols-1
+  return renderTemplate`${maybeRenderHead()}<section class="relative bg-white py-14"> <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"> <div class="grid grid-cols-1
     gap-12
     lg:grid-cols-[1.7fr_1fr]
     lg:items-center
-    lg:gap-16"> <!-- Left Content --> <div class="w-full"> <h2 class="font-clash
-        text-[36px] font-semibold
-        leading-[93%] tracking-[0]
-        md:text-[48px]
-        lg:text-[50px] uppercase"> ${trustedBrands.title} <span class="gradient-text"> ${" "} ${trustedBrands.highlight} </span> </h2> <p class="mt-3 font-geist text-[25px] leading-[114%] tracking-[0] text-black"> ${trustedBrands.description} </p> </div> <!-- Brand Logos --> <div class="grid grid-cols-2
-      items-center justify-items-center
-      gap-x-6 gap-y-10
-      sm:grid-cols-3
-      sm:gap-x-8 sm:gap-y-12"> ${trustedBrands.logos.map((logo) => renderTemplate`<a${addAttribute(logo.url, "href")} target="_blank" rel="noopener noreferrer" class="
+    lg:gap-16"> <!-- Left Content --> <div class="w-full"> <h2 class="font-clash text-4xl font-semibold leading-[93%] tracking-[0] uppercase md:text-[48px] lg:text-[50px]"> ${trustedBrands.title} <span class="gradient-text"> ${" "} ${trustedBrands.highlight} </span> </h2> <p class="mt-3 max-w-xl font-geist text-lg leading-[114%] tracking-[0] text-black sm:text-[22px] lg:text-[25px]"> ${trustedBrands.description} </p> </div> <!-- Brand Logos --> <div class="grid grid-cols-2 items-center justify-items-center gap-x-6 gap-y-10 sm:grid-cols-3 sm:gap-x-8 sm:gap-y-12"> ${trustedBrands.logos.map((logo) => renderTemplate`<a${addAttribute(logo.url, "href")} target="_blank" rel="noopener noreferrer" class="
             group
             flex min-h-20 w-full
             items-center justify-center
-          "${addAttribute(logo.alt, "aria-label")}> ${renderComponent($$result, "Image", $$Image, { "src": logo.image, "alt": logo.alt, "width": 180, "height": 90, "class": "\r\n              h-14 w-auto\r\n              max-w-full\r\n              object-contain\r\n              transition-opacity duration-300\r\n              group-hover:opacity-100\r\n              sm:h-16\r\n            " })} </a>`)} </div> </div> </div> <!-- Full-width Bottom Gradient Border --> <div class="pointer-events-none
+          "${addAttribute(logo.alt, "aria-label")}> ${renderComponent($$result, "Image", $$Image, { "src": logo.image, "alt": logo.alt, "width": 180, "height": 90, "class": "h-12 w-auto max-w-full object-contain transition-opacity duration-300 group-hover:opacity-100 sm:h-14 lg:h-16" })} </a>`)} </div> </div> </div> <!-- Full-width Bottom Gradient Border --> <div class="pointer-events-none
       absolute inset-x-0 bottom-0
       h-[3px]
       bg-gradient-to-r
@@ -379,47 +375,9 @@ const $$Testimonials = createComponent(($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$props, $$slots);
   Astro2.self = $$Testimonials;
   const { testimonials } = Astro2.props;
-  return renderTemplate`${maybeRenderHead()}<section class="relative bg-white"> <div class="
-      mx-auto max-w-7xl
-      px-6 py-14
-      lg:px-8
-    "> <!-- Section Heading --> <h2 class="
-        font-clash
-        text-[36px] font-semibold
-        leading-[93%] tracking-[0]
-        md:text-[48px]
-        lg:text-[50px]
-      "> ${testimonials.title} <span class="
+  return renderTemplate`${maybeRenderHead()}<section class="relative bg-white"> <div class="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8"> <!-- Section Heading --> <h2 class="font-clash text-4xl font-semibold leading-[93%] tracking-[0] md:text-[48px] lg:text-[50px]"> ${testimonials.title} <span class="
         gradient-text
-        "> ${" "} ${testimonials.highlight} </span> </h2> <!-- Testimonials --> <div class="
-        mt-8 grid gap-12
-        lg:grid-cols-2
-        lg:gap-16
-      "> ${testimonials.items.map((item) => renderTemplate`<article> <!-- Quote --> <p class="
-                font-geist
-                text-[28px]
-                leading-[114%]
-                tracking-normal
-                text-black
-              "> ${item.quote} </p> <!-- User --> <div class="
-                mt-10 flex
-                items-center gap-5
-                sm:mt-12
-              "> ${renderComponent($$result, "Image", $$Image, { "src": item.image, "alt": item.name, "width": 80, "height": 80, "class": "\r\n                  h-16 w-16\r\n                  shrink-0 rounded-full\r\n                  object-cover\r\n                  sm:h-20 sm:w-20\r\n                " })} <div> <h3 class="
-                    font-geist
-                    text-[25px]
-                    leading-[114%]
-                    tracking-normal
-                    text-black
-                  "> ${item.name} </h3> <p class="
-                    mt-1
-                    font-geist
-                    text-[16px]
-                    font-light
-                    leading-[114%]
-                    tracking-normal
-                    
-                  "> ${item.designation} </p> </div> </div> </article>`)} </div> </div> <!-- Full-width Bottom Gradient Border --> <div class="
+        "> ${" "} ${testimonials.highlight} </span> </h2> <!-- Testimonials --> <div class="mt-8 grid gap-12 lg:grid-cols-2 lg:gap-16"> ${testimonials.items.map((item) => renderTemplate`<article> <!-- Quote --> <p class="font-geist text-lg leading-[114%] tracking-normal text-black sm:text-2xl lg:text-[28px]"> ${item.quote} </p> <!-- User --> <div class="mt-10 flex items-center gap-5 sm:mt-12"> ${renderComponent($$result, "Image", $$Image, { "src": item.image, "alt": item.name, "width": 80, "height": 80, "class": "h-16 w-16 shrink-0 rounded-full object-cover sm:h-20 sm:w-20" })} <div> <h3 class="font-geist text-xl leading-[114%] tracking-normal text-black sm:text-[25px]"> ${item.name} </h3> <p class="mt-1 font-geist text-sm font-light leading-[114%] tracking-normal sm:text-base"> ${item.designation} </p> </div> </div> </article>`)} </div> </div> <!-- Full-width Bottom Gradient Border --> <div class="
       pointer-events-none
       absolute inset-x-0 bottom-0
       h-[3px]
@@ -434,11 +392,7 @@ const $$FieldNotes = createComponent(($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$props, $$slots);
   Astro2.self = $$FieldNotes;
   const { fieldNotes } = Astro2.props;
-  return renderTemplate`${maybeRenderHead()}<section class="py-14"> <div class="mx-auto max-w-7xl px-6 lg:px-8"> <div class="flex items-end justify-between"> <div> <h2 class="font-clash
-        text-[36px] font-semibold
-        leading-[100%] tracking-[0]
-        md:text-[48px]
-        lg:text-[50px]"> ${fieldNotes.title} <br> <span class="gradient-text mt-2"> ${fieldNotes.highlight} </span> </h2> <!-- <p class="text-6xl font-bold">FROM THE STUDIO.</p> --> </div> <a${addAttribute(fieldNotes?.buttonLink, "href")} class="mt-20 inline-flex items-center gap-4 text-xl font-medium group"> ${fieldNotes?.buttonText} ${renderComponent($$result, "Icon", $$Icon, { "name": fieldNotes.buttonIcon, "class": "w-6 h-6" })} </a> </div> <div class="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-3"> ${fieldNotes.posts.map((post) => renderTemplate`<a${addAttribute(`/blog/${post.slug}`, "href")} class="group block cursor-pointer"> <div class="
+  return renderTemplate`${maybeRenderHead()}<section class="py-14"> <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"> <div class="flex flex-col gap-5 sm:items-start lg:flex-row lg:items-end lg:justify-between"> <div> <h2 class="font-clash text-4xl font-semibold leading-[100%] tracking-[0] md:text-[48px] lg:text-[50px]"> ${fieldNotes.title} <br> <span class="gradient-text mt-2"> ${fieldNotes.highlight} </span> </h2> <!-- <p class="text-6xl font-bold">FROM THE STUDIO.</p> --> </div> <a${addAttribute(fieldNotes?.buttonLink, "href")} class="inline-flex items-center gap-3 text-base font-medium group sm:text-lg lg:text-xl"> ${fieldNotes?.buttonText} ${renderComponent($$result, "Icon", $$Icon, { "name": fieldNotes.buttonIcon, "class": "w-6 h-6" })} </a> </div> <div class="mt-12 grid gap-8 md:grid-cols-2 lg:mt-16 lg:grid-cols-3"> ${fieldNotes.posts.map((post) => renderTemplate`<a${addAttribute(`/posts/${post.slug}`, "href")} class="group block cursor-pointer"> <div class="
                                 overflow-hidden
                                 rounded-[18px]
                                 bg-black/5
@@ -454,52 +408,20 @@ const $$FieldNotes = createComponent(($$result, $$props, $$slots) => {
                                     duration-700
                                     ease-out
                                     group-hover:translate-y-3
-                                "> ${renderComponent($$result, "Image", $$Image, { "src": post.image, "alt": post.title, "width": 500, "height": 350, "class": "\r\n                                    h-auto\r\n                                    w-full\r\n                                    object-cover\r\n                                    grayscale\r\n                                    contrast-110\r\n                                    saturate-0\r\n                                    transition-[filter,opacity]\r\n                                    duration-700\r\n                                    ease-out\r\n                                    group-hover:grayscale-0\r\n                                    group-hover:contrast-100\r\n                                    group-hover:saturate-100\r\n                                " })} </div> </div> <div class="
+                                "> ${renderComponent($$result, "Image", $$Image, { "src": post.image, "alt": post.title, "width": 500, "height": 350, "class": "h-auto w-full object-cover grayscale contrast-110 saturate-0 transition-[filter,opacity] duration-700 ease-out group-hover:grayscale-0 group-hover:contrast-100 group-hover:saturate-100" })} </div> </div> <div class="
                                 mt-5
                                 transition-transform
                                 duration-500
                                 ease-out
                                 group-hover:translate-y-3
-                            "> <h3 class="
-                                    font-geist
-                                    text-[24px]
-                                    font-bold
-                                    leading-[114%]
-                                    tracking-normal
-                                    text-black
-                                    transition-colors
-                                    duration-300
-                                    group-hover:text-black/95
-                                "> ${post.title} </h3> <p class="
-                                    mt-3
-                                    font-geist
-                                    text-[16px]
-                                    leading-[114%]
-                                    tracking-normal
-                                    text-black/75
-                                    transition-colors
-                                    duration-300
-                                    group-hover:text-black/90
-                                "> ${post.description} </p> </div> </a>`)} </div> </div> </section>`;
+                            "> <h3 class="font-geist text-xl font-bold leading-[114%] tracking-normal text-black transition-colors duration-300 group-hover:text-black/95 sm:text-[24px]"> ${post.title} </h3> <p class="mt-3 font-geist text-sm leading-[114%] tracking-normal text-black/75 transition-colors duration-300 group-hover:text-black/90 sm:text-base"> ${post.description} </p> </div> </a>`)} </div> </div> </section>`;
 }, "D:/D Drive/artisanal-byte/topklickz/src/components/FieldNotes.astro", void 0);
 
 const $$TeamCulture = createComponent(($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$props, $$slots);
   Astro2.self = $$TeamCulture;
   const { teamCulture } = Astro2.props;
-  return renderTemplate`${maybeRenderHead()}<section class=""> <div class="mx-auto max-w-7xl px-6 lg:px-8"> <div class="grid grid-cols-1 items-center gap-16 lg:grid-cols-2"> <!-- Left Content --> <div> <h2 class="font-clash
-                        text-[40px]
-                        font-semibold
-                        leading-[114%]
-                        tracking-normal uppercase"> ${teamCulture.title} <span class="gradient-text"> ${" "} ${teamCulture.highlight} </span> </h2> <p class="mt-6
-                        font-geist
-                        text-[20px]
-                        leading-[120%]
-                        tracking-normal"> ${teamCulture.descriptionOne} </p> <p class="mt-4
-                    font-geist
-                    text-[20px]
-                    leading-[120%]
-                    tracking-normal"> ${teamCulture.descriptionTwo} </p> </div> <!-- Right Image --> <div> ${renderComponent($$result, "Image", $$Image, { "src": teamCulture.image, "alt": teamCulture.imageAlt, "width": 900, "height": 700, "class": "w-full rounded-lg object-cover" })} </div> </div> </div> </section>`;
+  return renderTemplate`${maybeRenderHead()}<section class="py-14"> <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"> <div class="grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-16"> <!-- Left Content --> <div> <h2 class="font-clash text-3xl font-semibold leading-[114%] tracking-normal uppercase sm:text-[36px] lg:text-[40px]"> ${teamCulture.title} <span class="gradient-text"> ${" "} ${teamCulture.highlight} </span> </h2> <p class="mt-6 font-geist text-base leading-[120%] tracking-normal sm:text-lg lg:text-[20px]"> ${teamCulture.descriptionOne} </p> <p class="mt-4 font-geist text-base leading-[120%] tracking-normal sm:text-lg lg:text-[20px]"> ${teamCulture.descriptionTwo} </p> </div> <!-- Right Image --> <div> ${renderComponent($$result, "Image", $$Image, { "src": teamCulture.image, "alt": teamCulture.imageAlt, "width": 900, "height": 700, "class": "w-full rounded-lg object-cover" })} </div> </div> </div> </section>`;
 }, "D:/D Drive/artisanal-byte/topklickz/src/components/TeamCulture.astro", void 0);
 
 const $$Faq = createComponent(($$result, $$props, $$slots) => {
@@ -510,30 +432,30 @@ const $$Faq = createComponent(($$result, $$props, $$slots) => {
     ...item,
     isDefaultOpen: item.defaultOpen || index === 0
   }));
-  return renderTemplate`${maybeRenderHead()}<section class="py-10"> <div class="mx-auto max-w-7xl px-6 lg:px-8"> <h2 class="font-clash text-[36px] font-semibold
-          leading-[93%] tracking-[0]
-          md:text-[48px]
-          lg:text-[50px] uppercase"> ${faq.title} <span class="gradient-text"> ${" "} ${faq.highlight} </span> </h2> <div class="mt-8"> <div class="h-px w-full bg-gradient-to-r from-[#FEC053] via-[#F2203E] via-50% to-[#5342D6] opacity-90"></div> ${items.map((faq2, index) => renderTemplate`${renderComponent($$result, "Fragment", Fragment, {}, { "default": ($$result2) => renderTemplate` <details class="group py-6"${addAttribute(faq2.isDefaultOpen, "open")} data-faq-item> <summary class="
-                    flex
+  return renderTemplate`${maybeRenderHead()}<section class="py-10 sm:py-14"> <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"> <h2 class="font-clash text-4xl font-semibold leading-[93%] tracking-[0] uppercase md:text-[48px] lg:text-[50px]"> ${faq.title} <span class="gradient-text"> ${" "} ${faq.highlight} </span> </h2> <div class="mt-8"> <div class="h-px w-full bg-gradient-to-r from-[#FEC053] via-[#F2203E] via-50% to-[#5342D6] opacity-90"></div> ${items.map((faq2, index) => renderTemplate`${renderComponent($$result, "Fragment", Fragment, {}, { "default": ($$result2) => renderTemplate` <details class="group py-6"${addAttribute(faq2.isDefaultOpen, "open")} data-faq-item> <summary class="
+                    flex flex-wrap
                     cursor-pointer
                     list-none
                     items-center
                     justify-between
+                    gap-4
                     font-clash
-                    text-[24px]
+                    text-lg
                     font-medium
                     leading-[28.8px]
                     tracking-normal
+                    sm:text-[24px]
                   "> <span>${faq2.question}</span> <span class="text-[24px] transition group-open:rotate-45">
 +
 </span> </summary> <p class="
                     mt-5
                     max-w-3xl
                     font-geist
-                    text-[18px]
+                    text-base
                     leading-[28.8px]
                     tracking-normal
                     text-[#010101]
+                    sm:text-[18px]
                   "> ${faq2.answer} </p> </details> ${index < items.length - 1 && renderTemplate`<div class="h-px w-full bg-gradient-to-r from-[#FEC053] via-[#F2203E] via-50% to-[#5342D6] opacity-90"></div>`}` })}`)} <div class="h-px w-full bg-gradient-to-r from-[#FEC053] via-[#F2203E] via-50% to-[#5342D6] opacity-90"></div> </div> </div> </section> ${renderScript($$result, "D:/D Drive/artisanal-byte/topklickz/src/components/Faq.astro?astro&type=script&index=0&lang.ts")}`;
 }, "D:/D Drive/artisanal-byte/topklickz/src/components/Faq.astro", void 0);
 
@@ -541,14 +463,14 @@ const $$Cta = createComponent(($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$props, $$slots);
   Astro2.self = $$Cta;
   const { cta } = Astro2.props;
-  return renderTemplate`${maybeRenderHead()}<section class="bg-black py-24"> <div class="container mx-auto px-6 text-center"> <h2 class="mx-auto text-5xl font-extrabold uppercase leading-tight text-white lg:text-6xl"> ${cta.title} <br> <span class="bg-gradient-to-r from-red-500 via-pink-500 to-purple-600 bg-clip-text text-transparent"> ${cta.highlight} </span> </h2> <p class="mx-auto mt-8 max-w-2xl text-lg leading-8 text-gray-400"> ${cta.description} </p> <a${addAttribute(cta.button.link, "href")} class="group mt-12 inline-flex items-center gap-3 rounded-full border border-white px-8 py-2 text-white transition hover:bg-white hover:text-black"> <span class="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-r from-red-500 via-pink-500 to-purple-600"></span> <span class="font-semibold uppercase"> ${cta.button.text} </span> ${renderComponent($$result, "Icon", $$Icon, { "name": cta.button.icon, "class": "h-5 w-5 transition group-hover:translate-x-1" })} </a> </div> </section>`;
+  return renderTemplate`${maybeRenderHead()}<section class="bg-black py-16 sm:py-20 lg:py-24"> <div class="mx-auto max-w-5xl px-4 text-center sm:px-6"> <h2 class="mx-auto text-3xl font-extrabold uppercase leading-tight text-white sm:text-5xl lg:text-6xl"> ${cta.title} <br> <span class="bg-gradient-to-r from-red-500 via-pink-500 to-purple-600 bg-clip-text text-transparent"> ${cta.highlight} </span> </h2> <p class="mx-auto mt-6 max-w-2xl text-base leading-8 text-gray-400 sm:mt-8 sm:text-lg"> ${cta.description} </p> <a${addAttribute(cta.button.link, "href")} class="group mt-10 inline-flex flex-wrap items-center justify-center gap-3 rounded-full border border-white px-6 py-3 text-white transition hover:bg-white hover:text-black sm:mt-12 sm:px-8"> <span class="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-r from-red-500 via-pink-500 to-purple-600"></span> <span class="font-semibold uppercase"> ${cta.button.text} </span> ${renderComponent($$result, "Icon", $$Icon, { "name": cta.button.icon, "class": "h-5 w-5 transition group-hover:translate-x-1" })} </a> </div> </section>`;
 }, "D:/D Drive/artisanal-byte/topklickz/src/components/Cta.astro", void 0);
 
 const $$Footer = createComponent(($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$props, $$slots);
   Astro2.self = $$Footer;
   const { footer } = Astro2.props;
-  return renderTemplate`${maybeRenderHead()}<footer class="bg-black text-white"> <div class="mx-auto max-w-7xl px-6 lg:px-8"> <div class="grid gap-12 lg:grid-cols-4"> <!-- Logo --> <div> ${renderComponent($$result, "Image", $$Image, { "src": footer.logo, "alt": "Footer Logo", "width": 100, "height": 100 })} <div class="mt-6 space-y-2 text-sm text-neutral-300"> <p>${footer.email}</p> <p>${footer.phone}</p> <p>${footer.address}</p> </div> <div class="mt-8 text-xs text-neutral-500"> <p>${footer.policyText}</p> <p>${footer.copyright}</p> </div> </div> <!-- Company --> <div> <h3 class="mb-5 font-semibold">Company</h3> <ul class="space-y-3"> ${footer.companyLinks.map((item) => renderTemplate`<li> <a${addAttribute(item.href, "href")}>${item.title}</a> </li>`)} </ul> </div> <!-- Services --> <div> <h3 class="mb-5 font-semibold">Services</h3> <ul class="space-y-3"> ${footer.serviceLinks.map((item) => renderTemplate`<li> <a${addAttribute(item.href, "href")}>${item.title}</a> </li>`)} </ul> </div> <!-- Social --> <div> <h3 class="mb-5 font-semibold">Socials</h3> <ul class="space-y-3"> ${footer.socialLinks.map((item) => renderTemplate`<li> <a${addAttribute(item.href, "href")} target="_blank"> ${item.title} </a> </li>`)} </ul> </div> </div> </div> <div class="overflow-hidden border-t border-neutral-800"> ${footer.marqueeImage && renderTemplate`${renderComponent($$result, "Image", $$Image, { "src": footer.marqueeImage, "alt": "Marquee Image", "width": 800, "height": 300, "class": " object-cover ml-auto mt-10" })}`} <p class="mt-6 text-right text-xl"> ${footer.tagline} </p> </div> </footer>`;
+  return renderTemplate`${maybeRenderHead()}<footer class="bg-black text-white"> <div class="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8"> <div class="grid gap-12 sm:grid-cols-2 lg:grid-cols-4"> <!-- Logo --> <div> ${renderComponent($$result, "Image", $$Image, { "src": footer.logo, "alt": "Footer Logo", "width": 100, "height": 100, "class": "h-16 w-auto" })} <div class="mt-6 space-y-2 text-sm text-neutral-300"> <p>${footer.email}</p> <p>${footer.phone}</p> <p>${footer.address}</p> </div> <div class="mt-8 text-xs text-neutral-500"> <p>${footer.policyText}</p> <p>${footer.copyright}</p> </div> </div> <!-- Company --> <div> <h3 class="mb-5 font-semibold">Company</h3> <ul class="space-y-3"> ${footer.companyLinks.map((item) => renderTemplate`<li> <a class="text-neutral-300 transition hover:text-white"${addAttribute(item.href, "href")}>${item.title}</a> </li>`)} </ul> </div> <!-- Services --> <div> <h3 class="mb-5 font-semibold">Services</h3> <ul class="space-y-3"> ${footer.serviceLinks.map((item) => renderTemplate`<li> <a class="text-neutral-300 transition hover:text-white"${addAttribute(item.href, "href")}>${item.title}</a> </li>`)} </ul> </div> <!-- Social --> <div> <h3 class="mb-5 font-semibold">Socials</h3> <ul class="space-y-3"> ${footer.socialLinks.map((item) => renderTemplate`<li> <a class="text-neutral-300 transition hover:text-white"${addAttribute(item.href, "href")} target="_blank" rel="noopener noreferrer"> ${item.title} </a> </li>`)} </ul> </div> </div> </div> <div class="overflow-hidden border-t border-neutral-800 px-4 pb-10 sm:px-6 lg:px-8"> ${footer.marqueeImage && renderTemplate`${renderComponent($$result, "Image", $$Image, { "src": footer.marqueeImage, "alt": "Marquee Image", "width": 800, "height": 300, "class": "mx-auto mt-10 w-full max-w-2xl object-cover lg:ml-auto lg:mr-0" })}`} <p class="mt-6 text-center text-lg sm:text-xl lg:text-right"> ${footer.tagline} </p> </div> </footer>`;
 }, "D:/D Drive/artisanal-byte/topklickz/src/components/Footer.astro", void 0);
 
 const $$Index = createComponent(async ($$result, $$props, $$slots) => {

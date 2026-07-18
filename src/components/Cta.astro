@@ -3,10 +3,10 @@ import { Icon } from "astro-icon/components";
 const { cta } = Astro.props;
 ---
 
-<section class="bg-black py-24">
-  <div class="container mx-auto px-6 text-center">
+<section class="bg-black py-16 sm:py-20 lg:py-24">
+  <div class="mx-auto max-w-5xl px-4 text-center sm:px-6">
 
-    <h2 class="mx-auto text-xl font-extrabold uppercase leading-tight text-white lg:text-6xl">
+    <h2 class="mx-auto text-3xl font-extrabold uppercase leading-tight text-white sm:text-5xl lg:text-6xl">
       {cta.title}
       <br />
       <span class="bg-gradient-to-r from-red-500 via-pink-500 to-purple-600 bg-clip-text text-transparent">
@@ -14,13 +14,13 @@ const { cta } = Astro.props;
       </span>
     </h2>
 
-    <p class="mx-auto mt-8 max-w-2xl text-lg leading-8 text-gray-400">
+    <p class="mx-auto mt-6 max-w-2xl text-base leading-8 text-gray-400 sm:mt-8 sm:text-lg">
       {cta.description}
     </p>
 
     <a
       href={cta.button.link}
-      class="group mt-12 inline-flex items-center gap-3 rounded-full border border-white px-8 py-2 text-white transition hover:bg-white hover:text-black"
+      class="group mt-10 inline-flex flex-wrap items-center justify-center gap-3 rounded-full border border-white px-6 py-3 text-white transition hover:bg-white hover:text-black sm:mt-12 sm:px-8"
     >
       <span class="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-r from-red-500 via-pink-500 to-purple-600">
       </span>

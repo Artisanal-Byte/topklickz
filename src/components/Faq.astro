@@ -6,13 +6,10 @@ const items = faq.items.map((item, index) => ({
 }));
 ---
 
-<section class="py-10">
-  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+<section class="py-10 sm:py-14">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
     <h2
-      class="font-clash text-[36px] font-semibold
-          leading-[93%] tracking-[0]
-          md:text-[48px]
-          lg:text-[50px] uppercase"
+      class="font-clash text-4xl font-semibold leading-[93%] tracking-[0] uppercase md:text-[48px] lg:text-[50px]"
     >
       {faq.title}
       <span class="gradient-text">
@@ -30,16 +27,18 @@ const items = faq.items.map((item, index) => ({
             <details class="group py-6" open={faq.isDefaultOpen} data-faq-item>
               <summary
                 class="
-                    flex
+                    flex flex-wrap
                     cursor-pointer
                     list-none
                     items-center
                     justify-between
+                    gap-4
                     font-clash
-                    text-[24px]
+                    text-lg
                     font-medium
                     leading-[28.8px]
                     tracking-normal
+                    sm:text-[24px]
                   "
               >
                 <span>{faq.question}</span>
@@ -54,10 +53,11 @@ const items = faq.items.map((item, index) => ({
                     mt-5
                     max-w-3xl
                     font-geist
-                    text-[18px]
+                    text-base
                     leading-[28.8px]
                     tracking-normal
                     text-[#010101]
+                    sm:text-[18px]
                   "
               >
                 {faq.answer}

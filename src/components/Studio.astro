@@ -4,10 +4,10 @@ import { Image } from "astro:assets";
 ---
 
 <section class="bg-black py-12 lg:py-0">
-  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
     <div class="rounded-sm px-0 py-0 lg:px-14 lg:py-8">
       <!-- Top -->
-      <div class="mb-10">
+      <div class="mb-8 sm:mb-10">
         <span class="text-sm text-gray-400">
           {studio.sectionNumber}/{studio.sectionTitle}
         </span>
@@ -15,33 +15,33 @@ import { Image } from "astro:assets";
 
       <!-- Heading -->
       <div class="mx-auto max-w-5xl text-center">
-        <h2 class="font-clash text-[20px] lg:text-[32px] font-semibold leading-[114%] text-center text-white">
+        <h2 class="font-clash text-lg font-semibold leading-[114%] text-center text-white sm:text-2xl lg:text-[32px]">
           {studio.title}
         </h2>
 
-        <p class="mx-auto mt-8 max-w-3xl font-clash text-[20px] leading-[140%] text-center text-white/70">
+        <p class="mx-auto mt-6 max-w-3xl font-clash text-base leading-[150%] text-center text-white/70 sm:mt-8 sm:text-lg lg:text-[20px]">
           {studio.description}
         </p>
       </div>
 
       <!-- Clients -->
-      <div class="mt-14 overflow-hidden">
-        <h3 class="mb-8 text-center text-3xl font-medium text-white">
+      <div class="mt-12 overflow-hidden sm:mt-14">
+        <h3 class="mb-6 text-center text-xl font-medium text-white sm:mb-8 sm:text-2xl">
           {studio.clientTitle}
         </h3>
 
-        <div class="relative overflow-hidden mx-auto max-w-2xl">
-          <div class="flex w-max animate-marquee gap-12">
+        <div class="relative mx-auto overflow-hidden max-w-2xl">
+          <div class="flex w-max animate-marquee gap-8 sm:gap-12">
             <!-- First Set -->
             {
               studio.clients.map((client) => (
-                <div class="flex h-16 w-30 shrink-0 items-center justify-center">
+                <div class="flex h-14 w-28 shrink-0 items-center justify-center sm:h-16 sm:w-30">
                   <Image
                     src={client.logo}
                     alt={client.alt}
                     width={160}
                     height={60}
-                    class="h-10 w-auto object-contain opacity-90 transition hover:opacity-100"
+                    class="h-8 w-auto object-contain opacity-90 transition hover:opacity-100 sm:h-10"
                   />
                 </div>
               ))
@@ -50,13 +50,13 @@ import { Image } from "astro:assets";
             <!-- Duplicate Set -->
             {
               studio.clients.map((client) => (
-                <div class="flex h-16 w-48 shrink-0 items-center justify-center">
+                <div class="flex h-14 w-36 shrink-0 items-center justify-center sm:h-16 sm:w-48">
                   <Image
                     src={client.logo}
                     alt={client.alt}
                     width={160}
                     height={60}
-                    class="h-10 w-auto object-contain opacity-90 transition hover:opacity-100"
+                    class="h-8 w-auto object-contain opacity-90 transition hover:opacity-100 sm:h-10"
                   />
                 </div>
               ))
@@ -66,13 +66,13 @@ import { Image } from "astro:assets";
       </div>
 
       <!-- Button -->
-      <div class="mt-10 flex justify-center">
+      <div class="mt-8 flex justify-center sm:mt-10">
         <a
           href={studio?.buttonLink}
-          class="hidden lg:inline-flex rounded-full p-[1px] bg-[radial-gradient(50%_83.67%_at_50%_50%,#FEC053_0%,#F2203E_33%,#B729A8_65%,#5342D6_100%)]"
+          class="inline-flex w-full max-w-sm rounded-full p-[1px] bg-[radial-gradient(50%_83.67%_at_50%_50%,#FEC053_0%,#F2203E_33%,#B729A8_65%,#5342D6_100%)] lg:w-auto"
         >
           <span
-            class="flex h-[45px] w-[170px] items-center justify-center gap-2 rounded-full bg-black px-2 font-clash text-[17px] font-medium leading-none text-white"
+            class="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-black px-4 font-clash text-base font-medium leading-none text-white sm:h-[45px] sm:w-[170px] sm:px-2 sm:text-[17px]"
           >
             <span class="h-6 w-6 rounded-full gradient-bg"></span>
             {studio?.buttonText}
