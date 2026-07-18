@@ -1,82 +1,195 @@
 ---
+import { Icon } from "astro-icon/components";
 import { Image } from "astro:assets";
 
 const { testimonials } = Astro.props;
+const items = testimonials?.items ?? [];
+const pages = Array.from(
+  { length: Math.ceil(items.length / 2) },
+  (_, pageIndex) => items.slice(pageIndex * 2, pageIndex * 2 + 2),
+);
 ---
 
-<section class="relative bg-white">
+<section class="relative">
   <div class="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
-    <!-- Section Heading -->
-    <h2
-      class="font-clash text-4xl font-semibold leading-[93%] tracking-[0] md:text-[48px] lg:text-[50px]"
-    >
+    <h2 class="font-clash text-4xl font-semibold leading-[93%] tracking-[0] md:text-[48px] lg:text-[50px]">
       {testimonials.title}
-
-      <span
-        class="
-        gradient-text
-        "
-      >
-        {" "}
-        {testimonials.highlight}
-      </span>
+      <span class="gradient-text"> {testimonials.highlight}</span>
     </h2>
 
-    <!-- Testimonials -->
-    <div
-      class="mt-8 grid gap-12 lg:grid-cols-2 lg:gap-16"
-    >
-      {
-        testimonials.items.map((item) => (
-          <article>
-            <!-- Quote -->
-           <p
-              class="font-geist text-lg leading-[114%] tracking-normal text-black sm:text-2xl lg:text-[28px]"
-            >
-              {item.quote}
-            </p>
-            <!-- User -->
+    <div class="relative mt-8" data-testimonial-carousel>
+      <div
+        class="relative overflow-hidden transition-[height] duration-500 ease-out"
+        data-testimonial-viewport
+      >
+        {
+          pages.map((page, pageIndex) => (
             <div
-              class="mt-10 flex items-center gap-5 sm:mt-12"
+              class:list={[
+                "grid gap-6 lg:grid-cols-2 lg:gap-8",
+                pageIndex === 0
+                  ? "relative opacity-100 translate-x-0"
+                  : "absolute inset-0 opacity-0 translate-x-8 pointer-events-none",
+              ]}
+              data-testimonial-page
+              data-page-index={pageIndex}
             >
-              <Image
-                src={item.image}
-                alt={item.name}
-                width={80}
-                height={80}
-                class="h-16 w-16 shrink-0 rounded-full object-cover sm:h-20 sm:w-20"
-              />
+              {
+                page.map((item) => (
+                  <button
+                    type="button"
+                    class="group relative h-full min-h-[340px] rounded-[28px] border border-black/10 bg-white p-6 text-left transition-all duration-500 ease-out sm:min-h-[360px] sm:p-8 lg:min-h-[400px] lg:p-10"
+                    data-testimonial-card
+                    aria-label="Show next testimonials"
+                  >
+                    <div class="flex h-full flex-col justify-between gap-8">
+                      <p class="font-geist text-lg leading-[1.28] tracking-normal text-black sm:text-2xl lg:text-[28px]">
+                        {item.quote}
+                      </p>
 
-              <div>
-               <h3
-                  class="font-geist text-xl leading-[114%] tracking-normal text-black sm:text-[25px]"
-                >
-                  {item.name}
-                </h3>
-                <p
-                  class="mt-1 font-geist text-sm font-light leading-[114%] tracking-normal sm:text-base"
-                >
-                  {item.designation}
-                </p>
-              </div>
+                      <div class="flex items-center gap-5 pt-2">
+                        <Image
+                          src={item.image}
+                          alt={item.name}
+                          width={80}
+                          height={80}
+                          class="h-16 w-16 shrink-0 rounded-full object-cover sm:h-20 sm:w-20"
+                        />
+
+                        <div>
+                          <h3 class="font-geist text-xl leading-[114%] tracking-normal text-black sm:text-[25px]">
+                            {item.name}
+                          </h3>
+                          <p class="mt-1 font-geist text-sm font-light leading-[114%] tracking-normal sm:text-base">
+                            {item.designation}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </button>
+                ))
+              }
             </div>
-          </article>
-        ))
-      }
+          ))
+        }
+      </div>
+
+      <div class="pointer-events-none absolute inset-0 z-20 overflow-visible">
+        <span
+          class="absolute inline-flex -translate-x-1/2 -translate-y-1/2 items-center gap-2 rounded-full gradient-bg px-3 py-2 font-clash text-sm font-bold uppercase tracking-[0.16em] text-white"
+          data-hover-pill
+          style="left: 50%; top: 50%;"
+        >
+          <Icon name="mdi:arrow-top-right" class="h-4 w-4 shrink-0" />
+          <span>Click to see next</span>
+        </span>
+      </div>
     </div>
   </div>
 
-  <!-- Full-width Bottom Gradient Border -->
   <div
-    class="
-      pointer-events-none
-      absolute inset-x-0 bottom-0
-      h-[3px]
-      bg-gradient-to-r
-      from-orange-500
-      via-pink-500
-      to-violet-600
-    "
+    class="pointer-events-none absolute inset-x-0 bottom-0 h-[3px] bg-gradient-to-r from-orange-500 via-pink-500 to-violet-600"
     aria-hidden="true"
   ></div>
 </section>
+
+<script is:inline>
+  const carousel = document.querySelector("[data-testimonial-carousel]");
+
+  if (carousel) {
+    const viewport = carousel.querySelector("[data-testimonial-viewport]");
+    const hoverPill = carousel.querySelector("[data-hover-pill]");
+    const pages = Array.from(
+      carousel.querySelectorAll("[data-testimonial-page]"),
+    );
+    const cards = Array.from(
+      carousel.querySelectorAll("[data-testimonial-card]"),
+    );
+    let activeIndex = 0;
+
+    const moveHoverPill = (event) => {
+      if (!(hoverPill instanceof HTMLElement)) return;
+
+      const rect = carousel.getBoundingClientRect();
+      const x = event.clientX - rect.left;
+      const y = event.clientY - rect.top;
+
+      hoverPill.style.left = `${x}px`;
+      hoverPill.style.top = `${y}px`;
+      hoverPill.style.opacity = "1";
+    };
+
+    const hideHoverPill = () => {
+      if (!(hoverPill instanceof HTMLElement)) return;
+
+      hoverPill.style.opacity = "0";
+    };
+
+    const setViewportHeight = (page) => {
+      if (!viewport || !page) return;
+      viewport.style.height = `${page.offsetHeight}px`;
+    };
+
+    const setActivePage = (nextIndex) => {
+      activeIndex = nextIndex;
+
+      pages.forEach((page, index) => {
+        const isActive = index === activeIndex;
+        page.style.opacity = isActive ? "1" : "0";
+        page.style.transform = isActive
+          ? "translate3d(0, 0, 0)"
+          : "translate3d(32px, 0, 0)";
+        page.style.pointerEvents = isActive ? "auto" : "none";
+        page.style.position = isActive ? "relative" : "absolute";
+        page.style.inset = isActive ? "auto" : "0";
+      });
+
+      setViewportHeight(pages[activeIndex]);
+    };
+
+    const handleResize = () => {
+      setViewportHeight(pages[activeIndex]);
+    };
+
+    cards.forEach((card) => {
+      card.addEventListener("click", () => {
+        setActivePage((activeIndex + 1) % pages.length);
+      });
+
+      card.addEventListener("pointerenter", (event) => {
+        if (event instanceof PointerEvent) {
+          moveHoverPill(event);
+        }
+      });
+
+      card.addEventListener("pointermove", (event) => {
+        if (event instanceof PointerEvent) {
+          moveHoverPill(event);
+        }
+      });
+
+      card.addEventListener("pointerleave", hideHoverPill);
+    });
+
+    carousel.addEventListener("pointerleave", hideHoverPill);
+
+    const reducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)",
+    ).matches;
+
+    if (reducedMotion) {
+      pages.forEach((page, index) => {
+        page.style.transition = "none";
+        page.style.transform = "none";
+        page.style.opacity = index === 0 ? "1" : "0";
+      });
+    }
+
+    setActivePage(0);
+    window.addEventListener("resize", handleResize, { passive: true });
+
+    document.addEventListener("astro:page-load", () => {
+      setActivePage(activeIndex);
+    });
+  }
+</script>

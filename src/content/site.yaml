@@ -195,6 +195,24 @@ testimonials:
       image: /uploads/testimonials/testimonials/items/1/image.png
       name: Pickleball Community
       designation: Founder
+    - quote: >-
+        "The team helped us build a clear identity and digital presence that
+        truly represents who we are."
+      image: /uploads/testimonials/testimonials/items/2/image.png
+      name: Sarah Johnson
+      designation: Marketing Director, NovaTech Solutions
+    - quote: >-
+        "The team helped us build a clear identity and digital presence that
+        truly represents who we are."
+      image: /uploads/testimonials/testimonials/items/3/image.png
+      name: Michael Chen
+      designation: Founder, BrightScale
+    - quote: >-
+        "The team helped us build a clear identity and digital presence that
+        truly represents who we are."
+      image: /uploads/testimonials/testimonials/items/4/image.webp
+      name: Emily Roberts
+      designation: CEO, Horizon Digital
 fieldNotes:
   title: "FIELD NOTES\L"
   highlight: FROM THE STUDIO.
