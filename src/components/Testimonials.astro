@@ -38,11 +38,11 @@ const pages = Array.from(
                 page.map((item) => (
                   <button
                     type="button"
-                    class="group relative h-full min-h-[340px] rounded-[28px] border border-black/10 bg-white p-6 text-left transition-all duration-500 ease-out sm:min-h-[360px] sm:p-8 lg:min-h-[400px] lg:p-10"
+                    class="group relative h-full lg:min-h-[340px] rounded-[28px] border border-black/10 bg-white p-6 text-left transition-all duration-500 ease-out sm:p-8 lg:p-10 touch-manipulation"
                     data-testimonial-card
                     aria-label="Show next testimonials"
                   >
-                    <div class="flex h-full flex-col justify-between gap-8">
+                    <div class="flex h-full flex-col justify-between gap-4">
                       <p class="font-geist text-lg leading-[1.28] tracking-normal text-black sm:text-2xl lg:text-[28px]">
                         {item.quote}
                       </p>
@@ -74,7 +74,7 @@ const pages = Array.from(
         }
       </div>
 
-      <div class="pointer-events-none absolute inset-0 z-20 overflow-visible">
+      <div class="pointer-events-none absolute inset-0 z-20 hidden overflow-visible sm:block">
         <span
           class="absolute inline-flex -translate-x-1/2 -translate-y-1/2 items-center gap-2 rounded-full gradient-bg px-3 py-2 font-clash text-sm font-bold uppercase tracking-[0.16em] text-white"
           data-hover-pill
@@ -84,6 +84,18 @@ const pages = Array.from(
           <span>Click to see next</span>
         </span>
       </div>
+    </div>
+
+    <div class="mt-5 flex justify-center sm:hidden">
+      <button
+        type="button"
+        class="inline-flex items-center gap-2 rounded-full gradient-bg px-4 py-3 font-clash text-sm font-bold uppercase tracking-[0.16em] text-white shadow-lg transition-transform duration-200 active:scale-[0.98] touch-manipulation"
+        data-testimonial-next
+        aria-label="Show next testimonials"
+      >
+        <Icon name="mdi:arrow-top-right" class="h-4 w-4 shrink-0" />
+        <span>Click to see next</span>
+      </button>
     </div>
   </div>
 
@@ -97,8 +109,11 @@ const pages = Array.from(
   const carousel = document.querySelector("[data-testimonial-carousel]");
 
   if (carousel) {
-    const viewport = carousel.querySelector("[data-testimonial-viewport]");
+    // const viewport = carousel.querySelector("[data-testimonial-viewport]");
     const hoverPill = carousel.querySelector("[data-hover-pill]");
+    const nextButton = carousel.parentElement?.querySelector(
+      "[data-testimonial-next]",
+    );
     const pages = Array.from(
       carousel.querySelectorAll("[data-testimonial-page]"),
     );
@@ -106,6 +121,12 @@ const pages = Array.from(
       carousel.querySelectorAll("[data-testimonial-card]"),
     );
     let activeIndex = 0;
+
+    const goToNextPage = () => {
+      if (!pages.length) return;
+
+      setActivePage((activeIndex + 1) % pages.length);
+    };
 
     const moveHoverPill = (event) => {
       if (!(hoverPill instanceof HTMLElement)) return;
@@ -152,9 +173,7 @@ const pages = Array.from(
     };
 
     cards.forEach((card) => {
-      card.addEventListener("click", () => {
-        setActivePage((activeIndex + 1) % pages.length);
-      });
+      card.addEventListener("click", goToNextPage);
 
       card.addEventListener("pointerenter", (event) => {
         if (event instanceof PointerEvent) {
@@ -170,6 +189,10 @@ const pages = Array.from(
 
       card.addEventListener("pointerleave", hideHoverPill);
     });
+
+    if (nextButton instanceof HTMLButtonElement) {
+      nextButton.addEventListener("click", goToNextPage);
+    }
 
     carousel.addEventListener("pointerleave", hideHoverPill);
 
