@@ -1,39 +1,181 @@
 ---
 import { Icon } from "astro-icon/components";
-const { cta } = Astro.props;
+
+interface CTAProps {
+  title: string;
+  highlight: string;
+  description: string;
+  button: {
+    text: string;
+    link: string;
+    icon: string;
+  };
+}
+
+const { cta } = Astro.props as {
+  cta: CTAProps;
+};
 ---
 
-<section class="bg-black py-16 sm:py-20 lg:py-24">
-  <div class="mx-auto max-w-5xl px-4 text-center sm:px-6">
-
-    <h2 class="mx-auto text-3xl font-extrabold uppercase leading-tight text-white sm:text-5xl lg:text-6xl">
-      {cta.title}
-      <br />
-      <span class="bg-gradient-to-r from-red-500 via-pink-500 to-purple-600 bg-clip-text text-transparent">
-        {cta.highlight}
-      </span>
-    </h2>
-
-    <p class="mx-auto mt-6 max-w-2xl text-base leading-8 text-gray-400 sm:mt-8 sm:text-lg">
-      {cta.description}
-    </p>
-
-    <a
-      href={cta.button.link}
-      class="group mt-10 inline-flex flex-wrap items-center justify-center gap-3 rounded-full border border-white px-6 py-3 text-white transition hover:bg-white hover:text-black sm:mt-12 sm:px-8"
+{
+  cta && (
+    <section
+      class="
+        relative
+        w-full
+        overflow-hidden
+        border-b
+        border-white/60
+        bg-black
+        py-16
+        sm:py-20
+        lg:py-24
+      "
     >
-      <span class="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-r from-red-500 via-pink-500 to-purple-600">
-      </span>
+      <div
+        class="
+          mx-auto
+          flex
+          w-full
+          max-w-5xl
+          flex-col
+          items-center
+          px-5
+          text-center
+          sm:px-6
+          lg:px-8
+        "
+      >
+        <!-- Heading -->
+        <h2
+          class="
+            font-clash
+            text-[34px]
+            font-semibold
+            uppercase
+            leading-[1.08]
+            tracking-[-0.02em]
+            text-white
+            sm:text-[42px]
+            lg:text-[50px]
+          "
+        >
+          <span class="block">
+            {cta.title}
+          </span>
 
-      <span class="font-semibold uppercase">
-        {cta.button.text}
-      </span>
+          <span
+            class="
+              block
+              bg-gradient-to-r
+              from-red-500
+              via-pink-500
+              to-purple-600
+              bg-clip-text
+              text-transparent
+            "
+          >
+            {cta.highlight}
+          </span>
+        </h2>
 
-      <Icon
-        name={cta.button.icon}
-        class="h-5 w-5 transition group-hover:translate-x-1"
-      />
-    </a>
+        <!-- Description -->
+        <p
+          class="
+            mx-auto
+            mt-4
+            max-w-2xl
+            font-geist
+            text-[15px]
+            font-light
+            leading-[1.45]
+            text-white/70
+            sm:text-[16px]
+            lg:text-[18px]
+          "
+        >
+          {cta.description}
+        </p>
 
-  </div>
-</section>
+        <!-- CTA Button -->
+        <a
+          href={cta.button.link}
+          class="
+            group
+            mt-10
+            inline-flex
+            items-center
+            justify-center
+            gap-3
+            rounded-full
+            border
+            border-white/50
+            bg-white/5
+            px-3
+            py-2
+            text-white
+            transition-all
+            duration-300
+            ease-out
+            hover:border-white
+            hover:bg-white
+            hover:text-black
+            focus-visible:outline-none
+            focus-visible:ring-2
+            focus-visible:ring-white
+            focus-visible:ring-offset-2
+            focus-visible:ring-offset-black
+            sm:px-4
+            lg:px-5
+          "
+        >
+          <!-- Gradient Circle -->
+          <span
+            aria-hidden="true"
+            class="
+              h-8
+              w-8
+              shrink-0
+              rounded-full
+              bg-gradient-to-br
+              from-orange-500
+              via-pink-500
+              to-purple-600
+              shadow-[0_0_18px_rgba(236,72,153,0.35)]
+            "
+          ></span>
+
+          <!-- Button Text -->
+          <span
+            class="
+              whitespace-nowrap
+              font-geist
+              text-[13px]
+              font-semibold
+              uppercase
+              leading-none
+              sm:text-[14px]
+            "
+          >
+            {cta.button.text}
+          </span>
+
+          <!-- Arrow Icon -->
+          <Icon
+            name={cta.button.icon}
+            class="
+              h-4
+              w-4
+              shrink-0
+              transition-transform
+              duration-300
+              group-hover:translate-x-1
+              sm:h-5
+              sm:w-5
+            "
+          />
+        </a>
+      </div>
+    </section>
+  )
+}
