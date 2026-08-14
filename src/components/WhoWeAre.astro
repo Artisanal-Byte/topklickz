@@ -1,0 +1,125 @@
+---
+const descriptions = [
+	"We believe strong brands are built through clarity, consistency and craftsmanship.",
+	"Every project is an opportunity to solve a real challenge, create a stronger connection and leave a lasting impression.",
+	"We don't chase trends. We build systems that help businesses grow with purpose.",
+	"Our goal is to inspire innovation and foster creativity in every aspect of our work.",
+];
+
+const stats = [
+	{
+		value: "8+",
+		label: "YEARS OF EXPERIENCE",
+	},
+	{
+		value: "150+",
+		label: "PROJECTS DELIVERED",
+	},
+	{
+		value: "30+",
+		label: "BRANDS BUILT",
+	},
+	{
+		value: "20+",
+		label: "INDUSTRIES SERVED",
+	},
+	{
+		value: "98%",
+		label: "CLIENT RETENTION",
+	},
+];
+---
+
+<section>
+	<div class="mx-auto max-w-5xl px-6 lg:px-8 py-10 lg:py-20">
+		<!-- Top Section -->
+		<div
+			class="grid grid-cols-1 gap-10 lg:grid-cols-[0.8fr_1.5fr] lg:gap-24"
+		>
+			<!-- Left -->
+			<div>
+				<h2
+					class="m-0
+						font-clash
+						text-[22px]
+						font-semibold
+						uppercase
+						leading-none
+						tracking-[0.04em]
+						text-[#111111]"
+				>
+					WHO WE ARE
+				</h2>
+
+				<div
+					class="mt-2
+						h-[4px]
+						w-[94px]
+						bg-gradient-to-r
+						from-[#ff9b42]
+						via-[#ef2362]
+						to-[#6944db]"
+				>
+				</div>
+			</div>
+
+			<!-- Right -->
+			<div
+				class="max-w-[590px] font-geist text-[16px] font-normal leading-[24px] tracking-normal text-[#1d1d1d]"
+			>
+				{
+					descriptions.map((paragraph, index) => (
+						<p class={index === 0 ? "m-0" : "mb-0 mt-5"}>
+							{paragraph}
+						</p>
+					))
+				}
+			</div>
+		</div>
+	</div>
+	<div class="mx-auto max-w-7xl px-6 lg:px-8 py-10 lg:py-0">
+		<!-- Stats -->
+		<div class="border-t border-[#d9d9d9]">
+			<div class="grid
+					grid-cols-1
+					sm:grid-cols-2
+					lg:grid-cols-5">
+				{
+					stats.map((stat, index) => (
+						<div
+							class:list={[
+								"min-h-[145px] px-5 py-9 sm:px-6 lg:px-5",
+
+								index !== stats.length - 1 &&
+									"lg:border-r lg:border-[#d9d9d9]",
+
+								index !== stats.length - 1 &&
+									"max-lg:border-b max-lg:border-[#d9d9d9]",
+							]}
+						>
+							<h3 class="font-clash-display text-4xl font-[550] leading-[120%] tracking-normal gradient-text lg:text-[45px]">
+								{stat.value}
+							</h3>
+
+							<p
+								class="
+									mb-0
+									mt-3
+									font-satoshi
+									text-[15px]
+									font-normal
+									uppercase
+									leading-[15.75px]
+									tracking-[0.84px]
+									text-[#858585]
+								"
+							>
+								{stat.label}
+							</p>
+						</div>
+					))
+				}
+			</div>
+		</div>
+	</div>
+</section>

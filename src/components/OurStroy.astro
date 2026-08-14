@@ -1,0 +1,57 @@
+---
+const descriptions = [
+	"Founded in Ahmedabad, TOPKLICKZ started with a simple belief:businesses deserve more than generic marketing.",
+	"What began as a passion for design and communication has evolvedinto a multidisciplinary studio helping brands navigate growth through strategy, identity and digital experiences.",
+	"Today, we work with founders, startups and established businesses tobuild brands people remember.",
+];
+
+---
+
+<section class="bg-[#D9D9D93D] mt-10">
+	<div class="mx-auto max-w-5xl px-6 lg:px-8 py-10 lg:py-20">
+		<!-- Top Section -->
+		<div
+			class="grid grid-cols-1 gap-10 lg:grid-cols-[0.8fr_1.5fr] lg:gap-24"
+		>
+			<!-- Left -->
+			<div>
+				<h2
+					class="m-0
+						font-clash
+						text-[22px]
+						font-semibold
+						uppercase
+						leading-none
+						tracking-[0.04em]
+						text-[#111111]"
+				>
+					OUR STORY
+				</h2>
+
+				<div
+					class="mt-2
+						h-[4px]
+						w-[94px]
+						bg-gradient-to-r
+						from-[#ff9b42]
+						via-[#ef2362]
+						to-[#6944db]"
+				>
+				</div>
+			</div>
+
+			<!-- Right -->
+			<div
+				class="max-w-[590px] font-geist text-[16px] font-normal leading-[24px] tracking-normal text-[#1d1d1d]"
+			>
+				{
+					descriptions.map((paragraph, index) => (
+						<p class={index === 0 ? "m-0" : "mb-0 mt-5"}>
+							{paragraph}
+						</p>
+					))
+				}
+			</div>
+		</div>
+	</div>
+</section>

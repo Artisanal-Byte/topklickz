@@ -1,0 +1,93 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import config from "../../keystatic.config";
+import { createReader } from "@keystatic/core/reader";
+import Footer from "../components/Footer.astro";
+import Whoweare from "../components/WhoWeAre.astro";
+import OurStroy from "../components/OurStroy.astro";
+import WhatWeBelieve from "../components/WhatWeBelieve.astro";
+import OurProcess from "../components/OurProcess.astro";
+import OurApproach from "../components/OurApproach.astro";
+import AboutWork from "../components/AboutWork.astro";
+import ClientLogo from "../components/ClientLogo.astro";
+import Team from "../components/Team.astro";
+import StudioImage from "../components/StudioImages.astro";
+import AboutTestimonials from "../components/AboutTestimonials.astro";
+import BrandPhilosophy from "../components/BrandPhilosophy.astro";
+import AboutCtc from "../components/AboutCtc.astro";
+const reader = createReader(process.cwd(), config);
+const site = await reader.singletons.site.read();
+
+
+---
+
+<Layout>
+    <Header navbar={site?.navbar} />
+
+    <!-- about hero section  -->
+    <section class="mx-auto max-w-7xl px-6 lg:px-8 lg:py-20 py-10">
+        <h1
+            class="font-clash text-4xl font-[550] leading-[120%] tracking-normal text-black lg:text-[64px]"
+        >
+            A <span class="gradient-text">GOOD MIX</span> OF<br />
+            STRATEGISTS, DESIGNERS,<br />
+            CREATORS, AND BUILDERS.
+        </h1>
+    </section>
+
+    <!-- image  -->
+    <section class="w-full h-full">
+        <img src="/img/about.webp" class="w-full h-full" />
+
+        <section class="w-full bg-[#0a0a0a]">
+            <div
+                class="mx-auto max-w-7xl px-6 lg:px-8 lg:py-14 py-10 grid grid-cols-1 grid-cols-2 gap-10"
+            >
+                <!-- Left Content -->
+                <div>
+                    <h2
+                        class="m-0 font-Clash_Grotesk text-[30px] font-medium uppercase leading-[40px] tracking-[-0.03em] text-white"
+                    >
+                        <span class="gradient-text"> TOPKLICKZ </span>
+                        IS A CREATIVE STUDIO
+                        <br class="hidden sm:block" />
+                        BUILDING MEMORABLE BRANDS AND
+                        <br class="hidden sm:block" />
+                        MEANINGFUL EXPERIENCES.
+                    </h2>
+                </div>
+
+                <!-- Right Content -->
+                <div class="lg:pt-6">
+                    <p
+                        class="font-Geist text-[14px] font-normal leading-[22.4px] tracking-normal text-[#aaa7a7]"
+                    >
+                        We bring together strategy, design, content and
+                        technology to help businesses communicate clearly,
+                        connect deeply and grow confidently.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <!-- who we are -->
+    <Whoweare />
+
+    <!-- our stroy -->
+
+    <OurStroy />
+
+    <WhatWeBelieve />
+    <OurProcess />
+    <OurApproach />
+    <AboutWork />
+    <ClientLogo />
+    <Team />
+    <StudioImage />
+    <AboutTestimonials />
+    <BrandPhilosophy />
+    <AboutCtc />
+    <Footer footer={site?.footer} />
+</Layout>

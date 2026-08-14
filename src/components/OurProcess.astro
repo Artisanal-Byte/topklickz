@@ -1,0 +1,156 @@
+---
+const processSteps = [
+	{
+		number: "01",
+		title: "DISCOVER",
+		description:
+			"We start by understanding your business, audience and goals.",
+	},
+	{
+		number: "02",
+		title: "DEFINE",
+		description:
+			"We uncover opportunities, shape positioning and establish direction.",
+	},
+	{
+		number: "03",
+		title: "DESIGN",
+		description:
+			"We create identities, experiences and content systems that bring ideas to life.",
+	},
+	{
+		number: "04",
+		title: "DELIVER",
+		description:
+			"We launch, refine and support solutions designed for long-term impact.",
+	},
+];
+---
+
+<section class="w-full bg-[#D9D9D93D]">
+	<div
+		class="
+			mx-auto
+			max-w-7xl
+			px-6
+			py-10
+			lg:px-8
+			lg:py-16
+		"
+	>
+		<!-- Heading -->
+		<div>
+			<h2
+				class="
+					m-0
+					font-clash
+					text-[24px]
+					font-semibold
+					uppercase
+					leading-[1.2]
+					tracking-[0.04em]
+					text-[#0b0b0b]
+				"
+			>
+				OUR PROCESS
+			</h2>
+
+			<!-- Gradient Line -->
+			<div
+				class="
+					mt-2
+					h-[3px]
+					w-[104px]
+					bg-[linear-gradient(90deg,#FEC053_0%,#F2203E_33%,#B729A8_65%,#5342D6_100%)]
+				"
+			></div>
+		</div>
+
+		<!-- Process Grid -->
+		<div
+			class="
+				mt-8
+				grid
+				grid-cols-1
+				border-t
+				border-[#D2D0CB]
+				md:grid-cols-2
+				lg:grid-cols-4
+			"
+		>
+			{
+				processSteps.map((step, index) => (
+					<div
+						class:list={[
+							"relative px-0 py-9 md:min-h-[168px] md:px-7 lg:px-8",
+
+							/* Desktop vertical divider */
+							index !== processSteps.length - 1 &&
+								"lg:border-r lg:border-[#D2D0CB]",
+
+							/* Tablet dividers */
+							index % 2 === 0 &&
+								"md:border-r md:border-[#D2D0CB] lg:border-r",
+
+							/* Mobile horizontal divider */
+							index !== processSteps.length - 1 &&
+								"border-b border-[#D2D0CB] md:border-b-0",
+
+							/* First column alignment */
+							index === 0 && "md:pl-0 lg:pl-0",
+						]}
+					>
+						<!-- Number -->
+						<p
+							class="
+								m-0
+								font-satoshi
+								text-[11px]
+								font-normal
+								leading-[16.5px]
+								tracking-[1.1px]
+								text-[#7D7A74]
+							"
+						>
+							{step.number}
+						</p>
+
+						<!-- Title -->
+						<h3
+							class="
+								mb-0
+								mt-5
+								font-clash-display
+								text-[15px]
+								font-semibold
+								uppercase
+								leading-[1.2]
+								tracking-[0px]
+								text-[#111111]
+							"
+						>
+							{step.title}
+						</h3>
+
+						<!-- Description -->
+						<p
+							class="
+								mb-0
+								mt-4
+								max-w-[280px]
+								font-satoshi
+								text-[13.5px]
+								font-normal
+								leading-[22.27px]
+								tracking-[0px]
+								text-[#6B6962]
+							"
+						>
+							{step.description}
+						</p>
+					</div>
+				))
+			}
+		</div>
+	</div>
+</section>

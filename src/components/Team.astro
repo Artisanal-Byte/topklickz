@@ -1,0 +1,175 @@
+---
+const teamMembers = [
+	{
+		name: "Lorem Ipsum",
+		role: "Technology Lead",
+		image: "/img/team/team-1.jpg",
+	},
+	{
+		name: "Lorem Ipsum",
+		role: "Technology Lead",
+		image: "/img/team/team-2.jpg",
+	},
+	{
+		name: "Lorem Ipsum",
+		role: "Technology Lead",
+		image: "/img/team/team-3.jpg",
+	},
+	{
+		name: "Lorem Ipsum",
+		role: "Technology Lead",
+		image: "/img/team/team-4.jpg",
+	},
+];
+---
+
+<section class="w-full pl-30 overflow-hidden bg-white py-14 lg:py-0">
+	<!-- Heading -->
+	<div class="mx-auto max-w-[1500px] px-6 lg:px-0">
+		<h2
+			class="
+				m-0
+				font-clash-display
+				text-[26px]
+				font-semibold
+				uppercase
+				leading-[32px]
+				tracking-[2px]
+				text-[#090909]
+			"
+		>
+			TEAM
+		</h2>
+
+		<div
+			class="
+				mt-1
+				h-[4px]
+				w-[90px]
+				bg-[linear-gradient(90deg,#FEC053_0%,#F2203E_33%,#B729A8_65%,#5342D6_100%)]
+			"
+		></div>
+	</div>
+
+	<!-- Team Grid -->
+	<div
+		class="
+			mx-auto
+			mt-10
+			grid
+			max-w-[1650px]
+			grid-cols-1
+			gap-8
+			px-6
+			sm:grid-cols-2
+			lg:grid-cols-4
+			lg:items-start
+			lg:gap-[30px]
+			lg:px-0
+		"
+	>
+		{
+			teamMembers.map((member) => (
+				<article
+					class="
+						group
+						relative
+						cursor-pointer
+					"
+				>
+					<!-- Image -->
+					<div
+						class="
+							relative
+							h-[340px]
+							w-full
+							overflow-hidden
+							bg-[#eeeeee]
+							transition-[height]
+							duration-500
+							ease-in-out
+
+							lg:h-[305px]
+							lg:group-hover:h-[455px]
+						"
+					>
+						<img
+							src={member.image}
+							alt={member.name}
+							loading="lazy"
+							class="
+								absolute
+								inset-0
+								h-full
+								w-full
+								object-cover
+								object-top
+								grayscale
+								transition-all
+								duration-500
+								ease-in-out
+
+								group-hover:grayscale-0
+							"
+						/>
+					</div>
+
+					<!-- Gradient line -->
+					<div
+						class="
+							h-[3px]
+							w-full
+							origin-left
+							scale-x-0
+							bg-[linear-gradient(90deg,#FEC053_0%,#F2203E_33%,#B729A8_65%,#5342D6_100%)]
+							transition-transform
+							duration-500
+							ease-out
+
+							group-hover:scale-x-100
+						"
+					></div>
+
+					<!-- Content -->
+					<div
+						class="
+							pt-5
+							transition-all
+							duration-500
+							ease-out
+						"
+					>
+						<h3
+							class="
+								m-0
+								font-clash-display
+								text-[18px]
+								font-semibold
+								leading-[24px]
+								tracking-[0px]
+								text-[#111111]
+							"
+						>
+							{member.name}
+						</h3>
+
+						<p
+							class="
+								mb-0
+								mt-2
+								font-satoshi
+								text-[15px]
+								font-normal
+								leading-[22px]
+								tracking-[0px]
+								text-[#6B6962]
+							"
+						>
+							{member.role}
+						</p>
+					</div>
+				</article>
+			))
+		}
+	</div>
+</section>
