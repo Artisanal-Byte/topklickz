@@ -8,10 +8,10 @@ const descriptions = [
 ---
 
 <section class="bg-[#D9D9D93D] mt-10">
-	<div class="mx-auto max-w-5xl px-6 lg:px-8 py-10 lg:py-20">
+	<div class="mx-auto max-w-5xl px-4 lg:px-8 py-10 lg:py-20">
 		<!-- Top Section -->
 		<div
-			class="grid grid-cols-1 gap-10 lg:grid-cols-[0.8fr_1.5fr] lg:gap-24"
+			class="grid grid-cols-1 gap-8 lg:grid-cols-[0.8fr_1.5fr] lg:gap-24"
 		>
 			<!-- Left -->
 			<div>
@@ -46,7 +46,7 @@ const descriptions = [
 			>
 				{
 					descriptions.map((paragraph, index) => (
-						<p class={index === 0 ? "m-0" : "mb-0 mt-5"}>
+						<p class={index === 0 ? "m-0" : "mb-0 mt-3 lg:mt-5"}>
 							{paragraph}
 						</p>
 					))
