@@ -21,7 +21,7 @@ navbar:
     - title: Services
       href: brand-strategy
     - title: Work
-      href: '#work'
+      href: portfolio
     - title: Insights
       href: '#insights'
   buttonText: Get in Touch
