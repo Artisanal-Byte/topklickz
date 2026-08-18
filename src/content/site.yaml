@@ -19,7 +19,7 @@ navbar:
     - title: About
       href: /about
     - title: Services
-      href: '#services'
+      href: brand-strategy
     - title: Work
       href: '#work'
     - title: Insights

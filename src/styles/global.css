@@ -2,18 +2,18 @@
 
 
 @font-face {
-    font-family: "Clash Grotesk" , "Geist" ,"Clash Display" , "Satoshi" ,"Figma Hand";
-    src: url("/fonts/ClashGrotesk-Medium.woff2") format("woff2");
-    font-weight: 500;
-    font-style: normal;
+  font-family: "Clash Grotesk", "Geist", "Clash Display", "Satoshi", "Figma Hand";
+  src: url("/fonts/ClashGrotesk-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
 }
 
 @theme {
-    --font-clash: "Clash Grotesk", sans-serif;
-    --font-geist: "Geist", sans-serif;
-    --font-clash-display: "Clash Display", sans-serif;
-    --font-satoshi: "Satoshi", sans-serif;
-    --font-figma-hand: "Figma Hand";
+  --font-clash: "Clash Grotesk", sans-serif;
+  --font-geist: "Geist", sans-serif;
+  --font-clash-display: "Clash Display", sans-serif;
+  --font-satoshi: "Satoshi", sans-serif;
+  --font-figma-hand: "Figma Hand";
 
 }
 
@@ -27,26 +27,43 @@ body {
 }
 
 .gradient-bg {
-    background: linear-gradient(48.89deg,
-            #FEC053 14.5%,
-            #F2203E 37.57%,
-            #B729A8 59.94%,
-            #5342D6 84.41%);
+  background: linear-gradient(48.89deg,
+      #FEC053 14.5%,
+      #F2203E 37.57%,
+      #B729A8 59.94%,
+      #5342D6 84.41%);
 }
+
 /* global.css */
 .gradient-text {
   @apply bg-gradient-to-r from-orange-500 via-pink-500 to-violet-600 bg-clip-text text-transparent;
 }
 
 .gradient-border {
-    border: 1px solid transparent;
-    border-radius: px;
+  border: 1px solid transparent;
+  border-radius: px;
 
-    border-image: radial-gradient(50% 83.67% at 50% 50%,
-            #FEC053 0%,
-            #F2203E 33%,
-            #B729A8 65%,
-            #5342D6 100%) 1;
+  border-image: radial-gradient(50% 83.67% at 50% 50%,
+      #FEC053 0%,
+      #F2203E 33%,
+      #B729A8 65%,
+      #5342D6 100%) 1;
+}
+
+@import "tailwindcss";
+
+/* Common site button */
+.site-btn {
+  @apply mt-7 inline-flex min-h-[43px] items-center gap-[11px] rounded-full border border-[#F8BA57] py-[7px] pr-[15px] pl-[11px] font-clash text-[14px] font-medium leading-none no-underline transition-all duration-300;
+
+  @variant lg {
+    @apply mt-[37px] text-[16px];
+  }
+
+  @variant hover {
+    @apply -translate-y-[2px] bg-[#FFFDF9];
+    box-shadow: 0 5px 15px rgba(32, 24, 14, 0.06);
+  }
 }
 
 /* studio component client logo  */

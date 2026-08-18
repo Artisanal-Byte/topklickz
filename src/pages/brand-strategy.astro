@@ -1,0 +1,37 @@
+---
+import Layout from "../layouts/Layout.astro";
+import config from "../../keystatic.config";
+import { createReader } from "@keystatic/core/reader";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import BrandStrategyHero from "../components/services/BrandStrategyHero.astro"
+import BrandStrategyDetails from "../components/services/BrandStrategyDetails.astro";
+import ServiceGrid from "../components/services/ServicesGrid.astro";
+import OurApproachBrandStrategy from "../components/services/OurApproachBrandStrategy.astro";
+import WhatYouGetBrandStrategy from "../components/services/WhatYouGetBrandStrategy.astro"
+import SelectedWorkBrandStrategy from "../components/services/SelectedWorkBrandStrategy.astro";
+import StatsStripBrandStrategy from "../components/services/StatsStripBrandStrategy.astro";
+import BrandBrandStrategy from "../components/services/BrandsBrandStrategy.astro";
+import Faq from "../components/services/FaqBrandStrategy.astro";
+import BrandPhilosophy from "../components/BrandPhilosophy.astro";
+const reader = createReader(process.cwd(), config);
+const site = await reader.singletons.site.read();
+---
+
+<Layout>
+    <Header navbar={site?.navbar} />
+
+    <BrandStrategyHero />
+    <ServiceGrid />
+    <BrandStrategyDetails />
+    <OurApproachBrandStrategy/>
+    <WhatYouGetBrandStrategy />
+    <SelectedWorkBrandStrategy />
+    <StatsStripBrandStrategy />
+    <BrandBrandStrategy />
+    <Faq />
+ <BrandPhilosophy />
+
+
+    <Footer footer={site?.footer} />
+</Layout>

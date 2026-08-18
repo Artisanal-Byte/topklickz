@@ -1,0 +1,203 @@
+---
+const disciplines = [
+	{
+		title: "Research",
+		active: true,
+	},
+	{
+		title: "Positioning",
+		active: false,
+	},
+	{
+		title: "Messaging",
+		active: false,
+	},
+	{
+		title: "Brand Architecture",
+		active: false,
+	},
+	{
+		title: "Customer Insights",
+		active: false,
+	},
+];
+
+interface Props {
+	title?: string;
+	description?: string;
+	descriptionTwo?: string;
+	image?: string;
+	imageAlt?: string;
+}
+
+const {
+	title = "Brand Strategy",
+
+	description =
+		"Strategy is the spine of everything we build. Without a clear strategic foundation, even the most beautiful brand falls flat. We create the thinking that makes your brand impossible to ignore — and hard to forget.",
+
+	descriptionTwo =
+		"Our brand strategy practice combines market intelligence, audience psychology and creative intuition to give you a positioning that is both defensible and distinctive. We work collaboratively, embedding with your team to surface insights that no external consultant could find alone.",
+
+	image = "/img/brandstratagy.png",
+	imageAlt = "Brand strategy work",
+} = Astro.props;
+---
+
+<section>
+	<div class="mx-auto max-w-7xl px-4 lg:px-8 lg:py-0 py-10">
+		<!-- Top button -->
+		<a href="#what-we-do" class="site-btn !mt-0">
+			<span
+				class="
+					gradient-bg
+					h-[18px]
+					w-[18px]
+					shrink-0
+					rounded-full
+				"
+			></span>
+
+			<span>What We Do</span>
+		</a>
+
+		<!-- Content Grid -->
+		<div
+			class="
+				mt-[32px]
+				grid
+				grid-cols-1
+				gap-[45px]
+				lg:grid-cols-[540px_minmax(0,1fr)]
+				lg:gap-[20px]
+			"
+		>
+			<!-- LEFT -->
+			<div>
+				<h2
+					class="
+						font-clash
+						text-[34px]
+						font-bold
+						leading-[1]
+						tracking-[-0.04em]
+						text-black
+						lg:text-[62px]
+					"
+				>
+					{title}
+				</h2>
+
+				<!-- Discipline List -->
+				<div class="mt-[20px]">
+					<ul class="space-y-[7px]">
+						{
+							disciplines.map((item) => (
+								<li>
+									<button
+										type="button"
+										class:list={[
+											`
+												block
+												w-fit
+												font-geist
+												text-left
+												text-[25px]
+												leading-[1.12]
+												tracking-[-0.02em]
+												transition-colors
+												duration-300
+											`,
+											item.active
+												? "font-normal text-[#171717]"
+												: "font-normal text-[#B7B7B7] hover:text-black",
+										]}
+									>
+										{item.title}
+									</button>
+								</li>
+							))
+						}
+					</ul>
+
+					<!-- small gradient line -->
+					<div
+						class="
+							mt-[19px]
+							h-[3px]
+							w-[10px]
+							rounded-full
+							bg-[linear-gradient(90deg,#FF9B38_0%,#FF336F_45%,#693BFF_100%)]
+						"
+					></div>
+				</div>
+			</div>
+
+			<!-- RIGHT -->
+			<div class="max-w-[720px]">
+				<!-- Main description -->
+				<p
+					class="
+						font-clash
+						text-[15px]
+						leading-[1.45]
+						tracking-[-0.02em]
+						text-[#171717]
+						lg:text-[25px]
+						lg:leading-[1.42]
+					"
+				>
+					{description}
+				</p>
+
+				<!-- Second description -->
+				<p
+					class="
+						mt-[27px]
+						max-w-[600px]
+						font-clash
+						text-[13px]
+						font-normal
+						leading-[1.55]
+						tracking-[-0.01em]
+						text-[#313131]
+						lg:mt-[34px]
+						lg:text-[18px]
+						lg:leading-[1.6]
+					"
+				>
+					{descriptionTwo}
+				</p>
+
+				<!-- Image -->
+				<div
+					class="
+						mt-[28px]
+						w-full
+						max-w-[720px]
+						overflow-hidden
+						bg-[#F5F1EC]
+
+						lg:mt-[30px]
+					"
+				>
+					<img
+						src={image}
+						alt={imageAlt}
+						loading="lazy"
+						class="
+							block
+							aspect-[2.45/1]
+							w-full
+							object-cover
+							transition-transform
+							duration-500
+							ease-out
+							hover:scale-[1.02]
+						"
+					/>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
