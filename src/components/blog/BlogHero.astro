@@ -1,0 +1,90 @@
+---
+interface Props {
+	eyebrow?: string;
+	titleLine1?: string;
+	titleLine2?: string;
+	titleLine3?: string;
+	highlight?: string;
+	description?: string;
+	image?: string;
+	articleTitle?: string;
+	articleLink?: string;
+}
+
+const {
+	titleLine1 = "UNCOVER IDEAS,",
+	titleLine2 = "INSIGHTS,",
+	titleLine3 = "AND",
+	highlight = "GROWTH.",
+	description =
+		"Explore expert perspectives, practical strategies, and creative thinking on branding, digital marketing, web experiences, AI, and business growth. Designed to help ambitious brands stay ahead.",
+} = Astro.props;
+---
+
+<section class="w-full">
+	<div
+		class="
+			mx-auto
+			w-full
+			max-w-7xl   
+			px-5
+			py-12
+			lg:px-12
+			lg:py-20
+		"
+	>
+		<!-- =========================
+		     TOP CONTENT
+		========================= -->
+		<div class="max-w-[720px]">
+			<h2
+				class="
+					text-[42px]
+					font-medium
+					uppercase
+					leading-[1.00]
+					tracking-[-2px]
+					text-black
+					lg:text-[60px]
+					lg:tracking-[-3px]
+                    font-clash
+				"
+			>
+				<span class="block">{titleLine1}</span>
+
+				<span class="block">
+					{titleLine2}
+				</span>
+
+				<span class="block">
+					{titleLine3}
+
+					<span
+						class="
+							inline-block
+							bg-[linear-gradient(90deg,#ee1765_0%,#d6248c_45%,#7548d7_100%)]
+							bg-clip-text
+							font-bold
+							text-transparent
+						"
+					>
+						{highlight}
+					</span>
+				</span>
+			</h2>
+
+			<p
+				class="
+					mt-5
+					max-w-[570px]
+					text-[18px]
+					font-normal
+					leading-[1.45]
+					text-black
+				"
+			>
+				{description}
+			</p>
+		</div>
+	</div>
+</section>

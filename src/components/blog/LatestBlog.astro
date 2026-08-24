@@ -1,0 +1,143 @@
+---
+const insights = [
+	{
+		image: "/img/blog.png",
+		category: "NEWS",
+		title: "TOPKLICKZ Expands Creative & AI Services for Growing Businesses",
+		date: "May 10, 2026",
+		readTime: "6 min read",
+		link: "#",
+	},
+	{
+		image: "/img/blog.png",
+		category: "NEWS",
+		title: "TOPKLICKZ Expands Creative & AI Services for Growing Businesses",
+		date: "May 10, 2026",
+		readTime: "6 min read",
+		link: "#",
+	},
+	{
+		image: "/img/blog.png",
+		category: "NEWS",
+		title: "TOPKLICKZ Expands Creative & AI Services for Growing Businesses",
+		date: "May 10, 2026",
+		readTime: "6 min read",
+		link: "#",
+	},
+];
+---
+
+<section class="w-full bg-white py-12 lg:py-16">
+	<div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
+		<!-- Header -->
+		<div class="mb-8 flex items-center justify-between">
+			<h2 class="text-[25px] font-semibold text-black">
+				Latest insights
+			</h2>
+
+			<a
+				href="/insights"
+				class="flex items-center gap-3 text-[12px] font-medium text-black transition-opacity hover:opacity-60"
+			>
+				<span>View all insights</span>
+				<span class="text-[20px] leading-none">→</span>
+			</a>
+		</div>
+
+		<!-- Cards -->
+		<div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 lg:gap-10">
+			{
+				insights.map((item) => (
+					<article class="group">
+						<a href={item.link} class="block">
+							<!-- IMAGE AREA -->
+							<div
+								class="
+									relative
+									aspect-[1/1.08]
+									w-full
+									overflow-hidden
+									rounded-[14px]
+								"
+							>
+								<!-- Full light-blue image -->
+								<img
+									src={item.image}
+									alt={item.title}
+									class="
+										absolute
+										inset-0
+										h-full
+										w-full
+										object-cover
+										object-center
+										transition-transform
+										duration-500
+										ease-out
+										group-hover:scale-[1.025]
+									"
+								/>
+
+								<!-- NEWS BADGE -->
+								<span
+									class="
+										absolute
+										left-4
+										top-4
+										z-10
+										rounded-full
+										bg-black
+										px-[13px]
+										py-[6px]
+										text-[14px]
+										font-semibold
+										uppercase
+										leading-none
+										tracking-[0.3px]
+										text-white
+									"
+								>
+									{item.category}
+								</span>
+							</div>
+
+							<!-- Content -->
+							<div class="pt-5">
+								<h3
+									class="
+                                    font-geist
+										max-w-[390px]
+										text-[24px]
+										font-semibold
+										leading-[1.08]
+										tracking-[-0.4px]
+										text-black
+									"
+								>
+									{item.title}
+								</h3>
+
+								<div
+									class="
+										mt-5
+										flex
+										items-center
+										gap-2
+										text-[14px]
+										text-black/45
+									"
+								>
+									<span>{item.date}</span>
+
+									<span>•</span>
+
+									<span>{item.readTime}</span>
+								</div>
+							</div>
+						</a>
+					</article>
+				))
+			}
+		</div>
+	</div>
+</section>

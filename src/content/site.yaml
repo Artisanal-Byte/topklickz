@@ -23,7 +23,7 @@ navbar:
     - title: Work
       href: portfolio
     - title: Insights
-      href: '#insights'
+      href: blog
     - title: Work-Inner
       href: portfolio-inner
   buttonText: Get in Touch
