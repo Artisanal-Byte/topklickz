@@ -1,0 +1,66 @@
+---
+const section = {
+	label: "Thinking",
+	number: "03",
+	items: [
+		{
+			title: "The Challenge",
+			description:
+				"Create a luxury positioning that felt simultaneously earthy and aspirational, without leaning into tired wellness cliches. The brand needed to feel genuinely premium without feeling cold or clinical.",
+		},
+		{
+			title: "Our Approach",
+			description:
+				"We anchored the identity in ritual and texture — letting materiality guide the visual language. Custom display typography, a muted palette of ochre and stone, and tactile embossed packaging finishes made the brand feel unmistakably premium.",
+		},
+	],
+};
+---
+
+<section class="w-full bg-[#f5f5f3] py-14 md:py-20 lg:py-24">
+	<div class="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+		<div
+			class="grid gap-12 lg:grid-cols-[170px_minmax(0,1fr)] lg:gap-16 xl:grid-cols-[185px_minmax(0,1fr)] xl:gap-20"
+		>
+			<!-- Left side -->
+			<div>
+				<div class="flex items-center gap-3">
+					<span
+						class="text-[10px] font-medium uppercase tracking-[0.24em] text-[#a4a4a4]"
+					>
+						{section.label}
+					</span>
+
+					<div
+						class="h-px w-[130px] bg-gradient-to-r from-[#d9bf87] via-[#d78cf0] to-[#738dff]"
+					></div>
+				</div>
+
+				<div
+					class="mt-6 text-[68px] font-semibold leading-none tracking-[-0.06em] text-[#cdcdcd] sm:text-[76px] lg:text-[84px]"
+				>
+					{section.number}
+				</div>
+			</div>
+
+			<!-- Right side -->
+			<div class="grid gap-10 md:grid-cols-2 md:gap-12 xl:gap-16">
+				{
+					section.items.map((item) => (
+						<div class="min-w-0">
+							<h3 class="text-[24px] font-semibold leading-none tracking-[-0.03em] text-[#111111] md:text-[26px]">
+								{item.title}
+							</h3>
+
+							<div class="mt-5 h-px w-full bg-[#dfdfdf]"></div>
+
+							<p class="mt-6 max-w-[430px] text-[17px] font-normal leading-[1.9] tracking-[-0.01em] text-[#7f7f7f] lg:text-[18px]">
+								{item.description}
+							</p>
+						</div>
+					))
+				}
+			</div>
+		</div>
+	</div>
+</section>

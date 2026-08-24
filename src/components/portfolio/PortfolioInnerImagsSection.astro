@@ -1,0 +1,321 @@
+---
+const gallery = {
+	topLeft: "/img/nymora-01.webp",
+	topRight: "/img/nymora-02.webp",
+
+	bottomLeft: "/img/nymora-03.webp",
+	bottomCenter: "/img/nymora-04.webp",
+
+	pattern: "/img/nymora-05.webp",
+	brandMark: "/img/nymora-06.webp",
+	interiorSmall: "/img/nymora-07.webp",
+	archSmall: "/img/nymora-08.webp",
+	fabricSmall: "/img/nymora-09.webp",
+};
+---
+
+<section class="w-full bg-[#f7f7f4] py-4">
+	<div class="mx-auto w-full max-w-7xl px-2 sm:px-4 lg:px-5">
+
+		<!-- ============================= -->
+		<!-- DESKTOP COLLAGE -->
+		<!-- ============================= -->
+		<div class="hidden overflow-hidden md:block">
+
+			<!-- TOP ROW -->
+			<div class="grid grid-cols-2 gap-[3px]">
+				<!-- Top Left -->
+				<div
+					class="
+						group
+						h-[330px]
+						overflow-hidden
+						lg:h-[430px]
+						xl:h-[520px]
+					"
+				>
+					<img
+						src={gallery.topLeft}
+						alt="Nymora salon branding"
+						class="
+							h-full
+							w-full
+							object-cover
+							object-center
+							transition-transform
+							duration-700
+							ease-out
+							group-hover:scale-[1.025]
+                            bg-white
+						"
+					/>
+				</div>
+
+				<!-- Top Right -->
+				<div
+					class="
+						group
+						h-[330px]
+						overflow-hidden
+						lg:h-[430px]
+						xl:h-[520px]
+					"
+				>
+					<img
+						src={gallery.topRight}
+						alt="Nymora packaging"
+						class="
+							h-full
+							w-full
+							object-cover
+							object-center
+							transition-transform
+							duration-700
+							ease-out
+							group-hover:scale-[1.025]
+                             bg-white
+						"
+					/>
+				</div>
+			</div>
+
+			<!-- ============================= -->
+			<!-- BOTTOM ROW -->
+			<!-- ============================= -->
+			<div
+				class="
+					mt-[3px]
+					grid
+					h-[190px]
+					grid-cols-[30%_30%_40%]
+					gap-[3px]
+					lg:h-[235px]
+					xl:h-[275px]
+				"
+			>
+				<!-- Bottom Left -->
+				<div class="group overflow-hidden">
+					<img
+						src={gallery.bottomLeft}
+						alt="Nymora stationery"
+						class="
+							h-full
+							w-full
+							object-cover
+							object-center
+							transition-transform
+							duration-700
+							ease-out
+							group-hover:scale-[1.03]
+                             bg-white
+						"
+					/>
+				</div>
+
+				<!-- Bottom Center -->
+				<div class="group overflow-hidden">
+					<img
+						src={gallery.bottomCenter}
+						alt="Nymora product collection"
+						class="
+							h-full
+							w-full
+							object-cover
+							object-center
+							transition-transform
+							duration-700
+							ease-out
+							group-hover:scale-[1.03]  bg-white
+						"
+					/>
+				</div>
+
+				<!-- ============================= -->
+				<!-- RIGHT NESTED COLLAGE -->
+				<!-- ============================= -->
+				<div class="grid min-w-0 grid-rows-2 gap-[3px]">
+
+					<!-- Pattern - Full Width -->
+					<div class="group overflow-hidden">
+						<img
+							src={gallery.pattern}
+							alt="Nymora brand pattern"
+							class="
+								h-full
+								w-full
+								object-cover
+								object-center
+								transition-transform
+								duration-700
+								ease-out
+								group-hover:scale-[1.03]  bg-white
+							"
+						/>
+					</div>
+
+					<!-- 4 SMALL IMAGES -->
+					<div
+						class="
+							grid
+							min-h-0
+							grid-cols-[22%_12%_35%_31%]
+							gap-[3px]
+						"
+					>
+						<!-- Brand Mark -->
+						<div class="group min-w-0 overflow-hidden">
+							<img
+								src={gallery.brandMark}
+								alt="Nymora monogram"
+								class="
+									h-full
+									w-full
+									object-cover
+									object-center
+									transition-transform
+									duration-700
+									group-hover:scale-[1.04] bg-white
+								"
+							/>
+						</div>
+
+						<!-- Small Interior -->
+						<div class="group min-w-0 overflow-hidden">
+							<img
+								src={gallery.interiorSmall}
+								alt="Nymora interior detail"
+								class="
+									h-full
+									w-full
+									object-cover
+									object-center
+									transition-transform
+									duration-700
+									group-hover:scale-[1.04] bg-white
+								"
+							/>
+						</div>
+
+						<!-- Arch -->
+						<div class="group min-w-0 overflow-hidden">
+							<img
+								src={gallery.archSmall}
+								alt="Nymora salon arch"
+								class="
+									h-full
+									w-full
+									object-cover
+									object-center
+									transition-transform
+									duration-700
+									group-hover:scale-[1.04] bg-white
+								"
+							/>
+						</div>
+
+						<!-- Fabric -->
+						<div class="group min-w-0 overflow-hidden">
+							<img
+								src={gallery.fabricSmall}
+								alt="Nymora brand texture"
+								class="
+									h-full
+									w-full
+									object-cover
+									object-center
+									transition-transform
+									duration-700
+									group-hover:scale-[1.04] bg-white
+								"
+							/>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- ============================= -->
+		<!-- MOBILE -->
+		<!-- ============================= -->
+		<div class="grid grid-cols-2 gap-[3px] md:hidden">
+
+			<!-- Main image -->
+			<div class="col-span-2 h-[270px] overflow-hidden">
+				<img
+					src={gallery.topLeft}
+					alt="Nymora salon branding"
+					class="h-full w-full object-cover"
+				/>
+			</div>
+
+			<!-- Packaging -->
+			<div class="col-span-2 h-[260px] overflow-hidden">
+				<img
+					src={gallery.topRight}
+					alt="Nymora packaging"
+					class="h-full w-full object-cover"
+				/>
+			</div>
+
+			<!-- Bottom left -->
+			<div class="h-[210px] overflow-hidden">
+				<img
+					src={gallery.bottomLeft}
+					alt="Nymora stationery"
+					class="h-full w-full object-cover"
+				/>
+			</div>
+
+			<!-- Bottom center -->
+			<div class="h-[210px] overflow-hidden">
+				<img
+					src={gallery.bottomCenter}
+					alt="Nymora product collection"
+					class="h-full w-full object-cover"
+				/>
+			</div>
+
+			<!-- Pattern -->
+			<div class="col-span-2 h-[130px] overflow-hidden">
+				<img
+					src={gallery.pattern}
+					alt="Nymora brand pattern"
+					class="h-full w-full object-cover"
+				/>
+			</div>
+
+			<!-- Four small images -->
+			<div class="h-[150px] overflow-hidden">
+				<img
+					src={gallery.brandMark}
+					alt="Nymora monogram"
+					class="h-full w-full object-cover"
+				/>
+			</div>
+
+			<div class="h-[150px] overflow-hidden">
+				<img
+					src={gallery.interiorSmall}
+					alt="Nymora interior"
+					class="h-full w-full object-cover"
+				/>
+			</div>
+
+			<div class="h-[170px] overflow-hidden">
+				<img
+					src={gallery.archSmall}
+					alt="Nymora arch"
+					class="h-full w-full object-cover"
+				/>
+			</div>
+
+			<div class="h-[170px] overflow-hidden">
+				<img
+					src={gallery.fabricSmall}
+					alt="Nymora texture"
+					class="h-full w-full object-cover"
+				/>
+			</div>
+		</div>
+	</div>
+</section>

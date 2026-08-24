@@ -24,6 +24,8 @@ navbar:
       href: portfolio
     - title: Insights
       href: '#insights'
+    - title: Work-Inner
+      href: portfolio-inner
   buttonText: Get in Touch
   buttonLink: '#contact'
 hero:
