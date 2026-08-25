@@ -183,29 +183,82 @@ const { services } = Astro.props;
                   </ul>
 
                   <!-- Button -->
-                <a
+                    <a
                     href={service.buttonLink}
-                    class="group mt-10 inline-flex max-w-full rounded-full bg-[radial-gradient(circle_at_center,#FEC053_0%,#F2203E_33%,#B729A8_65%,#5342D6_100%)] p-[1.5px] transition-all duration-300 sm:mt-14"
+                    class="
+                      group relative mt-10 inline-flex h-[52px] min-w-[220px]
+                      items-center overflow-hidden rounded-full
+                      bg-[linear-gradient(135deg,#FEC053_0%,#F2203E_33%,#B729A8_65%,#5342D6_100%)]
+                      p-[1.5px]
+                      sm:mt-14 sm:h-[58px] sm:min-w-[270px]
+                    "
                   >
+                    <!-- White inner background -->
                     <span
-                      class="flex w-full items-center gap-2 rounded-full bg-white px-2 py-2 pr-4 transition-colors duration-300 group-hover:bg-violet-50 sm:w-auto sm:gap-4 sm:px-2 sm:pr-6"
-                    >
-                      <!-- Icon -->
-                      <span
-                        class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full gradient-bg transition-transform duration-300 group-hover:rotate-45 sm:h-10 sm:w-10"
-                      >
-                        <Icon
-                          name={service.buttonIcon}
-                          class="h-4 w-4 text-white sm:h-5 sm:w-5"
-                        />
-                      </span>
+                      class="
+                        absolute inset-[1.5px]
+                        rounded-full bg-white
+                      "
+                    ></span>
 
-                      <!-- Text -->
-                      <span
-                        class="whitespace-nowrap font-clash text-sm font-medium leading-[100%] tracking-[0] text-black sm:text-[20px]"
-                      >
-                        {service.buttonText}
-                      </span>
+                    <!-- Gradient Circle -->
+                    <span
+                      class="
+                        absolute left-[10px] top-1/2 z-[2]
+                        h-10 w-10
+                        -translate-y-1/2
+                        rounded-full
+                        bg-[linear-gradient(135deg,#FEC053_0%,#F2203E_33%,#B729A8_65%,#5342D6_100%)]
+                        transition-all
+                        duration-500
+                        ease-in-out
+                        group-hover:left-[1.5px]
+                        group-hover:h-[calc(100%-3px)]
+                        group-hover:w-[calc(100%-3px)]
+                      "
+                    ></span>
+
+                    <!-- Text -->
+                    <span
+                      class="
+                        relative z-10
+                        flex w-full
+                        items-center
+                        justify-center
+                        pl-14 pr-5
+                        font-clash
+                        text-[20px]
+                        font-medium
+                        leading-[100%]
+                        tracking-[0]
+                        text-black
+                        transition-all
+                        duration-500
+                        ease-in-out
+                        group-hover:pl-14
+                        group-hover:pr-14
+                        group-hover:text-white
+                      "
+                    >
+                      {service.buttonText}
+                    </span>
+
+                    <!-- Arrow -->
+                    <span
+                      class="
+                        absolute left-[20px] top-1/2 z-20
+                        flex -translate-y-1/2
+                        items-center justify-center
+                        transition-all
+                        duration-500
+                        ease-in-out
+                        group-hover:left-[calc(100%-38px)]
+                      "
+                    >
+                      <Icon
+                        name={service.buttonIcon}
+                        class="h-5 w-5 text-white"
+                      />
                     </span>
                   </a>
                 </div>
@@ -221,9 +274,6 @@ const { services } = Astro.props;
                   font-clash
                   text-sm leading-relaxed
                   text-gray-800
-
-                  sm:text-base
-
                   lg:text-2xl
                   lg:leading-relaxed
                 "
@@ -239,8 +289,6 @@ const { services } = Astro.props;
                       group mt-6 overflow-hidden
                       rounded-xl
                       bg-gray-100
-
-                      sm:mt-10
                       md:mt-12
                     "
                   >
