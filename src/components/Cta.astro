@@ -98,83 +98,108 @@ const { cta } = Astro.props as {
         </p>
 
         <!-- CTA Button -->
-        <a
-          href={cta.button.link}
-          class="
-            group
-            mt-10
-            inline-flex
-            items-center
-            justify-center
-            gap-3
-            rounded-full
-            border
-            border-white/50
-            bg-white/5
-            px-3
-            py-2
-            text-white
-            transition-all
-            duration-300
-            ease-out
-            hover:border-white
-            hover:bg-white
-            hover:text-black
-            focus-visible:outline-none
-            focus-visible:ring-2
-            focus-visible:ring-white
-            focus-visible:ring-offset-2
-            focus-visible:ring-offset-black
-            sm:px-4
-            lg:px-5
-          "
-        >
-          <!-- Gradient Circle -->
-          <span
-            aria-hidden="true"
-            class="
-              h-8
-              w-8
-              shrink-0
-              rounded-full
-              bg-gradient-to-br
-              from-orange-500
-              via-pink-500
-              to-purple-600
-              shadow-[0_0_18px_rgba(236,72,153,0.35)]
-            "
-          ></span>
+      <a
+	href={cta.button.link}
+	class="
+		group
+		relative
+		mt-10
+		inline-flex
+		items-center
+		justify-center
+		overflow-hidden
+		rounded-full
+		border
+		border-white/50
+		bg-white/5
+		px-3
+		py-4
+		text-white
+		focus-visible:outline-none
+		focus-visible:ring-2
+		focus-visible:ring-white
+		focus-visible:ring-offset-2
+		focus-visible:ring-offset-black
 
-          <!-- Button Text -->
-          <span
-            class="
-              whitespace-nowrap
-              font-geist
-              text-[13px]
-              font-semibold
-              uppercase
-              leading-none
-              sm:text-[14px]
-            "
-          >
-            {cta.button.text}
-          </span>
+		lg:px-8
+	"
+>
+	<!-- Gradient Circle / Hover Background -->
+	<span
+		aria-hidden="true"
+		class="
+			absolute
+			left-[10px]
+			top-1/2
+			h-8
+			w-8
+			-translate-y-1/2
+			rounded-full
+			bg-[linear-gradient(135deg,#FEC053_0%,#F2203E_33%,#B729A8_65%,#5342D6_100%)]
+			shadow-[0_0_18px_rgba(236,72,153,0.35)]
 
-          <!-- Arrow Icon -->
-          <Icon
-            name={cta.button.icon}
-            class="
-              h-4
-              w-4
-              shrink-0
-              transition-transform
-              duration-300
-              group-hover:translate-x-1
-              sm:h-5
-              sm:w-5
-            "
-          />
-        </a>
+			transition-[left,top,width,height,transform,border-radius]
+			duration-500
+			ease-[cubic-bezier(0.65,0,0.35,1)]
+
+			group-hover:left-0
+			group-hover:top-0
+			group-hover:h-full
+			group-hover:w-full
+			group-hover:translate-y-0
+			group-hover:rounded-full
+		"
+	></span>
+
+	<!-- Content -->
+	<span
+		class="
+			relative
+			z-10
+			flex
+			items-center
+			justify-center
+			gap-3
+			translate-x-[14px]
+
+			transition-transform
+			duration-500
+			ease-[cubic-bezier(0.65,0,0.35,1)]
+
+			group-hover:translate-x-0
+		"
+	>
+		<!-- Button Text -->
+		<span
+			class="
+				whitespace-nowrap
+				font-geist
+				text-[13px]
+				font-semibold
+				uppercase
+				leading-none
+				sm:text-[14px]
+			"
+		>
+			{cta.button.text}
+		</span>
+
+		<!-- Arrow -->
+		<Icon
+			name={cta.button.icon}
+			class="
+				h-4
+				w-4
+				shrink-0
+				transition-transform
+				duration-300
+				group-hover:translate-x-1
+				sm:h-5
+				sm:w-5
+			"
+		/>
+	</span>
+</a>
       </div>
     </section>
   )
