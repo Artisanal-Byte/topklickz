@@ -16,18 +16,19 @@ navbar:
   logo: /uploads/logo/navbar/logo.png
   navigation:
     - title: Home
+      href: /
     - title: About
       href: /about
     - title: Services
-      href: brand-strategy
+      href: /brand-strategy
     - title: Work
-      href: portfolio
+      href: /portfolio
     - title: Insights
-      href: blog
+      href: /blog
     - title: Work-Inner
-      href: portfolio-inner
+      href: /portfolio-inner
   buttonText: Get in Touch
-  buttonLink: contact
+  buttonLink: /contact
 hero:
   title: WE CRAFT
   subtitle: DISTINCTIVE BRANDS

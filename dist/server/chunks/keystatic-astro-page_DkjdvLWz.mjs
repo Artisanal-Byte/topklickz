@@ -1,6 +1,6 @@
-import { c as createComponent } from './astro-component_BDlADTaG.mjs';
+import { c as createComponent } from './astro-component_SIZg3C0w.mjs';
 import 'piccolore';
-import { c as renderComponent, d as renderTemplate } from './server_BQ993Bgy.mjs';
+import { e as renderComponent, d as renderTemplate } from './server_CT6lbpK0.mjs';
 
 const prerender = false;
 const $$KeystaticAstroPage = createComponent(($$result, $$props, $$slots) => {

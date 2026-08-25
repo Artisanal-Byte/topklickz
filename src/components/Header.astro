@@ -2,6 +2,22 @@
 import { Image } from "astro:assets";
 
 const { navbar } = Astro.props;
+
+const normalizePath = (path: string) => {
+  const pathname = path.split("?")[0].split("#")[0].replace(/\/+$/, "");
+  return pathname || "/";
+};
+
+const currentPath = normalizePath(Astro.url.pathname);
+const getNavPath = (href?: string) =>
+  normalizePath(href?.startsWith("/") ? href : `/${href ?? ""}`);
+const isActive = (href?: string) => {
+  const navPath = getNavPath(href);
+
+  if (navPath === "/") return currentPath === "/";
+
+  return currentPath === navPath || currentPath.startsWith(`${navPath}/`);
+};
 ---
 
 <header
@@ -28,12 +44,15 @@ const { navbar } = Astro.props;
       <!-- Desktop Navigation -->
       <nav class="hidden flex-1 items-center justify-center gap-2 lg:flex">
         {
-          navbar?.navigation?.map((item, index) => (
+          navbar?.navigation?.map((item) => (
             <a
-              href={item.href}
+              href={item.href ?? "/"}
+              aria-current={isActive(item.href) ? "page" : undefined}
               class:list={[
-                "rounded-full px-5 py-2 font-clash text-[18px] font-bold leading-none tracking-normal transition",
-                index === 0 ? "gradient-bg text-white" : "hover:bg-gray-100",
+                "nav-link rounded-full px-5 py-2 font-clash text-[18px] font-bold leading-none tracking-normal",
+                isActive(item.href)
+                  ? "is-active gradient-bg text-white"
+                  : "text-[#0f0f11] hover:bg-gray-100",
               ]}
             >
               {item.title}
@@ -88,14 +107,15 @@ const { navbar } = Astro.props;
     >
       <nav class="flex flex-col gap-2">
         {
-          navbar?.navigation?.map((item, index) => (
+          navbar?.navigation?.map((item) => (
             <a
-              href={item.href}
+              href={item.href ?? "/"}
+              aria-current={isActive(item.href) ? "page" : undefined}
               class:list={[
-                "rounded-2xl px-4 py-3 font-clash text-[16px] font-bold leading-none tracking-normal transition",
-                index === 0
-                  ? "gradient-bg text-white"
-                  : "bg-gray-50 hover:bg-gray-100",
+                "nav-link rounded-2xl px-4 py-3 font-clash text-[16px] font-bold leading-none tracking-normal",
+                isActive(item.href)
+                  ? "is-active gradient-bg text-white"
+                  : "bg-gray-50 text-[#0f0f11] hover:bg-gray-100",
               ]}
             >
               {item.title}
