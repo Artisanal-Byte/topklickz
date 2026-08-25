@@ -1,6 +1,6 @@
-import { c as createComponent } from './astro-component_SIZg3C0w.mjs';
+import { c as createComponent } from './astro-component_BHMeOs4G.mjs';
 import 'piccolore';
-import { m as maybeRenderHead, d as renderTemplate } from './server_CT6lbpK0.mjs';
+import { m as maybeRenderHead, d as renderTemplate } from './server_D_KfSsri.mjs';
 import 'clsx';
 
 const $$AboutCtc = createComponent(($$result, $$props, $$slots) => {
@@ -49,9 +49,10 @@ Whether you're launching something new,
 				evolving an existing brand or building a stronger
 				digital presence, we'd love to hear your story.
 </p> </div> <!-- CTA Button --> <div class="lg:justify-self-end"> <a href="/contact" class="
-					group
-					inline-flex
-					items-center
+                    site-btn
+                    site-btn-dark
+                    group
+                    items-center
 					gap-3
 					rounded-full
 					border

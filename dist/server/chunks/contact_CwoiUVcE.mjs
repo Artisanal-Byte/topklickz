@@ -1,11 +1,11 @@
-import { c as createComponent } from './astro-component_SIZg3C0w.mjs';
+import { c as createComponent } from './astro-component_BHMeOs4G.mjs';
 import 'piccolore';
-import { m as maybeRenderHead, c as addAttribute, d as renderTemplate, e as renderComponent } from './server_CT6lbpK0.mjs';
-import { $ as $$Layout, a as $$Header, b as $$Footer } from './Footer_DM3E89k9.mjs';
+import { m as maybeRenderHead, c as addAttribute, d as renderTemplate, e as renderComponent } from './server_D_KfSsri.mjs';
+import { $ as $$Layout, a as $$Header, b as $$Footer } from './Footer_B2B13Dv0.mjs';
 import { createReader } from '@keystatic/core/reader';
 import { c as config } from './keystatic.config_Df-6VW00.mjs';
 import 'clsx';
-import { $ as $$AboutCtc } from './AboutCtc_C8RGL_U0.mjs';
+import { $ as $$AboutCtc } from './AboutCtc_Ch9WhesQ.mjs';
 
 const $$Hero = createComponent(($$result, $$props, $$slots) => {
   const services = [
@@ -161,6 +161,8 @@ What service do you need? *
 							transition
 							focus:border-black/40
 						"></textarea> </div> <!-- Button --> <button type="submit" class="
+						site-btn
+						site-btn-dark
 						mt-5
 						flex
 						h-[56px]
@@ -363,6 +365,7 @@ FREQUENTLY ASKED QUESTIONS
 									leading-[1.55]
 									text-black/60
 								"> ${faq.answer} </p> </div> </details>`)} </div> <!-- Mobile View All --> <a href="/faqs" class="
+				site-btn
 				mt-6
 				flex
 				items-center

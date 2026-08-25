@@ -1,6 +1,6 @@
-import { c as createComponent } from './astro-component_SIZg3C0w.mjs';
+import { c as createComponent } from './astro-component_BHMeOs4G.mjs';
 import 'piccolore';
-import { m as maybeRenderHead, d as renderTemplate } from './server_CT6lbpK0.mjs';
+import { m as maybeRenderHead, d as renderTemplate } from './server_D_KfSsri.mjs';
 import 'clsx';
 
 const $$BrandPhilosophy = createComponent(($$result, $$props, $$slots) => {

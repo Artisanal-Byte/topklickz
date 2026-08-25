@@ -1,12 +1,12 @@
-import { c as createComponent } from './astro-component_SIZg3C0w.mjs';
+import { c as createComponent } from './astro-component_BHMeOs4G.mjs';
 import 'piccolore';
-import { m as maybeRenderHead, c as addAttribute, d as renderTemplate, e as renderComponent } from './server_CT6lbpK0.mjs';
-import { $ as $$Layout, a as $$Header, b as $$Footer } from './Footer_DM3E89k9.mjs';
+import { m as maybeRenderHead, c as addAttribute, d as renderTemplate, e as renderComponent } from './server_D_KfSsri.mjs';
+import { $ as $$Layout, a as $$Header, b as $$Footer } from './Footer_B2B13Dv0.mjs';
 import { c as config } from './keystatic.config_Df-6VW00.mjs';
 import { createReader } from '@keystatic/core/reader';
 import 'clsx';
-import { $ as $$BrandPhilosophy } from './BrandPhilosophy_CKeZ9Hod.mjs';
-import { $ as $$AboutCtc } from './AboutCtc_C8RGL_U0.mjs';
+import { $ as $$BrandPhilosophy } from './BrandPhilosophy_DbVWqkLc.mjs';
+import { $ as $$AboutCtc } from './AboutCtc_Ch9WhesQ.mjs';
 
 const $$WhoWeAre = createComponent(($$result, $$props, $$slots) => {
   const descriptions = [
@@ -461,9 +461,9 @@ PERCEPTION
 A selection of branding, digital and content projects
 					created for ambitious businesses across industries.
 </p> <a href="/portfolio" class="
-						group
-						inline-flex
-						w-fit
+                        site-btn
+                        group
+                        w-fit
 						items-center
 						gap-3
 						font-satoshi
@@ -1066,6 +1066,7 @@ PERSPECTIVES.
 									leading-[17px]
 									text-[#85817C]
 								"> ${testimonial.role} </p> </div> </article>`)} </div> <!-- See More --> <a href="#" class="
+				site-btn
 				mt-12
 				inline-flex
 				items-center

@@ -19,7 +19,10 @@ const items = faq.items.map((item, index) => ({
     </h2>
 
     <div class="mt-8">
-      <div class="h-px w-full bg-gradient-to-r from-[#FEC053] via-[#F2203E] via-50% to-[#5342D6] opacity-90"></div>
+      <div
+        class="h-px w-full bg-gradient-to-r from-[#FEC053] via-[#F2203E] via-50% to-[#5342D6] opacity-90"
+      >
+      </div>
 
       {
         items.map((faq, index) => (
@@ -34,14 +37,22 @@ const items = faq.items.map((item, index) => ({
                     justify-between
                     gap-4
                     font-clash
-                    text-lg
+                    text-[25px]
                     font-medium
                     leading-[28.8px]
                     tracking-normal
-                    sm:text-[24px]
                   "
               >
-                <span>{faq.question}</span>
+                <span
+                  class="
+		font-medium
+		transition-all
+		duration-300
+		group-open:font-bold text-[20px]
+	"
+                >
+                  {faq.question}
+                </span>
 
                 <span class="text-[24px] transition group-open:rotate-45">
                   +
@@ -65,13 +76,16 @@ const items = faq.items.map((item, index) => ({
             </details>
 
             {index < items.length - 1 && (
-              <div class="h-px w-full bg-gradient-to-r from-[#FEC053] via-[#F2203E] via-50% to-[#5342D6] opacity-90"></div>
+              <div class="h-px w-full bg-gradient-to-r from-[#FEC053] via-[#F2203E] via-50% to-[#5342D6] opacity-90" />
             )}
           </>
         ))
       }
 
-      <div class="h-px w-full bg-gradient-to-r from-[#FEC053] via-[#F2203E] via-50% to-[#5342D6] opacity-90"></div>
+      <div
+        class="h-px w-full bg-gradient-to-r from-[#FEC053] via-[#F2203E] via-50% to-[#5342D6] opacity-90"
+      >
+      </div>
     </div>
   </div>
 </section>

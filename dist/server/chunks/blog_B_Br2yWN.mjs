@@ -1,11 +1,11 @@
-import { c as createComponent } from './astro-component_SIZg3C0w.mjs';
+import { c as createComponent } from './astro-component_BHMeOs4G.mjs';
 import 'piccolore';
-import { m as maybeRenderHead, d as renderTemplate, c as addAttribute, e as renderComponent } from './server_CT6lbpK0.mjs';
-import { $ as $$Layout, a as $$Header, b as $$Footer } from './Footer_DM3E89k9.mjs';
+import { m as maybeRenderHead, d as renderTemplate, c as addAttribute, e as renderComponent } from './server_D_KfSsri.mjs';
+import { $ as $$Layout, a as $$Header, b as $$Footer } from './Footer_B2B13Dv0.mjs';
 import 'clsx';
 import { createReader } from '@keystatic/core/reader';
 import { c as config } from './keystatic.config_Df-6VW00.mjs';
-import { $ as $$AboutCtc } from './AboutCtc_C8RGL_U0.mjs';
+import { $ as $$AboutCtc } from './AboutCtc_Ch9WhesQ.mjs';
 
 const $$BlogHero = createComponent(($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$props, $$slots);
@@ -153,7 +153,7 @@ const $$LatestBlog = createComponent(($$result, $$props, $$slots) => {
   ];
   return renderTemplate`${maybeRenderHead()}<section class="w-full bg-white py-12 lg:py-16"> <div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12"> <!-- Header --> <div class="mb-8 flex items-center justify-between"> <h2 class="text-[25px] font-semibold text-black">
 Latest insights
-</h2> <a href="/blog-inner" class="flex items-center gap-3 text-[12px] font-medium text-black transition-opacity hover:opacity-60"> <span>View all insights</span> <span class="text-[20px] leading-none">→</span> </a> </div> <!-- Cards --> <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 lg:gap-10"> ${insights.map((item) => renderTemplate`<article class="group"> <a${addAttribute(item.link, "href")} class="block"> <!-- IMAGE AREA --> <div class="
+</h2> <a href="/blog-inner" class="site-btn flex items-center gap-3 text-[12px] font-medium transition-opacity hover:opacity-60"> <span>View all insights</span> <span class="text-[20px] leading-none">→</span> </a> </div> <!-- Cards --> <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 lg:gap-10"> ${insights.map((item) => renderTemplate`<article class="group"> <a${addAttribute(item.link, "href")} class="block"> <!-- IMAGE AREA --> <div class="
 									relative
 									aspect-[1/1.08]
 									w-full
@@ -272,6 +272,8 @@ const $$Newsletter = createComponent(($$result, $$props, $$slots) => {
 					focus:ring-1
 					focus:ring-black/20
 				"> <button type="submit" class="
+					site-btn
+					site-btn-dark
 					inline-flex
 					h-[54px]
 					shrink-0

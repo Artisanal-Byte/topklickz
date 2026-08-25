@@ -1,10 +1,10 @@
-import { c as createComponent } from './astro-component_SIZg3C0w.mjs';
+import { c as createComponent } from './astro-component_BHMeOs4G.mjs';
 import 'piccolore';
-import { m as maybeRenderHead, c as addAttribute, d as renderTemplate, e as renderComponent, F as Fragment } from './server_CT6lbpK0.mjs';
-import { $ as $$Layout, a as $$Header, b as $$Footer } from './Footer_DM3E89k9.mjs';
+import { m as maybeRenderHead, c as addAttribute, d as renderTemplate, e as renderComponent, F as Fragment } from './server_D_KfSsri.mjs';
+import { $ as $$Layout, a as $$Header, b as $$Footer } from './Footer_B2B13Dv0.mjs';
 import { createReader } from '@keystatic/core/reader';
 import { c as config } from './keystatic.config_Df-6VW00.mjs';
-import { $ as $$AboutCtc } from './AboutCtc_C8RGL_U0.mjs';
+import { $ as $$AboutCtc } from './AboutCtc_Ch9WhesQ.mjs';
 
 const $$BlogDetail = createComponent(($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$props, $$slots);
@@ -175,7 +175,7 @@ const $$BlogDetail = createComponent(($$result, $$props, $$slots) => {
 X
 </a> <a href="https://www.linkedin.com/sharing/share-offsite/" target="_blank" rel="noreferrer" aria-label="Share on LinkedIn" class="flex h-6 w-6 items-center justify-center rounded-full bg-black text-[10px] font-semibold text-white">
 in
-</a> </div> </div> </div> <a href="/blog" class="mt-4 inline-flex items-center gap-2 rounded-full bg-black px-4 py-2 text-[15px] font-medium text-white transition-opacity hover:opacity-75"> <span class="h-1.5 w-1.5 rounded-full bg-gradient-to-r from-[#ff2d55] to-[#7c3aed]"></span>
+</a> </div> </div> </div> <a href="/blog" class="site-btn site-btn-dark mt-4 items-center gap-2 text-[15px] font-medium transition-opacity hover:opacity-75"> <span class="h-1.5 w-1.5 rounded-full bg-gradient-to-r from-[#ff2d55] to-[#7c3aed]"></span>
 More Insights
 </a> </footer> </div> </article>`;
 }, "D:/D Drive/artisanal-byte/topklickz/src/components/blog/BlogDetail.astro", void 0);

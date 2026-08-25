@@ -1,12 +1,12 @@
-import { c as createComponent } from './astro-component_SIZg3C0w.mjs';
+import { c as createComponent } from './astro-component_BHMeOs4G.mjs';
 import 'piccolore';
-import { m as maybeRenderHead, c as addAttribute, e as renderComponent, d as renderTemplate, F as Fragment } from './server_CT6lbpK0.mjs';
-import { $ as $$Layout, a as $$Header, b as $$Footer } from './Footer_DM3E89k9.mjs';
-import { a as $$Icon, $ as $$Cta } from './Cta_jfMGjwVY.mjs';
-import { $ as $$Image } from './_astro_assets_Zym9oINd.mjs';
+import { m as maybeRenderHead, c as addAttribute, e as renderComponent, d as renderTemplate, F as Fragment } from './server_D_KfSsri.mjs';
+import { $ as $$Layout, a as $$Header, b as $$Footer } from './Footer_B2B13Dv0.mjs';
+import { a as $$Icon, $ as $$Cta } from './Cta_DrFLohRq.mjs';
+import { $ as $$Image } from './_astro_assets_vmxrmwuv.mjs';
 import { createReader } from '@keystatic/core/reader';
 import { c as config } from './keystatic.config_Df-6VW00.mjs';
-import { r as renderScript } from './script_CPS-h6Yh.mjs';
+import { r as renderScript } from './script_yfFF4na6.mjs';
 
 const $$Hero = createComponent(($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$props, $$slots);
@@ -19,14 +19,34 @@ const $$Hero = createComponent(($$result, $$props, $$slots) => {
         to-violet-600
         bg-clip-text
         text-transparent
-        lg:text-[70px]"> ${hero?.subtitle} </h2> <h3 class="mt-3 font-clash text-4xl font-bold leading-[93%] tracking-normal text-black lg:text-[68px]"> ${hero?.description} </h3> <a${addAttribute(hero?.buttonLink, "href")} class="group mt-5 lg:mt-16 inline-flex items-center gap-4 font-geist text-[28px] font-normal leading-[114%] tracking-normal"> ${hero?.buttonText} ${renderComponent($$result, "Icon", $$Icon, { "name": hero.buttonIcon, "class": "h-8 w-8 transition-transform duration-300 group-hover:translate-x-1" })} </a> </div> <!-- RIGHT --> <div class="flex items-start justify-end lg:-mt-10 mt-5"> ${hero?.image && renderTemplate`${renderComponent($$result, "Image", $$Image, { "src": hero.image, "alt": hero?.title, "width": 380, "height": 420 })}`} </div> </div> </div> </section>`;
+        lg:text-[70px]"> ${hero?.subtitle} </h2> <h3 class="mt-3 font-clash text-4xl font-bold leading-[93%] tracking-normal text-black lg:text-[68px]"> ${hero?.description} </h3> <a${addAttribute(hero?.buttonLink, "href")} class="site-btn group mt-5 lg:mt-16 items-center gap-4 font-geist text-[28px] font-normal leading-[114%] tracking-normal"> <span>${hero?.buttonText}</span> ${renderComponent($$result, "Icon", $$Icon, { "name": hero.buttonIcon, "class": "h-8 w-8 transition-transform duration-300 group-hover:translate-x-1" })} </a> </div> <!-- RIGHT --> <div class="flex items-start justify-end lg:-mt-10 mt-5"> ${hero?.image && renderTemplate`${renderComponent($$result, "Image", $$Image, { "src": hero.image, "alt": hero?.title, "width": 380, "height": 420 })}`} </div> </div> </div> </section>`;
 }, "D:/D Drive/artisanal-byte/topklickz/src/components/Hero.astro", void 0);
 
 const $$Studio = createComponent(($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$props, $$slots);
   Astro2.self = $$Studio;
   const { studio } = Astro2.props;
-  return renderTemplate`${maybeRenderHead()}<section class="bg-black py-12 lg:py-0"> <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"> <div class="rounded-sm px-0 py-0 lg:px-14 lg:py-8"> <!-- Top --> <div class="mb-8 sm:mb-10"> <span class="text-sm text-gray-400"> ${studio.sectionNumber}/${studio.sectionTitle} </span> </div> <!-- Heading --> <div class="mx-auto max-w-5xl text-center"> <h2 class="font-clash text-lg font-semibold leading-[114%] text-center text-white sm:text-2xl lg:text-[32px]"> ${studio.title} </h2> <p class="mx-auto mt-6 max-w-3xl font-clash text-base leading-[150%] text-center text-white/70 sm:mt-8 sm:text-lg lg:text-[20px]"> ${studio.description} </p> </div> <!-- Clients --> <div class="mt-12 overflow-hidden sm:mt-14"> <h3 class="mb-6 text-center text-xl font-medium text-white sm:mb-8 sm:text-2xl"> ${studio.clientTitle} </h3> <div class="relative mx-auto overflow-hidden max-w-2xl"> <div class="flex w-max animate-marquee gap-8 sm:gap-12"> <!-- First Set --> ${studio.clients.map((client) => renderTemplate`<div class="flex h-14 w-28 shrink-0 items-center justify-center sm:h-16 sm:w-30"> ${renderComponent($$result, "Image", $$Image, { "src": client.logo, "alt": client.alt, "width": 160, "height": 60, "class": "h-8 w-auto object-contain opacity-90 transition hover:opacity-100 sm:h-10" })} </div>`)} <!-- Duplicate Set --> ${studio.clients.map((client) => renderTemplate`<div class="flex h-14 w-36 shrink-0 items-center justify-center sm:h-16 sm:w-48"> ${renderComponent($$result, "Image", $$Image, { "src": client.logo, "alt": client.alt, "width": 160, "height": 60, "class": "h-8 w-auto object-contain opacity-90 transition hover:opacity-100 sm:h-10" })} </div>`)} </div> </div> </div> <!-- Button --> <div class="mt-8 flex justify-center sm:mt-10"> <a${addAttribute(studio?.buttonLink, "href")} class="inline-flex w-full max-w-sm rounded-full p-[1px] bg-[radial-gradient(50%_83.67%_at_50%_50%,#FEC053_0%,#F2203E_33%,#B729A8_65%,#5342D6_100%)] lg:w-auto"> <span class="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-black px-4 font-clash text-base font-medium leading-none text-white sm:h-[45px] sm:w-[170px] sm:px-2 sm:text-[17px]"> <span class="h-6 w-6 rounded-full gradient-bg"></span> ${studio?.buttonText} </span> </a> </div> </div> </div> </section>`;
+  return renderTemplate`${maybeRenderHead()}<section class="bg-black py-12 lg:py-0"> <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"> <div class="rounded-sm px-0 py-0 lg:px-14 lg:py-8"> <!-- Top --> <div class="mb-8 sm:mb-10"> <span class="text-sm text-gray-400"> ${studio.sectionNumber}/${studio.sectionTitle} </span> </div> <!-- Heading --> <div class="mx-auto max-w-5xl text-center"> <h2 class="font-clash text-lg font-semibold leading-[114%] text-center text-white sm:text-2xl lg:text-[32px]"> ${studio.title} </h2> <p class="mx-auto mt-6 max-w-3xl font-clash text-base leading-[150%] text-center text-white/70 sm:mt-8 sm:text-lg lg:text-[20px]"> ${studio.description} </p> </div> <!-- Clients --> <div class="mt-12 overflow-hidden sm:mt-14"> <h3 class="mb-6 text-center text-xl font-medium text-white sm:mb-8 sm:text-2xl"> ${studio.clientTitle} </h3> <div class="relative mx-auto overflow-hidden max-w-2xl"> <div class="flex w-max animate-marquee gap-8 sm:gap-12"> <!-- First Set --> ${studio.clients.map((client) => renderTemplate`<div class="flex h-14 w-28 shrink-0 items-center justify-center sm:h-16 sm:w-30"> ${renderComponent($$result, "Image", $$Image, { "src": client.logo, "alt": client.alt, "width": 160, "height": 60, "class": "h-8 w-auto object-contain opacity-90 transition hover:opacity-100 sm:h-10" })} </div>`)} <!-- Duplicate Set --> ${studio.clients.map((client) => renderTemplate`<div class="flex h-14 w-36 shrink-0 items-center justify-center sm:h-16 sm:w-48"> ${renderComponent($$result, "Image", $$Image, { "src": client.logo, "alt": client.alt, "width": 160, "height": 60, "class": "h-8 w-auto object-contain opacity-90 transition hover:opacity-100 sm:h-10" })} </div>`)} </div> </div> </div> <!-- Button --> <div class="mt-8 flex justify-center sm:mt-10"> <a${addAttribute(studio?.buttonLink, "href")} class="gradient-expand-btn
+			inline-flex
+			w-full
+			max-w-sm
+			rounded-full
+			p-[1px]
+			bg-[radial-gradient(50%_83.67%_at_50%_50%,#FEC053_0%,#F2203E_33%,#B729A8_65%,#5342D6_100%)]
+			lg:w-auto"> <span class="gradient-expand-btn-inner
+				flex
+				h-12
+				w-full
+				items-center
+				justify-center
+				rounded-full
+				bg-black
+				px-4
+				font-clash
+				text-base
+				font-medium
+				leading-none
+				text-white"> <span class="gradient-expand-btn-bg"></span> <!-- Button text --> <span class="gradient-expand-btn-text"> ${studio?.buttonText} </span> </span> </a> </div> </div> </div> </section>`;
 }, "D:/D Drive/artisanal-byte/topklickz/src/components/Studio.astro", void 0);
 
 var __freeze$1 = Object.freeze;
@@ -161,7 +181,7 @@ const $$Work = createComponent(($$result, $$props, $$slots) => {
           sm:text-lg
           lg:text-[22px]
         "> ${work.description} </p> <a${addAttribute(work.buttonLink, "href")} class="
-          group mt-2 inline-flex items-center gap-2
+          site-btn group mt-2 items-center gap-2
           font-geist text-lg font-light
           leading-[114%] tracking-[0]
           text-black
@@ -242,7 +262,7 @@ const $$FieldNotes = createComponent(($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$props, $$slots);
   Astro2.self = $$FieldNotes;
   const { fieldNotes } = Astro2.props;
-  return renderTemplate`${maybeRenderHead()}<section class="py-14"> <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"> <div class="flex flex-col gap-5 sm:items-start lg:flex-row lg:items-end lg:justify-between"> <div> <h2 class="font-clash text-4xl font-semibold leading-[100%] tracking-[0] md:text-[48px] lg:text-[50px]"> ${fieldNotes.title} <br> <span class="gradient-text mt-2"> ${fieldNotes.highlight} </span> </h2> <!-- <p class="text-6xl font-bold">FROM THE STUDIO.</p> --> </div> <a${addAttribute(fieldNotes?.buttonLink, "href")} class="inline-flex items-center gap-3 text-base font-medium group sm:text-lg lg:text-xl"> ${fieldNotes?.buttonText} ${renderComponent($$result, "Icon", $$Icon, { "name": fieldNotes.buttonIcon, "class": "w-6 h-6" })} </a> </div> <div class="mt-12 grid gap-8 md:grid-cols-2 lg:mt-16 lg:grid-cols-3"> ${fieldNotes.posts.map((post) => renderTemplate`<a${addAttribute(`/posts/${post.slug}`, "href")} class="group block cursor-pointer"> <div class="
+  return renderTemplate`${maybeRenderHead()}<section class="py-14"> <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"> <div class="flex flex-col gap-5 sm:items-start lg:flex-row lg:items-end lg:justify-between"> <div> <h2 class="font-clash text-4xl font-semibold leading-[100%] tracking-[0] md:text-[48px] lg:text-[50px]"> ${fieldNotes.title} <br> <span class="gradient-text mt-2"> ${fieldNotes.highlight} </span> </h2> <!-- <p class="text-6xl font-bold">FROM THE STUDIO.</p> --> </div> <a${addAttribute(fieldNotes?.buttonLink, "href")} class="site-btn inline-flex items-center gap-3 text-base font-medium group sm:text-lg lg:text-xl"> <span>${fieldNotes?.buttonText}</span> ${renderComponent($$result, "Icon", $$Icon, { "name": fieldNotes.buttonIcon, "class": "w-6 h-6" })} </a> </div> <div class="mt-12 grid gap-8 md:grid-cols-2 lg:mt-16 lg:grid-cols-3"> ${fieldNotes.posts.map((post) => renderTemplate`<a${addAttribute(`/posts/${post.slug}`, "href")} class="group block cursor-pointer"> <div class="
                                 overflow-hidden
                                 rounded-[18px]
                                 bg-black/5
@@ -290,12 +310,16 @@ const $$Faq = createComponent(($$result, $$props, $$slots) => {
                     justify-between
                     gap-4
                     font-clash
-                    text-lg
+                    text-[25px]
                     font-medium
                     leading-[28.8px]
                     tracking-normal
-                    sm:text-[24px]
-                  "> <span>${faq2.question}</span> <span class="text-[24px] transition group-open:rotate-45">
+                  "> <span class="
+		font-medium
+		transition-all
+		duration-300
+		group-open:font-bold text-[20px]
+	"> ${faq2.question} </span> <span class="text-[24px] transition group-open:rotate-45">
 +
 </span> </summary> <p class="
                     mt-5

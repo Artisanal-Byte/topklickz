@@ -20,10 +20,7 @@ const isActive = (href?: string) => {
 };
 ---
 
-<header
-  class="relative z-20"
-  data-site-header
->
+<header class="relative z-20" data-site-header>
   <div class="mx-auto max-w-7xl px-4 py-3 backdrop-blur-md sm:px-5 sm:py-4">
     <div class="flex items-center justify-between gap-3 lg:gap-8">
       <!-- Logo -->
@@ -63,17 +60,27 @@ const isActive = (href?: string) => {
 
       <div class="flex items-center gap-2 sm:gap-3 lg:gap-4">
         <!-- Desktop Button -->
-        <a
-          href={navbar?.buttonLink}
-          class="hidden lg:inline-flex rounded-full p-[1px] bg-[radial-gradient(50%_83.67%_at_50%_50%,#FEC053_0%,#F2203E_33%,#B729A8_65%,#5342D6_100%)]"
-        >
-          <span
-            class="flex h-[45px] w-[170px] items-center justify-center gap-2 rounded-full bg-white px-3 font-clash text-[17px] font-medium leading-none tracking-normal"
+          <a
+            href={navbar?.buttonLink}
+            class="gradient-expand-btn hidden lg:inline-flex gradient-border"
           >
-            <span class="h-7 w-7 rounded-full gradient-bg"></span>
-            {navbar?.buttonText}
-          </span>
-        </a>
+            <span class="gradient-expand-btn-inner">
+              <!-- Gradient circle -->
+              <span class="gradient-expand-btn-bg"></span>
+
+              <!-- Text -->
+              <span
+                class="gradient-expand-btn-text
+          font-clash
+          text-[17px]
+          font-bold
+          leading-none
+          tracking-normal"
+              >
+                {navbar?.buttonText}
+              </span>
+            </span>
+          </a>
 
         <!-- Mobile Menu Button -->
         <button

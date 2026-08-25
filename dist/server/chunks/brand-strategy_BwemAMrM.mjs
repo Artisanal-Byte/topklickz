@@ -1,11 +1,11 @@
-import { c as createComponent } from './astro-component_SIZg3C0w.mjs';
+import { c as createComponent } from './astro-component_BHMeOs4G.mjs';
 import 'piccolore';
-import { m as maybeRenderHead, c as addAttribute, d as renderTemplate, e as renderComponent } from './server_CT6lbpK0.mjs';
-import { $ as $$Layout, a as $$Header, b as $$Footer } from './Footer_DM3E89k9.mjs';
+import { m as maybeRenderHead, c as addAttribute, d as renderTemplate, e as renderComponent } from './server_D_KfSsri.mjs';
+import { $ as $$Layout, a as $$Header, b as $$Footer } from './Footer_B2B13Dv0.mjs';
 import { c as config } from './keystatic.config_Df-6VW00.mjs';
 import { createReader } from '@keystatic/core/reader';
 import 'clsx';
-import { $ as $$BrandPhilosophy } from './BrandPhilosophy_CKeZ9Hod.mjs';
+import { $ as $$BrandPhilosophy } from './BrandPhilosophy_DbVWqkLc.mjs';
 
 const $$BrandStrategyHero = createComponent(($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$props, $$slots);
@@ -56,7 +56,7 @@ Services
 							lg:text-[27px]"> ${number} </p> <!-- Heading --> <h1 class="font-clash text-[60px] font-[550] leading-[90%] tracking-normal text-black lg:text-[90px]"> <span class="block"> ${title} </span> <span class="block
 								pb-[12px]
 								pr-[10px]
-								gradient-text"> ${gradientTitle} </span> </h1> </div> <!-- Explore button --> <a${addAttribute(exploreLink, "href")} class="site-btn"> <!-- Gradient circle --> <span class="h-[22px] w-[22px] gradient-bg rounded-full"></span> <span> ${exploreText} </span> </a> </div> <!-- RIGHT --> <div class="w-full"> <!-- Description --> <p class="max-w-[600px]
+								gradient-text"> ${gradientTitle} </span> </h1> </div> <!-- Explore button --> <a${addAttribute(exploreLink, "href")} class="site-btn mt-7 lg:mt-[37px]"> <!-- Gradient circle --> <span class="h-[22px] w-[22px] gradient-bg rounded-full"></span> <span> ${exploreText} </span> </a> </div> <!-- RIGHT --> <div class="w-full"> <!-- Description --> <p class="max-w-[600px]
 						font-geist
 						text-[18px]
 						leading-[1.35]
@@ -67,6 +67,7 @@ Services
 						lg:text-[24px]
 						lg:leading-[1.24]
 						lg:tracking-[-0.028em]"> ${description} </p> <!-- Start Project --> <a${addAttribute(projectLink, "href")} class="group
+						site-btn
 						mt-[25px]
 						inline-flex
 						items-center
@@ -692,8 +693,8 @@ const $$SelectedWorkBrandStrategy = createComponent(($$result, $$props, $$slots)
 					sm:text-[46px]
 					lg:text-[56px]
 				"> ${title} </h2> <a${addAttribute(seeAllLink, "href")} class="
+					site-btn
 					group
-					inline-flex
 					shrink-0
 					items-center
 					gap-[14px]

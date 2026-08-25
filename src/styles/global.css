@@ -79,15 +79,135 @@ body {
   @apply bg-gradient-to-r from-orange-500 via-pink-500 to-violet-600 bg-clip-text text-transparent;
 }
 
-.gradient-border {
-  border: 1px solid transparent;
-  border-radius: px;
+/* =========================================
+   Gradient Expand Button
+========================================= */
 
-  border-image: radial-gradient(50% 83.67% at 50% 50%,
-      #FEC053 0%,
-      #F2203E 33%,
-      #B729A8 65%,
-      #5342D6 100%) 1;
+.gradient-expand-btn {
+	position: relative;
+	display: inline-flex;
+	padding: 1px;
+	border-radius: 9999px;
+
+	/* background: linear-gradient(
+		135deg,
+		#FEC053 0%,
+		#F2203E 33%,
+		#B729A8 65%,
+		#5342D6 100%
+	); */
+}
+
+.gradient-expand-btn-inner {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 170px;
+	height: 45px;
+	overflow: hidden;
+	border-radius: 9999px;
+  border: linear-gradient(
+		135deg,
+		#FEC053 0%,
+		#F2203E 33%,
+		#B729A8 65%,
+		#5342D6 100%
+	);
+
+	/* background REMOVE */
+}
+
+
+/* =========================
+   Gradient Circle
+========================= */
+
+.gradient-expand-btn-bg {
+	position: absolute;
+
+	left: 8px;
+	top: 50%;
+	width: 28px;
+	height: 28px;
+	border-radius: 9999px;
+	background: linear-gradient(
+		135deg,
+		#FEC053 0%,
+		#F2203E 33%,
+		#B729A8 65%,
+		#5342D6 100%
+	);
+
+	transform: translateY(-50%);
+
+	transition:
+		left 0.5s cubic-bezier(0.65, 0, 0.35, 1),
+		width 0.5s cubic-bezier(0.65, 0, 0.35, 1),
+		height 0.5s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+
+/* Circle expands */
+.gradient-expand-btn:hover .gradient-expand-btn-bg {
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+
+/* =========================
+   Button Text
+========================= */
+
+.gradient-expand-btn-text {
+	position: relative;
+	z-index: 2;
+
+	/* color REMOVE */
+
+	transform: translateX(14px);
+	transition:
+		transform 0.5s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+
+/* Hover par center */
+.gradient-expand-btn:hover .gradient-expand-btn-text {
+	transform: translateX(0);
+
+	/* color REMOVE */
+}
+
+
+.gradient-border {
+	position: relative;
+	border-radius: 9999px;
+}
+
+.gradient-border::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	padding: 1px;
+	border-radius: inherit;
+
+	background: radial-gradient(
+		50% 83.67% at 50% 50%,
+		#FEC053 0%,
+		#F2203E 33%,
+		#B729A8 65%,
+		#5342D6 100%
+	);
+
+	-webkit-mask:
+		linear-gradient(#fff 0 0) content-box,
+		linear-gradient(#fff 0 0);
+
+	-webkit-mask-composite: xor;
+	mask-composite: exclude;
+
+	pointer-events: none;
 }
 
 @import "tailwindcss";
