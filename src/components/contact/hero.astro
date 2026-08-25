@@ -1,0 +1,284 @@
+---
+const services = [
+	"Brand Strategy",
+	"Web Design",
+	"Development",
+	"Digital Marketing",
+];
+---
+
+<section class="w-full bg-white">
+	<div
+		class="
+			mx-auto
+			grid
+			max-w-7xl
+			grid-cols-1
+			gap-12
+			px-5
+			py-14
+			lg:grid-cols-[minmax(0,1fr)_minmax(420px,520px)]
+			lg:items-center
+			lg:gap-16
+			lg:px-12
+			lg:py-20
+		"
+	>
+		<!-- LEFT CONTENT -->
+		<div class="max-w-[620px]">
+			<!-- Small label -->
+			<div class="flex items-center gap-3">
+				<span
+					class="
+						h-[10px]
+						w-[10px]
+						rounded-full
+						bg-[#d72ed4]
+					"
+				></span>
+
+				<p
+					class="
+						text-[20px]
+						font-semibold
+						uppercase
+						tracking-[0.2px]
+						text-black
+					"
+				>
+					CONTACT US
+				</p>
+			</div>
+
+			<!-- Heading -->
+			<h2
+				class="
+					mt-6
+					text-[48px]
+					font-medium
+					leading-[1.02]
+					tracking-[-2.2px]
+					text-black
+					lg:text-[80px]
+					lg:tracking-[-3px]
+				"
+			>
+				<span class="block">Let's Build</span>
+				<span class="block">Something</span>
+
+				<span
+					class="
+						mt-1
+						gradient-text
+					"
+				>
+					Exceptional.
+				</span>
+			</h2>
+
+			<p
+				class="
+					mt-7
+					max-w-[470px]
+					text-[18px]
+					leading-[1.45]
+					text-black/75
+				"
+			>
+				Tell us about your project. We'll recommend the right strategy,
+				team and timeline.
+			</p>
+		</div>
+
+		<!-- RIGHT FORM CARD -->
+		<div
+			class="
+				w-full
+				rounded-[30px]
+				border
+				border-black/20
+				bg-white
+				p-6
+				lg:p-8
+			"
+		>
+			<h3
+				class="
+					text-[26px]
+					font-semibold
+					leading-none
+					tracking-[-0.8px]
+					text-black
+				"
+			>
+				START YOUR PROJECT
+			</h3>
+
+			<form class="mt-7">
+				<!-- 2 column row -->
+				<div class="grid grid-cols-1 gap-3 sm:grid-cols-2">
+					<input
+						type="text"
+						placeholder="Full Name*"
+						class="
+							h-[46px]
+							w-full
+							border
+							border-black/10
+							bg-white
+							px-4
+							text-[12px]
+							text-black
+							outline-none
+							placeholder:text-black/20
+							transition
+							focus:border-black/40
+						"
+					/>
+
+					<input
+						type="email"
+						placeholder="Work Email *"
+						class="
+							h-[46px]
+							w-full
+							border
+							border-black/10
+							bg-white
+							px-4
+							text-[12px]
+							text-black
+							outline-none
+							placeholder:text-black/20
+							transition
+							focus:border-black/40
+						"
+					/>
+
+					<input
+						type="text"
+						placeholder="Company Name"
+						class="
+							h-[46px]
+							w-full
+							border
+							border-black/10
+							bg-white
+							px-4
+							text-[12px]
+							text-black
+							outline-none
+							placeholder:text-black/20
+							transition
+							focus:border-black/40
+						"
+					/>
+
+					<input
+						type="tel"
+						placeholder="Phone Number"
+						class="
+							h-[46px]
+							w-full
+							border
+							border-black/10
+							bg-white
+							px-4
+							text-[12px]
+							text-black
+							outline-none
+							placeholder:text-black/20
+							transition
+							focus:border-black/40
+						"
+					/>
+				</div>
+
+				<!-- Service -->
+				<div class="mt-3">
+					<select
+						class="
+							h-[46px]
+							w-full
+							border
+							border-black/10
+							bg-white
+							px-4
+							text-[12px]
+							text-black/35
+							outline-none
+							transition
+							focus:border-black/40
+						"
+					>
+						<option value="" selected disabled>
+							What service do you need? *
+						</option>
+
+						{
+							services.map((service) => (
+								<option value={service}>
+									{service}
+								</option>
+							))
+						}
+					</select>
+				</div>
+
+				<!-- Message -->
+				<div class="mt-3">
+					<textarea
+						rows="5"
+						placeholder="Tell us about your project *"
+						class="
+							min-h-[120px]
+							w-full
+							resize-none
+							border
+							border-black/10
+							bg-white
+							px-4
+							py-4
+							text-[12px]
+							text-black
+							outline-none
+							placeholder:text-black/20
+							transition
+							focus:border-black/40
+						"
+					></textarea>
+				</div>
+
+				<!-- Button -->
+				<button
+					type="submit"
+					class="
+						mt-5
+						flex
+						h-[56px]
+						w-full
+						items-center
+						justify-center
+						gap-4
+						bg-black
+						px-6
+						text-[16px]
+						font-semibold
+						uppercase
+						tracking-[0.1px]
+						text-white
+						transition-all
+						duration-300
+						hover:bg-black/80
+					"
+				>
+					<span>START YOUR PROJECT</span>
+
+					<span class="text-[20px] leading-none">
+						→
+					</span>
+				</button>
+			</form>
+		</div>
+	</div>
+</section>

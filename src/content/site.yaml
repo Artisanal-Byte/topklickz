@@ -27,7 +27,7 @@ navbar:
     - title: Work-Inner
       href: portfolio-inner
   buttonText: Get in Touch
-  buttonLink: '#contact'
+  buttonLink: contact
 hero:
   title: WE CRAFT
   subtitle: DISTINCTIVE BRANDS
