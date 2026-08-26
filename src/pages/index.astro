@@ -1,31 +1,40 @@
 ---
-import { getCollection } from 'astro:content';
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Hero from "../components/Hero.astro";
 
-export const prerender = true;
+import { createReader } from "@keystatic/core/reader";
+import config from "../../keystatic.config";
+import Studio from "../components/Studio.astro";
+import Services from "../components/Services.astro";
+import Work from "../components/Work.astro";
+import TrustedBrands from "../components/trustedBrands.astro";
+import Testimonials from "../components/Testimonials.astro";
+import FieldNotes from "../components/FieldNotes.astro";
+import TeamCulture from "../components/TeamCulture.astro";
+import Faq from "../components/Faq.astro";
+import Cta from "../components/Cta.astro";
+import Footer from "../components/Footer.astro";
 
-const posts = await getCollection('posts');
+const reader = createReader(process.cwd(), config);
+const site = await reader.singletons.site.read();
 ---
 
-<Layout title="Keystatic & Astro's Content Collections">
-  <div>
-    <h1>Keystatic ⚡️ + Astro 🚀</h1>
-    <p>
-      This homepage shows how to load data from Astro's content collections.
-    </p>
-    <p>
-      <a href="/keystatic">Click here to visit the Admin UI</a>, or the link
-      below to view a post in the collection.
-    </p>
-    <h2>Posts</h2>
-    <ul>
-      {
-        posts.map(post => (
-          <li>
-            <a href={`/posts/${post.id}`}>{post.data.title}</a>
-          </li>
-        ))
-      }
-    </ul>
-  </div>
+<Layout
+  title={site?.seo?.title}
+  description={site?.seo?.description}
+  keywords={site?.seo?.keywords}
+>
+  <Header navbar={site?.navbar} />
+  <Hero hero={site?.hero} />
+  <Studio studio={site?.studio} />
+  <Services services={site?.services} />
+  <Work work={site?.work} />
+  <TrustedBrands trustedBrands={site?.trustedBrands} />
+  <Testimonials testimonials={site?.testimonials} />
+  <FieldNotes fieldNotes={site?.fieldNotes} />
+  <TeamCulture teamCulture={site?.teamCulture} />
+  <Faq faq={site?.faq} />
+  <Cta cta={site?.cta} />
+  <Footer footer={site?.footer} />
 </Layout>

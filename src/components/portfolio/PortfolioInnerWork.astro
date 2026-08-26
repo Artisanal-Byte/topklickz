@@ -1,0 +1,116 @@
+---
+const workSamples = {
+	mainLarge: "/img/nymora-bag-main.webp",
+	topRight: "/img/nymora-shades.webp",
+	midRight: "/img/nymora-brand-book.webp",
+	bottomLeft: "/img/nymora-salon.webp",
+	bottomRight: "/img/nymora-products.webp",
+};
+---
+
+<section class="w-full py-14 md:py-20 lg:py-24">
+	<div class="mx-auto max-w-[1440px] px-5 sm:px-6 lg:px-8">
+		<!-- Heading -->
+		<div class="mb-8 lg:mb-10">
+			<p class="text-[10px] font-medium uppercase tracking-[0.24em] text-[#a5a5a5]">
+				Work Samples
+			</p>
+			<div class="mt-3 h-px w-[140px] bg-gradient-to-r from-[#d6bf87] via-[#d98cf0] to-[#6e8dff]"></div>
+		</div>
+
+		<!-- Desktop / Tablet Layout -->
+		<div class="hidden md:block">
+			<div class="grid grid-cols-[1.18fr_0.94fr] gap-[4px] lg:gap-[5px]">
+				<!-- Left big image -->
+				<div class="group overflow-hidden rounded-[4px] bg-[#ece9e4]">
+					<img
+						src={workSamples.mainLarge}
+						alt="Nymora shopping bags"
+						class="h-[350px] w-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-[1.03] lg:h-[470px] xl:h-[560px]"
+					/>
+				</div>
+
+				<!-- Right stacked images -->
+				<div class="grid grid-rows-2 gap-[4px] lg:gap-[5px]">
+					<div class="group overflow-hidden rounded-[4px] bg-[#ece9e4]">
+						<img
+							src={workSamples.topRight}
+							alt="Nymora color palette samples"
+							class="h-[173px] w-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-[1.03] lg:h-[232px] xl:h-[277px]"
+						/>
+					</div>
+
+					<div class="group overflow-hidden rounded-[4px] bg-[#ece9e4]">
+						<img
+							src={workSamples.midRight}
+							alt="Nymora brand book"
+							class="h-[173px] w-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-[1.03] lg:h-[232px] xl:h-[277px]"
+						/>
+					</div>
+				</div>
+			</div>
+
+			<!-- Bottom row -->
+			<div class="mt-[4px] grid grid-cols-[1.18fr_0.94fr] gap-[4px] lg:mt-[5px] lg:gap-[5px]">
+				<div class="group overflow-hidden rounded-[4px] bg-[#ece9e4]">
+					<img
+						src={workSamples.bottomLeft}
+						alt="Nymora salon interior"
+						class="h-[170px] w-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-[1.03] lg:h-[210px] xl:h-[240px]"
+					/>
+				</div>
+
+				<div class="group overflow-hidden rounded-[4px] bg-[#ece9e4]">
+					<img
+						src={workSamples.bottomRight}
+						alt="Nymora beauty products"
+						class="h-[170px] w-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-[1.03] lg:h-[210px] xl:h-[240px]"
+					/>
+				</div>
+			</div>
+		</div>
+
+		<!-- Mobile Layout -->
+		<div class="grid grid-cols-1 gap-3 md:hidden">
+			<div class="group overflow-hidden rounded-[4px] bg-[#ece9e4]">
+				<img
+					src={workSamples.mainLarge}
+					alt="Nymora shopping bags"
+					class="h-[300px] w-full object-cover object-center transition-transform duration-700 group-hover:scale-[1.03]"
+				/>
+			</div>
+
+			<div class="group overflow-hidden rounded-[4px] bg-[#ece9e4]">
+				<img
+					src={workSamples.topRight}
+					alt="Nymora color palette samples"
+					class="h-[220px] w-full object-cover object-center transition-transform duration-700 group-hover:scale-[1.03]"
+				/>
+			</div>
+
+			<div class="group overflow-hidden rounded-[4px] bg-[#ece9e4]">
+				<img
+					src={workSamples.midRight}
+					alt="Nymora brand book"
+					class="h-[220px] w-full object-cover object-center transition-transform duration-700 group-hover:scale-[1.03]"
+				/>
+			</div>
+
+			<div class="group overflow-hidden rounded-[4px] bg-[#ece9e4]">
+				<img
+					src={workSamples.bottomLeft}
+					alt="Nymora salon interior"
+					class="h-[220px] w-full object-cover object-center transition-transform duration-700 group-hover:scale-[1.03]"
+				/>
+			</div>
+
+			<div class="group overflow-hidden rounded-[4px] bg-[#ece9e4]">
+				<img
+					src={workSamples.bottomRight}
+					alt="Nymora beauty products"
+					class="h-[220px] w-full object-cover object-center transition-transform duration-700 group-hover:scale-[1.03]"
+				/>
+			</div>
+		</div>
+	</div>
+</section>

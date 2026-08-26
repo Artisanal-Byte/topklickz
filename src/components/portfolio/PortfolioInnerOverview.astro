@@ -1,0 +1,65 @@
+---
+const points = [
+	"Primary & secondary logo system",
+	"Packaging design across 12 SKUs",
+	"Brand guidelines (120 pages)",
+	"Art direction for launch campaign",
+	"Retail display and POS materials",
+	"Brand photography direction",
+];
+---
+
+<section class="w-full py-14 md:py-20 lg:py-24">
+	<div class="mx-auto max-w-[1280px] px-5 sm:px-6 lg:px-8">
+		<div
+			class="grid items-start gap-10 md:grid-cols-[160px_minmax(0,1fr)] md:gap-14 lg:grid-cols-[300px_minmax(0,760px)] lg:gap-16"
+		>
+			<!-- Left side -->
+			<div class="flex flex-col">
+				<div class="flex items-center gap-3">
+					<span
+						class="text-[10px] font-medium uppercase tracking-[0.22em] text-[#9b9b9b]"
+					>
+						Overview
+					</span>
+
+					<span
+						class="h-px w-[120px] bg-gradient-to-r from-[#d9c089] via-[#c9a7f3] to-[#7aa2ff]"
+					>
+					</span>
+				</div>
+
+				<div
+					class="mt-5 text-[64px] font-semibold leading-none tracking-[-0.05em] text-[#cfcfcf] lg:text-[78px]"
+				>
+					01
+				</div>
+			</div>
+
+			<!-- Right side -->
+			<div class="">
+				<p
+					class="text-[24px] font-normal leading-[1.55] tracking-[-0.02em] text-[#1f1f1f] lg:text-[28px]"
+				>
+					Mammalua is a premium beauty brand rooted in the belief
+					that nature holds the answers. We built their entire
+					identity from the ground up — naming, visual language,
+					packaging system and brand architecture — to create
+					something that felt both ancient and completely modern.
+				</p>
+
+				<div class="mt-8 flex flex-wrap gap-3">
+					{
+						points.map((item) => (
+							<span
+								class="inline-flex rounded-full border border-[#eceae6] bg-[#efeeeb] px-4 py-2 text-[12px] font-medium leading-none text-[#8a8a8a] sm:text-[13px]"
+							>
+								{item}
+							</span>
+						))
+					}
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

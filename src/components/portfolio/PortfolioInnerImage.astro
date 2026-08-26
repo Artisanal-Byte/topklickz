@@ -1,0 +1,443 @@
+---
+const galleryImages = [
+	{
+		src: "/img/nymora-1.webp",
+		alt: "Nymora storefront branding",
+	},
+	{
+		src: "/img/nymora-2.webp",
+		alt: "Nymora salon interior",
+	},
+	{
+		src: "/img/nymora-3.webp",
+		alt: "Nymora product packaging",
+	},
+	{
+		src: "/img/nymora-4.webp",
+		alt: "Nymora stationery",
+	},
+	{
+		src: "/img/nymora-5.webp",
+		alt: "Nymora shopping bag",
+	},
+	{
+		src: "/img/nymora-6.webp",
+		alt: "Nymora pattern design",
+	},
+	{
+		src: "/img/nymora-7.webp",
+		alt: "Nymora service menu",
+	},
+];
+---
+
+<section class="w-full bg-[#f7f6f2] py-5">
+	<div class="mx-auto w-full max-w-7xl px-4 lg:px-5">
+
+		<!-- =========================
+			DESKTOP / TABLET
+		========================= -->
+		<div class="hidden md:block">
+
+			<!-- TOP ROW -->
+			<div
+				class="
+					grid
+					h-[280px]
+					grid-cols-[46%_23%_1fr]
+					gap-[7px]
+
+					lg:h-[340px]
+					xl:h-[420px]
+				"
+			>
+				<!-- Image 1 -->
+				<div
+					class="
+						group
+						relative
+						h-full
+						w-full
+						overflow-hidden
+						rounded-[10px]
+						bg-[#ecebe7]
+					"
+				>
+					<img
+						src={galleryImages[0].src}
+						alt={galleryImages[0].alt}
+						class="
+							h-full
+							w-full
+							object-cover
+							object-center
+							transition-transform
+							duration-700
+							ease-out
+							group-hover:scale-[1.035]
+						"
+					/>
+				</div>
+
+				<!-- Image 2 -->
+				<div
+					class="
+						group
+						relative
+						h-full
+						w-full
+						overflow-hidden
+						rounded-[10px]
+						bg-[#ecebe7]
+					"
+				>
+					<img
+						src={galleryImages[1].src}
+						alt={galleryImages[1].alt}
+						class="
+							h-full
+							w-full
+							object-cover
+							object-center
+							transition-transform
+							duration-700
+							ease-out
+							group-hover:scale-[1.035]
+						"
+					/>
+				</div>
+
+				<!-- Image 3 -->
+				<div
+					class="
+						group
+						relative
+						h-full
+						w-full
+						overflow-hidden
+						rounded-[10px]
+						bg-[#ecebe7]
+					"
+				>
+					<img
+						src={galleryImages[2].src}
+						alt={galleryImages[2].alt}
+						class="
+							h-full
+							w-full
+							object-cover
+							object-center
+							transition-transform
+							duration-700
+							ease-out
+							group-hover:scale-[1.035]
+						"
+					/>
+				</div>
+			</div>
+
+			<!-- BOTTOM ROW -->
+			<div
+				class="
+					mt-[7px]
+					grid
+					h-[240px]
+					grid-cols-[24%_24%_28%_1fr]
+					gap-[7px]
+
+					lg:h-[300px]
+					xl:h-[380px]
+				"
+			>
+				<!-- Image 4 -->
+				<div
+					class="
+						group
+						relative
+						h-full
+						w-full
+						overflow-hidden
+						rounded-[10px]
+						bg-[#ecebe7]
+					"
+				>
+					<img
+						src={galleryImages[3].src}
+						alt={galleryImages[3].alt}
+						class="
+							h-full
+							w-full
+							object-cover
+							object-center
+							transition-transform
+							duration-700
+							ease-out
+							group-hover:scale-[1.035]
+						"
+					/>
+				</div>
+
+				<!-- Image 5 -->
+				<div
+					class="
+						group
+						relative
+						h-full
+						w-full
+						overflow-hidden
+						rounded-[10px]
+						bg-[#ecebe7]
+					"
+				>
+					<img
+						src={galleryImages[4].src}
+						alt={galleryImages[4].alt}
+						class="
+							h-full
+							w-full
+							object-cover
+							object-center
+							transition-transform
+							duration-700
+							ease-out
+							group-hover:scale-[1.035]
+						"
+					/>
+				</div>
+
+				<!-- Image 6 -->
+				<div
+					class="
+						group
+						relative
+						h-full
+						w-full
+						overflow-hidden
+						rounded-[10px]
+						bg-[#ecebe7]
+					"
+				>
+					<img
+						src={galleryImages[5].src}
+						alt={galleryImages[5].alt}
+						class="
+							h-full
+							w-full
+							object-cover
+							object-center
+							transition-transform
+							duration-700
+							ease-out
+							group-hover:scale-[1.035]
+						"
+					/>
+				</div>
+
+				<!-- Image 7 -->
+				<div
+					class="
+						group
+						relative
+						h-full
+						w-full
+						overflow-hidden
+						rounded-[10px]
+						bg-[#ecebe7]
+					"
+				>
+					<img
+						src={galleryImages[6].src}
+						alt={galleryImages[6].alt}
+						class="
+							h-full
+							w-full
+							object-cover
+							object-center
+							transition-transform
+							duration-700
+							ease-out
+							group-hover:scale-[1.035]
+						"
+					/>
+				</div>
+			</div>
+		</div>
+
+		<!-- =========================
+			MOBILE
+		========================= -->
+		<div class="grid grid-cols-2 gap-2 md:hidden">
+
+			<!-- Image 1 -->
+			<div
+				class="
+					group
+					col-span-2
+					h-[240px]
+					overflow-hidden
+					rounded-[10px]
+				"
+			>
+				<img
+					src={galleryImages[0].src}
+					alt={galleryImages[0].alt}
+					class="
+						h-full
+						w-full
+						object-cover
+						object-center
+						transition-transform
+						duration-700
+						group-hover:scale-105
+					"
+				/>
+			</div>
+
+			<!-- Image 2 -->
+			<div
+				class="
+					group
+					h-[200px]
+					overflow-hidden
+					rounded-[10px]
+				"
+			>
+				<img
+					src={galleryImages[1].src}
+					alt={galleryImages[1].alt}
+					class="
+						h-full
+						w-full
+						object-cover
+						object-center
+						transition-transform
+						duration-700
+						group-hover:scale-105
+					"
+				/>
+			</div>
+
+			<!-- Image 3 -->
+			<div
+				class="
+					group
+					h-[200px]
+					overflow-hidden
+					rounded-[10px]
+				"
+			>
+				<img
+					src={galleryImages[2].src}
+					alt={galleryImages[2].alt}
+					class="
+						h-full
+						w-full
+						object-cover
+						object-center
+						transition-transform
+						duration-700
+						group-hover:scale-105
+					"
+				/>
+			</div>
+
+			<!-- Image 4 -->
+			<div
+				class="
+					group
+					h-[190px]
+					overflow-hidden
+					rounded-[10px]
+				"
+			>
+				<img
+					src={galleryImages[3].src}
+					alt={galleryImages[3].alt}
+					class="
+						h-full
+						w-full
+						object-cover
+						object-center
+						transition-transform
+						duration-700
+						group-hover:scale-105
+					"
+				/>
+			</div>
+
+			<!-- Image 5 -->
+			<div
+				class="
+					group
+					h-[190px]
+					overflow-hidden
+					rounded-[10px]
+				"
+			>
+				<img
+					src={galleryImages[4].src}
+					alt={galleryImages[4].alt}
+					class="
+						h-full
+						w-full
+						object-cover
+						object-center
+						transition-transform
+						duration-700
+						group-hover:scale-105
+					"
+				/>
+			</div>
+
+			<!-- Image 6 -->
+			<div
+				class="
+					group
+					col-span-2
+					h-[230px]
+					overflow-hidden
+					rounded-[10px]
+				"
+			>
+				<img
+					src={galleryImages[5].src}
+					alt={galleryImages[5].alt}
+					class="
+						h-full
+						w-full
+						object-cover
+						object-center
+						transition-transform
+						duration-700
+						group-hover:scale-105
+					"
+				/>
+			</div>
+
+			<!-- Image 7 -->
+			<div
+				class="
+					group
+					col-span-2
+					h-[240px]
+					overflow-hidden
+					rounded-[10px]
+				"
+			>
+				<img
+					src={galleryImages[6].src}
+					alt={galleryImages[6].alt}
+					class="
+						h-full
+						w-full
+						object-cover
+						object-center
+						transition-transform
+						duration-700
+						group-hover:scale-105
+					"
+				/>
+			</div>
+		</div>
+	</div>
+</section>

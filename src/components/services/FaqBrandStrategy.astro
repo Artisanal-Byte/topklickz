@@ -1,0 +1,195 @@
+---
+interface FaqItem {
+    question: string;
+    answer: string;
+}
+
+const faqs: FaqItem[] = [
+    {
+        question: "What makes your brand strategy different?",
+        answer: "Our approach combines research, positioning, messaging and creative thinking to build a strategy that is practical, distinctive and aligned with your business goals.",
+    },
+    {
+        question: "How long does a brand strategy project take?",
+        answer: "Most brand strategy engagements take several weeks depending on the scope, complexity and level of research required.",
+    },
+    {
+        question: "Do you work with early-stage startups?",
+        answer: "Yes. We work with early-stage startups as well as established businesses that need stronger positioning, messaging and brand direction.",
+    },
+    {
+        question: "What do we need to bring to the process?",
+        answer: "We ask you to bring your business context, goals, customer understanding and an openness to collaborate throughout the strategy process.",
+    },
+];
+---
+
+<section class="w-full bg-white">
+    <div
+        class="mx-auto
+			grid
+			w-full
+			max-w-7xl
+			grid-cols-1
+			gap-[45px]
+			px-5
+			py-[65px]
+			sm:px-6
+			md:py-[80px]
+			lg:grid-cols-[300px_minmax(0,1fr)]
+			lg:gap-[95px]
+			lg:px-8
+			lg:py-[95px]
+			xl:grid-cols-[360px_minmax(0,1fr)]
+			xl:gap-[110px]"
+    >
+        <!-- LEFT -->
+        <div>
+            <h2
+                class="
+					max-w-[540px]
+					font-clash
+					text-[40px]
+					font-semibold
+					leading-[0.99]
+					tracking-[-0.045em]
+					text-black
+					lg:text-[55px]
+					uppercase
+				"
+            >
+                <span class="block"> Frequently </span>
+
+                <span
+                    class="block
+						w-fit
+						bg-[linear-gradient(90deg,#FF9E45_0%,#FF4C55_30%,#DE2B9D_62%,#6742ED_100%)]
+						bg-clip-text
+						text-transparent"
+                >
+                    Asked
+                </span>
+            </h2>
+        </div>
+
+        <!-- RIGHT / FAQ -->
+         <!-- RIGHT / FAQ -->
+<div class="w-full">
+	<!-- First Top Gradient Line -->
+	<div
+		class="
+			h-px
+			w-full
+			bg-[linear-gradient(90deg,#FFB547_0%,#FF5A55_32%,#E12CA8_65%,#6848F5_100%)]
+		"
+	></div>
+
+	{
+		faqs.map((faq) => (
+			<details
+				name="faq-group"
+				class="
+					group
+					border-b
+					border-transparent
+					[border-image:linear-gradient(90deg,#FFB547_0%,#FF5A55_32%,#E12CA8_65%,#6848F5_100%)_1]
+				"
+			>
+				<!-- Question -->
+				<summary
+					class="
+						flex
+						min-h-[50px]
+						cursor-pointer
+						list-none
+						items-center
+						justify-between
+						gap-5
+						py-[20px]
+						[&::-webkit-details-marker]:hidden
+					"
+				>
+					<h3
+						class="
+							m-0
+							font-clash
+							text-[18px]
+							font-medium
+							leading-[1.3]
+							tracking-[-0.025em]
+							text-[#111111]
+							lg:text-[20px]
+						"
+					>
+						{faq.question}
+					</h3>
+
+					<!-- Plus / Minus -->
+					<span
+						class="
+							relative
+							flex
+							h-[30px]
+							w-[30px]
+							shrink-0
+							items-center
+							justify-center
+							rounded-full
+							border
+							border-[#FFB547]
+						"
+					>
+						<!-- Horizontal -->
+						<span
+							class="
+								absolute
+								h-px
+								w-[10px]
+								bg-[linear-gradient(90deg,#FF983F,#E82F91,#6742ED)]
+							"
+						></span>
+
+						<!-- Vertical -->
+						<span
+							class="
+								absolute
+								h-[10px]
+								w-px
+								bg-[linear-gradient(180deg,#FF983F,#E82F91,#6742ED)]
+								transition-transform
+								duration-300
+								group-open:scale-y-0
+							"
+						></span>
+					</span>
+				</summary>
+
+				<!-- Answer -->
+				<div
+					class="
+						max-w-[760px]
+						pb-[10px]
+						pr-[50px]
+					"
+				>
+					<p
+						class="
+							m-0
+							font-clash
+							text-[14px]
+							font-normal
+							leading-[1.65]
+							text-[#737373]
+
+							sm:text-[15px]
+						"
+					>
+						{faq.answer}
+					</p>
+				</div>
+			</details>
+		))
+	}
+</div>
+    </div>
+</section>

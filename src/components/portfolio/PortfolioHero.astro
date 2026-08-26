@@ -1,0 +1,560 @@
+---
+interface Props {
+    image?: string;
+    projectName?: string;
+    projectCount?: number;
+}
+
+const {
+    image = "/img/project.png",
+    projectName = "GF Studio",
+    projectCount = 12,
+} = Astro.props;
+---
+
+<section class="relative w-full overflow-hidden bg-white">
+    <div
+        class="mx-auto
+			grid
+			max-w-7xl
+			grid-cols-1
+			items-center
+			gap-10
+			px-4
+			py-12
+			lg:min-h-[630px]
+			lg:grid-cols-[1.08fr_0.92fr]
+			lg:gap-4
+			lg:px-8
+			lg:py-0"
+    >
+        <!-- ================================================= -->
+        <!-- LEFT CONTENT -->
+        <!-- ================================================= -->
+
+        <div class="relative z-20">
+            <p
+                class="mb-9
+					font-['Satoshi',sans-serif]
+					text-[12px]
+					font-normal
+					uppercase
+					tracking-[0.16em]
+					text-[#777]
+					sm:text-[13px]"
+            >
+                SELECTED WORK · 12 PROJECTS
+            </p>
+
+            <h2
+                class="font-clash font-bold text-[60px] leading-[90%] tracking-normal text-black lg:text-[70px]"
+            >
+                Work that
+
+                <span
+                    class="inline-block
+						bg-[linear-gradient(100deg,#FFAD4D_0%,#FF654A_25%,#EB205F_50%,#BB29AC_74%,#6540DB_100%)]
+						bg-clip-text
+						text-transparent"
+                >
+                    speaks
+                </span>
+
+                <br />
+
+                for itself.
+            </h2>
+
+            <p
+                class="mt-9
+					max-w-[570px]
+					font-geist
+					text-[17px]
+					leading-[1.65]
+					text-[#777]
+					lg:text-[19px]"
+            >
+                From brand foundations to digital execution — every project is
+                built with strategy, craft and intention.
+            </p>
+        </div>
+
+        <!-- ================================================= -->
+        <!-- RIGHT VISUAL -->
+        <!-- ================================================= -->
+
+        <div
+            class="relative
+				mx-auto
+				h-[400px]
+				w-full
+				max-w-[620px]
+				sm:h-[470px]
+				lg:h-[520px]"
+        >
+            <!-- ================================================= -->
+            <!-- FIXED VISUAL CANVAS -->
+            <!-- ================================================= -->
+
+            <div
+                class="absolute
+					left-1/2
+					top-1/2
+					h-[520px]
+					w-[620px]
+					origin-center
+					-translate-x-1/2
+					-translate-y-1/2
+					scale-[0.60]
+					sm:scale-[0.82]
+					md:scale-[0.90]
+					lg:scale-100"
+            >
+                <!-- ================================================= -->
+                <!-- SOFT GLOW -->
+                <!-- ================================================= -->
+
+                <div
+                    class="pointer-events-none
+						absolute
+						left-1/2
+						top-1/2
+						h-[360px]
+						w-[360px]
+						-translate-x-1/2
+						-translate-y-1/2
+						rounded-full
+						bg-[#f4f4f4]/70
+						blur-[75px]"
+                >
+                </div>
+
+                <!-- ================================================= -->
+                <!-- DASHED ORBIT -->
+                <!-- ================================================= -->
+
+                <div
+                    class="pointer-events-none
+						absolute
+						left-[55px]
+						top-[28px]
+						z-[1]
+						h-[450px]
+						w-[510px]
+						rounded-[50%]
+						border-[1.5px]
+						border-dashed
+						border-black/[0.07]"
+                >
+                </div>
+
+                <!-- ================================================= -->
+                <!-- WEBSITE DESIGN -->
+                <!-- ================================================= -->
+
+                <div
+                    class="website-animation
+						pointer-events-none
+						absolute
+						left-[20px]
+						top-[175px]
+						z-40"
+                >
+                    <span
+                        class="inline-flex
+							h-[36px]
+							items-center
+							justify-center
+							whitespace-nowrap
+							rounded-full
+							bg-[#EE3B3F]
+							px-[17px]
+							font-['Satoshi',sans-serif]
+							text-[10px]
+							font-semibold
+							text-white
+							shadow-[0_12px_28px_rgba(238,59,63,0.28)]"
+                    >
+                        Website Design
+                    </span>
+                </div>
+
+                <!-- ================================================= -->
+                <!-- PACKAGING -->
+                <!-- ================================================= -->
+
+                <div
+                    class="packaging-animation
+						pointer-events-none
+						absolute
+						left-[265px]
+						top-[25px]
+						z-40"
+                >
+                    <span
+                        class="inline-flex
+							h-[36px]
+							items-center
+							justify-center
+							whitespace-nowrap
+							rounded-full
+							bg-[#2B7FD5]
+							px-[17px]
+							font-['Satoshi',sans-serif]
+							text-[10px]
+							font-semibold
+							text-white
+							shadow-[0_12px_28px_rgba(43,127,213,0.28)]"
+                    >
+                        Packaging
+                    </span>
+                </div>
+
+                <!-- ================================================= -->
+                <!-- SOCIAL MEDIA -->
+                <!-- ================================================= -->
+
+                <div
+                    class="social-animation
+						pointer-events-none
+						absolute
+						right-[10px]
+						top-[150px]
+						z-40"
+                >
+                    <span
+                        class="inline-flex
+							h-[36px]
+							items-center
+							justify-center
+							whitespace-nowrap
+							rounded-full
+							bg-[#CF357D]
+							px-[17px]
+							font-['Satoshi',sans-serif]
+							text-[10px]
+							font-semibold
+							text-white
+							shadow-[0_12px_28px_rgba(207,53,125,0.28)]"
+                    >
+                        Social Media
+                    </span>
+                </div>
+
+                <!-- ================================================= -->
+                <!-- BRAND STRATEGY -->
+                <!-- ================================================= -->
+
+                <div
+                    class="strategy-animation
+						pointer-events-none
+						absolute
+						left-[38px]
+						top-[355px]
+						z-40"
+                >
+                    <span
+                        class="inline-flex
+							h-[36px]
+							items-center
+							justify-center
+							whitespace-nowrap
+							rounded-full
+							bg-[#FF7C19]
+							px-[17px]
+							font-['Satoshi',sans-serif]
+							text-[10px]
+							font-semibold
+							text-white
+							shadow-[0_12px_28px_rgba(255,124,25,0.28)]"
+                    >
+                        Brand Strategy
+                    </span>
+                </div>
+
+                <!-- ================================================= -->
+                <!-- BRAND IDENTITY -->
+                <!-- ================================================= -->
+
+                <div
+                    class="identity-animation
+						pointer-events-none
+						absolute
+						right-[0px]
+						top-[335px]
+						z-40"
+                >
+                    <span
+                        class="inline-flex
+							h-[36px]
+							items-center
+							justify-center
+							whitespace-nowrap
+							rounded-full
+							bg-[#7247DC]
+							px-[17px]
+							font-['Satoshi',sans-serif]
+							text-[10px]
+							font-semibold
+							text-white
+							shadow-[0_12px_28px_rgba(114,71,220,0.28)]"
+                    >
+                        Brand Identity
+                    </span>
+                </div>
+
+                <!-- ================================================= -->
+                <!-- CENTER PROJECT IMAGE -->
+                <!-- ================================================= -->
+
+                <div
+                    class="project-card-animation
+						absolute
+						left-1/2
+						top-[48%]
+						z-20
+						w-[320px]
+						-translate-x-1/2
+						-translate-y-1/2"
+                >
+                    <img
+                        src={image}
+                        alt={projectName}
+                        class="block
+							h-full
+							w-full
+							rounded-[14px]
+							object-cover"
+                        loading="lazy"
+                    />
+                </div>
+
+                <!-- ================================================= -->
+                <!-- PROJECT COUNT -->
+                <!-- ================================================= -->
+
+                <div
+                    class="counter-animation
+						absolute
+						bottom-[25px]
+						left-1/2
+						z-50
+						flex
+						-translate-x-1/2
+						items-center
+						gap-[10px]
+						rounded-[15px]
+						bg-white
+						py-[7px]
+						pl-[9px]
+						pr-[18px]
+						shadow-[0_10px_28px_rgba(0,0,0,0.14)]"
+                >
+                    <div
+                        class="flex
+							h-[34px]
+							w-[34px]
+							shrink-0
+							items-center
+							justify-center
+							rounded-full
+							bg-[linear-gradient(135deg,#FF953D_0%,#ED1768_48%,#7543DD_100%)]
+							font-['Satoshi',sans-serif]
+							text-[11px]
+							font-bold
+							text-white"
+                    >
+                        {projectCount}
+                    </div>
+
+                    <div>
+                        <p
+                            class="m-0
+								whitespace-nowrap
+								font-['Satoshi',sans-serif]
+								text-[11px]
+								font-bold
+								leading-none
+								text-black"
+                        >
+                            Projects
+                        </p>
+
+                        <p
+                            class="mb-0
+								mt-[4px]
+								font-['Satoshi',sans-serif]
+								text-[8px]
+								leading-none
+								text-[#A6A6A6]"
+                        >
+                            Delivered
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style is:global>
+    /* =========================================================
+	   WEBSITE DESIGN
+	========================================================= */
+
+    .website-animation {
+        animation: websiteServiceMove 5s ease-in-out infinite alternate;
+    }
+
+    @keyframes websiteServiceMove {
+        0% {
+            translate: 0 40px;
+        }
+
+        50% {
+            translate: 30px 0;
+        }
+
+        100% {
+            translate: 70px -25px;
+        }
+    }
+
+    /* =========================================================
+	   PACKAGING
+	========================================================= */
+
+    .packaging-animation {
+        animation: packagingServiceMove 5.5s ease-in-out infinite alternate;
+    }
+
+    @keyframes packagingServiceMove {
+        0% {
+            translate: -65px 18px;
+        }
+
+        50% {
+            translate: 0 -8px;
+        }
+
+        100% {
+            translate: 65px 18px;
+        }
+    }
+
+    /* =========================================================
+	   SOCIAL MEDIA
+	========================================================= */
+
+    .social-animation {
+        animation: socialServiceMove 5.2s ease-in-out infinite alternate;
+    }
+
+    @keyframes socialServiceMove {
+        0% {
+            translate: -65px -25px;
+        }
+
+        50% {
+            translate: -28px 0;
+        }
+
+        100% {
+            translate: 0 45px;
+        }
+    }
+
+    /* =========================================================
+	   BRAND STRATEGY
+	========================================================= */
+
+    .strategy-animation {
+        animation: strategyServiceMove 5.7s ease-in-out infinite alternate;
+    }
+
+    @keyframes strategyServiceMove {
+        0% {
+            translate: 0 -40px;
+        }
+
+        50% {
+            translate: 28px -5px;
+        }
+
+        100% {
+            translate: 70px 25px;
+        }
+    }
+
+    /* =========================================================
+	   BRAND IDENTITY
+	========================================================= */
+
+    .identity-animation {
+        animation: identityServiceMove 5.9s ease-in-out infinite alternate;
+    }
+
+    @keyframes identityServiceMove {
+        0% {
+            translate: -70px 28px;
+        }
+
+        50% {
+            translate: -30px 0;
+        }
+
+        100% {
+            translate: 0 -38px;
+        }
+    }
+
+    /* =========================================================
+	   PROJECT IMAGE
+	========================================================= */
+
+    .project-card-animation {
+        animation: selectedProjectFloat 4.5s ease-in-out infinite;
+    }
+
+    @keyframes selectedProjectFloat {
+        0%,
+        100% {
+            margin-top: 0;
+        }
+
+        50% {
+            margin-top: -7px;
+        }
+    }
+
+    /* =========================================================
+	   COUNTER
+	========================================================= */
+
+    .counter-animation {
+        animation: selectedCounterFloat 4s ease-in-out infinite;
+    }
+
+    @keyframes selectedCounterFloat {
+        0%,
+        100% {
+            margin-bottom: 0;
+        }
+
+        50% {
+            margin-bottom: 5px;
+        }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        .website-animation,
+        .packaging-animation,
+        .social-animation,
+        .strategy-animation,
+        .identity-animation,
+        .project-card-animation,
+        .counter-animation {
+            animation: none !important;
+        }
+    }
+</style>

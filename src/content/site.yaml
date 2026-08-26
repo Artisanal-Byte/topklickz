@@ -1,0 +1,312 @@
+seo:
+  title: Creative Branding & Digital Design Studio | TOPKLICKZ
+  description: >-
+    We craft distinctive brands for a digital world. TOPKLICKZ specializes in
+    brand strategy, visual identity, website design, content creation, and
+    digital marketing solutions.
+  keywords: >-
+    Astro, Static Site Generator, Tailwind, TailwindCSS, Tailwind CSS,
+    Tailwindcss, Tailwind Css, Tailwind Css Framework, Tailwind Css Frameworks,
+    Tailwind Css Frameworks For Web Development, Tailwind Css Frameworks For Web
+    Development And Design, Tailwind Css Frameworks For Web Development And
+    Design And Development, Tailwind Css Frameworks For Web Development And
+    Design And Development And Deployment, Tailwind Css Frameworks For Web
+    Development And Design And Development And Deployment And Maintenance
+navbar:
+  logo: /uploads/logo/navbar/logo.png
+  navigation:
+    - title: Home
+      href: /
+    - title: About
+      href: /about
+    - title: Services
+      href: /brand-strategy
+    - title: Work
+      href: /portfolio
+    - title: Insights
+      href: /blog
+    - title: Work-Inner
+      href: /portfolio-inner
+  buttonText: Get in Touch
+  buttonLink: /contact
+hero:
+  title: WE CRAFT
+  subtitle: DISTINCTIVE BRANDS
+  description: FOR A DIGITAL WORLD.
+  buttonText: Scroll to Explore
+  buttonIcon: mdi:arrow-down
+  image: /uploads/hero/hero/image.png
+studio:
+  sectionNumber: '02'
+  sectionTitle: Studio
+  title: >-
+    TOPKLICKZ is a branding, website and content studio helping ambitious
+    businesses create meaningful connections through strategy, design and
+    digital execution.
+  description: >-
+    We partner with founders, startups and growing businesses to create brands,
+    websites and content systems that remain relevant, recognizable and
+    impactful.
+  clientTitle: Selected clients
+  clients:
+    - logo: /uploads/clients/studio/clients/0/logo.png
+    - logo: /uploads/clients/studio/clients/1/logo.png
+    - logo: /uploads/clients/studio/clients/2/logo.png
+    - logo: /uploads/clients/studio/clients/3/logo.png
+    - logo: /uploads/clients/studio/clients/4/logo.png
+    - logo: /uploads/clients/studio/clients/5/logo.png
+    - logo: /uploads/clients/studio/clients/6/logo.png
+    - logo: /uploads/clients/studio/clients/7/logo.png
+    - logo: /uploads/clients/studio/clients/8/logo.png
+    - logo: /uploads/clients/studio/clients/9/logo.png
+  buttonText: About US
+services:
+  title: Six disciplines.
+  gradientTitle: 'one creative '
+  endTitle: practice.
+  items:
+    - number: '01'
+      title: Brand Strategy
+      description: >-
+        We help brands discover their voice, define their position and create a
+        foundation for sustainable growth.
+      features:
+        - Research
+        - Positioning
+        - Messaging
+        - Brand Architecture
+        - Customer Insights
+      image: /uploads/services/services/items/0/image.png
+      buttonText: Explore Strategy
+      buttonIcon: mdi:arrow-top-right
+    - number: '02'
+      title: Brand Identity
+      description: >-
+        We create visual identities that build recognition, consistency and
+        trust across every customer touchpoint.
+      features:
+        - 'Logo Systems '
+        - 'Visual Language '
+        - 'Guidelines '
+        - 'Creative Direction '
+        - Marketing Assets
+      image: /uploads/services/services/items/1/image.png
+      buttonText: See Brand Systems
+      buttonIcon: mdi:arrow-top-right
+    - number: '03'
+      title: Website Design
+      description: >-
+        We design digital experiences that communicate clearly, perform
+        effectively and leave lasting impressions.
+      features:
+        - 'UX Strategy '
+        - 'UI Design '
+        - 'Webflow Development '
+        - WordPress Development
+        - ' Landing Pages'
+      image: /uploads/services/services/items/2/image.png
+      buttonText: Explore Digital Experiences
+      buttonIcon: mdi:arrow-top-right
+    - number: '04'
+      title: Social Media Systems
+      description: >-
+        We create visual identities that build recognition, consistency and
+        trust across every customer touchpoint.
+      features:
+        - 'Content Strategy '
+        - Campaign Design
+        - ' Creative Direction'
+        - ' Reels & Short-form Content'
+        - ' Community Building'
+      image: /uploads/services/services/items/3/image.png
+      buttonText: Explore Campaign Work
+      buttonIcon: mdi:arrow-top-right
+    - number: '05'
+      title: Performance Marketing
+      description: >-
+        We help businesses connect with the right audience through strategic and
+        measurable marketing initiatives.
+      features:
+        - 'Meta Advertising '
+        - 'Google Advertising '
+        - Lead Generation
+        - ' Conversion Optimization '
+        - Analytics
+      buttonText: Explore Digital Experiences
+      buttonIcon: mdi:arrow-top-right
+work:
+  title: Selected Work
+  description: ' Creating a premium hospitality experience through strategy, design and storytelling.'
+  buttonText: See All
+  buttonIcon: mdi:arrow-right
+  projects:
+    - image: /uploads/work/work/projects/0/image.png
+      title: Afro Cafe
+      category: Brand Identity • Packaging • Website
+      description: ' Creating a premium hospitality experience through strategy, design and storytelling.'
+    - image: /uploads/work/work/projects/1/image.png
+      title: Bainbridge
+      category: Brand Identity • Website • Social Media
+      description: ' Creating a premium hospitality experience through strategy, design and storytelling.'
+    - image: /uploads/work/work/projects/2/image.png
+      title: Afro Cafe
+      category: Brand Identity • Packaging • Website
+      description: >-
+        Creating a premium hospitality experience through strategy, design and
+        storytelling.
+    - image: /uploads/work/work/projects/3/image.png
+      title: Bainbridge
+      category: Brand Identity • Website • Social Media
+      description: >-
+        Creating a premium hospitality experience through strategy, design and
+        storytelling.
+trustedBrands:
+  title: Trusted by
+  highlight: ambitious brands.
+  description: >-
+    From startups to established businesses, we collaborate with organizations
+    looking to create stronger brands and more meaningful customer experiences.
+  logos:
+    - image: /uploads/clients/trustedBrands/logos/0/image.png
+      alt: Neujin Solutions Logo
+      url: https://neujinsolutions.com/
+    - image: /uploads/clients/trustedBrands/logos/1/image.png
+      alt: IPA Logo
+    - image: /uploads/clients/trustedBrands/logos/2/image.png
+      alt: Sawaca Enterprises Ltd Logo
+      url: https://sawacaenterprises.com/
+    - image: /uploads/clients/trustedBrands/logos/3/image.png
+      alt: Mahaa Rajaa Logo
+      url: https://mahaarajaa.life/
+    - image: /uploads/clients/trustedBrands/logos/4/image.png
+      alt: globofarm
+    - image: /uploads/clients/trustedBrands/logos/5/image.png
+      alt: veer prabhu
+testimonials:
+  title: WHAT FOUNDERS
+  highlight: SAY
+  items:
+    - quote: >-
+        "TOPKLICKZ transformed the way our brand communicates. Their strategic
+        thinking and attention to detail made a lasting impact."
+      image: /uploads/testimonials/testimonials/items/0/image.png
+      name: Aurum Cafe
+      designation: Founder
+    - quote: >-
+        "The team helped us build a clear identity and digital presence that
+        truly represents who we are."
+      image: /uploads/testimonials/testimonials/items/1/image.png
+      name: Pickleball Community
+      designation: Founder
+    - quote: >-
+        "The team helped us build a clear identity and digital presence that
+        truly represents who we are."
+      image: /uploads/testimonials/testimonials/items/2/image.png
+      name: Sarah Johnson
+      designation: Marketing Director, NovaTech Solutions
+    - quote: >-
+        "The team helped us build a clear identity and digital presence that
+        truly represents who we are."
+      image: /uploads/testimonials/testimonials/items/3/image.png
+      name: Michael Chen
+      designation: Founder, BrightScale
+    - quote: >-
+        "The team helped us build a clear identity and digital presence that
+        truly represents who we are."
+      image: /uploads/testimonials/testimonials/items/4/image.webp
+      name: Emily Roberts
+      designation: CEO, Horizon Digital
+fieldNotes:
+  title: "FIELD NOTES\L"
+  highlight: FROM THE STUDIO.
+  buttonText: See All
+  buttonIcon: mdi:arrow-right
+  posts:
+    - image: /uploads/blogs/fieldNotes/posts/0/image.png
+      alt: Brand identity stationery and packaging mockup displayed on a desk.
+      title: The Art of Building Brands That Endure
+      description: >-
+        How strategic positioning, visual identity and consistency create brands
+        that remain relevant over time.
+    - image: /uploads/blogs/fieldNotes/posts/1/image.png
+      alt: Modern brand guideline displayed on a desktop monitor.
+      title: Design Systems That Scale
+      description: >-
+        Learn how structured design systems improve collaboration and create
+        consistent digital experiences.
+    - image: /uploads/blogs/fieldNotes/posts/2/image.png
+      alt: UI design process and wireframes arranged on a workspace.
+      title: Creating Meaningful Digital Experiences
+      description: >-
+        Discover how research, strategy and design come together to build
+        user-focused digital products.
+teamCulture:
+  title: Passion, curiosity and craftsmanship power everything
+  highlight: we create.
+  descriptionOne: >-
+    We believe meaningful brands are built through thoughtful strategy,
+    purposeful design and consistent execution.
+  descriptionTwo: >-
+    Our approach combines creativity, collaboration and clarity to create
+    experiences that connect with people and support business growth.
+  image: /uploads/creative/teamCulture/image.png
+  imageAlt: TOPKLICKZ team celebrating together at the studio.
+faq:
+  title: FREQUENTLY
+  highlight: ASKED
+  items:
+    - question: What services does TOPKLICKZ offer?
+      answer: >-
+        We offer Brand Strategy, Brand Identity, Website Design, Social Media
+        Systems, Performance Marketing, and Creative Production — six
+        disciplines under one creative practice.
+      defaultOpen: true
+    - question: Who do you work with?
+      answer: >-
+        We partner with startups, growing businesses, established companies, and
+        organizations looking to strengthen their brand and digital presence.
+      defaultOpen: false
+    - question: How long does a typical project take?
+      answer: >-
+        Most branding and website projects take between 4–8 weeks depending on
+        the scope, requirements, and feedback cycle.
+      defaultOpen: false
+    - question: How do we get started?
+      answer: >-
+        Simply contact us through our website or schedule a discovery call.
+        We'll discuss your goals and recommend the best approach.
+      defaultOpen: false
+    - question: Do you work with international clients?
+      answer: >-
+        Yes. We collaborate with clients worldwide using online meetings,
+        project management tools, and regular communication.
+      defaultOpen: false
+cta:
+  title: LET'S CREATE SOMETHING
+  highlight: MEMORABLE.
+  description: >-
+    Whether you're launching a new venture, evolving an existing brand or
+    improving your digital presence, we'd love to hear from you.
+  button:
+    text: START A PROJECT
+    icon: mdi:arrow-right
+footer:
+  logo: /uploads/footer/footer/logo.png
+  email: hello@topklickz.com
+  phone: +91 XXXXX XXXXX
+  address: Ahmedabad, India
+  copyright: © 2026 TOPKLICKZ
+  companyLinks:
+    - title: About
+    - title: Work
+    - title: Careers
+    - title: Contact
+  serviceLinks:
+    - title: Brand Strategy
+    - title: Brand Identity
+    - title: Website Design
+  socialLinks:
+    - title: Instagram
+    - title: Instagram
+  marqueeImage: /uploads/footer/footer/marqueeImage.png
+  tagline: CLICK. GROW. RELISH.

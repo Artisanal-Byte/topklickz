@@ -1,0 +1,713 @@
+---
+const projects = {
+	"afro-cafe": {
+		title: "Afro Cafe",
+		description: "A premium Afrocentric dining experience",
+		year: "2024",
+		image: "/img/projects/afro-cafe.webp",
+		link: "#",
+		tags: ["Brand Identity", "Packaging", "Website Design"],
+	},
+
+	bainbridge: {
+		title: "Bainbridge",
+		description: "Modern identity for a bold new venture",
+		year: "2024",
+		image: "/img/projects/bainbridge.webp",
+		link: "#",
+		tags: ["Brand Identity", "Website Design", "Social Media"],
+	},
+
+	nymora: {
+		title: "Nymora",
+		description: "Positioning a lifestyle brand for global scale",
+		year: "2023",
+		image: "/img/projects/nymora.webp",
+		link: "#",
+		tags: ["Brand Strategy", "Brand Identity"],
+	},
+
+	"veer-prabhu": {
+		title: "Veer Prabhu",
+		description: "Heritage craft meets contemporary brand voice",
+		year: "2024",
+		image: "/img/projects/veer-prabhu.webp",
+		link: "#",
+		tags: ["Brand Identity", "Packaging"],
+	},
+
+	"gf-studio": {
+		title: "GF Studio",
+		description: "A boutique creative studio's visual identity",
+		year: "2023",
+		image: "/img/projects/gf-studio.webp",
+		link: "#",
+		tags: ["Brand Identity", "Digital"],
+	},
+
+	"sawaca-enterprises": {
+		title: "Sawaca Enterprises",
+		description: "Corporate refresh anchored in trust and clarity",
+		year: "2024",
+		image: "/img/projects/sawaca-enterprises.webp",
+		link: "#",
+		tags: ["Brand Identity", "Website Design"],
+	},
+
+	neujin: {
+		title: "Neujin",
+		description: "A new-age tech brand built to disrupt",
+		year: "2024",
+		image: "/img/projects/neujin.webp",
+		link: "#",
+		tags: ["Brand Identity", "Digital"],
+	},
+
+	"layer-one": {
+		title: "Layer One",
+		description: "Packaging design for an urban wellness brand",
+		year: "2024",
+		image: "/img/projects/layer-one.webp",
+		link: "#",
+		tags: ["Brand Identity", "Packaging"],
+	},
+
+	"pickleball-community": {
+		title: "Pickleball Community",
+		description: "Building a passionate sports community brand",
+		year: "2024",
+		image: "/img/projects/pickleball-community.webp",
+		link: "#",
+		tags: ["Brand Identity", "Digital"],
+	},
+
+	"ipa-group": {
+		title: "IPA Group",
+		description: "Strategic positioning for a professional services firm",
+		year: "2023",
+		image: "/img/projects/ipa-group.webp",
+		link: "#",
+		tags: ["Brand Strategy", "Website Design"],
+	},
+
+	swc: {
+		title: "SWC",
+		description: "Community-driven brand storytelling at scale",
+		year: "2024",
+		image: "/img/projects/swc.webp",
+		link: "#",
+		tags: ["Brand Strategy", "Digital"],
+	},
+
+	"pixel-studio": {
+		title: "Pixel Studio",
+		description: "Digital-first experience for modern audiences",
+		year: "2024",
+		image: "/img/projects/pixel-studio.webp",
+		link: "#",
+		tags: ["Digital", "Website Design"],
+	},
+};
+
+const sections = [
+	{
+		id: "brand-identity",
+		title: "Brand Identity",
+		filter: "branding",
+		projects: [
+			"afro-cafe",
+			"bainbridge",
+			"nymora",
+			"veer-prabhu",
+			"gf-studio",
+			"sawaca-enterprises",
+			"neujin",
+			"layer-one",
+			"pickleball-community",
+		],
+	},
+
+	{
+		id: "brand-strategy",
+		title: "Brand Strategy",
+		filter: "branding",
+		projects: [
+			"nymora",
+			"sawaca-enterprises",
+			"ipa-group",
+			"swc",
+		],
+	},
+
+	{
+		id: "digital",
+		title: "Digital",
+		filter: "digital",
+		projects: [
+			"gf-studio",
+			"neujin",
+			"pickleball-community",
+			"swc",
+			"pixel-studio",
+		],
+	},
+
+	{
+		id: "website-design",
+		title: "Website Design",
+		filter: "website-design",
+		projects: [
+			"afro-cafe",
+			"bainbridge",
+			"sawaca-enterprises",
+			"ipa-group",
+			"pixel-studio",
+		],
+	},
+];
+
+const filters = [
+	{
+		label: "All",
+		value: "all",
+	},
+	{
+		label: "Digital",
+		value: "digital",
+	},
+	{
+		label: "Branding",
+		value: "branding",
+	},
+	{
+		label: "Website Design",
+		value: "website-design",
+	},
+];
+
+const uniqueProjectIds = [
+	...new Set(
+		sections.flatMap((section) => section.projects),
+	),
+];
+---
+
+<section
+	id="portfolio-projects"
+	class="
+		w-full
+		overflow-hidden
+		bg-white
+		py-14
+		lg:py-0
+	"
+>
+	<div
+		class="
+			mx-auto max-w-7xl px-4 lg:px-8 lg:pb-20 pb-10 grid
+		"
+	>
+		<!-- ======================================== -->
+		<!-- FILTER BUTTONS -->
+		<!-- ======================================== -->
+
+		<div
+			class="
+				flex
+				flex-col
+				gap-5
+				lg:flex-row
+				lg:items-center
+				lg:gap-7
+			"
+		>
+			<div
+				class="
+					flex
+					flex-wrap
+					items-center
+					gap-3
+					lg:gap-7
+				"
+			>
+				{
+					filters.map((filter, index) => (
+						<button
+							type="button"
+							data-filter={filter.value}
+							class:list={[
+								"portfolio-filter",
+								"inline-flex",
+								"h-[40px]",
+								"items-center",
+								"justify-center",
+								"rounded-full",
+								"px-6",
+								"font-['Satoshi',sans-serif]",
+								"text-[15px]",
+								"font-medium",
+								"transition-all",
+								"duration-300",
+
+								index === 0
+									? "active-filter text-white"
+									: "border border-black/[0.14] bg-white text-black hover:border-black/40",
+							]}
+						>
+							{filter.label}
+						</button>
+					))
+				}
+			</div>
+
+			<p
+				class="
+					font-['Satoshi',sans-serif]
+					text-[14px]
+					text-[#aaa]
+				"
+			>
+				<span id="portfolio-total-count">
+					{uniqueProjectIds.length}
+				</span>
+				projects
+			</p>
+		</div>
+
+		<!-- ======================================== -->
+		<!-- SECTIONS -->
+		<!-- ======================================== -->
+
+		<div
+			id="portfolio-sections"
+			class="
+				mt-16
+				sm:mt-20
+			"
+		>
+			{
+				sections.map((section) => (
+					<section
+						data-project-section
+						data-section-filter={section.filter}
+						class="
+							project-group
+							mb-20
+							last:mb-0
+							lg:mb-24
+						"
+					>
+						<!-- ================================= -->
+						<!-- SECTION HEADER -->
+						<!-- ================================= -->
+
+						<div
+							class="
+								flex
+								items-center
+								justify-between
+								gap-6
+								border-b
+								border-black/[0.08]
+								pb-8
+							"
+						>
+							<div
+								class="
+									flex
+									flex-wrap
+									items-end
+									gap-x-4
+									gap-y-2
+								"
+							>
+								<h2
+									class="
+										font-['Clash_Display',sans-serif]
+										text-[32px]
+										font-semibold
+										leading-none
+										tracking-[-0.04em]
+										text-black
+										sm:text-[38px]
+										lg:text-[42px]
+									"
+								>
+									{section.title}
+								</h2>
+
+								<p
+									class="
+										mb-[3px]
+										font-['Satoshi',sans-serif]
+										text-[13px]
+										font-normal
+										text-[#aaa]
+										sm:text-[14px]
+									"
+								>
+									{section.projects.length} projects
+								</p>
+							</div>
+
+							<div
+								class="
+									h-[3px]
+									w-[45px]
+									shrink-0
+									rounded-full
+									bg-[linear-gradient(90deg,#FF9C3C_0%,#F32B59_46%,#7545DF_100%)]
+								"
+							>
+							</div>
+						</div>
+
+						<!-- ================================= -->
+						<!-- PROJECT GRID -->
+						<!-- ================================= -->
+
+						<div
+							class="
+								mt-12
+								grid
+								grid-cols-1
+								gap-x-8
+								gap-y-14
+								md:grid-cols-2
+								xl:grid-cols-3
+								xl:gap-x-9
+								xl:gap-y-16
+							"
+						>
+							{
+								section.projects.map((projectId) => {
+									const project =
+										projects[
+											projectId as keyof typeof projects
+										];
+
+									if (!project) return null;
+
+									return (
+										<article
+											class="
+												group
+												min-w-0
+											"
+										>
+											<!-- IMAGE -->
+
+											<a
+												href={project.link}
+												class="
+													relative
+													block
+													aspect-[1.34/1]
+													w-full
+													overflow-hidden
+													rounded-[4px]
+													bg-[#f4f4f4]
+												"
+											>
+												<img
+													src={project.image}
+													alt={project.title}
+													loading="lazy"
+													class="
+														h-full
+														w-full
+														object-cover
+														transition-transform
+														duration-700
+														ease-out
+														group-hover:scale-[1.04]
+													"
+												/>
+
+												<div
+													class="
+														pointer-events-none
+														absolute
+														inset-0
+														bg-black/0
+														transition-colors
+														duration-500
+														group-hover:bg-black/[0.04]
+													"
+												>
+												</div>
+											</a>
+
+											<!-- TITLE + YEAR -->
+
+											<div
+												class="
+													mt-5
+													flex
+													items-start
+													justify-between
+													gap-4
+												"
+											>
+												<a
+													href={project.link}
+													class="
+														font-clash
+														text-[25px]
+														font-semibold
+														leading-none
+														tracking-[-0.035em]
+														text-black
+														transition-opacity
+														duration-300
+														hover:opacity-60
+														sm:text-[27px]
+													"
+												>
+													{project.title}
+												</a>
+
+												<p
+													class="
+														mt-[3px]
+														shrink-0
+														font-geist
+														text-[13px]
+														text-[#aaa]
+													"
+												>
+													{project.year}
+												</p>
+											</div>
+
+											<!-- DESCRIPTION -->
+
+											<p
+												class="
+													mt-2
+													font-satoshi
+													text-[14px]
+													font-normal
+													leading-[1.55]
+													text-[#888]
+													lg:text-[16px]
+												"
+											>
+												{project.description}
+											</p>
+
+											<!-- TAGS -->
+
+											<div
+												class="
+													mt-3
+													flex
+													flex-wrap
+													gap-[7px]
+												"
+											>
+												{
+													project.tags.map(
+														(tag) => (
+															<span
+																class="
+																	inline-flex
+																	min-h-[28px]
+																	items-center
+																	justify-center
+																	rounded-full
+																	border
+																	border-black/[0.13]
+																	px-3
+																	font-satoshi
+																	text-[13px]
+																	font-normal
+																	text-[#8a8a8a]
+																"
+															>
+																{tag}
+															</span>
+														),
+													)
+												}
+											</div>
+										</article>
+									);
+								})
+							}
+						</div>
+					</section>
+				))
+			}
+		</div>
+	</div>
+</section>
+
+<script>
+	const portfolio = document.querySelector(
+		"#portfolio-projects",
+	);
+
+	if (portfolio) {
+		const filterButtons =
+			portfolio.querySelectorAll(
+				"[data-filter]",
+			);
+
+		const projectSections =
+			portfolio.querySelectorAll(
+				"[data-project-section]",
+			);
+
+		const totalCount =
+			portfolio.querySelector(
+				"#portfolio-total-count",
+			);
+
+		function setActiveFilter(activeButton) {
+			filterButtons.forEach((button) => {
+				button.classList.remove(
+					"active-filter",
+					"text-white",
+				);
+
+				button.classList.add(
+					"border",
+					"border-black/[0.14]",
+					"bg-white",
+					"text-black",
+				);
+			});
+
+			activeButton.classList.remove(
+				"border",
+				"border-black/[0.14]",
+				"bg-white",
+				"text-black",
+			);
+
+			activeButton.classList.add(
+				"active-filter",
+				"text-white",
+			);
+		}
+
+		function filterSections(filter) {
+			let visibleProjects = new Set();
+
+			projectSections.forEach((section) => {
+				const sectionFilter =
+					section.dataset.sectionFilter;
+
+				const show =
+					filter === "all" ||
+					filter === sectionFilter;
+
+				if (show) {
+					section.classList.remove("hidden");
+
+					section.animate(
+						[
+							{
+								opacity: 0,
+								transform:
+									"translateY(18px)",
+							},
+							{
+								opacity: 1,
+								transform:
+									"translateY(0)",
+							},
+						],
+						{
+							duration: 400,
+							easing: "ease-out",
+						},
+					);
+
+					const cards =
+						section.querySelectorAll("article");
+
+					cards.forEach((card) => {
+						const title =
+							card.querySelector("a")
+								?.getAttribute("href");
+
+						if (title) {
+							visibleProjects.add(title);
+						}
+					});
+				} else {
+					section.classList.add("hidden");
+				}
+			});
+
+			/*
+			 * Count handling:
+			 *
+			 * All = total unique projects.
+			 * Filter = visible cards count.
+			 */
+
+			if (totalCount) {
+				if (filter === "all") {
+					totalCount.textContent =
+						"{uniqueProjectIds.length}";
+				} else {
+					let count = 0;
+
+					projectSections.forEach(
+						(section) => {
+							if (
+								!section.classList.contains(
+									"hidden",
+								)
+							) {
+								count +=
+									section.querySelectorAll(
+										"article",
+									).length;
+							}
+						},
+					);
+
+					totalCount.textContent =
+						String(count);
+				}
+			}
+		}
+
+		filterButtons.forEach((button) => {
+			button.addEventListener(
+				"click",
+				() => {
+					const filter =
+						button.dataset.filter;
+
+					if (!filter) return;
+
+					setActiveFilter(button);
+					filterSections(filter);
+				},
+			);
+		});
+	}
+</script>
+
+<style>
+	.portfolio-filter.active-filter {
+		border-color: transparent;
+
+		background: linear-gradient(
+			110deg,
+			#ffad42 0%,
+			#ff5448 24%,
+			#ec1767 49%,
+			#b525bd 73%,
+			#6240dc 100%
+		);
+
+		box-shadow: 0 8px 22px
+			rgba(218, 44, 112, 0.16);
+	}
+</style>

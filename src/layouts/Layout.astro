@@ -1,24 +1,139 @@
 ---
-import '../styles.css'
+import "../styles/global.css";
 
 export interface Props {
-	title: string;
+	title?: string;
+	description?: string;
+	keywords?: string;
 }
 
-const { title } = Astro.props;
+const {
+	title = "Topklickz",
+	description = "Topklickz - Astro",
+	keywords = "",
+} = Astro.props;
 ---
 
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" class="scroll-smooth bg-white">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description">
-		<meta name="viewport" content="width=device-width" />
+		<meta name="description" content={description} />
+		<meta name="keywords" content={keywords} />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+
+		<!-- schema -->
 	</head>
-	<body>
+	<body
+		class="min-h-screen overflow-x-hidden bg-[radial-gradient(circle_at_top_left,rgba(255,132,0,0.08),transparent_30%),radial-gradient(circle_at_85%_18%,rgba(124,58,237,0.08),transparent_28%),#ffffff] text-[#0f0f11] antialiased"
+	>
 		<slot />
 	</body>
 </html>
+
+<script>
+	let gradientTextObserver: IntersectionObserver | undefined;
+	const uppercaseCharacters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	const lowercaseCharacters = "abcdefghijklmnopqrstuvwxyz";
+	const gradientTextSelector =
+		'.gradient-text:not(.gradient-text-static), [class~="bg-clip-text"][class~="text-transparent"]:not(.gradient-text-static)';
+
+	const scrambleGradientText = (element: HTMLElement) => {
+		const originalText = element.textContent || "";
+		const characters = Array.from(originalText);
+		const scrambleIndexes = characters.reduce<number[]>(
+			(indexes, character, index) => {
+				if (/[A-Za-z]/.test(character)) indexes.push(index);
+				return indexes;
+			},
+			[]
+		);
+		const duration = 1200;
+		const startTime = performance.now();
+
+		const animate = (currentTime: number) => {
+			const progress = Math.min((currentTime - startTime) / duration, 1);
+			// Keep the final characters from hanging for too long.
+			const revealedCount = Math.ceil(
+				progress * scrambleIndexes.length
+			);
+			const revealedIndexes = new Set(
+				scrambleIndexes.slice(0, revealedCount)
+			);
+
+			element.textContent = characters
+				.map((character, index) => {
+					if (/\s/.test(character) || revealedIndexes.has(index)) {
+						return character;
+					}
+
+					const characters =
+						character === character.toUpperCase()
+							? uppercaseCharacters
+							: lowercaseCharacters;
+
+					return characters[
+						Math.floor(Math.random() * characters.length)
+					];
+				})
+				.join("");
+
+			if (progress < 1) {
+				requestAnimationFrame(animate);
+			} else {
+				element.textContent = originalText;
+				element.dataset.gradientTextVisible = "true";
+			}
+		};
+
+		requestAnimationFrame(animate);
+	};
+
+	const initGradientTextAnimations = () => {
+		const gradientTexts = Array.from(
+			document.querySelectorAll<HTMLElement>(gradientTextSelector)
+		).filter(
+			(element) =>
+				element.dataset.gradientTextReady !== "true"
+		);
+
+		if (!gradientTexts.length) return;
+
+		if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+			gradientTexts.forEach((element) => {
+				element.dataset.gradientTextReady = "true";
+				element.dataset.gradientTextVisible = "true";
+			});
+			return;
+		}
+
+		gradientTextObserver ??= new IntersectionObserver(
+			(entries, observer) => {
+				entries.forEach((entry) => {
+					if (!entry.isIntersecting) return;
+
+					const element = entry.target as HTMLElement;
+					element.dataset.gradientTextVisible = "true";
+					observer.unobserve(element);
+
+					// Counters already have their own number animation.
+					if (element.querySelector(".counter")) return;
+
+					scrambleGradientText(element);
+				});
+			},
+			{ threshold: 0.35 }
+		);
+
+		gradientTexts.forEach((element) => {
+			element.dataset.gradientTextReady = "true";
+			gradientTextObserver?.observe(element);
+		});
+	};
+
+	initGradientTextAnimations();
+	document.addEventListener("astro:page-load", initGradientTextAnimations);
+</script>

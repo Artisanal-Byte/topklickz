@@ -1,0 +1,231 @@
+---
+interface Props {
+    number?: string;
+    category?: string;
+
+    title?: string;
+    gradientTitle?: string;
+
+    description?: string;
+
+    exploreText?: string;
+    exploreLink?: string;
+
+    projectText?: string;
+    projectLink?: string;
+
+    image?: string;
+    imageAlt?: string;
+}
+
+const {
+    number = "01",
+    category = "Brand Strategy",
+
+    title = "Brand",
+    gradientTitle = "Strategy.",
+
+    description = "We help brands discover their voice, define their position and create a foundation for sustainable growth.",
+
+    exploreText = "Explore the Discipline",
+    exploreLink = "#discipline",
+
+    projectText = "Start a project",
+    projectLink = "/contact",
+
+    image = "/img/service.png",
+    imageAlt = "Brand strategy",
+} = Astro.props;
+---
+
+<section class="w-full overflow-hidden bg-white">
+    <div class="mx-auto max-w-7xl px-4 lg:px-8 lg:py-16 py-10">
+        <!-- Breadcrumb -->
+        <div
+            class="flex
+				items-center
+				gap-[10px]
+				font-['Geist']
+				text-[10px]
+				font-normal
+				uppercase
+				leading-none
+				tracking-[0.02em]
+				text-[#CCCCCC]
+				lg:text-[11px]"
+        >
+            <a
+                href="/services"
+                class="transition-colors
+					duration-300
+					hover:text-black font-clash"
+            >
+                Services
+            </a>
+
+            <span class="text-[#DDDDDD]">/</span>
+
+            <span class="font-clash gradient-text">
+                {category}
+            </span>
+        </div>
+
+        <!-- Content -->
+        <div
+            class="mt-[31px]
+				grid
+				grid-cols-1
+				gap-[44px]
+				md:mt-10
+				md:gap-[55px]
+				lg:mt-[38px]
+				lg:grid-cols-2
+				lg:gap-10"
+        >
+            <!-- LEFT -->
+            <div class="flex flex-col items-start">
+                <div>
+                    <!-- Number -->
+                    <p
+                        class="mb-5
+							font-geist
+							text-[22px]
+							font-light
+							leading-none
+							text-[#333333]
+							md:text-[25px]
+							lg:mb-[25px]
+							lg:text-[27px]"
+                    >
+                        {number}
+                    </p>
+
+                    <!-- Heading -->
+                    <h1
+                        class="font-clash text-[60px] font-[550] leading-[90%] tracking-normal text-black lg:text-[90px]"
+                    >
+                        <span class="block">
+                            {title}
+                        </span>
+
+                        <span class="block
+								pb-[12px]
+								pr-[10px]
+								gradient-text">
+                            {gradientTitle}
+                        </span>
+                    </h1>
+                </div>
+
+                <!-- Explore button -->
+                <a href={exploreLink} class="site-btn">
+                    <!-- Gradient circle -->
+                    <span class="h-[22px] w-[22px] gradient-bg rounded-full">
+                    </span>
+
+                    <span>
+                        {exploreText}
+                    </span>
+                </a>
+            </div>
+
+            <!-- RIGHT -->
+            <div class="w-full">
+                <!-- Description -->
+                <p
+                    class="max-w-[600px]
+						font-geist
+						text-[18px]
+						leading-[1.35]
+						tracking-[-0.02em]
+						text-[#151515]
+						md:text-[20px]
+						lg:max-w-[480px]
+						lg:text-[24px]
+						lg:leading-[1.24]
+						lg:tracking-[-0.028em]"
+                >
+                    {description}
+                </p>
+
+                <!-- Start Project -->
+                <a
+                    href={projectLink}
+                    class="group
+						mt-[25px]
+						inline-flex
+						items-center
+						gap-[17px]
+						font-geist
+						text-[15px]
+						font-normal
+						text-[#202020]
+						no-underline
+						lg:mt-[33px]
+						lg:text-[18px]"
+                >
+                    <span>
+                        {projectText}
+                    </span>
+
+                    <span class="flex items-center">
+                        <span
+                            class="h-px
+								w-[27px]
+								bg-[linear-gradient(90deg,#FF8A3D,#DF3A8B,#6544F4)]
+								transition-all
+								duration-300
+								group-hover:w-[38px]"
+                        >
+                        </span>
+
+                        <svg
+                            viewBox="0 0 8 12"
+                            fill="none"
+                            class="-ml-[1px]
+								h-[11px]
+								w-[7px]
+								text-[#663CFF]"
+                            aria-hidden="true"
+                        >
+                            <path
+                                d="M1 1L6 6L1 11"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"></path>
+                        </svg>
+                    </span>
+                </a>
+
+                <!-- Image -->
+                <div
+                    class="group
+						mt-[27px]
+						aspect-[1.45/1]
+						w-full
+						overflow-hidden
+						rounded-[4px]
+						bg-[#F2F0EB]
+						sm:aspect-[1.7/1]
+						lg:mt-[31px]
+						lg:max-w-[520px]
+						lg:aspect-[1.94/1]"
+                >
+                    <img
+                        src={image}
+                        alt={imageAlt}
+                        loading="eager"
+                        class="h-full
+							w-full
+							object-cover
+							transition-transform
+							duration-500
+							ease-out
+							group-hover:scale-[1.025]"
+                    />
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

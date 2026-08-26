@@ -1,0 +1,288 @@
+---
+interface ApproachStep {
+	number: string;
+	title: string;
+	description: string;
+	tags: string[];
+}
+
+const steps: ApproachStep[] = [
+	{
+		number: "01",
+		title: "Discovery & Research",
+		description:
+			"We dig deep into your market, competitors and target audience — uncovering insights that form the bedrock of every strategic decision.",
+		tags: [
+			"Market Analysis",
+			"Audience Research",
+			"Competitive Audit",
+		],
+	},
+	{
+		number: "02",
+		title: "Positioning",
+		description:
+			"We define your unique space in the market — crafting a positioning that is both authentic to who you are and compelling to those you want to reach.",
+		tags: [
+			"Value Proposition",
+			"Differentiation",
+			"Market Fit",
+		],
+	},
+	{
+		number: "03",
+		title: "Messaging Architecture",
+		description:
+			"Your words become weapons. We build a messaging framework that speaks consistently across every touchpoint, from elevator pitch to long-form content.",
+		tags: [
+			"Brand Voice",
+			"Tone of Voice",
+			"Key Messages",
+		],
+	},
+	{
+		number: "04",
+		title: "Brand Architecture",
+		description:
+			"How your brand, sub-brands and products relate to each other — structured for clarity now and scale later.",
+		tags: [
+			"Portfolio Strategy",
+			"Brand Hierarchy",
+			"Naming System",
+		],
+	},
+	{
+		number: "05",
+		title: "Customer Insights",
+		description:
+			"We translate data and conversations into actionable understanding — helping you see your brand through your customers' eyes.",
+		tags: [
+			"Persona Development",
+			"Journey Mapping",
+			"Insight Synthesis",
+		],
+	},
+];
+---
+
+<section class="w-full bg-white">
+	<div
+		class="
+			mx-auto max-w-7xl px-4 lg:px-8 lg:py-0 py-5
+		"
+	>
+		<!-- Top Button -->
+		<a href="#approach" class="site-btn !mt-0">
+			<span
+				class="
+					gradient-bg
+					h-[22px]
+					w-[22px]
+					shrink-0
+					rounded-full
+				"
+			></span>
+
+			<span>Our Approach</span>
+		</a>
+
+		<!-- Heading Area -->
+		<div
+			class="
+				mt-[42px]
+				grid
+				grid-cols-1
+				gap-7
+				md:mt-[55px]
+				md:grid-cols-[1fr_0.95fr]
+				md:items-end
+				md:gap-[70px]
+				lg:grid-cols-[1fr_0.92fr]
+				lg:gap-[120px]
+			"
+		>
+			<!-- Heading -->
+			<h2
+				class="
+					max-w-[540px]
+					font-clash
+					text-[40px]
+					font-semibold
+					leading-[0.99]
+					tracking-[-0.045em]
+					text-black
+					lg:text-[62px]
+				"
+			>
+				Five steps to a
+
+				<span
+					class="
+						gradient-text
+					"
+				>
+					distinctive
+				</span>
+
+				brand.
+			</h2>
+
+			<!-- Intro Text -->
+			<p
+				class="
+					max-w-[520px]
+					font-geist
+					text-[14px]
+					font-normal
+					leading-[1.55]
+					tracking-[-0.015em]
+					text-[#222222]
+					lg:text-[20px]
+					lg:leading-[1.5]
+				"
+			>
+				Every brand strategy engagement follows a proven
+				creative process — rigorous enough to deliver real
+				insight, flexible enough to meet you where you are.
+			</p>
+		</div>
+
+		<!-- Steps -->
+		<div class="mt-[55px] md:mt-[65px]">
+			{
+				steps.map((step) => (
+					<div
+						class="
+							relative
+							grid
+							grid-cols-1
+							gap-5
+							py-[30px]
+							md:grid-cols-[45px_minmax(180px,0.8fr)_minmax(260px,1fr)]
+							md:gap-x-7
+							md:gap-y-6
+							md:py-[32px]
+							lg:grid-cols-[70px_310px_minmax(330px,1fr)_minmax(260px,0.8fr)]
+							lg:items-start
+							lg:gap-x-[38px]
+							lg:py-[38px]
+						"
+					>
+						<!-- Top Gradient Border -->
+						<div
+							class="
+								absolute
+								left-0
+								top-0
+								h-px
+								w-full
+								bg-[linear-gradient(90deg,#FFB547_0%,#FF5B53_32%,#E12CA8_64%,#6F48F5_100%)]
+							"
+						></div>
+
+						<!-- Number -->
+						<div
+							class="
+								font-clash
+								text-[24px]
+								font-extralight
+								leading-none
+								tracking-[-0.03em]
+								md:text-[26px]
+							"
+						>
+							{step.number}
+						</div>
+
+						<!-- Title -->
+						<h3
+							class="
+								font-clash
+								text-[22px]
+								font-medium
+								leading-[1.1]
+								tracking-[-0.03em]
+								text-[#0B0B0B]
+								sm:text-[24px]
+								lg:text-[25px]
+							"
+						>
+							{step.title}
+						</h3>
+
+						<!-- Description -->
+						<p
+							class="
+								max-w-[390px]
+								font-geist
+								text-[13px]
+								font-normal
+								leading-[1.55]
+								tracking-[-0.01em]
+								text-[#010101]
+								lg:text-[18px]
+								lg:leading-[1.6]
+							"
+						>
+							{step.description}
+						</p>
+
+						<!-- Tags -->
+						<div
+							class="
+								flex
+								flex-wrap
+								items-start
+								gap-[8px]
+								md:col-start-3
+								lg:col-start-auto
+								lg:justify-end
+							"
+						>
+							{
+								step.tags.map((tag) => (
+									<span
+										class="
+											inline-flex
+											min-h-[27px]
+											font-geist
+											items-center
+											justify-center
+											whitespace-nowrap
+											rounded-full
+											border
+											border-[#DCDCDC]
+											bg-white
+											px-[13px]
+											py-[5px]
+											font-clash
+											text-[16px]
+											font-normal
+											leading-none
+											text-[#4A4A4A]
+											transition-all
+											duration-300
+											hover:border-[#A9A9A9]
+											hover:text-black
+										"
+									>
+										{tag}
+									</span>
+								))
+							}
+						</div>
+					</div>
+				))
+			}
+
+			<!-- Last Bottom Gradient Line -->
+			<div
+				class="
+					h-px
+					w-full
+					bg-[linear-gradient(90deg,#FFB547_0%,#FF5B53_32%,#E12CA8_64%,#6F48F5_100%)]
+				"
+			></div>
+		</div>
+	</div>
+</section>

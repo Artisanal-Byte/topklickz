@@ -1,0 +1,155 @@
+---
+const section = {
+	eyebrow: "WORK IN CONTEXT",
+	titleTop: "Craft that",
+	titleGradient: "endures.",
+	description:
+		"Every system we build is designed to stay relevant and consistent long after we hand it over.",
+	background: "/img/portfolioinner.png",
+};
+---
+
+<section
+	class="
+		relative
+		min-h-[420px]
+		w-full
+		overflow-hidden
+		bg-black
+		lg:min-h-[420px]
+	"
+>
+	<!-- Background Image -->
+	<img
+		src={section.background}
+		alt="Nymora salon storefront"
+		class="
+			absolute
+			inset-0
+			h-full
+			w-full
+			object-cover
+			object-center
+		"
+	/>
+
+	<!-- Overall Dark Overlay -->
+	<div class="absolute inset-0 bg-black/35"></div>
+
+	<!-- Left Side Strong Dark Gradient -->
+	<div
+		class="
+			absolute
+			inset-0
+			bg-gradient-to-r
+			from-black/80
+			via-black/45
+			to-black/5
+		"
+	></div>
+
+	<!-- Slight Bottom Shade -->
+	<div
+		class="
+			absolute
+			inset-x-0
+			bottom-0
+			h-[35%]
+			bg-gradient-to-t
+			from-black/45
+			to-transparent
+		"
+	></div>
+
+	<!-- Content -->
+	<div
+		class="
+			relative
+			z-10
+			mx-auto
+			flex
+			w-full
+			max-w-7xl
+			items-center
+			px-5
+			md:px-8
+			lg:min-h-[620px]
+			lg:px-12
+		"
+	>
+		<div
+			class="
+				max-w-[370px]
+				lg:pt-4
+				pt-30
+				lg:max-w-[560px]
+			"
+		>
+			<!-- Eyebrow -->
+			<p
+				class="
+					mb-5
+					text-[9px]
+					font-medium
+					uppercase
+					tracking-[0.24em]
+					text-white/45
+					sm:text-[10px]
+				"
+			>
+				{section.eyebrow}
+			</p>
+
+			<!-- Heading -->
+			<h2
+				class="
+					text-[48px]
+					font-semibold
+					leading-[0.94]
+					tracking-[-0.055em]
+					text-white
+					sm:text-[58px]
+					md:text-[64px]
+					lg:text-[70px]
+					xl:text-[76px]
+				"
+			>
+				<span class="block">
+					{section.titleTop}
+				</span>
+
+				<span
+					class="
+						mt-1
+						block
+						bg-gradient-to-r
+						from-[#ff9b42]
+						via-[#ff2b76]
+						to-[#7448ff]
+						bg-clip-text
+						text-transparent
+					"
+				>
+					{section.titleGradient}
+				</span>
+			</h2>
+
+			<!-- Description -->
+			<p
+				class="
+					mt-7
+					max-w-[430px]
+					text-[15px]
+					font-normal
+					leading-[1.75]
+					text-white/55
+					sm:text-[16px]
+					md:text-[17px]
+					lg:mt-8
+				"
+			>
+				{section.description}
+			</p>
+		</div>
+	</div>
+</section>

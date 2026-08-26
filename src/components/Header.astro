@@ -1,0 +1,204 @@
+---
+import { Image } from "astro:assets";
+
+const { navbar } = Astro.props;
+
+const normalizePath = (path: string) => {
+  const pathname = path.split("?")[0].split("#")[0].replace(/\/+$/, "");
+  return pathname || "/";
+};
+
+const currentPath = normalizePath(Astro.url.pathname);
+const getNavPath = (href?: string) =>
+  normalizePath(href?.startsWith("/") ? href : `/${href ?? ""}`);
+const isActive = (href?: string) => {
+  const navPath = getNavPath(href);
+
+  if (navPath === "/") return currentPath === "/";
+
+  return currentPath === navPath || currentPath.startsWith(`${navPath}/`);
+};
+---
+
+<header class="relative z-20" data-site-header>
+  <div class="mx-auto max-w-7xl px-4 py-3 backdrop-blur-md sm:px-5 sm:py-4">
+    <div class="flex items-center justify-between gap-3 lg:gap-8">
+      <!-- Logo -->
+      <a href="/" class="shrink-0">
+        {
+          navbar?.logo && (
+            <Image
+              src={navbar.logo}
+              alt="Logo"
+              width={80}
+              height={80}
+              class="h-12 w-auto sm:h-14 lg:h-16"
+            />
+          )
+        }
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden flex-1 items-center justify-center gap-2 lg:flex">
+        {
+          navbar?.navigation?.map((item) => (
+            <a
+              href={item.href ?? "/"}
+              aria-current={isActive(item.href) ? "page" : undefined}
+              class:list={[
+                "nav-link rounded-full px-5 py-2 font-clash text-[18px] font-bold leading-none tracking-normal",
+                isActive(item.href)
+                  ? "is-active gradient-bg text-white"
+                  : "text-[#0f0f11] hover:bg-gray-100",
+              ]}
+            >
+              {item.title}
+            </a>
+          ))
+        }
+      </nav>
+
+      <div class="flex items-center gap-2 sm:gap-3 lg:gap-4">
+        <!-- Desktop Button -->
+          <a
+            href={navbar?.buttonLink}
+            class="gradient-expand-btn group !hidden lg:!inline-flex gradient-border"
+          >
+            <span class="gradient-expand-btn-inner">
+              <!-- Gradient circle -->
+              <span class="gradient-expand-btn-bg"></span>
+
+              <!-- Text -->
+              <span
+                class="gradient-expand-btn-text
+          font-clash
+          text-[17px]
+          font-bold
+          leading-none
+          tracking-normal
+          text-black
+          transition-colors
+          duration-300
+          group-hover:text-white"
+              >
+                {navbar?.buttonText}
+              </span>
+            </span>
+          </a>
+
+        <!-- Mobile Menu Button -->
+        <button
+          type="button"
+          class="inline-flex h-12 w-12 items-center justify-center rounded-full border border-black/10 bg-white text-[#0f0f11] shadow-sm transition hover:bg-gray-50 lg:hidden"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false"
+          aria-controls="mobile-navigation"
+          data-nav-toggle
+        >
+          <span class="relative block h-4 w-5">
+            <span
+              class="absolute left-0 top-0 h-0.5 w-5 rounded-full bg-current transition-transform duration-200"
+              data-nav-icon="top"></span>
+            <span
+              class="absolute left-0 top-1.5 h-0.5 w-5 rounded-full bg-current transition-opacity duration-200"
+              data-nav-icon="middle"></span>
+            <span
+              class="absolute left-0 top-3 h-0.5 w-5 rounded-full bg-current transition-transform duration-200"
+              data-nav-icon="bottom"></span>
+          </span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation -->
+    <div
+      id="mobile-navigation"
+      class="mt-4 hidden rounded-2xl border border-black/5 bg-white p-3 shadow-[0_14px_40px_rgba(15,15,17,0.08)] lg:hidden"
+      data-nav-panel
+    >
+      <nav class="flex flex-col gap-2">
+        {
+          navbar?.navigation?.map((item) => (
+            <a
+              href={item.href ?? "/"}
+              aria-current={isActive(item.href) ? "page" : undefined}
+              class:list={[
+                "nav-link rounded-2xl px-4 py-3 font-clash text-[16px] font-bold leading-none tracking-normal",
+                isActive(item.href)
+                  ? "is-active gradient-bg text-white"
+                  : "bg-gray-50 text-[#0f0f11] hover:bg-gray-100",
+              ]}
+            >
+              {item.title}
+            </a>
+          ))
+        }
+      </nav>
+
+      <a
+        href={navbar?.buttonLink}
+        class="mt-3 inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-[#0f0f11] px-4 py-3 font-clash text-[16px] font-medium leading-none tracking-normal text-white transition hover:bg-black"
+      >
+        <span class="h-6 w-6 rounded-full gradient-bg"></span>
+        {navbar?.buttonText}
+      </a>
+    </div>
+  </div>
+</header>
+
+<script is:inline>
+  const header = document.querySelector("[data-site-header]");
+  if (header) {
+    const toggle = header.querySelector("[data-nav-toggle]");
+    const panel = header.querySelector("[data-nav-panel]");
+    const topBar = header.querySelector('[data-nav-icon="top"]');
+    const middleBar = header.querySelector('[data-nav-icon="middle"]');
+    const bottomBar = header.querySelector('[data-nav-icon="bottom"]');
+
+    const setOpen = (open) => {
+      if (!toggle || !panel) return;
+      toggle.setAttribute("aria-expanded", String(open));
+      panel.classList.toggle("hidden", !open);
+
+      if (topBar && middleBar && bottomBar) {
+        topBar.classList.toggle("translate-y-1.5", open);
+        topBar.classList.toggle("rotate-45", open);
+        middleBar.classList.toggle("opacity-0", open);
+        bottomBar.classList.toggle("-translate-y-1.5", open);
+        bottomBar.classList.toggle("-rotate-45", open);
+      }
+    };
+
+    toggle?.addEventListener("click", () => {
+      const isOpen = toggle.getAttribute("aria-expanded") === "true";
+      setOpen(!isOpen);
+    });
+
+    panel?.addEventListener("click", (event) => {
+      if (event.target instanceof HTMLAnchorElement) {
+        setOpen(false);
+      }
+    });
+
+    document.addEventListener("click", (event) => {
+      const isOpen = toggle?.getAttribute("aria-expanded") === "true";
+      if (!isOpen) return;
+      const target = event.target;
+      if (target instanceof Node && !header.contains(target)) {
+        setOpen(false);
+      }
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") {
+        setOpen(false);
+      }
+    });
+
+    window.addEventListener("resize", () => {
+      if (window.innerWidth >= 1024) {
+        setOpen(false);
+      }
+    });
+  }
+</script>

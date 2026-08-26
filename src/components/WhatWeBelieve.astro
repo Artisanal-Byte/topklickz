@@ -1,0 +1,135 @@
+---
+const beliefs = [
+	{
+		number: "01",
+		title: "CLARITY BEATS COMPLEXITY",
+		description:
+			"The best brands communicate simply, consistently and confidently.",
+	},
+	{
+		number: "02",
+		title: "SYSTEMS OUTPERFORM CAMPAIGNS",
+		description:
+			"Long-term growth comes from strong foundations, not one-off tactics.",
+	},
+	{
+		number: "03",
+		title: "CRAFT CREATES TRUST",
+		description:
+			"Every detail shapes perception. Thoughtful execution builds credibility.",
+	},
+];
+---
+
+<section class="w-full bg-white">
+	<div
+		class="
+			mx-auto max-w-7xl px-5 lg:px-8 py-10 lg:py-20
+		"
+	>
+		<!-- Heading -->
+		<div>
+			<h2
+				class="
+					m-0
+					font-clash
+					text-[24px]
+					font-semibold
+					uppercase
+					leading-[1.2]
+					tracking-[0.04em]
+					text-[#0b0b0b]
+				"
+			>
+				WHAT WE BELIEVE
+			</h2>
+
+			<div
+				class="
+					mt-2
+					h-[3px]
+					w-[104px]
+					bg-[linear-gradient(90deg,#FEC053_0%,#F2203E_33%,#B729A8_65%,#5342D6_100%)]
+				"
+			></div>
+		</div>
+
+		<!-- Beliefs -->
+		<div
+			class="
+				mt-3
+				grid
+				grid-cols-1
+				md:mt-16
+				md:grid-cols-3
+				lg:mt-7
+			"
+		>
+			{
+				beliefs.map((belief, index) => (
+					<div
+						class:list={[
+							"relative px-0 py-8 md:min-h-[218px]  lg:px-10",
+
+							index !== beliefs.length - 1 &&
+								"border-b border-[#d2d2d2] md:border-r md:border-b-0",
+
+							index === 0 && "md:pl-10 lg:pl-10",
+
+							index === beliefs.length - 1 &&
+								"md:pr-0 lg:pl-10",
+						]}
+					>
+						<!-- Number -->
+						<p
+							class="
+								m-0
+								font-satoshi
+								text-[14px]
+								font-normal
+								leading-[22px]
+								tracking-[0]
+								text-[#7d7a76]
+							"
+						>
+							{belief.number}
+						</p>
+
+						<!-- Title -->
+						<h3
+							class="
+								mb-0
+								mt-4
+								font-clash-display
+								text-[15px]
+								font-semibold
+								uppercase
+								leading-[1.2]
+								tracking-[-0.02em]
+							"
+						>
+							{belief.title}
+						</h3>
+
+						<!-- Description -->
+						<p
+                                class="
+                                    mb-0
+                                    mt-3
+                                    max-w-[340px]
+                                    font-satoshi
+                                    text-[13.5px]
+                                    font-normal
+                                    leading-[22.27px]
+                                    tracking-[1px]
+                                    text-[#6B6962]
+                                "
+                            >
+                                {belief.description}
+                            </p>
+					</div>
+				))
+			}
+		</div>
+	</div>
+</section>

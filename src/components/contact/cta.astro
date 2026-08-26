@@ -1,0 +1,155 @@
+---
+interface Props {
+	titleLine1?: string;
+	titleLine2?: string;
+	highlight?: string;
+	description?: string;
+	buttonText?: string;
+	buttonLink?: string;
+	decorativeImage?: string;
+}
+
+const {
+	titleLine1 = "READY TO BUILD",
+	titleLine2 = "YOUR NEXT",
+	highlight = "SUCCESS STORY?",
+	description = "From strategy to scale, let's create impact together.",
+	buttonText = "BOOK A DISCOVERY CALL",
+	buttonLink = "#",
+	decorativeImage = "/img/tk.png",
+} = Astro.props;
+---
+
+<section class="w-full bg-white">
+	<div class="mx-auto max-w-7xl px-5 py-12 sm:px-8 lg:px-12">
+		<div
+			class="
+				relative
+				overflow-hidden
+				rounded-[14px]
+				bg-[#111111]
+				px-6
+				py-8
+				text-white
+				lg:flex
+				lg:min-h-[135px]
+				lg:items-center
+				lg:px-10
+				lg:py-7
+			"
+		>
+			<!-- LEFT CONTENT -->
+			<div
+				class="
+					relative
+					z-10
+					flex
+					flex-col
+					gap-8
+					lg:flex-row
+					lg:items-center
+					lg:gap-10
+				"
+			>
+				<!-- Heading -->
+				<div class="max-w-[260px]">
+					<h2
+						class="
+							text-[25px]
+							font-bold
+							uppercase
+							leading-[1.0]
+							tracking-[-1px]
+
+						"
+					>
+						<span class="block">{titleLine1}</span>
+						<span class="block">{titleLine2}</span>
+
+						<span
+							class="
+								block
+								bg-[linear-gradient(90deg,#ff8a1f_0%,#ff3c5c_38%,#d51bbd_72%,#7a35ff_100%)]
+								bg-clip-text
+								text-transparent
+							"
+						>
+							{highlight}
+						</span>
+					</h2>
+				</div>
+
+				<!-- Divider -->
+				<div
+					class="
+						hidden
+						h-[58px]
+						w-px
+						bg-white/25
+						lg:block
+					"
+				></div>
+
+				<!-- Description -->
+				<p
+					class="
+						max-w-[160px]
+						text-[14px]
+						leading-[1.45]
+						text-white/80
+					"
+				>
+					{description}
+				</p>
+
+				<!-- Button -->
+				<a
+					href={buttonLink}
+					class="
+						inline-flex
+						h-[42px]
+						min-w-[180px]
+						items-center
+						justify-center
+						gap-3
+						rounded-[6px]
+						bg-white
+						px-5
+						text-[12px]
+						font-semibold
+						uppercase
+						text-black
+						transition-all
+						duration-300
+						hover:bg-white/90
+					"
+				>
+					<span>{buttonText}</span>
+
+					<span class="text-[17px] leading-none">
+						→
+					</span>
+				</a>
+			</div>
+
+			<!-- RIGHT DECORATIVE IMAGE -->
+			<img
+				src={decorativeImage}
+				alt=""
+				class="
+					pointer-events-none
+					absolute
+					right-10
+					top-1/2
+					hidden
+					h-[150px]
+					w-auto
+					-translate-y-1/2
+					object-contain
+					opacity-20
+					lg:block
+				"
+			/>
+		</div>
+	</div>
+</section>

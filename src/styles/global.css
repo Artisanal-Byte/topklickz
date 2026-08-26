@@ -1,0 +1,249 @@
+@import "tailwindcss";
+
+
+@font-face {
+  font-family: "Clash Grotesk", "Geist", "Clash Display", "Satoshi", "Figma Hand";
+  src: url("/fonts/ClashGrotesk-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@theme {
+  --font-clash: "Clash Grotesk", sans-serif;
+  --font-geist: "Geist", sans-serif;
+  --font-clash-display: "Clash Display", sans-serif;
+  --font-satoshi: "Satoshi", sans-serif;
+  --font-figma-hand: "Figma Hand";
+
+}
+
+html,
+body {
+  width: 100%;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.gradient-bg {
+  background: linear-gradient(48.89deg,
+      #FEC053 14.5%,
+      #F2203E 37.57%,
+      #B729A8 59.94%,
+      #5342D6 84.41%);
+}
+
+/* Navigation links share one animated active state on desktop and mobile. */
+.nav-link {
+  position: relative;
+  transform: translateZ(0);
+  transition:
+    transform 260ms ease,
+    background-color 260ms ease,
+    color 260ms ease,
+    box-shadow 260ms ease;
+}
+
+.nav-link:hover:not(.is-active) {
+  transform: translateY(-2px);
+}
+
+.nav-link.is-active {
+  animation: nav-active-in 420ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  box-shadow: 0 7px 18px rgba(83, 66, 214, 0.16);
+}
+
+@keyframes nav-active-in {
+  from {
+    opacity: 0.65;
+    transform: scale(0.88) translateY(2px);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nav-link,
+  .nav-link.is-active {
+    animation: none;
+    transition: none;
+  }
+}
+
+/* global.css */
+.gradient-text {
+  @apply bg-gradient-to-r from-orange-500 via-pink-500 to-violet-600 bg-clip-text text-transparent;
+
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+/* =========================================
+   Gradient Expand Button
+========================================= */
+
+.gradient-expand-btn {
+	position: relative;
+	display: inline-flex;
+	padding: 1px;
+	border-radius: 9999px;
+
+	/* background: linear-gradient(
+		135deg,
+		#FEC053 0%,
+		#F2203E 33%,
+		#B729A8 65%,
+		#5342D6 100%
+	); */
+}
+
+.gradient-expand-btn-inner {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 170px;
+	height: 45px;
+	overflow: hidden;
+	border-radius: 9999px;
+  border: linear-gradient(
+		135deg,
+		#FEC053 0%,
+		#F2203E 33%,
+		#B729A8 65%,
+		#5342D6 100%
+	);
+
+	/* background REMOVE */
+}
+
+
+/* =========================
+   Gradient Circle
+========================= */
+
+.gradient-expand-btn-bg {
+	position: absolute;
+
+	left: 8px;
+	top: 50%;
+	width: 28px;
+	height: 28px;
+	border-radius: 9999px;
+	background: linear-gradient(
+		135deg,
+		#FEC053 0%,
+		#F2203E 33%,
+		#B729A8 65%,
+		#5342D6 100%
+	);
+
+	transform: translateY(-50%);
+
+	transition:
+		left 0.5s cubic-bezier(0.65, 0, 0.35, 1),
+		width 0.5s cubic-bezier(0.65, 0, 0.35, 1),
+		height 0.5s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+
+/* Circle expands */
+.gradient-expand-btn:hover .gradient-expand-btn-bg {
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+
+/* =========================
+   Button Text
+========================= */
+
+.gradient-expand-btn-text {
+	position: relative;
+	z-index: 2;
+
+	/* color REMOVE */
+
+	transform: translateX(14px);
+	transition:
+		transform 0.5s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+
+/* Hover par center */
+.gradient-expand-btn:hover .gradient-expand-btn-text {
+	transform: translateX(0);
+
+	/* color REMOVE */
+}
+
+
+.gradient-border {
+	position: relative;
+	border-radius: 9999px;
+}
+
+.gradient-border::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	padding: 1px;
+	border-radius: inherit;
+
+	background: radial-gradient(
+		50% 83.67% at 50% 50%,
+		#FEC053 0%,
+		#F2203E 33%,
+		#B729A8 65%,
+		#5342D6 100%
+	);
+
+	-webkit-mask:
+		linear-gradient(#fff 0 0) content-box,
+		linear-gradient(#fff 0 0);
+
+	-webkit-mask-composite: xor;
+	mask-composite: exclude;
+
+	pointer-events: none;
+}
+
+@import "tailwindcss";
+
+/* Common site button */
+.site-btn {
+  @apply mt-7 inline-flex min-h-[43px] items-center gap-[11px] rounded-full border border-[#F8BA57] py-[7px] pr-[15px] pl-[11px] font-clash text-[14px] font-medium leading-none no-underline transition-all duration-300;
+
+  @variant lg {
+    @apply mt-[37px] text-[16px];
+  }
+
+  @variant hover {
+    @apply -translate-y-[2px] bg-[#FFFDF9];
+    box-shadow: 0 5px 15px rgba(32, 24, 14, 0.06);
+  }
+}
+
+/* studio component client logo  */
+@keyframes marquee {
+  from {
+    transform: translateX(0%);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 20s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}

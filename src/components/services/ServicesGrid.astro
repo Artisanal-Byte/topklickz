@@ -1,0 +1,170 @@
+---
+interface ServiceItem {
+	number: string;
+	title: string;
+	href: string;
+	active?: boolean;
+}
+
+const services: ServiceItem[] = [
+	{
+		number: "01",
+		title: "Brand Strategy",
+		href: "/services/branding",
+		active: true,
+	},
+	{
+		number: "02",
+		title: "Social Media",
+		href: "/services/social-media",
+	},
+	{
+		number: "03",
+		title: "Web Design & Development",
+		href: "/services/web-design-development",
+	},
+	{
+		number: "04",
+		title: "Performance Marketing",
+		href: "/services/performance-marketing",
+	},
+	{
+		number: "05",
+		title: "Creative Production",
+		href: "/services/creative-production",
+	},
+    {
+		number: "06",
+		title: "Creative Production",
+		href: "/services/creative-production",
+	},
+];
+---
+
+<section
+	class="
+		relative
+		w-full
+		bg-white lg:pb-[50px]
+		lg:pb-0
+	"
+>
+	<!-- Top Gradient Line -->
+	<div
+		class="
+			absolute
+			left-0
+			top-0
+			h-px
+			w-full
+			bg-[linear-gradient(90deg,#FFB33E_0%,#FF4D57_32%,#DB32B4_62%,#5A43F1_100%)]
+		"
+	></div>
+
+	<div class="mx-auto max-w-7xl px-4 lg:px-8 lg:py-16 py-10">
+		<div
+			class="
+				grid
+				grid-cols-1
+				gap-[5px]
+				lg:grid-cols-3
+			"
+		>
+			{
+				services.map((service) => (
+					<a
+						href={service.href}
+						class="
+							group
+							block
+							bg-[#ECECEC]
+							p-px
+							no-underline
+							transition-all
+							duration-300
+
+							hover:bg-[linear-gradient(135deg,#FFB43E_0%,#FF5957_30%,#E12AA8_62%,#5342F2_100%)]
+						"
+					>
+						<div
+							class="
+								flex
+								h-full
+								min-h-[124px]
+								flex-col
+								justify-center
+								bg-white
+								px-[31px]
+								py-[25px]
+
+								sm:min-h-[126px]
+							"
+						>
+							<!-- Number -->
+							<span
+								class:list={[
+									`
+										mb-[13px]
+										block
+										font-clash
+										text-[12px]
+										font-light
+										leading-none
+										transition-colors
+										duration-300
+									`,
+									service.active
+										? "text-[#777777]"
+										: "text-[#D5D5D5] group-hover:text-[#999999]",
+								]}
+							>
+								{service.number}
+							</span>
+
+							<!-- Title -->
+							<h3
+								class:list={[
+									`
+										m-0
+										font-clash  
+										text-[17px]
+										leading-[1.25]
+										tracking-[-0.025em]
+										transition-colors
+										duration-300
+
+										sm:text-[18px]
+									`,
+									service.active
+										? "font-medium text-black"
+										: "font-normal text-[#808080] group-hover:text-black",
+								]}
+							>
+								{service.title}
+							</h3>
+
+							<!-- Gradient small line -->
+							<span
+								class:list={[
+									`
+										mt-[15px]
+										block
+										h-[2px]
+										rounded-full
+										bg-[linear-gradient(90deg,#FF9F35_0%,#FF475A_45%,#7042F4_100%)]
+										transition-all
+										duration-300
+									`,
+									service.active
+										? "w-[18px]"
+										: "w-0 group-hover:w-[18px]",
+								]}
+							>
+							</span>
+						</div>
+					</a>
+				))
+			}
+		</div>
+	</div>
+</section>

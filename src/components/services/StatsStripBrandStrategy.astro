@@ -1,0 +1,122 @@
+---
+interface StatItem {
+	value: string;
+	label: string;
+}
+
+const stats: StatItem[] = [
+	{
+		value: "94%",
+		label: "Client retention rate",
+	},
+	{
+		value: "3×",
+		label: "Average growth in brand recall",
+	},
+	{
+		value: "48h",
+		label: "Strategy workshop delivery",
+	},
+	{
+		value: "60+",
+		label: "Brands transformed",
+	},
+];
+---
+
+<section class="w-full bg-white">
+	<div
+		class="mx-auto max-w-7xl px-4 lg:px-8 lg:pb-10 pb-10"
+	>
+		<!-- Top Gradient Line -->
+		<div
+			class="
+				h-px
+				w-full
+				bg-[linear-gradient(90deg,#FFB547_0%,#FF5A55_34%,#E72CA5_66%,#6848F5_100%)]
+			"
+		></div>
+
+		<!-- Stats Grid -->
+		<div
+			class="
+				grid
+				grid-cols-1
+
+				sm:grid-cols-2
+
+				lg:grid-cols-4
+			"
+		>
+			{
+				stats.map((stat, index) => (
+					<div
+						class:list={[
+							`
+								flex
+								min-h-[175px]
+								flex-col
+								justify-center
+								px-[26px]
+								py-[28px]
+
+								sm:min-h-[180px]
+								sm:px-[32px]
+
+								lg:min-h-[178px]
+								lg:px-[44px]
+								lg:py-[35px]
+							`,
+							index !== 0
+								? "border-t border-[#ECECEC] sm:border-t-0 sm:border-l"
+								: "",
+							index >= 2
+								? "sm:border-t lg:border-t-0"
+								: "",
+						]}
+					>
+						<!-- Value -->
+						<h3
+							class="
+								font-clash
+								text-[46px]
+								font-semibold
+								leading-none
+								tracking-[-0.045em]
+                                gradient-text
+								lg:text-[56px]
+							"
+						>
+							{stat.value}
+						</h3>
+
+						<!-- Label -->
+						<p
+							class="
+								mt-[12px]
+								max-w-[170px]
+								font-geist
+								text-[16px]
+								font-normal
+								leading-[1.45]
+								tracking-[0.015em]
+								text-[#010101]
+							"
+						>
+							{stat.label}
+						</p>
+					</div>
+				))
+			}
+		</div>
+
+		<!-- Bottom Gradient Line -->
+		<div
+			class="
+				h-px
+				w-full
+				bg-[linear-gradient(90deg,#FFB547_0%,#FF5A55_34%,#E72CA5_66%,#6848F5_100%)]
+			"
+		></div>
+	</div>
+</section>

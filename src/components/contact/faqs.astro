@@ -1,0 +1,201 @@
+---
+const faqs = [
+	{
+		question: "How soon can we start?",
+		answer:
+			"Once we understand your requirements and scope, we can confirm the project timeline and start date.",
+	},
+	{
+		question: "How do payments work?",
+		answer:
+			"Payments are usually structured in project milestones based on scope, timeline, and deliverables.",
+	},
+	{
+		question: "Do you work with international clients?",
+		answer:
+			"Yes, we work with clients across different countries and time zones.",
+	},
+	{
+		question: "Do you provide ongoing support?",
+		answer:
+			"Yes, ongoing support and maintenance can be arranged depending on your project requirements.",
+	},
+	{
+		question: "Can we sign an NDA?",
+		answer:
+			"Yes, we can sign an NDA before discussing confidential project details.",
+	},
+	{
+		question: "What information do you need to get started?",
+		answer:
+			"We typically need your project goals, requirements, references, timeline, and any existing brand or technical material.",
+	},
+];
+---
+
+<section class="w-full bg-white">
+	<div class="mx-auto max-w-7xl px-5 py-12 sm:px-8 lg:px-12 lg:py-16">
+		<!-- Header -->
+		<div class="mb-6 flex items-center justify-between gap-6">
+			<h2
+				class="
+					text-[18px]
+					font-bold
+					uppercase
+					leading-none
+					tracking-[-0.1px]
+					text-black
+				"
+			>
+				FREQUENTLY ASKED QUESTIONS
+			</h2>
+
+			<a
+				href="/faqs"
+				class="
+					hidden
+					items-center
+					gap-3
+					text-[10px]
+					font-medium
+					uppercase
+					text-[#b427b9]
+					transition-opacity
+					hover:opacity-60
+					sm:flex
+				"
+			>
+				<span>VIEW ALL FAQS</span>
+				<span class="text-[18px] leading-none">→</span>
+			</a>
+		</div>
+
+		<!-- FAQ GRID -->
+		<div
+			class="
+				grid
+				grid-cols-1
+				gap-3
+				lg:grid-cols-2
+				lg:gap-x-8
+				lg:gap-y-3
+			"
+		>
+			{
+				faqs.map((faq) => (
+					<details
+						class="
+							group
+							rounded-[5px]
+							border
+							border-black/10
+							bg-white
+							transition-colors
+							duration-300
+							open:bg-black/[0.015]
+						"
+					>
+						<summary
+							class="
+								flex
+								min-h-[58px]
+								cursor-pointer
+								list-none
+								items-center
+								justify-between
+								gap-5
+								px-5
+								py-4
+								[&::-webkit-details-marker]:hidden
+							"
+						>
+							<span
+								class="
+									text-[16px]
+									font-semibold
+									leading-[1.3]
+									text-black
+								"
+							>
+								{faq.question}
+							</span>
+
+							<!-- PLUS / MINUS -->
+							<span
+								class="
+									relative
+									h-[18px]
+									w-[18px]
+									shrink-0
+								"
+								aria-hidden="true"
+							>
+								<span
+									class="
+										absolute
+										left-1/2
+										top-1/2
+										h-px
+										w-[13px]
+										-translate-x-1/2
+										-translate-y-1/2
+										bg-black
+									"
+								></span>
+
+								<span
+									class="
+										absolute
+										left-1/2
+										top-1/2
+										h-[13px]
+										w-px
+										-translate-x-1/2
+										-translate-y-1/2
+										bg-black
+										transition-transform
+										duration-300
+										group-open:rotate-90
+										group-open:scale-y-0
+									"
+								></span>
+							</span>
+						</summary>
+
+						<div class="px-5 pb-5">
+							<p
+								class="
+									max-w-[650px]
+									text-[15px]
+									leading-[1.55]
+									text-black/60
+								"
+							>
+								{faq.answer}
+							</p>
+						</div>
+					</details>
+				))
+			}
+		</div>
+
+		<!-- Mobile View All -->
+		<a
+			href="/faqs"
+			class="
+				mt-6
+				flex
+				items-center
+				gap-3
+				text-[10px]
+				font-medium
+				uppercase
+				text-[#b427b9]
+				sm:hidden
+			"
+		>
+			<span>VIEW ALL FAQS</span>
+			<span class="text-[18px]">→</span>
+		</a>
+	</div>
+</section>

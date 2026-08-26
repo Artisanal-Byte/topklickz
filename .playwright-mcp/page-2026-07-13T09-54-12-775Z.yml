@@ -1,0 +1,653 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e5]:
+    - generic [ref=e7]:
+      - link "home" [ref=e8] [cursor=pointer]:
+        - /url: /
+      - navigation [ref=e24]:
+        - list [ref=e25]:
+          - listitem [ref=e26]:
+            - link "About" [ref=e27] [cursor=pointer]:
+              - /url: /about-us
+          - listitem [ref=e28]:
+            - link "Services" [ref=e29] [cursor=pointer]:
+              - /url: /services
+          - listitem [ref=e30]:
+            - link "Work" [ref=e31] [cursor=pointer]:
+              - /url: /work
+          - listitem [ref=e32]:
+            - link "Insights" [ref=e33] [cursor=pointer]:
+              - /url: /insights
+          - listitem [ref=e34]:
+            - link "Careers" [ref=e35] [cursor=pointer]:
+              - /url: /careers
+      - link "→ Get in touch Get in touch" [ref=e37] [cursor=pointer]:
+        - /url: /contact-us
+        - generic [ref=e38]: →
+        - generic [ref=e41]:
+          - generic [ref=e42]: Get in touch
+          - generic [ref=e43]: Get in touch
+  - generic:
+    - navigation:
+      - list:
+        - listitem:
+          - link "About":
+            - /url: /about-us
+        - listitem:
+          - link "Services":
+            - /url: /services
+        - listitem:
+          - link "Work":
+            - /url: /work
+        - listitem:
+          - link "Insights":
+            - /url: /insights
+        - listitem:
+          - link "Careers":
+            - /url: /careers
+        - listitem:
+          - link "Ethics Policy":
+            - /url: /ethics-policy
+        - listitem:
+          - link "Contact Us":
+            - /url: /contact-us
+      - generic:
+        - generic:
+          - generic:
+            - generic: Say hello!
+            - link "hello@atlantiser.com":
+              - /url: mailto:hello@atlantiser.com
+          - generic:
+            - generic: Hello, Talent!
+            - link "careers@atlantiser.com":
+              - /url: mailto:careers@atlantiser.com
+        - generic: Follow us
+        - generic:
+          - link "Visit Linkedin":
+            - /url: https://in.linkedin.com/company/atlantiser
+          - link "Visit Instagram":
+            - /url: https://www.instagram.com/atlantiser.agency/
+          - link "Visit Twitter":
+            - /url: https://twitter.com/Atlantiser_
+  - main [ref=e44]:
+    - generic [ref=e47]:
+      - generic [ref=e49]:
+        - generic [ref=e50]:
+          - generic [ref=e51]: WE
+          - generic [ref=e52]: ARE
+          - generic [ref=e53]: BRAND
+        - generic [ref=e55]: Transformation
+        - generic [ref=e57]: Navigators
+      - generic [ref=e63]: Scroll to explore
+    - generic [ref=e66]:
+      - generic [ref=e67]: Since 2016
+      - heading "Atlantiser® is a strategy-first branding agency that specializes in building and scaling next-gen brands and digital-experiences ." [level=2] [ref=e68]:
+        - generic [ref=e69]:
+          - generic [ref=e70]: Atlantiser®
+          - generic [ref=e71]: is
+          - generic [ref=e72]: a
+          - generic [ref=e73]: strategy-first
+          - generic [ref=e74]: branding
+          - generic [ref=e75]: agency
+        - generic [ref=e76]:
+          - generic [ref=e77]: that
+          - generic [ref=e78]: specializes
+          - generic [ref=e79]: in
+          - generic [ref=e80]: building
+          - generic [ref=e81]: and
+          - generic [ref=e82]: scaling
+        - generic [ref=e83]:
+          - generic [ref=e84]: next-gen
+          - link "brands" [ref=e85] [cursor=pointer]:
+            - /url: "#"
+          - generic [ref=e87]: and
+          - link "digital-experiences" [ref=e88] [cursor=pointer]:
+            - /url: "#"
+          - generic [ref=e90]: .
+      - generic [ref=e91]:
+        - paragraph [ref=e92]: Transforming visions into brands that stand out, inspire, and excel in a crowded digital-first world
+        - generic [ref=e93]: awards & recognitions
+        - generic [ref=e94]:
+          - generic [ref=e95]:
+            - img "Clutch" [ref=e97]
+            - img "Awwwards" [ref=e99]
+            - img "CSSDA" [ref=e101]
+            - img "FWA" [ref=e103]
+            - img "Reddot" [ref=e105]
+            - img "Section" [ref=e107]
+            - img "Strategyzer" [ref=e109]
+            - img "Future London Academy" [ref=e111]
+            - img "IDEO" [ref=e113]
+            - img "Business made simple" [ref=e115]
+          - generic [ref=e116]:
+            - img "Clutch" [ref=e118]
+            - img "Awwwards" [ref=e120]
+            - img "CSSDA" [ref=e122]
+            - img "FWA" [ref=e124]
+            - img "Reddot" [ref=e126]
+            - img "Section" [ref=e128]
+            - img "Strategyzer" [ref=e130]
+            - img "Future London Academy" [ref=e132]
+            - img "IDEO" [ref=e134]
+            - img "Business made simple" [ref=e136]
+          - generic [ref=e137]:
+            - img "Clutch" [ref=e139]
+            - img "Awwwards" [ref=e141]
+            - img "CSSDA" [ref=e143]
+            - img "FWA" [ref=e145]
+            - img "Reddot" [ref=e147]
+            - img "Section" [ref=e149]
+            - img "Strategyzer" [ref=e151]
+            - img "Future London Academy" [ref=e153]
+            - img "IDEO" [ref=e155]
+            - img "Business made simple" [ref=e157]
+      - link "→ About us About us" [ref=e159] [cursor=pointer]:
+        - /url: /about-us
+        - generic [ref=e160]: →
+        - generic [ref=e163]:
+          - generic [ref=e164]: About us
+          - generic [ref=e165]: About us
+    - generic [ref=e168]:
+      - generic [ref=e169]: Services
+      - generic [ref=e171]:
+        - generic [ref=e172]:
+          - generic [ref=e173]: "001"
+          - generic [ref=e175]:
+            - generic [ref=e176]:
+              - generic [ref=e177]: Brand Strategy
+              - paragraph [ref=e179]: Your brand’s compass. It defines purpose, sharpens positioning, and ensures every decision you make resonates with your audience while driving business growth.
+            - generic [ref=e181]:
+              - list [ref=e182]:
+                - listitem [ref=e183]: Research & Insights
+                - listitem [ref=e184]: Go-to-Market Strategy (GTM)
+                - listitem [ref=e185]: Brand Architecture
+                - listitem [ref=e186]: Purpose, Mission, Vision
+                - listitem [ref=e187]: Value Proposition
+                - listitem [ref=e188]: Communication Strategy
+                - listitem [ref=e189]: Verbal Identity
+                - listitem [ref=e190]: Naming
+              - link "→ Let’s Begin Let’s Begin" [ref=e191] [cursor=pointer]:
+                - /url: /contact-us
+                - generic [ref=e192]: →
+                - generic [ref=e195]:
+                  - generic [ref=e196]: Let’s Begin
+                  - generic [ref=e197]: Let’s Begin
+        - generic [ref=e201]:
+          - generic [ref=e202]: "002"
+          - generic [ref=e204]:
+            - generic [ref=e205]:
+              - generic [ref=e206]: Brand Identity
+              - paragraph [ref=e208]: "The visual heartbeat of your brand: we shape a distinct visual language that turns heads, stirs hearts, and makes your brand unforgettable."
+            - generic [ref=e210]:
+              - list [ref=e211]:
+                - listitem [ref=e212]: Logotype & Symbol Design
+                - listitem [ref=e213]: Typography & Color Systems
+                - listitem [ref=e214]: Brand Book & Guidelines
+                - listitem [ref=e215]: Illustrations & 3D Visuals
+                - listitem [ref=e216]: Motion Graphics & Storytelling
+                - listitem [ref=e217]: Art Direction
+                - listitem [ref=e218]: Packaging Design
+              - link "→ Let’s Begin Let’s Begin" [ref=e219] [cursor=pointer]:
+                - /url: /contact-us
+                - generic [ref=e220]: →
+                - generic [ref=e223]:
+                  - generic [ref=e224]: Let’s Begin
+                  - generic [ref=e225]: Let’s Begin
+        - generic [ref=e229]:
+          - generic [ref=e230]: "003"
+          - generic [ref=e232]:
+            - generic [ref=e233]:
+              - generic [ref=e234]: Website
+              - paragraph [ref=e236]: The digital face of your brand, we create websites that captivate, connect, and leave an unforgettable mark on every visitor.
+            - generic [ref=e238]:
+              - list [ref=e239]:
+                - listitem [ref=e240]: UX Design
+                - listitem [ref=e241]: Interactive UI Design
+                - listitem [ref=e242]: Information Architecture
+                - listitem [ref=e243]: Custom Web Development
+                - listitem [ref=e244]: Scroll Based Animations & 3D
+                - listitem [ref=e245]: Editorial Design & CMS
+                - listitem [ref=e246]: Performance Optimization
+                - listitem [ref=e247]: Website Maintenance & Support
+              - link "→ Let’s Begin Let’s Begin" [ref=e248] [cursor=pointer]:
+                - /url: /contact-us
+                - generic [ref=e249]: →
+                - generic [ref=e252]:
+                  - generic [ref=e253]: Let’s Begin
+                  - generic [ref=e254]: Let’s Begin
+        - generic [ref=e258]:
+          - generic [ref=e259]: "004"
+          - generic [ref=e261]:
+            - generic [ref=e262]:
+              - generic [ref=e263]: Digital Product
+              - paragraph [ref=e265]: The engine of your digital experience. We design SaaS products and mobile apps that are functional, scalable, and always one step ahead of user expectations.
+            - generic [ref=e267]:
+              - list [ref=e268]:
+                - listitem [ref=e269]: UX Design
+                - listitem [ref=e270]: User Research & Testing
+                - listitem [ref=e271]: Interactive Prototypes
+                - listitem [ref=e272]: Mobile App UI Design
+                - listitem [ref=e273]: Software UI Design
+                - listitem [ref=e274]: Web App Design
+                - listitem [ref=e275]: Interaction & Motion Design
+              - link "→ Let’s Begin Let’s Begin" [ref=e276] [cursor=pointer]:
+                - /url: /contact-us
+                - generic [ref=e277]: →
+                - generic [ref=e280]:
+                  - generic [ref=e281]: Let’s Begin
+                  - generic [ref=e282]: Let’s Begin
+        - generic [ref=e286]:
+          - generic [ref=e287]: "005"
+          - generic [ref=e289]:
+            - generic [ref=e290]:
+              - generic [ref=e291]: E-commerce
+              - paragraph [ref=e293]: Your brand’s digital marketplace. We create e-commerce experiences that are as effortless to shop as they are hard to forget.
+            - generic [ref=e295]:
+              - list [ref=e296]:
+                - listitem [ref=e297]: Consulting & Strategy
+                - listitem [ref=e298]: Custom Storefront Design & UX
+                - listitem [ref=e299]: Technical & Compliances
+                - listitem [ref=e300]: Engineering & Execution
+                - listitem [ref=e301]: Optimisation & Growth
+                - listitem [ref=e302]: Maintenance & Support
+              - link "→ Let’s Begin Let’s Begin" [ref=e303] [cursor=pointer]:
+                - /url: /contact-us
+                - generic [ref=e304]: →
+                - generic [ref=e307]:
+                  - generic [ref=e308]: Let’s Begin
+                  - generic [ref=e309]: Let’s Begin
+        - generic [ref=e313]:
+          - generic [ref=e314]: "006"
+          - generic [ref=e316]:
+            - generic [ref=e317]:
+              - generic [ref=e318]: Content Design
+              - paragraph [ref=e320]: Turning ideas into captivating visuals and stories. We produce top-tier content that delivers impact, whether it’s for a commercial, campaign, or brand story.
+            - generic [ref=e322]:
+              - list [ref=e323]:
+                - listitem [ref=e324]: Concept Development
+                - listitem [ref=e325]: Social Media Content
+                - listitem [ref=e326]: Motion Graphics & CGI
+                - listitem [ref=e327]: Photography
+                - listitem [ref=e328]: Video & Post-Production
+                - listitem [ref=e329]: Content & Copywriting
+                - listitem [ref=e330]: 360 Campaign Design
+              - link "→ Let’s Begin Let’s Begin" [ref=e331] [cursor=pointer]:
+                - /url: /contact-us
+                - generic [ref=e332]: →
+                - generic [ref=e335]:
+                  - generic [ref=e336]: Let’s Begin
+                  - generic [ref=e337]: Let’s Begin
+    - generic [ref=e342]:
+      - heading "Success cases" [level=2] [ref=e343]:
+        - generic [ref=e344]:
+          - generic [ref=e345]: Success
+          - generic [ref=e346]: cases
+      - generic [ref=e347]:
+        - link "Strategy - E-Commerce - Storefront & UX Design - Motion & CGI Knowsmoke Knowsmoke" [ref=e349] [cursor=pointer]:
+          - /url: "#"
+          - figure [ref=e350]
+          - generic [ref=e353]:
+            - generic [ref=e354]:
+              - generic [ref=e355]: Strategy
+              - generic [ref=e357]: "-"
+              - generic [ref=e358]: E-Commerce
+              - generic [ref=e360]: "-"
+              - generic [ref=e361]: Storefront & UX Design
+              - generic [ref=e363]: "-"
+              - generic [ref=e364]: Motion & CGI
+            - generic [ref=e366]:
+              - heading "Knowsmoke" [level=3] [ref=e367]
+              - heading "Knowsmoke" [level=3] [ref=e368]
+        - link "Strategy - Branding - Website - Content Design Zymo cosmetics Zymo cosmetics" [ref=e370] [cursor=pointer]:
+          - /url: "#"
+          - figure [ref=e371]
+          - generic [ref=e374]:
+            - generic [ref=e375]:
+              - generic [ref=e376]: Strategy
+              - generic [ref=e378]: "-"
+              - generic [ref=e379]: Branding
+              - generic [ref=e381]: "-"
+              - generic [ref=e382]: Website
+              - generic [ref=e384]: "-"
+              - generic [ref=e385]: Content Design
+            - generic [ref=e387]:
+              - heading "Zymo cosmetics" [level=3] [ref=e388]
+              - heading "Zymo cosmetics" [level=3] [ref=e389]
+        - link "Strategy - Website CARAWAY.Health CARAWAY.Health" [ref=e391] [cursor=pointer]:
+          - /url: "#"
+          - figure [ref=e392]:
+            - img "Caraway Health" [ref=e393]
+          - generic [ref=e396]:
+            - generic [ref=e397]:
+              - generic [ref=e398]: Strategy
+              - generic [ref=e400]: "-"
+              - generic [ref=e401]: Website
+            - generic [ref=e403]:
+              - heading "CARAWAY.Health" [level=3] [ref=e404]
+              - heading "CARAWAY.Health" [level=3] [ref=e405]
+        - link "Strategy - Branding - Website - Product Design BETTERBUGS BETTERBUGS" [ref=e407] [cursor=pointer]:
+          - /url: "#"
+          - figure [ref=e408]
+          - generic [ref=e409]:
+            - generic [ref=e410]:
+              - generic [ref=e411]: Strategy
+              - generic [ref=e413]: "-"
+              - generic [ref=e414]: Branding
+              - generic [ref=e416]: "-"
+              - generic [ref=e417]: Website
+              - generic [ref=e419]: "-"
+              - generic [ref=e420]: Product Design
+            - generic [ref=e422]:
+              - heading "BETTERBUGS" [level=3] [ref=e423]
+              - heading "BETTERBUGS" [level=3] [ref=e424]
+    - generic [ref=e426]:
+      - generic [ref=e427]:
+        - generic [ref=e428]: Partners
+        - generic [ref=e430]:
+          - generic [ref=e431]:
+            - generic [ref=e432]:
+              - generic [ref=e433]: Trusted
+              - generic [ref=e434]: by
+              - generic [ref=e435]: teams
+              - generic [ref=e436]: at
+              - generic [ref=e437]: every
+              - generic [ref=e438]: stage
+            - generic [ref=e439]:
+              - generic [ref=e440]: startups,
+              - generic [ref=e441]: scale-ups,
+              - generic [ref=e442]: and
+              - generic [ref=e443]: seasoned
+              - generic [ref=e444]: giants.
+          - generic [ref=e445]: Our secret sauce?Execution.
+      - link "→ Our partners Our partners" [ref=e453] [cursor=pointer]:
+        - /url: /partners
+        - generic [ref=e454]: →
+        - generic [ref=e457]:
+          - generic [ref=e458]: Our partners
+          - generic [ref=e459]: Our partners
+    - generic [ref=e461]:
+      - generic [ref=e462]: Our wall of love
+      - generic [ref=e464]:
+        - generic [ref=e465] [cursor=pointer]:
+          - generic [ref=e466]:
+            - generic [ref=e469]:
+              - generic [ref=e470]: Lane Goedhart
+              - generic [ref=e472]: COO, Knowsmoke
+            - paragraph [ref=e474]:
+              - generic [ref=e475]:
+                - generic [ref=e476]: Atlantiser
+                - generic [ref=e477]: transformed
+                - generic [ref=e478]: our
+                - generic [ref=e479]: online
+                - generic [ref=e480]: presence
+              - generic [ref=e481]:
+                - generic [ref=e482]: with
+                - generic [ref=e483]: a
+                - generic [ref=e484]: custom
+                - generic [ref=e485]: WordPress
+                - generic [ref=e486]: site
+                - generic [ref=e487]: and
+                - generic [ref=e488]: stunning
+              - generic [ref=e489]:
+                - generic [ref=e490]: animations.
+                - generic [ref=e491]: As
+                - generic [ref=e492]: we
+                - generic [ref=e493]: launched
+                - generic [ref=e494]: "'Ion"
+                - generic [ref=e495]: for
+                - generic [ref=e496]: Home,'
+              - generic [ref=e497]:
+                - generic [ref=e498]: they
+                - generic [ref=e499]: built
+                - generic [ref=e500]: versions
+                - generic [ref=e501]: "2"
+                - generic [ref=e502]: and
+                - generic [ref=e503]: "3"
+                - generic [ref=e504]: "on"
+                - generic [ref=e505]: Shopify,
+              - generic [ref=e506]:
+                - generic [ref=e507]: optimizing
+                - generic [ref=e508]: our
+                - generic [ref=e509]: e-commerce
+                - generic [ref=e510]: experience.
+              - generic [ref=e511]:
+                - generic [ref=e512]: Their
+                - generic [ref=e513]: attention
+                - generic [ref=e514]: to
+                - generic [ref=e515]: detail,
+                - generic [ref=e516]: excellent
+              - generic [ref=e517]:
+                - generic [ref=e518]: communication,
+                - generic [ref=e519]: and
+                - generic [ref=e520]: seamless
+                - generic [ref=e521]: project
+              - generic [ref=e522]:
+                - generic [ref=e523]: management
+                - generic [ref=e524]: made
+                - generic [ref=e525]: the
+                - generic [ref=e526]: process
+                - generic [ref=e527]: smooth.
+              - generic [ref=e528]:
+                - generic [ref=e529]: Highly
+                - generic [ref=e530]: recommended!
+          - generic [ref=e531]:
+            - generic [ref=e534]:
+              - generic [ref=e535]: Sara Al Jamal
+              - generic [ref=e537]: CEO, Illlusorr
+            - paragraph [ref=e539]:
+              - generic [ref=e540]:
+                - generic [ref=e541]: Atlantiser
+                - generic [ref=e542]: nailed
+                - generic [ref=e543]: it
+                - generic [ref=e544]: with
+                - generic [ref=e545]: WebGL
+                - generic [ref=e546]: and
+                - generic [ref=e547]: Three.js,
+              - generic [ref=e548]:
+                - generic [ref=e549]: delivering
+                - generic [ref=e550]: UI
+                - generic [ref=e551]: elements
+                - generic [ref=e552]: that
+                - generic [ref=e553]: perfectly
+              - generic [ref=e554]:
+                - generic [ref=e555]: matched
+                - generic [ref=e556]: our
+                - generic [ref=e557]: brand
+                - generic [ref=e558]: identity.
+                - generic [ref=e559]: Their
+              - generic [ref=e560]:
+                - generic [ref=e561]: adaptability,
+                - generic [ref=e562]: drive
+                - generic [ref=e563]: to
+                - generic [ref=e564]: learn,
+                - generic [ref=e565]: and
+                - generic [ref=e566]: seamless
+              - generic [ref=e567]:
+                - generic [ref=e568]: communication
+                - generic [ref=e569]: made
+                - generic [ref=e570]: the
+                - generic [ref=e571]: process
+                - generic [ref=e572]: a
+                - generic [ref=e573]: breeze.
+              - generic [ref=e574]:
+                - generic [ref=e575]: If
+                - generic [ref=e576]: you
+                - generic [ref=e577]: want
+                - generic [ref=e578]: quality
+                - generic [ref=e579]: and
+                - generic [ref=e580]: creativity,
+                - generic [ref=e581]: these
+                - generic [ref=e582]: are
+              - generic [ref=e583]:
+                - generic [ref=e584]: the
+                - generic [ref=e585]: folks
+                - generic [ref=e586]: to
+                - generic [ref=e587]: trust!
+        - text: prev next
+      - generic [ref=e588]:
+        - generic [ref=e589]: Verified reviews
+        - link "Go to clutch.co" [ref=e592] [cursor=pointer]:
+          - /url: https://clutch.co/profile/atlantiser
+    - generic [ref=e594]:
+      - generic [ref=e595]: Culture
+      - generic [ref=e597]:
+        - generic [ref=e598]: Passion, courage, and craftsmanship, our formula for turning aspirations into extraordinary results.
+        - generic [ref=e599]: Minus the fluff
+      - generic [ref=e604]:
+        - generic [ref=e605]: DREAM BOLD. BEGIN HUMBLE. GROW RAPIDLY.
+        - link "→ Explore openings Explore openings" [ref=e607] [cursor=pointer]:
+          - /url: /careers
+          - generic [ref=e608]: →
+          - generic [ref=e611]:
+            - generic [ref=e612]: Explore openings
+            - generic [ref=e613]: Explore openings
+    - generic [ref=e615]:
+      - generic [ref=e616]: Insights
+      - generic [ref=e618]:
+        - heading "Ideas, research, and stories." [level=2] [ref=e619]
+        - list [ref=e622]:
+          - listitem [ref=e623]:
+            - generic [ref=e624]:
+              - link "First-Mover Advantage in Niche Industries" [ref=e625] [cursor=pointer]:
+                - /url: /insights/first-mover-advantage-in-niche-industries
+              - generic [ref=e627]:
+                - link "Branding" [ref=e630] [cursor=pointer]:
+                  - /url: /topics/branding
+                - generic [ref=e632]: 10 Min
+              - link [ref=e633] [cursor=pointer]:
+                - /url: /insights/first-mover-advantage-in-niche-industries
+                - heading "First-Mover Advantage in Niche Industries" [level=3] [ref=e634]
+          - listitem [ref=e635]:
+            - generic [ref=e636]:
+              - link "Atlantiser® Is Now a Participant of the United Nations Global Compact" [ref=e637] [cursor=pointer]:
+                - /url: /insights/atlantiser-is-now-a-participant-of-the-united-nations-global-compact
+              - generic [ref=e639]:
+                - link "Commitment" [ref=e642] [cursor=pointer]:
+                  - /url: /topics/commitment
+                - generic [ref=e644]: 4 min
+              - link [ref=e645] [cursor=pointer]:
+                - /url: /insights/atlantiser-is-now-a-participant-of-the-united-nations-global-compact
+                - heading "Atlantiser® Is Now a Participant of the United Nations Global..." [level=3] [ref=e646]
+          - listitem [ref=e647]:
+            - generic [ref=e648]:
+              - link "B2B Doesn’t Mean Boring to Boring" [ref=e649] [cursor=pointer]:
+                - /url: /insights/b2b-doesnt-mean-boring-to-boring
+              - generic [ref=e651]:
+                - link "Strategy" [ref=e654] [cursor=pointer]:
+                  - /url: /topics/strategy
+                - generic [ref=e656]: 10 Min
+              - link [ref=e657] [cursor=pointer]:
+                - /url: /insights/b2b-doesnt-mean-boring-to-boring
+                - heading "B2B Doesn’t Mean Boring to Boring" [level=3] [ref=e658]
+    - generic [ref=e661]:
+      - generic [ref=e662]: Ordinary is yesterday. Extraordinary starts now.
+      - link "Let’s work together" [ref=e663] [cursor=pointer]:
+        - /url: /contact-us
+      - generic [ref=e667]:
+        - generic [ref=e668]: awards & recognitions
+        - generic [ref=e669]:
+          - generic [ref=e670]:
+            - img "Clutch" [ref=e672]
+            - img "Awwwards" [ref=e674]
+            - img "CSSDA" [ref=e676]
+            - img "FWA" [ref=e678]
+            - img "Reddot" [ref=e680]
+            - img "Section" [ref=e682]
+            - img "Strategyzer" [ref=e684]
+            - img "Future London Academy" [ref=e686]
+            - img "IDEO" [ref=e688]
+            - img "Business made simple" [ref=e690]
+          - generic [ref=e691]:
+            - img "Clutch" [ref=e693]
+            - img "Awwwards" [ref=e695]
+            - img "CSSDA" [ref=e697]
+            - img "FWA" [ref=e699]
+            - img "Reddot" [ref=e701]
+            - img "Section" [ref=e703]
+            - img "Strategyzer" [ref=e705]
+            - img "Future London Academy" [ref=e707]
+            - img "IDEO" [ref=e709]
+            - img "Business made simple" [ref=e711]
+          - generic [ref=e712]:
+            - img "Clutch" [ref=e714]
+            - img "Awwwards" [ref=e716]
+            - img "CSSDA" [ref=e718]
+            - img "FWA" [ref=e720]
+            - img "Reddot" [ref=e722]
+            - img "Section" [ref=e724]
+            - img "Strategyzer" [ref=e726]
+            - img "Future London Academy" [ref=e728]
+            - img "IDEO" [ref=e730]
+            - img "Business made simple" [ref=e732]
+  - contentinfo [ref=e733]:
+    - generic [ref=e734]:
+      - generic [ref=e736]:
+        - generic [ref=e737]:
+          - generic [ref=e738]: Atlantiser® is a strategy-first branding agency that specializes in building and scaling next-gen brands and digital experiences.
+          - generic [ref=e739]:
+            - generic [ref=e740]: A Proud Participants of
+            - generic [ref=e741]:
+              - link [ref=e742] [cursor=pointer]:
+                - /url: https://directories.onepercentfortheplanet.org/profile/atlantiser-mediatech-pvt-ltd
+              - link [ref=e743] [cursor=pointer]:
+                - /url: https://unglobalcompact.org/
+        - generic [ref=e746]:
+          - generic [ref=e747]:
+            - generic [ref=e748]:
+              - generic [ref=e749]: COMPANY
+              - generic [ref=e750]:
+                - link "About" [ref=e751] [cursor=pointer]:
+                  - /url: /about-us
+                - link "Services" [ref=e752] [cursor=pointer]:
+                  - /url: /services
+                - link "Work" [ref=e753] [cursor=pointer]:
+                  - /url: /work
+                - link "Membership" [ref=e754] [cursor=pointer]:
+                  - /url: "#"
+                - link "Contact" [ref=e755] [cursor=pointer]:
+                  - /url: /contact-us
+            - generic [ref=e756]:
+              - generic [ref=e757]: Learn
+              - generic [ref=e758]:
+                - link "Insights" [ref=e759] [cursor=pointer]:
+                  - /url: /insights
+                - link "Careers" [ref=e760] [cursor=pointer]:
+                  - /url: /careers
+                - link "Partners" [ref=e762] [cursor=pointer]:
+                  - /url: /partners
+                - link "Tech Stack" [ref=e763] [cursor=pointer]:
+                  - /url: /techstack
+                - link "Ethics Policy" [ref=e764] [cursor=pointer]:
+                  - /url: /ethics-policy
+            - generic [ref=e765]:
+              - generic [ref=e766]: expertise
+              - generic [ref=e767]:
+                - link "Brand Strategy" [ref=e768] [cursor=pointer]:
+                  - /url: /services
+                - link "Brand Identity" [ref=e769] [cursor=pointer]:
+                  - /url: /services
+                - link "Website" [ref=e770] [cursor=pointer]:
+                  - /url: /services
+                - link "Digital Product" [ref=e771] [cursor=pointer]:
+                  - /url: /services
+                - link "E-Commerce" [ref=e772] [cursor=pointer]:
+                  - /url: /services
+                - link "Content Design" [ref=e773] [cursor=pointer]:
+                  - /url: /services
+          - generic [ref=e774]:
+            - link "Go to Linkedin" [ref=e775] [cursor=pointer]:
+              - /url: https://in.linkedin.com/company/atlantiser
+            - link "Go to Instagram" [ref=e778] [cursor=pointer]:
+              - /url: https://www.instagram.com/atlantiser.agency/
+            - link "Go to Twitter" [ref=e783] [cursor=pointer]:
+              - /url: https://twitter.com/Atlantiser_
+      - generic [ref=e787]:
+        - generic [ref=e788]: © 2016-2026 ATLANTISER MEDIATECH PVT. LTD.
+        - generic [ref=e789]: CIN U74999GJ2016PTC092222
+        - link "Sitemap" [ref=e790] [cursor=pointer]:
+          - /url: /sitemap
+        - link "Terms & conditions" [ref=e791] [cursor=pointer]:
+          - /url: /terms-conditions
+        - link "Privacy policy" [ref=e792] [cursor=pointer]:
+          - /url: /privacy-policy
+        - link "Privacy policy":
+          - /url: /sitemap.xml

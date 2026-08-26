@@ -1,0 +1,522 @@
+---
+const { hero } = Astro.props;
+
+import { Icon } from "astro-icon/components";
+
+const youtubeId = "w6uX9jamcwQ";
+
+const youtubeSrc =
+    `https://www.youtube-nocookie.com/embed/${youtubeId}` +
+    `?autoplay=1` +
+    `&mute=1` +
+    `&loop=1` +
+    `&playlist=${youtubeId}` +
+    `&controls=0` +
+    `&autohide=1` +
+    `&modestbranding=1` +
+    `&showinfo=0` +
+    `&disablekb=1` +
+    `&fs=0` +
+    `&rel=0` +
+    `&playsinline=1` +
+    `&iv_load_policy=3`;
+---
+
+<section
+    data-hero-scroll
+    class="
+        relative
+        h-[185svh]
+        w-full
+        bg-white
+        motion-reduce:h-auto
+    "
+>
+
+    <div
+        data-hero-stage
+        class="
+            sticky
+            top-0
+            h-svh
+            w-full
+            overflow-hidden
+            bg-white
+            motion-reduce:relative
+            motion-reduce:h-auto
+            motion-reduce:min-h-screen
+            motion-reduce:overflow-visible
+        "
+    >
+        <div
+            class="
+                relative
+                z-20
+                mx-auto
+                h-full
+                max-w-7xl
+                px-4
+                pt-10
+                lg:px-8
+                lg:pt-[8vh]
+            "
+        >
+            <div
+                data-hero-copy
+                class="
+                    relative
+                    z-20
+                    max-w-[990px]
+                    will-change-[transform,opacity]
+                "
+            >
+                <!-- Title -->
+                <h1
+                    class="
+                        font-clash
+                        text-[40px]
+                        font-bold
+                        leading-[0.93]
+                        tracking-[-0.02em]
+                        text-black
+                        md:text-[58px]
+                        lg:text-[70px]
+                    "
+                >
+                    {hero?.title}
+                </h1>
+
+                <!-- Gradient Subtitle -->
+                <h2
+                    class="
+                        mt-2
+                        bg-gradient-to-r
+                        from-[#FEC053]
+                        via-[#F2203E]
+                        to-[#5342D6]
+                        bg-clip-text
+                        font-clash
+                        text-[40px]
+                        font-semibold
+                        leading-[0.93]
+                        tracking-[-0.02em]
+                        text-transparent
+                        md:text-[58px]
+                        lg:text-[70px]
+                    "
+                >
+                    {hero?.subtitle}
+                </h2>
+
+                <!-- Description -->
+                <h3
+                    class="
+                        mt-2
+                        max-w-[950px]
+                        font-clash
+                        text-[40px]
+                        font-bold
+                        leading-[0.93]
+                        tracking-[-0.02em]
+                        text-black
+                        md:text-[58px]
+                        lg:text-[68px]
+                    "
+                >
+                    {hero?.description}
+                </h3>
+
+                <!-- CTA -->
+                <a
+                    href={hero?.buttonLink || "#studio"}
+                    class="
+                        group
+                        mt-7
+                        inline-flex
+                        items-center
+                        gap-3
+                        font-geist
+                        text-[18px]
+                        font-normal
+                        leading-none
+                        text-black
+                        lg:mt-14
+                        lg:gap-4
+                        lg:text-[28px]
+                    "
+                >
+                    <span>
+                        {hero?.buttonText}
+                    </span>
+
+                    <Icon
+                        name={hero?.buttonIcon || "mdi:arrow-down"}
+                        class="
+                            h-6
+                            w-6
+                            shrink-0
+                            transition-transform
+                            duration-300
+                            ease-out
+                            group-hover:translate-y-1
+                            lg:h-8
+                            lg:w-8
+                        "
+                    />
+                </a>
+            </div>
+        </div>
+
+        <div
+            data-hero-media
+            class="
+                absolute
+                z-10
+                overflow-hidden
+                bg-black
+                shadow-[0_24px_70px_rgba(15,15,17,0.14)]
+                will-change-[left,top,width,height,border-radius]
+            "
+        >
+            <div
+                class="
+                    pointer-events-none
+                    absolute
+                    inset-0
+                    overflow-hidden
+                    bg-black
+                "
+            >
+                <iframe
+                    src={youtubeSrc}
+                    title="Hero background video"
+                    tabindex="-1"
+                    aria-hidden="true"
+                    allow="autoplay; encrypted-media"
+                    class="
+                        pointer-events-none
+                        absolute
+                        left-1/2
+                        top-1/2
+                        h-[56.25vw]
+                        min-h-[30%]
+                        w-[177.77778vh]
+                        min-w-[110%]
+                        -translate-x-1/2
+                        -translate-y-1/2
+                        scale-[1.04]
+                        border-0
+                    "
+                ></iframe>
+            </div>
+
+            <div
+                aria-hidden="true"
+                class="
+                    pointer-events-none
+                    absolute
+                    inset-0
+                    z-10
+                    bg-black/[0.02]
+                "
+            ></div>
+        </div>
+    </div>
+</section>
+
+<script>
+    const clamp = (
+        value: number,
+        min = 0,
+        max = 1
+    ) => Math.min(Math.max(value, min), max);
+
+    const easeOutCubic = (value: number) => {
+        return 1 - Math.pow(1 - value, 3);
+    };
+
+    // Keep the initial video card in the same ratio as the original hero image.
+    const heroMediaRatio = 207 / 378;
+
+    const initHeroScroll = () => {
+        const section =
+            document.querySelector<HTMLElement>(
+                "[data-hero-scroll]"
+            );
+
+        if (!section) return;
+        if (
+            section.dataset.heroInitialized ===
+            "true"
+        ) {
+            return;
+        }
+
+        section.dataset.heroInitialized = "true";
+
+        const media =
+            section.querySelector<HTMLElement>(
+                "[data-hero-media]"
+            );
+
+        const copy =
+            section.querySelector<HTMLElement>(
+                "[data-hero-copy]"
+            );
+
+        if (!media || !copy) return;
+
+        let animationFrame = 0;
+
+        const updateHero = () => {
+            animationFrame = 0;
+            const reduceMotion =
+                window.matchMedia(
+                    "(prefers-reduced-motion: reduce)"
+                ).matches;
+
+            if (reduceMotion) {
+                copy.style.opacity = "1";
+                copy.style.transform = "none";
+
+                media.style.position = "relative";
+                media.style.left = "auto";
+                media.style.top = "auto";
+                media.style.width = "calc(100% - 32px)";
+                media.style.height = "400px";
+                media.style.margin = "40px 16px 0";
+                media.style.transform = "none";
+                media.style.borderRadius = "12px";
+
+                return;
+            }
+            const viewportWidth =
+                window.innerWidth;
+
+            const viewportHeight =
+                window.innerHeight;
+
+            const sectionRect =
+                section.getBoundingClientRect();
+
+            const scrollDistance =
+                Math.max(
+                    section.offsetHeight -
+                        viewportHeight,
+                    1
+                );
+
+            const progress = clamp(
+                -sectionRect.top /
+                    scrollDistance
+            );
+
+            const revealProgress =
+                clamp(progress / 0.80);
+
+            const reveal =
+                easeOutCubic(
+                    revealProgress
+                );
+
+            const isMobile =
+                viewportWidth < 640;
+
+            const isTablet =
+                viewportWidth >= 640 &&
+                viewportWidth < 1024;
+
+            let startWidth = 480;
+            let startHeight = 307;
+            let startLeft = 0;
+            let startCenterY =
+                viewportHeight * 0.64;
+
+            if (isMobile) {
+                startWidth =
+                    Math.max(
+                        viewportWidth - 32,
+                        280
+                    );
+
+                startHeight = startWidth * heroMediaRatio;
+
+                startLeft = 16;
+                startCenterY =
+                    viewportHeight -
+                    startHeight / 2 -
+                    18;
+            }
+            else if (isTablet) {
+                startWidth =
+                    Math.min(
+                        viewportWidth * 0.47,
+                        520
+                    );
+
+                startHeight = startWidth * heroMediaRatio;
+
+                startLeft =
+                    viewportWidth -
+                    startWidth -
+                    32;
+
+                startCenterY =
+                    viewportHeight * 0.69;
+            }
+
+            else {
+                /*
+                 * Same max-w-7xl style alignment
+                 */
+                const containerWidth =
+                    Math.min(
+                        viewportWidth - 64,
+                        1280
+                    );
+
+                const containerLeft =
+                    (
+                        viewportWidth -
+                        containerWidth
+                    ) / 2;
+
+                const containerRight =
+                    containerLeft +
+                    containerWidth;
+
+                startLeft =
+                    containerRight -
+                    startWidth;
+
+                startCenterY =
+                    viewportHeight * 0.64;
+            }
+
+            const finalWidth =
+                viewportWidth;
+
+            const finalHeight =
+                viewportHeight;
+
+            const finalLeft = 0;
+
+            const finalCenterY =
+                viewportHeight / 2;
+
+            const currentWidth =
+                startWidth +
+                (
+                    finalWidth -
+                    startWidth
+                ) *
+                    reveal;
+            const currentHeight =
+                startHeight +
+                (
+                    finalHeight -
+                    startHeight
+                ) *
+                    reveal;
+            const currentLeft =
+                startLeft +
+                (
+                    finalLeft -
+                    startLeft
+                ) *
+                    reveal;
+            const currentCenterY =
+                startCenterY +
+                (
+                    finalCenterY -
+                    startCenterY
+                ) *
+                    reveal;
+            const startRadius =
+                isMobile
+                    ? 10
+                    : 14;
+
+            const currentRadius =
+                startRadius *
+                (1 - reveal);
+
+            media.style.left =
+                `${currentLeft}px`;
+
+            media.style.top =
+                `${currentCenterY}px`;
+
+            media.style.width =
+                `${currentWidth}px`;
+
+            media.style.height =
+                `${currentHeight}px`;
+
+            media.style.borderRadius =
+                `${currentRadius}px`;
+
+            media.style.transform =
+                "translate3d(0, -50%, 0)";
+            // Move the hero copy up and out of the video as the reveal begins.
+            const copyFade =
+                clamp(
+                    progress / 0.32
+                );
+
+            const copyTravel =
+                Math.min(
+                    viewportHeight * 0.85,
+                    620
+                );
+
+            copy.style.opacity =
+                `${1 - copyFade}`;
+
+            copy.style.transform =
+                `translate3d(
+                    0,
+                    ${-copyTravel * reveal}px,
+                    0
+                )`;
+
+            copy.style.pointerEvents =
+                copyFade > 0.8
+                    ? "none"
+                    : "auto";
+        };
+
+        const requestUpdate = () => {
+            if (animationFrame) return;
+
+            animationFrame =
+                requestAnimationFrame(
+                    updateHero
+                );
+        };
+        window.addEventListener(
+            "scroll",
+            requestUpdate,
+            {
+                passive: true,
+            }
+        );
+
+        window.addEventListener(
+            "resize",
+            requestUpdate,
+            {
+                passive: true,
+            }
+        );
+
+        requestUpdate();
+    };
+
+    initHeroScroll();
+
+    document.addEventListener(
+        "astro:page-load",
+        initHeroScroll
+    );
+</script>

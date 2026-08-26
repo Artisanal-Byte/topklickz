@@ -1,0 +1,205 @@
+---
+import { Icon } from "astro-icon/components";
+
+interface CTAProps {
+  title: string;
+  highlight: string;
+  description: string;
+  button: {
+    text: string;
+    link: string;
+    icon: string;
+  };
+}
+
+const { cta } = Astro.props as {
+  cta: CTAProps;
+};
+---
+
+{
+  cta && (
+    <section
+      class="
+        relative
+        w-full
+        overflow-hidden
+        border-b
+        border-white/60
+        bg-black
+        py-16
+        sm:py-20
+        lg:py-24
+      "
+    >
+      <div
+        class="
+          mx-auto
+          flex
+          w-full
+          max-w-5xl
+          flex-col
+          items-center
+          px-5
+          text-center
+          sm:px-6
+          lg:px-8
+        "
+      >
+        <!-- Heading -->
+        <h2
+          class="
+            font-clash
+            text-[34px]
+            font-semibold
+            uppercase
+            leading-[1.08]
+            tracking-[-0.02em]
+            text-white
+            sm:text-[42px]
+            lg:text-[50px]
+          "
+        >
+          <span class="block">
+            {cta.title}
+          </span>
+
+          <span
+            class="
+              block
+              bg-gradient-to-r
+              from-red-500
+              via-pink-500
+              to-purple-600
+              bg-clip-text
+              text-transparent
+            "
+          >
+            {cta.highlight}
+          </span>
+        </h2>
+
+        <!-- Description -->
+        <p
+          class="
+            mx-auto
+            mt-4
+            max-w-2xl
+            font-geist
+            text-[15px]
+            font-light
+            leading-[1.45]
+            text-white/70
+            sm:text-[16px]
+            lg:text-[18px]
+          "
+        >
+          {cta.description}
+        </p>
+
+        <!-- CTA Button -->
+      <a
+	href={cta.button.link}
+	class="
+		group
+		relative
+		mt-10
+		inline-flex
+		items-center
+		justify-center
+		overflow-hidden
+		rounded-full
+		border
+		border-white/50
+		bg-white/5
+		px-10
+		py-4
+		text-white
+		focus-visible:outline-none
+		focus-visible:ring-2
+		focus-visible:ring-white
+		focus-visible:ring-offset-2
+		focus-visible:ring-offset-black
+		lg:px-8
+	"
+>
+	<!-- Gradient Circle / Hover Background -->
+	<span
+		aria-hidden="true"
+		class="
+			absolute
+			left-[10px]
+			top-1/2
+			h-8
+			w-8
+			-translate-y-1/2
+			rounded-full
+			bg-[linear-gradient(135deg,#FEC053_0%,#F2203E_33%,#B729A8_65%,#5342D6_100%)]
+			shadow-[0_0_18px_rgba(236,72,153,0.35)]
+
+			transition-[left,top,width,height,transform,border-radius]
+			duration-500
+			ease-[cubic-bezier(0.65,0,0.35,1)]
+
+			group-hover:left-0
+			group-hover:top-0
+			group-hover:h-full
+			group-hover:w-full
+			group-hover:translate-y-0
+			group-hover:rounded-full
+		"
+	></span>
+
+	<!-- Content -->
+	<span
+		class="
+			relative
+			z-10
+			flex
+			items-center
+			justify-center
+			gap-3
+			translate-x-[14px]
+
+			transition-transform
+			duration-500
+			ease-[cubic-bezier(0.65,0,0.35,1)]
+
+			group-hover:translate-x-0
+		"
+	>
+		<!-- Button Text -->
+		<span
+			class="
+				whitespace-nowrap
+				font-geist
+				text-[13px]
+				font-semibold
+				uppercase
+				leading-none
+				sm:text-[14px]
+			"
+		>
+			{cta.button.text}
+		</span>
+
+		<!-- Arrow -->
+		<Icon
+			name={cta.button.icon}
+			class="
+				h-4
+				w-4
+				shrink-0
+				transition-transform
+				duration-300
+				group-hover:translate-x-1
+				sm:h-5
+				sm:w-5
+			"
+		/>
+	</span>
+</a>
+      </div>
+    </section>
+  )
+}

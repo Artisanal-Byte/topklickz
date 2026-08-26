@@ -1,0 +1,24 @@
+---
+import Header from "../components/Header.astro";
+import Layout from "../layouts/Layout.astro";
+import BlogHero from "../components/blog/BlogHero.astro";
+import { createReader } from "@keystatic/core/reader";
+import config from "../../keystatic.config";
+import Footer from "../components/Footer.astro";
+import BlogCard from "../components/blog/BlogCard.astro";
+import LatestBlog from "../components/blog/LatestBlog.astro";
+import Newsletter from "../components/blog/Newsletter.astro";
+import AboutCtc from "../components/AboutCtc.astro";
+const reader = createReader(process.cwd(), config);
+const site = await reader.singletons.site.read();
+---
+
+<Layout>
+    <Header navbar={site?.navbar} />
+    <BlogHero />
+    <BlogCard />
+    <LatestBlog />
+    <Newsletter />
+    <AboutCtc />
+    <Footer footer={site?.footer} />
+</Layout>

@@ -1,0 +1,198 @@
+---
+const clientLogos = [
+	{
+		name: "Artisanal Byte",
+		image: "/img/ab.png",
+	},
+	{
+		name: "Neujin Solutions",
+		image: "/img/neujin.png",
+	},
+	{
+		name: "NeuLearn",
+		image: "/img/neulearn.png",
+	},
+	{
+		name: "Mahaa Rajaa",
+		image: "/img/mh.png",
+	},
+	{
+		name: "Veer Prabhu Developers",
+		image: "/img/veer.png",
+	},
+	{
+		name: "Indian Pickleball Association",
+		image: "/img/ipl.png",
+	},
+	{
+		name: "Cafe & Kitchen",
+		image: "/img/Vector.png",
+	},
+	{
+		name: "Sawaca Enterprises",
+		image: "/img/sawaca.png",
+	},
+	{
+		name: "Pickleball",
+		image: "/img/bb.png",
+	},
+	{
+		name: "Afro House",
+		image: "/img/Layer_1 2.png",
+	},
+	{
+		name: "Anand Niketan",
+		image: "/img/an.png",
+	},
+	{
+		name: "Globo Farm",
+		image: "/img/gf.png",
+	},
+];
+---
+
+<section class="w-full bg-white">
+	<div
+		class="
+			mx-auto
+			max-w-7xl
+			px-4
+			py-8
+			lg:px-8
+			lg:py-20
+		"
+	>
+		<!-- Top Content -->
+		<div
+			class="
+				grid
+				grid-cols-1
+				gap-8
+				lg:grid-cols-[260px_1px_1fr]
+				lg:items-center
+				lg:gap-7
+			"
+		>
+			<!-- Heading -->
+			<div>
+				<h2
+					class="
+						m-0
+						font-clash-display
+						lg:text-[28px]
+						text-[25px]
+						font-semibold
+						uppercase
+						leading-[33px]
+						tracking-[1px]
+						text-[#090909]
+					"
+				>
+					CLIENT<br />
+					PERSPECTIVES.
+				</h2>
+
+				<div
+					class="
+						mt-3
+						h-[3px]
+						w-[126px]
+						bg-[linear-gradient(90deg,#FEC053_0%,#F2203E_33%,#B729A8_65%,#5342D6_100%)]
+					"
+				></div>
+			</div>
+
+			<!-- Vertical Divider -->
+			<div
+				class="
+					hidden
+					h-[62px]
+					w-px
+					bg-[#CFCFCF]
+					lg:block
+				"
+			></div>
+
+			<!-- Description -->
+			<div class="lg:pl-0">
+				<p
+					class="
+						m-0
+						font-satoshi
+						text-[14px]
+						font-normal
+						leading-[20px]
+						tracking-[1px]
+						text-[#6B6962]
+					"
+				>
+					The strongest partnerships are built on trust, transparency
+					and shared ambition.<br class="hidden md:block" />
+					We work closely with founders, teams and organizations to
+					create brands, experiences<br class="hidden md:block" />
+					and systems that deliver meaningful impact.
+				</p>
+			</div>
+		</div>
+
+		<!-- Logo Area -->
+		<div
+			class="
+				mt-12
+				w-full
+				bg-black
+				px-6
+				py-10
+				sm:px-8
+				lg:mt-12
+				lg:px-12
+				lg:py-9
+			"
+		>
+			<div
+				class="
+					grid
+					items-center
+					gap-x-8
+					gap-y-10
+					grid-cols-1
+					md:grid-cols-4
+					lg:grid-cols-6
+					lg:gap-x-8
+					lg:gap-y-9
+				"
+			>
+				{
+					clientLogos.map((client) => (
+						<div
+							class="
+								flex
+								min-h-[58px]
+								items-center
+								justify-center
+							"
+						>
+							<img
+								src={client.image}
+								alt={client.name}
+								loading="lazy"
+								class="
+									max-h-[54px]
+									w-auto
+									max-w-[145px]
+									object-contain
+									brightness-0
+									invert
+									opacity-80
+									transition-all
+									duration-300
+									hover:opacity-100
+								"
+							/>
+						</div>
+					))
+				}
+			</div>
+		</div>
+	</div>
+</section>

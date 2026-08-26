@@ -1,0 +1,116 @@
+---
+interface Brand {
+	name: string;
+	image: string;
+}
+
+const brands: Brand[] = [
+	{
+		name: "Nymora",
+		image: "/img/bb.png",
+	},
+	{
+		name: "Afro House",
+		image: "/img/ab.png",
+	},
+	{
+		name: "Veer Prabhu",
+		image: "/img/gf.png",
+	},
+	{
+		name: "Brand 04",
+		image: "/img/Layer_1 2.png",
+	},
+	{
+		name: "Sawaca",
+		image: "/img/neujin.png",
+	},
+	{
+		name: "Brand 06",
+		image: "/img/neulearn.png",
+	},
+	{
+		name: "Artisanal Byte",
+		image: "/img/veer.png",
+	},
+	{
+		name: "Brand 08",
+		image: "/img/Vector.png",
+	},
+	
+];
+---
+
+<section class="w-full bg-black">
+	<div
+		class="mx-auto max-w-4xl px-4 lg:px-8 lg:py-10 py-10"
+	>
+		<!-- Heading -->
+		<h2
+			class="
+				text-center
+				font-clash
+				text-[18px]
+				font-normal
+				leading-none
+				tracking-[-0.02em]
+				text-white
+				lg:text-[28px]
+			"
+		>
+			Brands we've helped
+		</h2>
+
+		<!-- Logos -->
+		<div
+			class="
+				mt-[30px]
+				grid
+				grid-cols-2
+				items-center
+				gap-x-8
+				gap-y-8
+				sm:grid-cols-3
+				md:grid-cols-5
+				lg:mt-[34px]
+				lg:grid-cols-8
+				lg:gap-x-[30px]
+			"
+		>
+			{
+				brands.map((brand) => (
+					<div
+						class="
+							group
+							flex
+							h-[42px]
+							w-full
+							items-center
+							justify-center
+						"
+					>
+						<img
+							src={brand.image}
+							alt={brand.name}
+							loading="lazy"
+							class="
+								max-h-[34px]
+								max-w-[90px]
+								object-contain
+								opacity-90
+								transition-all
+								duration-300
+
+								group-hover:opacity-100
+								group-hover:scale-105
+
+								lg:max-h-[31px]
+								lg:max-w-[92px]
+							"
+						/>
+					</div>
+				))
+			}
+		</div>
+	</div>
+</section>
