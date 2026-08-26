@@ -27,53 +27,69 @@ const items = faq.items.map((item, index) => ({
       {
         items.map((faq, index) => (
           <>
-            <details class="group py-6" open={faq.isDefaultOpen} data-faq-item>
-              <summary
+            <div
+              class="py-6"
+              data-faq-item
+              data-open={faq.isDefaultOpen ? "true" : "false"}
+            >
+              <button
+                type="button"
                 class="
-                    flex flex-wrap
+                    flex w-full flex-wrap
                     cursor-pointer
-                    list-none
                     items-center
                     justify-between
                     gap-4
+                    text-left
                     font-clash
                     text-[25px]
                     font-medium
                     leading-[28.8px]
                     tracking-normal
                   "
+                aria-expanded={faq.isDefaultOpen ? "true" : "false"}
+                data-faq-trigger
               >
                 <span
                   class="
 		font-medium
-		transition-all
-		duration-300
-		group-open:font-bold text-[20px]
+		text-[20px]
 	"
                 >
                   {faq.question}
                 </span>
 
-                <span class="text-[24px] transition group-open:rotate-45">
+                <span
+                  class="text-[24px] transition-transform duration-300"
+                  data-faq-icon
+                >
                   +
                 </span>
-              </summary>
+              </button>
 
-              <p
-                class="
-                    mt-5
-                    max-w-3xl
-                    font-geist
-                    text-base
-                    leading-[28.8px]
-                    tracking-normal
-                    text-[#010101]
-                    sm:text-[18px]
-                  "
+              <div
+                class="faq-panel"
+                aria-hidden={faq.isDefaultOpen ? "false" : "true"}
+                data-faq-panel
               >
-                {faq.answer}
-              </p>
-            </details>
+                <div class="overflow-hidden">
+                  <p
+                    class="
+                        pt-5
+                        max-w-3xl
+                        font-geist
+                        text-base
+                        leading-[28.8px]
+                        tracking-normal
+                        text-[#010101]
+                        sm:text-[18px]
+                      "
+                  >
+                    {faq.answer}
+                  </p>
+                </div>
+              </div>
+            </div>
 
             {index < items.length - 1 && (
               <div class="h-px w-full bg-gradient-to-r from-[#FEC053] via-[#F2203E] via-50% to-[#5342D6] opacity-90" />
@@ -90,18 +106,67 @@ const items = faq.items.map((item, index) => ({
   </div>
 </section>
 
+<style>
+  .faq-panel {
+    display: grid;
+    grid-template-rows: 0fr;
+    opacity: 0;
+    transition:
+      grid-template-rows 420ms cubic-bezier(0.22, 1, 0.36, 1),
+      opacity 220ms ease;
+  }
+
+  [data-faq-item][data-open="true"] .faq-panel {
+    grid-template-rows: 1fr;
+    opacity: 1;
+  }
+
+  [data-faq-item][data-open="true"] [data-faq-trigger] span:first-child {
+    font-weight: 700;
+  }
+
+  [data-faq-item][data-open="true"] [data-faq-icon] {
+    transform: rotate(45deg);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .faq-panel {
+      transition: none;
+    }
+  }
+</style>
+
 <script>
-  const accordionItems = document.querySelectorAll("[data-faq-item]");
+  const initFaqAccordion = () => {
+    const accordionItems = Array.from(
+      document.querySelectorAll<HTMLElement>("[data-faq-item]")
+    );
 
-  accordionItems.forEach((item) => {
-    item.addEventListener("toggle", () => {
-      if (!item.open) return;
+    accordionItems.forEach((item) => {
+      if (item.dataset.faqReady === "true") return;
+      item.dataset.faqReady = "true";
 
-      accordionItems.forEach((otherItem) => {
-        if (otherItem !== item) {
-          otherItem.open = false;
-        }
+      const trigger = item.querySelector<HTMLButtonElement>("[data-faq-trigger]");
+      const panel = item.querySelector<HTMLElement>("[data-faq-panel]");
+      const icon = item.querySelector<HTMLElement>("[data-faq-icon]");
+
+      trigger?.addEventListener("click", () => {
+        const shouldOpen = item.dataset.open !== "true";
+
+        accordionItems.forEach((otherItem) => {
+          const isOpen = otherItem === item && shouldOpen;
+          otherItem.dataset.open = String(isOpen);
+          otherItem
+            .querySelector<HTMLButtonElement>("[data-faq-trigger]")
+            ?.setAttribute("aria-expanded", String(isOpen));
+          otherItem
+            .querySelector<HTMLElement>("[data-faq-panel]")
+            ?.setAttribute("aria-hidden", String(!isOpen));
+        });
       });
     });
-  });
+  };
+
+  initFaqAccordion();
+  document.addEventListener("astro:page-load", initFaqAccordion);
 </script>
