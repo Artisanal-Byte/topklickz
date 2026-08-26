@@ -39,7 +39,7 @@ const {
 	const uppercaseCharacters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	const lowercaseCharacters = "abcdefghijklmnopqrstuvwxyz";
 	const gradientTextSelector =
-		'.gradient-text, [class~="bg-clip-text"][class~="text-transparent"]';
+		'.gradient-text:not(.gradient-text-static), [class~="bg-clip-text"][class~="text-transparent"]:not(.gradient-text-static)';
 
 	const scrambleGradientText = (element: HTMLElement) => {
 		const originalText = element.textContent || "";
