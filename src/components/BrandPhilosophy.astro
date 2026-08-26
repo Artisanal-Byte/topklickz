@@ -154,6 +154,7 @@
 
                 <!-- Hand Drawn Arrow -->
                 <div
+                    data-brand-arrow
                     class="pointer-events-none
 			absolute
 			left-[-130px]
@@ -162,8 +163,12 @@
 			h-[220px]
 			w-[220px]
 			lg:block"
-                >
-                    <img src="/img/about-icon.png" />
+            >
+                    <img
+                        src="/img/about-icon.png"
+                        alt=""
+                        aria-hidden="true"
+                    />
                 </div>
 
                 <!-- Handwritten Note -->
@@ -206,3 +211,66 @@
         </div>
     </div>
 </section>
+
+<style>
+    [data-brand-arrow][data-icon-animation="ready"] img {
+        clip-path: inset(0 0 100% 0);
+        opacity: 0;
+        transition:
+            clip-path 1800ms cubic-bezier(0.22, 1, 0.36, 1),
+            opacity 420ms ease;
+    }
+
+    [data-brand-arrow][data-icon-animation="ready"].is-visible img {
+        clip-path: inset(0 0 0 0);
+        opacity: 1;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        [data-brand-arrow][data-icon-animation="ready"] img,
+        [data-brand-arrow][data-icon-animation="ready"].is-visible img {
+            clip-path: inset(0 0 0 0);
+            opacity: 1;
+            transition: none;
+        }
+    }
+</style>
+
+<script>
+    const initBrandArrowAnimation = () => {
+        const arrow = document.querySelector<HTMLElement>("[data-brand-arrow]");
+        if (!arrow || arrow.dataset.animationReady === "true") return;
+
+        arrow.dataset.animationReady = "true";
+        arrow.dataset.iconAnimation = "ready";
+
+        const replayArrow = () => {
+            arrow.classList.remove("is-visible");
+            void arrow.offsetWidth;
+            requestAnimationFrame(() => arrow.classList.add("is-visible"));
+        };
+
+        if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+            arrow.classList.add("is-visible");
+            return;
+        }
+
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (!entry) return;
+
+                if (entry.isIntersecting) {
+                    replayArrow();
+                } else {
+                    arrow.classList.remove("is-visible");
+                }
+            },
+            { threshold: 0.25 }
+        );
+
+        observer.observe(arrow);
+    };
+
+    initBrandArrowAnimation();
+    document.addEventListener("astro:page-load", initBrandArrowAnimation);
+</script>
