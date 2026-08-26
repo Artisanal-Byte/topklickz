@@ -1,0 +1,100 @@
+import { c as createComponent } from './astro-component_DjyWzC9V.mjs';
+import 'piccolore';
+import { m as maybeRenderHead, d as renderTemplate } from './server_CU52pDLP.mjs';
+import 'clsx';
+
+const $$AboutCtc = createComponent(($$result, $$props, $$slots) => {
+  return renderTemplate`${maybeRenderHead()}<section class="w-full bg-black"> <div class="mx-auto
+			grid
+			max-w-7xl
+			grid-cols-1
+			items-center
+			text-center
+			lg:text-left
+			gap-5
+			px-4
+			pt-18
+			md:px-8
+			lg:grid-cols-[1.1fr_0.9fr_auto]
+			lg:gap-16
+			lg:py-14"> <!-- Left Heading --> <div> <h2 class="m-0
+					font-clash-display
+					lg:text-[48px]
+					text-[30px]
+					leading-[1.20]
+					font-semibold
+					uppercase
+					lg:leading-[0.98]
+					tracking-[-0.7px]
+					text-white">
+LET'S CREATE<br>
+SOMETHING<br> <span class="bg-[linear-gradient(90deg,#F2203E_0%,#D5257D_50%,#8A35D5_100%)]
+						bg-clip-text
+						text-transparent">
+MEMORABLE.
+</span> </h2> </div> <!-- Center Description --> <div> <p class="m-0
+					font-satoshi
+					text-[12px]
+					font-normal
+					leading-[20px]
+					tracking-[0px]
+					text-white/55">
+Whether you're launching something new, evolving an existing
+				brand or building a stronger digital presence, we'd love to hear
+				your story.
+</p> </div> <!-- CTA Button --> <div class="lg:justify-self-end"> <a href="/contact" class="group
+		relative
+		inline-flex
+		items-center
+		justify-center
+		overflow-hidden
+		rounded-full
+		border
+		border-white
+		px-8
+		py-4
+		pr-5
+		font-satoshi
+		text-[13px]
+		font-medium
+		uppercase
+		leading-none
+		tracking-[0px]
+		text-white
+		transition-[border-color]
+		duration-300"> <!-- Gradient Circle --> <span aria-hidden="true" class="absolute
+			left-[10px]
+			top-1/2
+			h-[34px]
+			w-[34px]
+			-translate-y-1/2
+			rounded-full
+			bg-[linear-gradient(135deg,#FEC053_0%,#F2203E_33%,#B729A8_65%,#5342D6_100%)]
+			transition-[left,top,width,height,transform,border-radius]
+			duration-500
+			ease-[cubic-bezier(0.65,0,0.35,1)]
+			group-hover:left-0
+			group-hover:top-0
+			group-hover:h-full
+			group-hover:w-full
+			group-hover:translate-y-0
+			group-hover:rounded-full"></span> <!-- Content --> <span class="relative
+			z-10
+			flex
+			items-center
+			justify-center
+			gap-3
+			translate-x-[14px]
+			transition-transform
+			duration-500
+			ease-[cubic-bezier(0.65,0,0.35,1)]
+			group-hover:translate-x-0"> <span class="whitespace-nowrap ml-3"> START A PROJECT </span> <span class="text-[16px]
+				leading-none
+				transition-transform
+				duration-300
+				group-hover:translate-x-1 mr-4">
+→
+</span> </span> </a> </div> </div> </section>`;
+}, "D:/D Drive/artisanal-byte/topklickz/src/components/AboutCtc.astro", void 0);
+
+export { $$AboutCtc as $ };
