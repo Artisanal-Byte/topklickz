@@ -22,17 +22,120 @@ const site = await reader.singletons.site.read();
 
 <Layout>
     <Header navbar={site?.navbar} />
-    <PortfolioInnerHero />
+    <section
+      data-portfolio-context-scroll
+      class="relative h-[185svh] w-full bg-white motion-reduce:h-auto"
+    >
+      <div
+        data-portfolio-context-stage
+        class="sticky top-0 h-svh w-full overflow-hidden bg-white motion-reduce:relative motion-reduce:h-auto motion-reduce:overflow-visible"
+      >
+        <div
+          data-portfolio-context-hero
+          class="absolute inset-0 z-10 overflow-y-auto bg-white will-change-[transform,opacity]"
+        >
+          <PortfolioInnerHero />
+        </div>
+
+        <div
+          data-portfolio-context-layer
+          class="pointer-events-none absolute inset-0 z-20 overflow-hidden bg-black opacity-0 will-change-[transform,opacity]"
+          aria-hidden="true"
+        >
+          <PortfolioInnerContext />
+        </div>
+      </div>
+    </section>
     <PortfolioInnerImage />
     <PortfolioInnerOverview />
     <PortfolioInnerImageSection />
     <PortfolioInnerProcess />
     <PortfolioInnerThinking />
     <PortfolioInnerWrok />
-    <PortfolioInnerContext />
+    <!-- <PortfolioInnerContext /> -->
     <PortfolioInnerKeyResults />
     <PortfolioInnerTestimonial />
     <NextProject />
     <Cta cta={site?.cta} />
     <Footer footer={site?.footer} />
 </Layout>
+
+<script>
+  const clamp = (value: number, min = 0, max = 1) =>
+    Math.min(Math.max(value, min), max);
+
+  const easeOutCubic = (value: number) => 1 - Math.pow(1 - value, 3);
+
+  const initPortfolioContextScroll = () => {
+    const section = document.querySelector<HTMLElement>("[data-portfolio-context-scroll]");
+    const heroLayer = document.querySelector<HTMLElement>("[data-portfolio-context-hero]");
+    const contextLayer = document.querySelector<HTMLElement>("[data-portfolio-context-layer]");
+
+    if (!section || !heroLayer || !contextLayer || section.dataset.initialized === "true") return;
+
+    section.dataset.initialized = "true";
+    let animationFrame = 0;
+
+    const updatePortfolioContextScroll = () => {
+      animationFrame = 0;
+
+      const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+      if (reduceMotion) {
+        heroLayer.style.transform = "none";
+        heroLayer.style.opacity = "1";
+        contextLayer.style.transform = "none";
+        contextLayer.style.opacity = "1";
+        contextLayer.style.pointerEvents = "auto";
+        contextLayer.setAttribute("aria-hidden", "false");
+        return;
+      }
+
+      const sectionRect = section.getBoundingClientRect();
+      const scrollDistance = Math.max(section.offsetHeight - window.innerHeight, 1);
+      const progress = clamp(-sectionRect.top / scrollDistance);
+      const reveal = easeOutCubic(clamp((progress - 0.08) / 0.72));
+
+      contextLayer.style.transform = `translate3d(0, ${(1 - reveal) * 100}%, 0)`;
+      contextLayer.style.opacity = `${clamp(reveal * 1.4)}`;
+      contextLayer.setAttribute("aria-hidden", reveal > 0.15 ? "false" : "true");
+
+      heroLayer.style.transform = `translate3d(0, ${-reveal * 38}px, 0) scale(${1 - reveal * 0.025})`;
+      heroLayer.style.opacity = `${1 - reveal * 0.3}`;
+    };
+
+    const requestPortfolioContextUpdate = () => {
+      if (animationFrame) return;
+      animationFrame = requestAnimationFrame(updatePortfolioContextScroll);
+    };
+
+    window.addEventListener("scroll", requestPortfolioContextUpdate, { passive: true });
+    window.addEventListener("resize", requestPortfolioContextUpdate, { passive: true });
+    requestPortfolioContextUpdate();
+  };
+
+  initPortfolioContextScroll();
+  document.addEventListener("astro:page-load", initPortfolioContextScroll);
+</script>
+
+<style>
+  @media (prefers-reduced-motion: reduce) {
+    [data-portfolio-context-stage] {
+      height: auto;
+      overflow: visible;
+    }
+
+    [data-portfolio-context-hero],
+    [data-portfolio-context-layer] {
+      position: relative;
+      inset: auto;
+      transform: none !important;
+      opacity: 1 !important;
+      overflow: visible;
+    }
+
+    [data-portfolio-context-layer] {
+      pointer-events: auto;
+    }
+  }
+</style>

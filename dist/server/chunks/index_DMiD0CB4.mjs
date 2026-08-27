@@ -1,11 +1,11 @@
-import { c as createComponent } from './astro-component_CrKxconC.mjs';
+import { c as createComponent } from './astro-component_JDSnf13e.mjs';
 import 'piccolore';
-import { m as maybeRenderHead, c as addAttribute, e as renderComponent, d as renderTemplate, F as Fragment } from './server_CXC2t5JS.mjs';
-import { r as renderScript, $ as $$Layout, a as $$Header, b as $$Footer } from './Footer_CRmw9EuL.mjs';
-import { a as $$Icon, $ as $$Cta } from './Cta_CdTNTnwA.mjs';
+import { m as maybeRenderHead, c as addAttribute, e as renderComponent, d as renderTemplate, F as Fragment } from './server_r20cRXJ1.mjs';
+import { r as renderScript, $ as $$Layout, a as $$Header, b as $$Footer } from './Footer_CNhL9zDA.mjs';
+import { a as $$Icon, $ as $$Cta } from './Cta_CoE8RaQg.mjs';
 import { createReader } from '@keystatic/core/reader';
 import { c as config } from './keystatic.config_Df-6VW00.mjs';
-import { $ as $$Image } from './_astro_assets_DTS-4MDI.mjs';
+import { $ as $$Image } from './_astro_assets_TtIEpgcp.mjs';
 
 const $$Hero = createComponent(($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$props, $$slots);
@@ -133,7 +133,7 @@ const $$Studio = createComponent(($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$props, $$slots);
   Astro2.self = $$Studio;
   const { studio } = Astro2.props;
-  return renderTemplate`${maybeRenderHead()}<section id="studio" class="bg-black py-12 lg:py-0"> <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"> <div class="rounded-sm px-0 py-0 lg:px-14 lg:py-8"> <!-- Top --> <div class="mb-8 sm:mb-10"> <span class="text-sm text-gray-400"> ${studio.sectionNumber}/${studio.sectionTitle} </span> </div> <!-- Heading --> <div class="mx-auto max-w-5xl text-center"> <h2 class="font-clash text-lg font-semibold leading-[114%] text-center text-white sm:text-2xl lg:text-[32px]"> ${studio.title} </h2> <p class="mx-auto mt-6 max-w-3xl font-clash text-base leading-[150%] text-center text-white/70 sm:mt-8 sm:text-lg lg:text-[20px]"> ${studio.description} </p> </div> <!-- Clients --> <div class="mt-12 overflow-hidden sm:mt-14"> <h3 class="mb-6 text-center text-xl font-medium text-white sm:mb-8 sm:text-2xl"> ${studio.clientTitle} </h3> <div class="relative mx-auto overflow-hidden max-w-2xl"> <div class="flex w-max animate-marquee gap-8 sm:gap-12"> <!-- First Set --> ${studio.clients.map((client) => renderTemplate`<div class="flex h-14 w-28 shrink-0 items-center justify-center sm:h-16 sm:w-30"> ${renderComponent($$result, "Image", $$Image, { "src": client.logo, "alt": client.alt, "width": 160, "height": 60, "class": "h-8 w-auto object-contain opacity-90 transition hover:opacity-100 sm:h-10" })} </div>`)} <!-- Duplicate Set --> ${studio.clients.map((client) => renderTemplate`<div class="flex h-14 w-36 shrink-0 items-center justify-center sm:h-16 sm:w-48"> ${renderComponent($$result, "Image", $$Image, { "src": client.logo, "alt": client.alt, "width": 160, "height": 60, "class": "h-8 w-auto object-contain opacity-90 transition hover:opacity-100 sm:h-10" })} </div>`)} </div> </div> </div> <!-- Button --> <div class="mt-8 flex justify-center sm:mt-10"> <a${addAttribute(studio?.buttonLink, "href")} class="gradient-expand-btn
+  return renderTemplate`${maybeRenderHead()}<section id="studio" class="bg-black py-12 lg:py-0"> <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"> <div class="rounded-sm px-0 py-0 lg:px-14 lg:py-8"> <!-- Top --> <div class="mb-8 sm:mb-10"> <span class="text-sm text-gray-400"> ${studio.sectionNumber}/${studio.sectionTitle} </span> </div> <!-- Heading --> <div class="mx-auto max-w-5xl text-center"> <h2 class="font-clash text-lg font-semibold leading-[114%] text-center text-white sm:text-2xl lg:text-[32px]"> ${studio.title} </h2> <p class="mx-auto mt-6 max-w-3xl font-clash text-base leading-[150%] text-center text-white/70 sm:mt-8 sm:text-lg lg:text-[20px]"> ${studio.description} </p> </div> <!-- Clients --> <div class="mt-12 overflow-hidden sm:mt-14"> <h3 class="mb-6 text-center text-xl font-medium text-white sm:mb-8 sm:text-2xl"> ${studio.clientTitle} </h3> <div class="relative mx-auto overflow-hidden max-w-4xl"> <div class="flex w-max animate-marquee gap-8 sm:gap-12"> <!-- First Set --> ${studio.clients.map((client) => renderTemplate`<div class="flex h-10 w-54 shrink-0 items-center justify-center sm:h-16 sm:w-30"> ${renderComponent($$result, "Image", $$Image, { "src": client.logo, "alt": client.alt, "width": 360, "height": 100, "class": "h-14 w-auto object-contain opacity-90 transition hover:opacity-100 sm:h-10" })} </div>`)} <!-- Duplicate Set --> ${studio.clients.map((client) => renderTemplate`<div class="flex h-14 w-36 shrink-0 items-center justify-center sm:h-16 sm:w-48"> ${renderComponent($$result, "Image", $$Image, { "src": client.logo, "alt": client.alt, "width": 260, "height": 100, "class": "h-8 w-auto object-contain opacity-90 transition hover:opacity-100 sm:h-10" })} </div>`)} </div> </div> </div> <!-- Button --> <div class="mt-8 flex justify-center mb-10"> <a${addAttribute(studio?.buttonLink, "href")} class="gradient-expand-btn
 			inline-flex
 
 			rounded-full

@@ -1,11 +1,11 @@
-import { c as createComponent } from './astro-component_CrKxconC.mjs';
+import { c as createComponent } from './astro-component_JDSnf13e.mjs';
 import 'piccolore';
-import { m as maybeRenderHead, c as addAttribute, d as renderTemplate, e as renderComponent } from './server_CXC2t5JS.mjs';
-import { $ as $$Layout, a as $$Header, b as $$Footer } from './Footer_CRmw9EuL.mjs';
+import { m as maybeRenderHead, c as addAttribute, d as renderTemplate, e as renderComponent } from './server_r20cRXJ1.mjs';
+import { $ as $$Layout, a as $$Header, b as $$Footer } from './Footer_CNhL9zDA.mjs';
 import { c as config } from './keystatic.config_Df-6VW00.mjs';
 import { createReader } from '@keystatic/core/reader';
 import 'clsx';
-import { $ as $$BrandPhilosophy } from './BrandPhilosophy_BvkBY8_W.mjs';
+import { $ as $$BrandPhilosophy } from './BrandPhilosophy_B28uSNMl.mjs';
 
 const $$BrandStrategyHero = createComponent(($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$props, $$slots);

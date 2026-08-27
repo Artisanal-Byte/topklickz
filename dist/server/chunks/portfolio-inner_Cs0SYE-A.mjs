@@ -1,11 +1,11 @@
-import { c as createComponent } from './astro-component_CrKxconC.mjs';
+import { c as createComponent } from './astro-component_JDSnf13e.mjs';
 import 'piccolore';
-import { m as maybeRenderHead, c as addAttribute, e as renderComponent, F as Fragment, d as renderTemplate } from './server_CXC2t5JS.mjs';
-import { $ as $$Layout, a as $$Header, b as $$Footer } from './Footer_CRmw9EuL.mjs';
+import { m as maybeRenderHead, c as addAttribute, e as renderComponent, F as Fragment, d as renderTemplate } from './server_r20cRXJ1.mjs';
+import { $ as $$Layout, r as renderScript, a as $$Header, b as $$Footer } from './Footer_CNhL9zDA.mjs';
 import { c as config } from './keystatic.config_Df-6VW00.mjs';
 import { createReader } from '@keystatic/core/reader';
 import 'clsx';
-import { $ as $$Cta } from './Cta_CdTNTnwA.mjs';
+import { $ as $$Cta } from './Cta_CoE8RaQg.mjs';
 
 const $$PortfolioInnerHero = createComponent(($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$props, $$slots);
@@ -21,8 +21,7 @@ const $$PortfolioInnerHero = createComponent(($$result, $$props, $$slots) => {
     parentTitle = "NYMORA",
     backLink = "/portfolio"
   } = Astro2.props;
-  return renderTemplate`${maybeRenderHead()}<section class="w-full bg-white"> <div class="
-			mx-auto
+  return renderTemplate`${maybeRenderHead()}<section class="w-full bg-white"> <div class="mx-auto
 			w-full
 			max-w-7xl
 			px-5
@@ -30,29 +29,21 @@ const $$PortfolioInnerHero = createComponent(($$result, $$props, $$slots) => {
 			md:py-14
 			lg:px-8
 			lg:pb-14
-			lg:pt-16
-		"> <!-- ======================================= --> <!-- BREADCRUMB --> <!-- ======================================= --> <div class="
-				flex
+			lg:pt-16"> <!-- ======================================= --> <!-- BREADCRUMB --> <!-- ======================================= --> <div class="flex
 				items-center
 				gap-3
 				font-geist
 				text-[15px]
 				font-normal
-				text-[#9B9B9B]
-			"> <a${addAttribute(backLink, "href")} class="
-					group
+				text-[#9B9B9B]"> <a${addAttribute(backLink, "href")} class="group
 					inline-flex
 					items-center
 					gap-2
 					transition-colors
 					duration-300
-					hover:text-black
-				"> <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" class="
-						transition-transform
+					hover:text-black"> <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" class="transition-transform
 						duration-300
-						group-hover:-translate-x-1
-					"> <path d="M15 9H3M3 9L7 5M3 9L7 13" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path> </svg> <span>${backText}</span> </a> <span class="text-[#D0D0D0]">/</span> <span class="uppercase text-[#ADADAD]"> ${parentTitle} </span> </div> <!-- ======================================= --> <!-- CONTENT --> <!-- ======================================= --> <div class="
-				mt-14
+						group-hover:-translate-x-1"> <path d="M15 9H3M3 9L7 5M3 9L7 13" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path> </svg> <span>${backText}</span> </a> <span class="text-[#D0D0D0]">/</span> <span class="uppercase text-[#ADADAD]"> ${parentTitle} </span> </div> <!-- ======================================= --> <!-- CONTENT --> <!-- ======================================= --> <div class="mt-14
 				grid
 				grid-cols-1
 				gap-12
@@ -61,14 +52,10 @@ const $$PortfolioInnerHero = createComponent(($$result, $$props, $$slots) => {
 				lg:grid-cols-[0.42fr_0.58fr]
 				lg:gap-16
 				xl:grid-cols-[440px_1fr]
-				xl:gap-[95px]
-			"> <!-- =================================== --> <!-- LEFT DETAILS --> <!-- =================================== --> <div> <!-- Category pill --> <div class="
-						inline-flex
+				xl:gap-[95px]"> <!-- =================================== --> <!-- LEFT DETAILS --> <!-- =================================== --> <div> <!-- Category pill --> <div class="inline-flex
 						rounded-full
 						bg-[linear-gradient(90deg,#FF9E3D_0%,#F13B59_47%,#7146E5_100%)]
-						p-[1px]
-					"> <span class="
-							inline-flex
+						p-[1px]"> <span class="inline-flex
 							h-[30px]
 							items-center
 							justify-center
@@ -80,78 +67,56 @@ const $$PortfolioInnerHero = createComponent(($$result, $$props, $$slots) => {
 							font-medium
 							uppercase
 							tracking-[0.04em]
-							text-[#8D8D8D]
-						"> ${category} </span> </div> <!-- Details --> <div class="
-						mt-10
+							text-[#8D8D8D]"> ${category} </span> </div> <!-- Details --> <div class="mt-10
 						space-y-8
 						lg:mt-10
-						lg:space-y-9
-					"> <!-- Client --> <div> <p class="
-								mb-2
+						lg:space-y-9"> <!-- Client --> <div> <p class="mb-2
 								font-geist
 								text-[15px]
 								font-medium
 								uppercase
 								tracking-[0.12em]
-								text-[#AFAFAF]
-							">
+								text-[#AFAFAF]">
 CLIENT
-</p> <p class="
-								font-geist
+</p> <p class="font-geist
 								text-[18px]
 								font-normal
 								leading-[1.4]
-								text-[#555555]
-							"> ${client} </p> </div> <!-- Year --> <div> <p class="
-								mb-2
+								text-[#555555]"> ${client} </p> </div> <!-- Year --> <div> <p class="mb-2
 								font-geist
 								text-[15px]
 								font-medium
 								uppercase
 								tracking-[0.12em]
-								text-[#AFAFAF]
-							">
+								text-[#AFAFAF]">
 YEAR
-</p> <p class="
-								font-geist
+</p> <p class="font-geist
 								text-[18px]
 								font-normal
 								leading-[1.4]
-								text-[#555555]
-							"> ${year} </p> </div> <!-- Scope --> <div> <p class="
-								mb-2
+								text-[#555555]"> ${year} </p> </div> <!-- Scope --> <div> <p class="mb-2
 								font-geist
 								text-[15px]
 								font-medium
 								uppercase
 								tracking-[0.12em]
-								text-[#AFAFAF]
-							">
+								text-[#AFAFAF]">
 SCOPE
-</p> <p class="
-								max-w-[390px]
+</p> <p class="max-w-[390px]
 								font-geist
 								text-[18px]
 								font-normal
 								leading-[1.6]
 								text-[#555555]
-								sm:text-[16px]
-							"> ${scope.map((item, index) => renderTemplate`${renderComponent($$result, "Fragment", Fragment, {}, { "default": ($$result2) => renderTemplate` <span>${item}</span> ${index < scope.length - 1 && renderTemplate`<span class="mx-[5px]">
-·
-</span>`}` })}`)} </p> </div> </div> </div> <!-- =================================== --> <!-- RIGHT TITLE --> <!-- =================================== --> <div class="
-					lg:pt-[4px]
-					xl:pl-[10px]
-				"> <h1 class="
-						font-clash
+								sm:text-[16px]"> ${scope.map((item, index) => renderTemplate`${renderComponent($$result, "Fragment", Fragment, {}, { "default": ($$result2) => renderTemplate` <span>${item}</span> ${index < scope.length - 1 && renderTemplate`<span class="mx-[5px]">·</span>`}` })}`)} </p> </div> </div> </div> <!-- =================================== --> <!-- RIGHT TITLE --> <!-- =================================== --> <div class="lg:pt-[4px]
+					xl:pl-[10px]"> <h1 class="font-clash
 						text-[64px]
 						font-semibold
 						leading-[0.95]
 						tracking-[-0.055em]
 						text-black
 						md:text-[92px]
-						lg:text-[88px]
-					"> ${title} </h1> <p class="
-						mt-8
+						lg:text-[88px]"> ${title} </h1> <p class="mt-8
 						max-w-[760px]
 						font-geist
 						text-[20px]
@@ -160,8 +125,7 @@ SCOPE
 						tracking-[-0.015em]
 						text-[#949494]
 						lg:mt-9
-						lg:text-[27px]
-					"> ${subtitle} </p> </div> </div> </div> </section>`;
+						lg:text-[27px]"> ${subtitle} </p> <img src="/img/blog.png" class="w-[200px] h-[240px] object-cover ml-auto mt-10"> </div> </div> </div> </section>`;
 }, "D:/D Drive/artisanal-byte/topklickz/src/components/portfolio/PortfolioInnerHero.astro", void 0);
 
 const $$PortfolioInnerImage = createComponent(($$result, $$props, $$slots) => {
@@ -645,11 +609,11 @@ const $$PortfolioInnerContext = createComponent(($$result, $$props, $$slots) => 
   };
   return renderTemplate`${maybeRenderHead()}<section class="
 		relative
-		min-h-[420px]
+		min-h-[100svh]
 		w-full
 		overflow-hidden
 		bg-black
-		lg:min-h-[420px]
+		lg:min-h-[100svh]
 	"> <!-- Background Image --> <img${addAttribute(section.background, "src")} alt="Nymora salon storefront" class="
 			absolute
 			inset-0
@@ -842,7 +806,7 @@ const $$NextProject = createComponent(($$result, $$props, $$slots) => {
 const $$PortfolioInner = createComponent(async ($$result, $$props, $$slots) => {
   const reader = createReader(process.cwd(), config);
   const site = await reader.singletons.site.read();
-  return renderTemplate`${renderComponent($$result, "Layout", $$Layout, {}, { "default": async ($$result2) => renderTemplate` ${renderComponent($$result2, "Header", $$Header, { "navbar": site?.navbar })} ${renderComponent($$result2, "PortfolioInnerHero", $$PortfolioInnerHero, {})} ${renderComponent($$result2, "PortfolioInnerImage", $$PortfolioInnerImage, {})} ${renderComponent($$result2, "PortfolioInnerOverview", $$PortfolioInnerOverview, {})} ${renderComponent($$result2, "PortfolioInnerImageSection", $$PortfolioInnerImagsSection, {})} ${renderComponent($$result2, "PortfolioInnerProcess", $$PortfolioInnerProcess, {})} ${renderComponent($$result2, "PortfolioInnerThinking", $$PortfolioInnerThinking, {})} ${renderComponent($$result2, "PortfolioInnerWrok", $$PortfolioInnerWork, {})} ${renderComponent($$result2, "PortfolioInnerContext", $$PortfolioInnerContext, {})} ${renderComponent($$result2, "PortfolioInnerKeyResults", $$PortfolioInnerKeyResults, {})} ${renderComponent($$result2, "PortfolioInnerTestimonial", $$PortfolioInnerTestimonial, {})} ${renderComponent($$result2, "NextProject", $$NextProject, {})} ${renderComponent($$result2, "Cta", $$Cta, { "cta": site?.cta })} ${renderComponent($$result2, "Footer", $$Footer, { "footer": site?.footer })} ` })}`;
+  return renderTemplate`${renderComponent($$result, "Layout", $$Layout, { "data-astro-cid-yzzepktl": true }, { "default": async ($$result2) => renderTemplate` ${renderComponent($$result2, "Header", $$Header, { "navbar": site?.navbar, "data-astro-cid-yzzepktl": true })} ${maybeRenderHead()}<section data-portfolio-context-scroll class="relative h-[185svh] w-full bg-white motion-reduce:h-auto" data-astro-cid-yzzepktl> <div data-portfolio-context-stage class="sticky top-0 h-svh w-full overflow-hidden bg-white motion-reduce:relative motion-reduce:h-auto motion-reduce:overflow-visible" data-astro-cid-yzzepktl> <div data-portfolio-context-hero class="absolute inset-0 z-10 overflow-y-auto bg-white will-change-[transform,opacity]" data-astro-cid-yzzepktl> ${renderComponent($$result2, "PortfolioInnerHero", $$PortfolioInnerHero, { "data-astro-cid-yzzepktl": true })} </div> <div data-portfolio-context-layer class="pointer-events-none absolute inset-0 z-20 overflow-hidden bg-black opacity-0 will-change-[transform,opacity]" aria-hidden="true" data-astro-cid-yzzepktl> ${renderComponent($$result2, "PortfolioInnerContext", $$PortfolioInnerContext, { "data-astro-cid-yzzepktl": true })} </div> </div> </section> ${renderComponent($$result2, "PortfolioInnerImage", $$PortfolioInnerImage, { "data-astro-cid-yzzepktl": true })} ${renderComponent($$result2, "PortfolioInnerOverview", $$PortfolioInnerOverview, { "data-astro-cid-yzzepktl": true })} ${renderComponent($$result2, "PortfolioInnerImageSection", $$PortfolioInnerImagsSection, { "data-astro-cid-yzzepktl": true })} ${renderComponent($$result2, "PortfolioInnerProcess", $$PortfolioInnerProcess, { "data-astro-cid-yzzepktl": true })} ${renderComponent($$result2, "PortfolioInnerThinking", $$PortfolioInnerThinking, { "data-astro-cid-yzzepktl": true })} ${renderComponent($$result2, "PortfolioInnerWrok", $$PortfolioInnerWork, { "data-astro-cid-yzzepktl": true })}  ${renderComponent($$result2, "PortfolioInnerKeyResults", $$PortfolioInnerKeyResults, { "data-astro-cid-yzzepktl": true })} ${renderComponent($$result2, "PortfolioInnerTestimonial", $$PortfolioInnerTestimonial, { "data-astro-cid-yzzepktl": true })} ${renderComponent($$result2, "NextProject", $$NextProject, { "data-astro-cid-yzzepktl": true })} ${renderComponent($$result2, "Cta", $$Cta, { "cta": site?.cta, "data-astro-cid-yzzepktl": true })} ${renderComponent($$result2, "Footer", $$Footer, { "footer": site?.footer, "data-astro-cid-yzzepktl": true })} ` })} ${renderScript($$result, "D:/D Drive/artisanal-byte/topklickz/src/pages/portfolio-inner.astro?astro&type=script&index=0&lang.ts")}`;
 }, "D:/D Drive/artisanal-byte/topklickz/src/pages/portfolio-inner.astro", void 0);
 
 const $$file = "D:/D Drive/artisanal-byte/topklickz/src/pages/portfolio-inner.astro";
