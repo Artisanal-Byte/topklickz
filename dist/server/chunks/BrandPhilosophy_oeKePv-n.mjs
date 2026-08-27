@@ -1,8 +1,8 @@
-import { c as createComponent } from './astro-component_DtJhUJ4K.mjs';
+import { c as createComponent } from './astro-component_CBHne6EO.mjs';
 import 'piccolore';
-import { m as maybeRenderHead, d as renderTemplate } from './server_THIT-rnP.mjs';
+import { m as maybeRenderHead, d as renderTemplate } from './server_DPeHzCWX.mjs';
 import 'clsx';
-import { r as renderScript } from './Footer_DlT6MMV1.mjs';
+import { r as renderScript } from './Footer_BMrz0d2e.mjs';
 
 const $$BrandPhilosophy = createComponent(($$result, $$props, $$slots) => {
   return renderTemplate`${maybeRenderHead()}<section class="relative w-full overflow-hidden bg-white" data-astro-cid-nwxm2flg> <div class="relative

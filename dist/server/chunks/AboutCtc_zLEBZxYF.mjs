@@ -1,6 +1,6 @@
-import { c as createComponent } from './astro-component_DtJhUJ4K.mjs';
+import { c as createComponent } from './astro-component_CBHne6EO.mjs';
 import 'piccolore';
-import { m as maybeRenderHead, d as renderTemplate } from './server_THIT-rnP.mjs';
+import { m as maybeRenderHead, d as renderTemplate } from './server_DPeHzCWX.mjs';
 import 'clsx';
 
 const $$AboutCtc = createComponent(($$result, $$props, $$slots) => {
