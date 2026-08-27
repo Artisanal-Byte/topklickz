@@ -2,7 +2,8 @@ import { config as config$1, singleton, fields } from '@keystatic/core';
 
 const config = config$1({
   storage: {
-    kind: "local"
+    kind: "github",
+    repo: "Artisanal-Byte/topklickz"
   },
   singletons: {
     site: singleton({

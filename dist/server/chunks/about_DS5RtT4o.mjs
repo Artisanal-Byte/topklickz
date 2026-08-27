@@ -1,12 +1,12 @@
-import { c as createComponent } from './astro-component_JDSnf13e.mjs';
+import { c as createComponent } from './astro-component_km9ZCO3C.mjs';
 import 'piccolore';
-import { m as maybeRenderHead, c as addAttribute, d as renderTemplate, e as renderComponent } from './server_r20cRXJ1.mjs';
-import { r as renderScript, $ as $$Layout, a as $$Header, b as $$Footer } from './Footer_CNhL9zDA.mjs';
-import { c as config } from './keystatic.config_Df-6VW00.mjs';
+import { m as maybeRenderHead, c as addAttribute, d as renderTemplate, e as renderComponent } from './server_C4kATRpT.mjs';
+import { r as renderScript, $ as $$Layout, a as $$Header, b as $$Footer } from './Footer_IE2GM_rV.mjs';
+import { c as config } from './keystatic.config_B9neeRdH.mjs';
 import { createReader } from '@keystatic/core/reader';
 import 'clsx';
-import { $ as $$BrandPhilosophy } from './BrandPhilosophy_B28uSNMl.mjs';
-import { $ as $$AboutCtc } from './AboutCtc_BoJK-wOY.mjs';
+import { $ as $$BrandPhilosophy } from './BrandPhilosophy_VDk2i3nO.mjs';
+import { $ as $$AboutCtc } from './AboutCtc_CP6MkCDH.mjs';
 
 const $$WhoWeAre = createComponent(($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$props, $$slots);
