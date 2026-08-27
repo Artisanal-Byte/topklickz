@@ -33,7 +33,7 @@ const services: ServiceItem[] = [
 		title: "Creative Production",
 		href: "/services/creative-production",
 	},
-    {
+	{
 		number: "06",
 		title: "Creative Production",
 		href: "/services/creative-production",
@@ -45,7 +45,7 @@ const services: ServiceItem[] = [
 	class="
 		relative
 		w-full
-		bg-white lg:pb-[50px]
+		bg-white
 		lg:pb-0
 	"
 >
@@ -61,7 +61,7 @@ const services: ServiceItem[] = [
 		"
 	></div>
 
-	<div class="mx-auto max-w-7xl px-4 lg:px-8 lg:py-16 py-10">
+	<div class="mx-auto max-w-7xl px-4 py-10 lg:px-8 lg:py-16">
 		<div
 			class="
 				grid
@@ -74,17 +74,24 @@ const services: ServiceItem[] = [
 				services.map((service) => (
 					<a
 						href={service.href}
-						class="
-							group
-							block
-							bg-[#ECECEC]
-							p-px
-							no-underline
-							transition-all
-							duration-300
-
-							hover:bg-[linear-gradient(135deg,#FFB43E_0%,#FF5957_30%,#E12AA8_62%,#5342F2_100%)]
-						"
+						class:list={[
+							`
+								group
+								block
+								p-px
+								no-underline
+								transition-all
+								duration-300
+							`,
+							service.active
+								? `
+									bg-[linear-gradient(135deg,#FFB43E_0%,#FF5957_30%,#E12AA8_62%,#5342F2_100%)]
+								`
+								: `
+									bg-[#ECECEC]
+									hover:bg-[linear-gradient(135deg,#FFB43E_0%,#FF5957_30%,#E12AA8_62%,#5342F2_100%)]
+								`,
+						]}
 					>
 						<div
 							class="
@@ -96,8 +103,6 @@ const services: ServiceItem[] = [
 								bg-white
 								px-[31px]
 								py-[25px]
-
-								sm:min-h-[126px]
 							"
 						>
 							<!-- Number -->
@@ -126,13 +131,12 @@ const services: ServiceItem[] = [
 								class:list={[
 									`
 										m-0
-										font-clash  
+										font-clash
 										text-[17px]
 										leading-[1.25]
 										tracking-[-0.025em]
 										transition-colors
 										duration-300
-
 										sm:text-[18px]
 									`,
 									service.active
@@ -143,7 +147,7 @@ const services: ServiceItem[] = [
 								{service.title}
 							</h3>
 
-							<!-- Gradient small line -->
+							<!-- Gradient Small Line -->
 							<span
 								class:list={[
 									`
@@ -159,8 +163,7 @@ const services: ServiceItem[] = [
 										? "w-[18px]"
 										: "w-0 group-hover:w-[18px]",
 								]}
-							>
-							</span>
+							></span>
 						</div>
 					</a>
 				))
