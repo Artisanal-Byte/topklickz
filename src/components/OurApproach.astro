@@ -93,7 +93,7 @@ const approachItems = [
             class="grid
 				grid-cols-1
 				border
-				border-[#D6D3CE]
+				[border-image:linear-gradient(to_right,#ff9b42,#ef2362,#6944db)_1]
 				md:grid-cols-2
 				lg:grid-cols-3"
         >
@@ -105,21 +105,21 @@ const approachItems = [
 
                             /* desktop vertical borders */
                             index % 3 !== 2 &&
-                                "lg:border-r lg:border-[#D6D3CE]",
+                                "lg:border-r lg:[border-image:linear-gradient(to_bottom,#ff9b42,#ef2362,#6944db)_1]",
 
                             /* desktop first row bottom border */
-                            index < 3 && "lg:border-b lg:border-[#D6D3CE]",
+                            index < 3 && "lg:border-b lg:[border-image:linear-gradient(to_bottom,#ff9b42,#ef2362,#6944db)_1]",
 
                             /* tablet borders */
                             index % 2 === 0 &&
-                                "md:border-r md:border-[#D6D3CE] lg:border-r",
+                                "md:border-r md:[border-image:linear-gradient(to_bottom,#ff9b42,#ef2362,#6944db)_1] lg:border-r",
 
                             index < approachItems.length - 2 &&
-                                "md:border-b md:border-[#D6D3CE] lg:border-b",
+                                "md:border-b md:[border-image:linear-gradient(to_bottom,#ff9b42,#ef2362,#6944db)_1] lg:border-b",
 
                             /* mobile */
                             index !== approachItems.length - 1 &&
-                                "border-b border-[#D6D3CE] md:border-b",
+                                "border-b [border-image:linear-gradient(to_bottom,#ff9b42,#ef2362,#6944db)_1] md:border-b",
                         ]}
                     >
                         <h3

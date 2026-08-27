@@ -73,7 +73,7 @@ const processSteps = [
 				grid
 				grid-cols-1
 				border-t
-				border-[#D2D0CB]
+				[border-image:linear-gradient(to_right,#ff9b42,#ef2362,#6944db)_1]
 				md:grid-cols-2
 				lg:grid-cols-4
 			"
@@ -94,7 +94,7 @@ const processSteps = [
 
 							/* Mobile horizontal divider */
 							index !== processSteps.length - 1 &&
-								"border-b border-[#D2D0CB] md:border-b-0",
+								"border-b [border-image:linear-gradient(to_bottom,#ff9b42,#ef2362,#6944db)_1] md:border-b-0",
 
 							/* First column alignment */
 							index === 0 && "md:pl-0 lg:pl-0",
