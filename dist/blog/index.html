@@ -1,0 +1,467 @@
+<!DOCTYPE html><html lang="en" class="scroll-smooth bg-white"> <head><meta charset="UTF-8"><meta name="description" content="Topklickz - Astro"><meta name="keywords" content><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="generator" content="Astro v6.4.8"><title>Topklickz</title><!-- schema --><link rel="stylesheet" href="/_astro/consts.CMqtHo9i.css"></head> <body class="min-h-screen overflow-x-hidden bg-[radial-gradient(circle_at_top_left,rgba(255,132,0,0.08),transparent_30%),radial-gradient(circle_at_85%_18%,rgba(124,58,237,0.08),transparent_28%),#ffffff] text-[#0f0f11] antialiased">  <header class="relative z-20" data-site-header> <div class="mx-auto max-w-7xl px-4 py-3 backdrop-blur-md sm:px-5 sm:py-4"> <div class="flex items-center justify-between gap-3 lg:gap-8"> <!-- Logo --> <a href="/" class="shrink-0"> <img src="/uploads/logo/navbar/logo.png" alt="Logo" loading="lazy" decoding="async" width="80" height="80" class="h-12 w-auto sm:h-14 lg:h-16"> </a> <!-- Desktop Navigation --> <nav class="hidden flex-1 items-center justify-center gap-2 lg:flex"> <a href="/" class="nav-link rounded-full px-5 py-2 font-clash text-[18px] font-bold leading-none tracking-normal text-[#0f0f11] hover:bg-gray-100"> Home </a><a href="/about" class="nav-link rounded-full px-5 py-2 font-clash text-[18px] font-bold leading-none tracking-normal text-[#0f0f11] hover:bg-gray-100"> About </a><a href="/brand-strategy" class="nav-link rounded-full px-5 py-2 font-clash text-[18px] font-bold leading-none tracking-normal text-[#0f0f11] hover:bg-gray-100"> Services </a><a href="/portfolio" class="nav-link rounded-full px-5 py-2 font-clash text-[18px] font-bold leading-none tracking-normal text-[#0f0f11] hover:bg-gray-100"> Work </a><a href="/blog" aria-current="page" class="nav-link rounded-full px-5 py-2 font-clash text-[18px] font-bold leading-none tracking-normal is-active gradient-bg text-white"> Insights </a><a href="/portfolio-inner" class="nav-link rounded-full px-5 py-2 font-clash text-[18px] font-bold leading-none tracking-normal text-[#0f0f11] hover:bg-gray-100"> Work-Inner </a> </nav> <div class="flex items-center gap-2 sm:gap-3 lg:gap-4"> <!-- Desktop Button --> <a href="/contact" class="gradient-expand-btn group !hidden lg:!inline-flex gradient-border"> <span class="gradient-expand-btn-inner"> <!-- Gradient circle --> <span class="gradient-expand-btn-bg"></span> <!-- Text --> <span class="gradient-expand-btn-text
+          font-clash
+          text-[17px]
+          font-bold
+          leading-none
+          tracking-normal
+          text-black
+          transition-colors
+          duration-300
+          group-hover:text-white"> Get in Touch </span> </span> </a> <!-- Mobile Menu Button --> <button type="button" class="inline-flex h-12 w-12 items-center justify-center rounded-full border border-black/10 bg-white text-[#0f0f11] shadow-sm transition hover:bg-gray-50 lg:hidden" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-navigation" data-nav-toggle> <span class="relative block h-4 w-5"> <span class="absolute left-0 top-0 h-0.5 w-5 rounded-full bg-current transition-transform duration-200" data-nav-icon="top"></span> <span class="absolute left-0 top-1.5 h-0.5 w-5 rounded-full bg-current transition-opacity duration-200" data-nav-icon="middle"></span> <span class="absolute left-0 top-3 h-0.5 w-5 rounded-full bg-current transition-transform duration-200" data-nav-icon="bottom"></span> </span> </button> </div> </div> <!-- Mobile Navigation --> <div id="mobile-navigation" class="mt-4 hidden rounded-2xl border border-black/5 bg-white p-3 shadow-[0_14px_40px_rgba(15,15,17,0.08)] lg:hidden" data-nav-panel> <nav class="flex flex-col gap-2"> <a href="/" class="nav-link rounded-2xl px-4 py-3 font-clash text-[16px] font-bold leading-none tracking-normal bg-gray-50 text-[#0f0f11] hover:bg-gray-100"> Home </a><a href="/about" class="nav-link rounded-2xl px-4 py-3 font-clash text-[16px] font-bold leading-none tracking-normal bg-gray-50 text-[#0f0f11] hover:bg-gray-100"> About </a><a href="/brand-strategy" class="nav-link rounded-2xl px-4 py-3 font-clash text-[16px] font-bold leading-none tracking-normal bg-gray-50 text-[#0f0f11] hover:bg-gray-100"> Services </a><a href="/portfolio" class="nav-link rounded-2xl px-4 py-3 font-clash text-[16px] font-bold leading-none tracking-normal bg-gray-50 text-[#0f0f11] hover:bg-gray-100"> Work </a><a href="/blog" aria-current="page" class="nav-link rounded-2xl px-4 py-3 font-clash text-[16px] font-bold leading-none tracking-normal is-active gradient-bg text-white"> Insights </a><a href="/portfolio-inner" class="nav-link rounded-2xl px-4 py-3 font-clash text-[16px] font-bold leading-none tracking-normal bg-gray-50 text-[#0f0f11] hover:bg-gray-100"> Work-Inner </a> </nav> <a href="/contact" class="mt-3 inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-[#0f0f11] px-4 py-3 font-clash text-[16px] font-medium leading-none tracking-normal text-white transition hover:bg-black"> <span class="h-6 w-6 rounded-full gradient-bg"></span> Get in Touch </a> </div> </div> </header> <script>
+  const header = document.querySelector("[data-site-header]");
+  if (header) {
+    const toggle = header.querySelector("[data-nav-toggle]");
+    const panel = header.querySelector("[data-nav-panel]");
+    const topBar = header.querySelector('[data-nav-icon="top"]');
+    const middleBar = header.querySelector('[data-nav-icon="middle"]');
+    const bottomBar = header.querySelector('[data-nav-icon="bottom"]');
+
+    const setOpen = (open) => {
+      if (!toggle || !panel) return;
+      toggle.setAttribute("aria-expanded", String(open));
+      panel.classList.toggle("hidden", !open);
+
+      if (topBar && middleBar && bottomBar) {
+        topBar.classList.toggle("translate-y-1.5", open);
+        topBar.classList.toggle("rotate-45", open);
+        middleBar.classList.toggle("opacity-0", open);
+        bottomBar.classList.toggle("-translate-y-1.5", open);
+        bottomBar.classList.toggle("-rotate-45", open);
+      }
+    };
+
+    toggle?.addEventListener("click", () => {
+      const isOpen = toggle.getAttribute("aria-expanded") === "true";
+      setOpen(!isOpen);
+    });
+
+    panel?.addEventListener("click", (event) => {
+      if (event.target instanceof HTMLAnchorElement) {
+        setOpen(false);
+      }
+    });
+
+    document.addEventListener("click", (event) => {
+      const isOpen = toggle?.getAttribute("aria-expanded") === "true";
+      if (!isOpen) return;
+      const target = event.target;
+      if (target instanceof Node && !header.contains(target)) {
+        setOpen(false);
+      }
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") {
+        setOpen(false);
+      }
+    });
+
+    window.addEventListener("resize", () => {
+      if (window.innerWidth >= 1024) {
+        setOpen(false);
+      }
+    });
+  }
+</script> <section class="w-full"> <div class="
+			mx-auto
+			w-full
+			max-w-7xl   
+			px-5
+			py-12
+			lg:px-12
+			lg:py-20
+		"> <!-- =========================
+		     TOP CONTENT
+		========================= --> <div class="max-w-[720px]"> <h2 class="
+					text-[42px]
+					font-medium
+					uppercase
+					leading-[1.00]
+					tracking-[-2px]
+					text-black
+					lg:text-[60px]
+					lg:tracking-[-3px]
+                    font-clash
+				"> <span class="block">UNCOVER IDEAS,</span> <span class="block"> INSIGHTS, </span> <span class="block"> AND <span class="
+							inline-block
+							bg-[linear-gradient(90deg,#ee1765_0%,#d6248c_45%,#7548d7_100%)]
+							bg-clip-text
+							font-bold
+							text-transparent
+						"> GROWTH. </span> </span> </h2> <p class="
+					mt-5
+					max-w-[570px]
+					text-[18px]
+					font-normal
+					leading-[1.45]
+					text-black
+				"> Explore expert perspectives, practical strategies, and creative thinking on branding, digital marketing, web experiences, AI, and business growth. Designed to help ambitious brands stay ahead. </p> </div> </div> </section> <div class="mx-auto max-w-7xl px-5 lg:px-12"> <a href="#" class="
+		group
+		relative
+		block
+		h-[395px]
+		w-full
+		overflow-hidden
+		rounded-[14px]
+		lg:h-[520px]
+	"> <!-- Background Image --> <img src="/img/bloghero.png" alt="Why Strong Brands Win in Competitive Markets" class="
+			absolute
+			inset-0
+			h-full
+			w-full
+			object-cover
+			object-center
+			transition-transform
+			duration-700
+			ease-out
+			group-hover:scale-[1.03]
+		"> <!-- Dark Overlay --> <div class="
+			absolute
+			inset-0
+			bg-[linear-gradient(90deg,rgba(0,0,0,0.38)_0%,rgba(0,0,0,0.12)_48%,rgba(0,0,0,0)_75%)]
+		"></div> <!-- Content --> <div class="
+			absolute
+			inset-0
+			z-10
+			flex
+			flex-col
+			p-6
+			lg:p-8
+		"> <!-- Badge --> <div> <span class="
+					inline-flex
+					items-center
+					rounded-[4px]
+					bg-black
+					px-[10px]
+					py-[7px]
+					text-[8px]
+					font-semibold
+					uppercase
+					leading-none
+					tracking-[0.2px]
+					text-white
+				"> FEATURED </span> </div> <!-- Text --> <div class="
+				mt-[60px]
+				max-w-[330px]
+				lg:mt-[72px]
+				lg:max-w-[410px]
+			"> <h2 class="
+					text-[40px]
+					font-bold
+					leading-[1.08]
+					tracking-[-2px]
+					text-white
+                    font-geist
+					lg:text-[62px]
+					lg:tracking-[-2.5px]
+				"> Why Strong Brands Win in Competitive Markets </h2> </div> </div> </a> </div> <section class="w-full bg-white py-12 lg:py-16"> <div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12"> <!-- Header --> <div class="mb-8 flex items-center justify-between"> <h2 class="text-[25px] font-semibold text-black">
+Latest insights
+</h2> <a href="/blog-inner" class="flex items-center gap-3 text-[12px] font-medium text-black transition-opacity hover:opacity-60"> <span>View all insights</span> <span class="text-[20px] leading-none">→</span> </a> </div> <!-- Cards --> <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 lg:gap-10"> <article class="group"> <a href="#" class="block"> <!-- IMAGE AREA --> <div class="
+									relative
+									aspect-[1/1.08]
+									w-full
+									overflow-hidden
+									rounded-[14px]
+								"> <!-- Full light-blue image --> <img src="/img/blog.png" alt="TOPKLICKZ Expands Creative &amp; AI Services for Growing Businesses" class="
+										absolute
+										inset-0
+										h-full
+										w-full
+										object-cover
+										object-center
+										transition-transform
+										duration-500
+										ease-out
+										group-hover:scale-[1.025]
+									"> <!-- NEWS BADGE --> <span class="
+										absolute
+										left-4
+										top-4
+										z-10
+										rounded-full
+										bg-black
+										px-[13px]
+										py-[6px]
+										text-[14px]
+										font-semibold
+										uppercase
+										leading-none
+										tracking-[0.3px]
+										text-white
+									"> NEWS </span> </div> <!-- Content --> <div class="pt-5"> <h3 class="
+                                    font-geist
+										max-w-[390px]
+										text-[24px]
+										font-semibold
+										leading-[1.08]
+										tracking-[-0.4px]
+										text-black
+									"> TOPKLICKZ Expands Creative &amp; AI Services for Growing Businesses </h3> <div class="
+										mt-5
+										flex
+										items-center
+										gap-2
+										text-[14px]
+										text-black/45
+									"> <span>May 10, 2026</span> <span>•</span> <span>6 min read</span> </div> </div> </a> </article><article class="group"> <a href="#" class="block"> <!-- IMAGE AREA --> <div class="
+									relative
+									aspect-[1/1.08]
+									w-full
+									overflow-hidden
+									rounded-[14px]
+								"> <!-- Full light-blue image --> <img src="/img/blog.png" alt="TOPKLICKZ Expands Creative &amp; AI Services for Growing Businesses" class="
+										absolute
+										inset-0
+										h-full
+										w-full
+										object-cover
+										object-center
+										transition-transform
+										duration-500
+										ease-out
+										group-hover:scale-[1.025]
+									"> <!-- NEWS BADGE --> <span class="
+										absolute
+										left-4
+										top-4
+										z-10
+										rounded-full
+										bg-black
+										px-[13px]
+										py-[6px]
+										text-[14px]
+										font-semibold
+										uppercase
+										leading-none
+										tracking-[0.3px]
+										text-white
+									"> NEWS </span> </div> <!-- Content --> <div class="pt-5"> <h3 class="
+                                    font-geist
+										max-w-[390px]
+										text-[24px]
+										font-semibold
+										leading-[1.08]
+										tracking-[-0.4px]
+										text-black
+									"> TOPKLICKZ Expands Creative &amp; AI Services for Growing Businesses </h3> <div class="
+										mt-5
+										flex
+										items-center
+										gap-2
+										text-[14px]
+										text-black/45
+									"> <span>May 10, 2026</span> <span>•</span> <span>6 min read</span> </div> </div> </a> </article><article class="group"> <a href="#" class="block"> <!-- IMAGE AREA --> <div class="
+									relative
+									aspect-[1/1.08]
+									w-full
+									overflow-hidden
+									rounded-[14px]
+								"> <!-- Full light-blue image --> <img src="/img/blog.png" alt="TOPKLICKZ Expands Creative &amp; AI Services for Growing Businesses" class="
+										absolute
+										inset-0
+										h-full
+										w-full
+										object-cover
+										object-center
+										transition-transform
+										duration-500
+										ease-out
+										group-hover:scale-[1.025]
+									"> <!-- NEWS BADGE --> <span class="
+										absolute
+										left-4
+										top-4
+										z-10
+										rounded-full
+										bg-black
+										px-[13px]
+										py-[6px]
+										text-[14px]
+										font-semibold
+										uppercase
+										leading-none
+										tracking-[0.3px]
+										text-white
+									"> NEWS </span> </div> <!-- Content --> <div class="pt-5"> <h3 class="
+                                    font-geist
+										max-w-[390px]
+										text-[24px]
+										font-semibold
+										leading-[1.08]
+										tracking-[-0.4px]
+										text-black
+									"> TOPKLICKZ Expands Creative &amp; AI Services for Growing Businesses </h3> <div class="
+										mt-5
+										flex
+										items-center
+										gap-2
+										text-[14px]
+										text-black/45
+									"> <span>May 10, 2026</span> <span>•</span> <span>6 min read</span> </div> </div> </a> </article> </div> </div> </section> <section class="w-full bg-white"> <div class="
+			mx-auto
+			grid
+			max-w-5xl
+			grid-cols-1
+			gap-8
+			px-5
+			pb-12
+			lg:grid-cols-[minmax(0,420px)_minmax(0,1fr)]
+			lg:items-center
+			lg:gap-0
+			lg:px-12
+			lg:pb-16
+		"> <!-- LEFT --> <div class="flex items-start gap-5"> <!-- Image instead of email icon --> <div class="
+					shrink-0
+					overflow-hidden
+					rounded-[10px]
+				"> <img src="/img/email.png" alt="" class="
+						h-[64px]
+						w-[64px]
+						object-cover
+						lg:h-[58px]
+						lg:w-[58px]
+					"> </div> <!-- Content --> <div class="min-w-0"> <div class="flex items-center gap-3"> <h2 class="
+							text-[20px]
+							font-semibold
+							leading-[1.1]
+							tracking-[-0.4px]
+							text-black
+                            font-geist
+						"> Stay ahead of the curve. </h2> </div> <p class="
+						mt-2
+						max-w-[290px]
+						text-[15px]
+						font-normal
+						leading-[1.55]
+						text-black/75
+					"> Every brand strategy engagement follows a proven creative process — rigorous enough to deliver real insight, flexible enough to meet you where you are. </p> </div> </div> <!-- RIGHT FORM --> <form class="
+				flex
+				w-full
+				flex-col
+				gap-4
+
+				sm:flex-row
+				sm:items-center
+			"> <input type="email" placeholder="Enter your email" required class="
+					h-[54px]
+					min-w-0
+					flex-1
+					border-0
+					bg-[#dddddd]
+					px-5
+					text-[14px]
+					text-black
+					outline-none
+					placeholder:text-black/35
+					focus:ring-1
+					focus:ring-black/20
+				"> <button type="submit" class="
+					inline-flex
+					h-[54px]
+					shrink-0
+					items-center
+					justify-center
+					gap-3
+					bg-black
+					px-6
+					text-[14px]
+					font-semibold
+					uppercase
+					tracking-[0.2px]
+					text-white
+					transition-all
+					duration-300
+					hover:bg-black/80
+				"> <span>SUBSCRIBE</span> <span class="text-[18px] leading-none">
+→
+</span> </button> </form> </div> </section> <section class="w-full bg-black"> <div class="mx-auto
+			grid
+			max-w-7xl
+			grid-cols-1
+			items-center
+			text-center
+			lg:text-left
+			gap-5
+			px-4
+			pt-18
+			md:px-8
+			lg:grid-cols-[1.1fr_0.9fr_auto]
+			lg:gap-16
+			lg:py-14"> <!-- Left Heading --> <div> <h2 class="m-0
+					font-clash-display
+					lg:text-[48px]
+					text-[30px]
+					leading-[1.20]
+					font-semibold
+					uppercase
+					lg:leading-[0.98]
+					tracking-[-0.7px]
+					text-white">
+LET'S CREATE<br>
+SOMETHING<br> <span class="bg-[linear-gradient(90deg,#F2203E_0%,#D5257D_50%,#8A35D5_100%)]
+						bg-clip-text
+						text-transparent">
+MEMORABLE.
+</span> </h2> </div> <!-- Center Description --> <div> <p class="m-0
+					font-satoshi
+					text-[12px]
+					font-normal
+					leading-[20px]
+					tracking-[0px]
+					text-white/55">
+Whether you're launching something new, evolving an existing
+				brand or building a stronger digital presence, we'd love to hear
+				your story.
+</p> </div> <!-- CTA Button --> <div class="lg:justify-self-end"> <a href="/contact" class="group
+		relative
+		inline-flex
+		items-center
+		justify-center
+		overflow-hidden
+		rounded-full
+		border
+		border-white
+		px-8
+		py-4
+		pr-5
+		font-satoshi
+		text-[13px]
+		font-medium
+		uppercase
+		leading-none
+		tracking-[0px]
+		text-white
+		transition-[border-color]
+		duration-300"> <!-- Gradient Circle --> <span aria-hidden="true" class="absolute
+			left-[10px]
+			top-1/2
+			h-[34px]
+			w-[34px]
+			-translate-y-1/2
+			rounded-full
+			bg-[linear-gradient(135deg,#FEC053_0%,#F2203E_33%,#B729A8_65%,#5342D6_100%)]
+			transition-[left,top,width,height,transform,border-radius]
+			duration-500
+			ease-[cubic-bezier(0.65,0,0.35,1)]
+			group-hover:left-0
+			group-hover:top-0
+			group-hover:h-full
+			group-hover:w-full
+			group-hover:translate-y-0
+			group-hover:rounded-full"></span> <!-- Content --> <span class="relative
+			z-10
+			flex
+			items-center
+			justify-center
+			gap-3
+			translate-x-[14px]
+			transition-transform
+			duration-500
+			ease-[cubic-bezier(0.65,0,0.35,1)]
+			group-hover:translate-x-0"> <span class="whitespace-nowrap ml-3"> START A PROJECT </span> <span class="text-[16px]
+				leading-none
+				transition-transform
+				duration-300
+				group-hover:translate-x-1 mr-4">
+→
+</span> </span> </a> </div> </div> </section> <footer class="bg-black text-white"> <div class="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8"> <div class="grid gap-12 sm:grid-cols-2 lg:grid-cols-4"> <!-- Logo --> <div> <img src="/uploads/footer/footer/logo.png" alt="Footer Logo" loading="lazy" decoding="async" width="100" height="100" class="h-16 w-auto"> <div class="mt-6 space-y-2 text-sm text-neutral-300"> <p>hello@topklickz.com</p> <p>+91 XXXXX XXXXX</p> <p>Ahmedabad, India</p> </div> <div class="mt-8 text-xs text-neutral-500"> <p></p> <p>© 2026 TOPKLICKZ</p> </div> </div> <!-- Company --> <div> <h3 class="mb-5 font-semibold">Company</h3> <ul class="space-y-3"> <li> <a class="text-neutral-300 transition hover:text-white" href>About</a> </li><li> <a class="text-neutral-300 transition hover:text-white" href>Work</a> </li><li> <a class="text-neutral-300 transition hover:text-white" href>Careers</a> </li><li> <a class="text-neutral-300 transition hover:text-white" href>Contact</a> </li> </ul> </div> <!-- Services --> <div> <h3 class="mb-5 font-semibold">Services</h3> <ul class="space-y-3"> <li> <a class="text-neutral-300 transition hover:text-white" href>Brand Strategy</a> </li><li> <a class="text-neutral-300 transition hover:text-white" href>Brand Identity</a> </li><li> <a class="text-neutral-300 transition hover:text-white" href>Website Design</a> </li> </ul> </div> <!-- Social --> <div> <h3 class="mb-5 font-semibold">Socials</h3> <ul class="space-y-3"> <li> <a class="text-neutral-300 transition hover:text-white" target="_blank" rel="noopener noreferrer"> Instagram </a> </li><li> <a class="text-neutral-300 transition hover:text-white" target="_blank" rel="noopener noreferrer"> Instagram </a> </li> </ul> </div> </div> </div> <div class="overflow-hidden border-t border-neutral-800 px-4 pb-10 sm:px-6 lg:px-8"> <img src="/uploads/footer/footer/marqueeImage.png" alt="Marquee Image" loading="lazy" decoding="async" width="800" height="300" class="mx-auto mt-10 w-full max-w-2xl object-cover lg:ml-auto lg:mr-0"> <p class="mt-6 text-center text-lg sm:text-xl lg:text-right"> CLICK. GROW. RELISH. </p> </div> </footer>  <script type="module">let l;const m="ABCDEFGHIJKLMNOPQRSTUVWXYZ",T="abcdefghijklmnopqrstuvwxyz",p='.gradient-text:not(.gradient-text-static), [class~="bg-clip-text"][class~="text-transparent"]:not(.gradient-text-static)',b=e=>{const t=e.textContent||"",a=Array.from(t),n=a.reduce((s,o,c)=>(/[A-Za-z]/.test(o)&&s.push(c),s),[]),r=1200,x=performance.now(),d=s=>{const o=Math.min((s-x)/r,1),c=Math.ceil(o*n.length),h=new Set(n.slice(0,c));e.textContent=a.map((i,f)=>{if(/\s/.test(i)||h.has(f))return i;const u=i===i.toUpperCase()?m:T;return u[Math.floor(Math.random()*u.length)]}).join(""),o<1?requestAnimationFrame(d):(e.textContent=t,e.dataset.gradientTextVisible="true")};requestAnimationFrame(d)},g=()=>{const e=Array.from(document.querySelectorAll(p)).filter(t=>t.dataset.gradientTextReady!=="true");if(e.length){if(window.matchMedia("(prefers-reduced-motion: reduce)").matches){e.forEach(t=>{t.dataset.gradientTextReady="true",t.dataset.gradientTextVisible="true"});return}l??=new IntersectionObserver((t,a)=>{t.forEach(n=>{if(!n.isIntersecting)return;const r=n.target;r.dataset.gradientTextVisible="true",a.unobserve(r),!r.querySelector(".counter")&&b(r)})},{threshold:.35}),e.forEach(t=>{t.dataset.gradientTextReady="true",l?.observe(t)})}};g();document.addEventListener("astro:page-load",g);</script></body></html>

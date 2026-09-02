@@ -1,17 +1,31 @@
 import { defineConfig } from 'astro/config';
+
 import react from '@astrojs/react';
 import markdoc from '@astrojs/markdoc';
-import node from '@astrojs/node';
 import keystatic from '@keystatic/astro';
-import tailwindcss from "@tailwindcss/vite";
-import astroIcon from 'astro-icon';
+import icon from 'astro-icon';
+
+import tailwindcss from '@tailwindcss/vite';
+
+const isDev = process.env.NODE_ENV === 'development';
 
 // https://astro.build/config
 export default defineConfig({
-  output: 'server',
-  adapter: node({ mode: 'standalone' }),
-  integrations: [react(), markdoc(), keystatic() , astroIcon()],
+  output: 'static',
+
+  integrations: [
+    react(),
+    markdoc(),
+
+    // Keystatic only during `npm run dev`
+    ...(isDev ? [keystatic()] : []),
+
+    icon(),
+  ],
+
   vite: {
-    plugins: [tailwindcss()],
+    plugins: [
+      tailwindcss(),
+    ],
   },
 });

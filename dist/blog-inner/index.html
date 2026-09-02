@@ -1,0 +1,343 @@
+<!DOCTYPE html><html lang="en" class="scroll-smooth bg-white"> <head><meta charset="UTF-8"><meta name="description" content="Topklickz - Astro"><meta name="keywords" content><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="generator" content="Astro v6.4.8"><title>Topklickz</title><!-- schema --><link rel="stylesheet" href="/_astro/consts.CMqtHo9i.css"></head> <body class="min-h-screen overflow-x-hidden bg-[radial-gradient(circle_at_top_left,rgba(255,132,0,0.08),transparent_30%),radial-gradient(circle_at_85%_18%,rgba(124,58,237,0.08),transparent_28%),#ffffff] text-[#0f0f11] antialiased">  <header class="relative z-20" data-site-header> <div class="mx-auto max-w-7xl px-4 py-3 backdrop-blur-md sm:px-5 sm:py-4"> <div class="flex items-center justify-between gap-3 lg:gap-8"> <!-- Logo --> <a href="/" class="shrink-0"> <img src="/uploads/logo/navbar/logo.png" alt="Logo" loading="lazy" decoding="async" width="80" height="80" class="h-12 w-auto sm:h-14 lg:h-16"> </a> <!-- Desktop Navigation --> <nav class="hidden flex-1 items-center justify-center gap-2 lg:flex"> <a href="/" class="nav-link rounded-full px-5 py-2 font-clash text-[18px] font-bold leading-none tracking-normal text-[#0f0f11] hover:bg-gray-100"> Home </a><a href="/about" class="nav-link rounded-full px-5 py-2 font-clash text-[18px] font-bold leading-none tracking-normal text-[#0f0f11] hover:bg-gray-100"> About </a><a href="/brand-strategy" class="nav-link rounded-full px-5 py-2 font-clash text-[18px] font-bold leading-none tracking-normal text-[#0f0f11] hover:bg-gray-100"> Services </a><a href="/portfolio" class="nav-link rounded-full px-5 py-2 font-clash text-[18px] font-bold leading-none tracking-normal text-[#0f0f11] hover:bg-gray-100"> Work </a><a href="/blog" class="nav-link rounded-full px-5 py-2 font-clash text-[18px] font-bold leading-none tracking-normal text-[#0f0f11] hover:bg-gray-100"> Insights </a><a href="/portfolio-inner" class="nav-link rounded-full px-5 py-2 font-clash text-[18px] font-bold leading-none tracking-normal text-[#0f0f11] hover:bg-gray-100"> Work-Inner </a> </nav> <div class="flex items-center gap-2 sm:gap-3 lg:gap-4"> <!-- Desktop Button --> <a href="/contact" class="gradient-expand-btn group !hidden lg:!inline-flex gradient-border"> <span class="gradient-expand-btn-inner"> <!-- Gradient circle --> <span class="gradient-expand-btn-bg"></span> <!-- Text --> <span class="gradient-expand-btn-text
+          font-clash
+          text-[17px]
+          font-bold
+          leading-none
+          tracking-normal
+          text-black
+          transition-colors
+          duration-300
+          group-hover:text-white"> Get in Touch </span> </span> </a> <!-- Mobile Menu Button --> <button type="button" class="inline-flex h-12 w-12 items-center justify-center rounded-full border border-black/10 bg-white text-[#0f0f11] shadow-sm transition hover:bg-gray-50 lg:hidden" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-navigation" data-nav-toggle> <span class="relative block h-4 w-5"> <span class="absolute left-0 top-0 h-0.5 w-5 rounded-full bg-current transition-transform duration-200" data-nav-icon="top"></span> <span class="absolute left-0 top-1.5 h-0.5 w-5 rounded-full bg-current transition-opacity duration-200" data-nav-icon="middle"></span> <span class="absolute left-0 top-3 h-0.5 w-5 rounded-full bg-current transition-transform duration-200" data-nav-icon="bottom"></span> </span> </button> </div> </div> <!-- Mobile Navigation --> <div id="mobile-navigation" class="mt-4 hidden rounded-2xl border border-black/5 bg-white p-3 shadow-[0_14px_40px_rgba(15,15,17,0.08)] lg:hidden" data-nav-panel> <nav class="flex flex-col gap-2"> <a href="/" class="nav-link rounded-2xl px-4 py-3 font-clash text-[16px] font-bold leading-none tracking-normal bg-gray-50 text-[#0f0f11] hover:bg-gray-100"> Home </a><a href="/about" class="nav-link rounded-2xl px-4 py-3 font-clash text-[16px] font-bold leading-none tracking-normal bg-gray-50 text-[#0f0f11] hover:bg-gray-100"> About </a><a href="/brand-strategy" class="nav-link rounded-2xl px-4 py-3 font-clash text-[16px] font-bold leading-none tracking-normal bg-gray-50 text-[#0f0f11] hover:bg-gray-100"> Services </a><a href="/portfolio" class="nav-link rounded-2xl px-4 py-3 font-clash text-[16px] font-bold leading-none tracking-normal bg-gray-50 text-[#0f0f11] hover:bg-gray-100"> Work </a><a href="/blog" class="nav-link rounded-2xl px-4 py-3 font-clash text-[16px] font-bold leading-none tracking-normal bg-gray-50 text-[#0f0f11] hover:bg-gray-100"> Insights </a><a href="/portfolio-inner" class="nav-link rounded-2xl px-4 py-3 font-clash text-[16px] font-bold leading-none tracking-normal bg-gray-50 text-[#0f0f11] hover:bg-gray-100"> Work-Inner </a> </nav> <a href="/contact" class="mt-3 inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-[#0f0f11] px-4 py-3 font-clash text-[16px] font-medium leading-none tracking-normal text-white transition hover:bg-black"> <span class="h-6 w-6 rounded-full gradient-bg"></span> Get in Touch </a> </div> </div> </header> <script>
+  const header = document.querySelector("[data-site-header]");
+  if (header) {
+    const toggle = header.querySelector("[data-nav-toggle]");
+    const panel = header.querySelector("[data-nav-panel]");
+    const topBar = header.querySelector('[data-nav-icon="top"]');
+    const middleBar = header.querySelector('[data-nav-icon="middle"]');
+    const bottomBar = header.querySelector('[data-nav-icon="bottom"]');
+
+    const setOpen = (open) => {
+      if (!toggle || !panel) return;
+      toggle.setAttribute("aria-expanded", String(open));
+      panel.classList.toggle("hidden", !open);
+
+      if (topBar && middleBar && bottomBar) {
+        topBar.classList.toggle("translate-y-1.5", open);
+        topBar.classList.toggle("rotate-45", open);
+        middleBar.classList.toggle("opacity-0", open);
+        bottomBar.classList.toggle("-translate-y-1.5", open);
+        bottomBar.classList.toggle("-rotate-45", open);
+      }
+    };
+
+    toggle?.addEventListener("click", () => {
+      const isOpen = toggle.getAttribute("aria-expanded") === "true";
+      setOpen(!isOpen);
+    });
+
+    panel?.addEventListener("click", (event) => {
+      if (event.target instanceof HTMLAnchorElement) {
+        setOpen(false);
+      }
+    });
+
+    document.addEventListener("click", (event) => {
+      const isOpen = toggle?.getAttribute("aria-expanded") === "true";
+      if (!isOpen) return;
+      const target = event.target;
+      if (target instanceof Node && !header.contains(target)) {
+        setOpen(false);
+      }
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") {
+        setOpen(false);
+      }
+    });
+
+    window.addEventListener("resize", () => {
+      if (window.innerWidth >= 1024) {
+        setOpen(false);
+      }
+    });
+  }
+</script> <article class="w-full bg-white"> <div class="mx-auto
+			w-full
+			max-w-5xl
+			px-5
+			py-10
+			lg:px-0
+			lg:py-16"> <!-- =============================
+		     ARTICLE HEADER
+		============================= --> <header> <h1 class="max-w-[520px]
+					text-[22px]
+					font-semibold
+					leading-[1.12]
+					tracking-[-0.5px]
+					text-black
+					sm:text-[28px]
+					sm:leading-[1.08]"> TOPKLICKZ Expands Creative &amp; AI Services for Growing Businesses </h1> <!-- Author / Meta --> <div class="mt-4
+					flex
+					flex-col
+					gap-4
+					sm:flex-row
+					sm:items-center
+					sm:justify-between"> <!-- Left --> <div class="flex items-center gap-3"> <img src="/img/author.webp" alt="Daniel J. Briggs" class="h-[24px]
+							w-[24px]
+							shrink-0
+							rounded-full
+							object-cover"> <span class="text-[15px]
+							font-medium
+							text-black/70"> Daniel J. Briggs </span> <span class="
+									rounded-full
+									bg-[#f2f2f2]
+									px-[9px]
+									py-[4px]
+									text-[17px]
+									font-medium
+									text-black/60
+								"> Branding </span><span class="
+									rounded-full
+									bg-[#f2f2f2]
+									px-[9px]
+									py-[4px]
+									text-[17px]
+									font-medium
+									text-black/60
+								"> Digital Marketing </span><span class="
+									rounded-full
+									bg-[#f2f2f2]
+									px-[9px]
+									py-[4px]
+									text-[17px]
+									font-medium
+									text-black/60
+								"> SEO </span><span class="
+									rounded-full
+									bg-[#f2f2f2]
+									px-[9px]
+									py-[4px]
+									text-[17px]
+									font-medium
+									text-black/60
+								"> AI SEO </span> </div> <!-- Right --> <div class="flex
+						items-center
+						gap-2
+						text-[15px]
+						text-black/45"> <span>May 10, 2026</span> <span>•</span> <span>6 min read</span> </div> </div> </header> <!-- =============================
+		     HERO IMAGE
+		============================= --> <div class="relative
+				mt-8
+				aspect-[1.75/1]
+				w-full
+				overflow-hidden
+				rounded-[10px]
+				sm:mt-10"> <img src="/img/bloghero.png" alt="Why Strong Brands Win in Competitive Markets" class="absolute
+					inset-0
+					h-full
+					w-full
+					object-cover
+					object-center"> <!-- subtle overlay --> <div class="absolute
+					inset-0
+					bg-[linear-gradient(90deg,rgba(0,0,0,0.27)_0%,rgba(0,0,0,0.08)_55%,rgba(0,0,0,0)_100%)]"></div> <!-- Featured --> <span class="absolute
+					left-4
+					top-4
+					z-10
+					rounded-[3px]
+					bg-black
+					px-[7px]
+					py-[4px]
+					text-[13px]
+					font-semibold
+					uppercase
+					leading-none
+					text-white"> FEATURED </span> <!-- Hero title --> <div class="absolute
+		inset-0
+		z-10
+		flex
+		items-center mx-20"> <div class="max-w-[420px]"> <h2 class="text-[52px]
+				font-bold
+				leading-[0.95]
+				tracking-[-1.5px]
+				text-white"> Why Strong Brands Win in Competitive Markets </h2> </div> </div> </div> <!-- =============================
+		     INTRO
+		============================= --> <div class="mt-9
+				space-y-[2px]
+				text-[17px]
+				font-normal
+				leading-[1.35]
+				text-black/75
+				sm:leading-[1.45]"> <p>Many businesses rely heavily on paid advertising for growth. While ads can deliver immediate traffic and leads, they often stop producing results once the budget ends.</p><p>Long-term success comes from creating marketing systems that continue generating awareness, trust, and conversions even when campaigns aren&#39;t running.</p><p>Here are seven strategies we implement to help brands build sustainable digital growth.</p> </div> <!-- =============================
+		     ARTICLE SECTIONS
+		============================= --> <div class="mt-8">  <section class="
+								border-t
+								border-black/20
+								py-6
+
+								sm:py-7
+							"> <h3 class="
+									text-[15px]
+									font-semibold
+									leading-[1.25]
+									text-black
+
+									sm:text-[16px]
+								"> 1. Build a Strong Brand Foundation </h3> <p class="
+									mt-2
+									text-[17px]
+									leading-[1.35]
+									text-black/75
+								"> A memorable brand is more than a logo. It&#39;s the combination of positioning, messaging, identity, and customer experience that creates trust. Businesses that invest in branding consistently outperform those competing only on price. </p> </section>  <section class="
+								border-t
+								border-black/20
+								py-6
+
+								sm:py-7
+							"> <h3 class="
+									text-[15px]
+									font-semibold
+									leading-[1.25]
+									text-black
+
+									sm:text-[16px]
+								"> 2. Create Content That Builds Authority </h3> <p class="
+									mt-2
+									text-[17px]
+									leading-[1.35]
+									text-black/75
+								"> Helpful content answers customer questions before they ask. Publishing valuable blogs, videos, guides, and case studies positions your business as an industry leader while improving organic visibility. Content continues working long after it&#39;s published. </p> </section> <figure class="my-2 overflow-hidden rounded-[10px] sm:my-4"> <img src="/img/blog-middle.png" alt="Three TOPKLICKZ real growth bars" loading="lazy" class="h-auto w-full object-cover"> </figure> <div class="mt-8">  <section class="
+									border-t
+									border-black/20
+									py-6
+
+									sm:py-7
+								"> <h3 class="
+										text-[15px]
+										font-semibold
+										leading-[1.25]
+										text-black
+
+										sm:text-[16px]
+									"> 1. Build a Strong Brand Foundation </h3> <p class="
+										mt-2
+										text-[17px]
+										leading-[1.35]
+										text-black/75
+									"> A memorable brand is more than a logo. It&#39;s the combination of positioning, messaging, identity, and customer experience that creates trust. Businesses that invest in branding consistently outperform those competing only on price. </p> </section>  <section class="
+									border-t
+									border-black/20
+									py-6
+
+									sm:py-7
+								"> <h3 class="
+										text-[15px]
+										font-semibold
+										leading-[1.25]
+										text-black
+
+										sm:text-[16px]
+									"> 2. Create Content That Builds Authority </h3> <p class="
+										mt-2
+										text-[17px]
+										leading-[1.35]
+										text-black/75
+									"> Helpful content answers customer questions before they ask. Publishing valuable blogs, videos, guides, and case studies positions your business as an industry leader while improving organic visibility. Content continues working long after it&#39;s published. </p> </section> <figure class="my-2 overflow-hidden rounded-[10px] sm:my-4"> <img src="/img/blog-middle-oat.png" alt="Four colorful oat milk cartons" loading="lazy" class="h-auto w-full object-cover"> </figure> </div> <!-- Last line --> <div class="h-px w-full bg-black/20"></div> </div> <!-- =============================
+		     ARTICLE FOOTER
+		============================= --> <footer class="mt-2 pt-2 sm:mt-4 sm:pt-3"> <div class="flex items-center justify-between gap-4"> <div> <p class="text-[16px] text-black/55">Tags</p> <div class="mt-1 flex flex-wrap gap-1.5"> <span class="rounded-full mt-3 bg-[#f2f2f2] px-2 py-1 text-[15px] font-medium text-black/65"> Branding </span><span class="rounded-full mt-3 bg-[#f2f2f2] px-2 py-1 text-[15px] font-medium text-black/65"> Digital Marketing </span><span class="rounded-full mt-3 bg-[#f2f2f2] px-2 py-1 text-[15px] font-medium text-black/65"> SEO </span><span class="rounded-full mt-3 bg-[#f2f2f2] px-2 py-1 text-[15px] font-medium text-black/65"> AI SEO </span> </div> </div> <div class="shrink-0 text-right"> <p class="text-[10px] text-black/55">Share</p> <div class="mt-1 flex justify-end gap-2"> <a href="https://x.com/intent/post" target="_blank" rel="noreferrer" aria-label="Share on X" class="flex h-6 w-6 items-center justify-center rounded-full bg-black text-[11px] font-medium text-white">
+X
+</a> <a href="https://www.linkedin.com/sharing/share-offsite/" target="_blank" rel="noreferrer" aria-label="Share on LinkedIn" class="flex h-6 w-6 items-center justify-center rounded-full bg-black text-[10px] font-semibold text-white">
+in
+</a> </div> </div> </div> <a href="/blog" class="mt-4 inline-flex items-center gap-2 rounded-full bg-black px-4 py-2 text-[15px] font-medium text-white transition-opacity hover:opacity-75"> <span class="h-1.5 w-1.5 rounded-full bg-gradient-to-r from-[#ff2d55] to-[#7c3aed]"></span>
+More Insights
+</a> </footer> </div> </article> <section class="w-full bg-black"> <div class="mx-auto
+			grid
+			max-w-7xl
+			grid-cols-1
+			items-center
+			text-center
+			lg:text-left
+			gap-5
+			px-4
+			pt-18
+			md:px-8
+			lg:grid-cols-[1.1fr_0.9fr_auto]
+			lg:gap-16
+			lg:py-14"> <!-- Left Heading --> <div> <h2 class="m-0
+					font-clash-display
+					lg:text-[48px]
+					text-[30px]
+					leading-[1.20]
+					font-semibold
+					uppercase
+					lg:leading-[0.98]
+					tracking-[-0.7px]
+					text-white">
+LET'S CREATE<br>
+SOMETHING<br> <span class="bg-[linear-gradient(90deg,#F2203E_0%,#D5257D_50%,#8A35D5_100%)]
+						bg-clip-text
+						text-transparent">
+MEMORABLE.
+</span> </h2> </div> <!-- Center Description --> <div> <p class="m-0
+					font-satoshi
+					text-[12px]
+					font-normal
+					leading-[20px]
+					tracking-[0px]
+					text-white/55">
+Whether you're launching something new, evolving an existing
+				brand or building a stronger digital presence, we'd love to hear
+				your story.
+</p> </div> <!-- CTA Button --> <div class="lg:justify-self-end"> <a href="/contact" class="group
+		relative
+		inline-flex
+		items-center
+		justify-center
+		overflow-hidden
+		rounded-full
+		border
+		border-white
+		px-8
+		py-4
+		pr-5
+		font-satoshi
+		text-[13px]
+		font-medium
+		uppercase
+		leading-none
+		tracking-[0px]
+		text-white
+		transition-[border-color]
+		duration-300"> <!-- Gradient Circle --> <span aria-hidden="true" class="absolute
+			left-[10px]
+			top-1/2
+			h-[34px]
+			w-[34px]
+			-translate-y-1/2
+			rounded-full
+			bg-[linear-gradient(135deg,#FEC053_0%,#F2203E_33%,#B729A8_65%,#5342D6_100%)]
+			transition-[left,top,width,height,transform,border-radius]
+			duration-500
+			ease-[cubic-bezier(0.65,0,0.35,1)]
+			group-hover:left-0
+			group-hover:top-0
+			group-hover:h-full
+			group-hover:w-full
+			group-hover:translate-y-0
+			group-hover:rounded-full"></span> <!-- Content --> <span class="relative
+			z-10
+			flex
+			items-center
+			justify-center
+			gap-3
+			translate-x-[14px]
+			transition-transform
+			duration-500
+			ease-[cubic-bezier(0.65,0,0.35,1)]
+			group-hover:translate-x-0"> <span class="whitespace-nowrap ml-3"> START A PROJECT </span> <span class="text-[16px]
+				leading-none
+				transition-transform
+				duration-300
+				group-hover:translate-x-1 mr-4">
+→
+</span> </span> </a> </div> </div> </section> <footer class="bg-black text-white"> <div class="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8"> <div class="grid gap-12 sm:grid-cols-2 lg:grid-cols-4"> <!-- Logo --> <div> <img src="/uploads/footer/footer/logo.png" alt="Footer Logo" loading="lazy" decoding="async" width="100" height="100" class="h-16 w-auto"> <div class="mt-6 space-y-2 text-sm text-neutral-300"> <p>hello@topklickz.com</p> <p>+91 XXXXX XXXXX</p> <p>Ahmedabad, India</p> </div> <div class="mt-8 text-xs text-neutral-500"> <p></p> <p>© 2026 TOPKLICKZ</p> </div> </div> <!-- Company --> <div> <h3 class="mb-5 font-semibold">Company</h3> <ul class="space-y-3"> <li> <a class="text-neutral-300 transition hover:text-white" href>About</a> </li><li> <a class="text-neutral-300 transition hover:text-white" href>Work</a> </li><li> <a class="text-neutral-300 transition hover:text-white" href>Careers</a> </li><li> <a class="text-neutral-300 transition hover:text-white" href>Contact</a> </li> </ul> </div> <!-- Services --> <div> <h3 class="mb-5 font-semibold">Services</h3> <ul class="space-y-3"> <li> <a class="text-neutral-300 transition hover:text-white" href>Brand Strategy</a> </li><li> <a class="text-neutral-300 transition hover:text-white" href>Brand Identity</a> </li><li> <a class="text-neutral-300 transition hover:text-white" href>Website Design</a> </li> </ul> </div> <!-- Social --> <div> <h3 class="mb-5 font-semibold">Socials</h3> <ul class="space-y-3"> <li> <a class="text-neutral-300 transition hover:text-white" target="_blank" rel="noopener noreferrer"> Instagram </a> </li><li> <a class="text-neutral-300 transition hover:text-white" target="_blank" rel="noopener noreferrer"> Instagram </a> </li> </ul> </div> </div> </div> <div class="overflow-hidden border-t border-neutral-800 px-4 pb-10 sm:px-6 lg:px-8"> <img src="/uploads/footer/footer/marqueeImage.png" alt="Marquee Image" loading="lazy" decoding="async" width="800" height="300" class="mx-auto mt-10 w-full max-w-2xl object-cover lg:ml-auto lg:mr-0"> <p class="mt-6 text-center text-lg sm:text-xl lg:text-right"> CLICK. GROW. RELISH. </p> </div> </footer>  <script type="module">let l;const m="ABCDEFGHIJKLMNOPQRSTUVWXYZ",T="abcdefghijklmnopqrstuvwxyz",p='.gradient-text:not(.gradient-text-static), [class~="bg-clip-text"][class~="text-transparent"]:not(.gradient-text-static)',b=e=>{const t=e.textContent||"",a=Array.from(t),n=a.reduce((s,o,c)=>(/[A-Za-z]/.test(o)&&s.push(c),s),[]),r=1200,x=performance.now(),d=s=>{const o=Math.min((s-x)/r,1),c=Math.ceil(o*n.length),h=new Set(n.slice(0,c));e.textContent=a.map((i,f)=>{if(/\s/.test(i)||h.has(f))return i;const u=i===i.toUpperCase()?m:T;return u[Math.floor(Math.random()*u.length)]}).join(""),o<1?requestAnimationFrame(d):(e.textContent=t,e.dataset.gradientTextVisible="true")};requestAnimationFrame(d)},g=()=>{const e=Array.from(document.querySelectorAll(p)).filter(t=>t.dataset.gradientTextReady!=="true");if(e.length){if(window.matchMedia("(prefers-reduced-motion: reduce)").matches){e.forEach(t=>{t.dataset.gradientTextReady="true",t.dataset.gradientTextVisible="true"});return}l??=new IntersectionObserver((t,a)=>{t.forEach(n=>{if(!n.isIntersecting)return;const r=n.target;r.dataset.gradientTextVisible="true",a.unobserve(r),!r.querySelector(".counter")&&b(r)})},{threshold:.35}),e.forEach(t=>{t.dataset.gradientTextReady="true",l?.observe(t)})}};g();document.addEventListener("astro:page-load",g);</script></body></html>

@@ -1,0 +1,843 @@
+<!DOCTYPE html><html lang="en" class="scroll-smooth bg-white"> <head><meta charset="UTF-8"><meta name="description" content="Topklickz - Astro"><meta name="keywords" content><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="generator" content="Astro v6.4.8"><title>Topklickz</title><!-- schema --><link rel="stylesheet" href="/_astro/consts.CMqtHo9i.css"><style>@media(prefers-reduced-motion:reduce){[data-astro-cid-yzzepktl][data-portfolio-context-stage]{height:auto;overflow:visible}[data-astro-cid-yzzepktl][data-portfolio-context-hero],[data-astro-cid-yzzepktl][data-portfolio-context-layer]{position:relative;inset:auto;transform:none!important;opacity:1!important;overflow:visible}[data-astro-cid-yzzepktl][data-portfolio-context-layer]{pointer-events:auto}}
+</style></head> <body class="min-h-screen overflow-x-hidden bg-[radial-gradient(circle_at_top_left,rgba(255,132,0,0.08),transparent_30%),radial-gradient(circle_at_85%_18%,rgba(124,58,237,0.08),transparent_28%),#ffffff] text-[#0f0f11] antialiased">  <header class="relative z-20" data-site-header> <div class="mx-auto max-w-7xl px-4 py-3 backdrop-blur-md sm:px-5 sm:py-4"> <div class="flex items-center justify-between gap-3 lg:gap-8"> <!-- Logo --> <a href="/" class="shrink-0"> <img src="/uploads/logo/navbar/logo.png" alt="Logo" loading="lazy" decoding="async" width="80" height="80" class="h-12 w-auto sm:h-14 lg:h-16"> </a> <!-- Desktop Navigation --> <nav class="hidden flex-1 items-center justify-center gap-2 lg:flex"> <a href="/" class="nav-link rounded-full px-5 py-2 font-clash text-[18px] font-bold leading-none tracking-normal text-[#0f0f11] hover:bg-gray-100"> Home </a><a href="/about" class="nav-link rounded-full px-5 py-2 font-clash text-[18px] font-bold leading-none tracking-normal text-[#0f0f11] hover:bg-gray-100"> About </a><a href="/brand-strategy" class="nav-link rounded-full px-5 py-2 font-clash text-[18px] font-bold leading-none tracking-normal text-[#0f0f11] hover:bg-gray-100"> Services </a><a href="/portfolio" class="nav-link rounded-full px-5 py-2 font-clash text-[18px] font-bold leading-none tracking-normal text-[#0f0f11] hover:bg-gray-100"> Work </a><a href="/blog" class="nav-link rounded-full px-5 py-2 font-clash text-[18px] font-bold leading-none tracking-normal text-[#0f0f11] hover:bg-gray-100"> Insights </a><a href="/portfolio-inner" aria-current="page" class="nav-link rounded-full px-5 py-2 font-clash text-[18px] font-bold leading-none tracking-normal is-active gradient-bg text-white"> Work-Inner </a> </nav> <div class="flex items-center gap-2 sm:gap-3 lg:gap-4"> <!-- Desktop Button --> <a href="/contact" class="gradient-expand-btn group !hidden lg:!inline-flex gradient-border"> <span class="gradient-expand-btn-inner"> <!-- Gradient circle --> <span class="gradient-expand-btn-bg"></span> <!-- Text --> <span class="gradient-expand-btn-text
+          font-clash
+          text-[17px]
+          font-bold
+          leading-none
+          tracking-normal
+          text-black
+          transition-colors
+          duration-300
+          group-hover:text-white"> Get in Touch </span> </span> </a> <!-- Mobile Menu Button --> <button type="button" class="inline-flex h-12 w-12 items-center justify-center rounded-full border border-black/10 bg-white text-[#0f0f11] shadow-sm transition hover:bg-gray-50 lg:hidden" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-navigation" data-nav-toggle> <span class="relative block h-4 w-5"> <span class="absolute left-0 top-0 h-0.5 w-5 rounded-full bg-current transition-transform duration-200" data-nav-icon="top"></span> <span class="absolute left-0 top-1.5 h-0.5 w-5 rounded-full bg-current transition-opacity duration-200" data-nav-icon="middle"></span> <span class="absolute left-0 top-3 h-0.5 w-5 rounded-full bg-current transition-transform duration-200" data-nav-icon="bottom"></span> </span> </button> </div> </div> <!-- Mobile Navigation --> <div id="mobile-navigation" class="mt-4 hidden rounded-2xl border border-black/5 bg-white p-3 shadow-[0_14px_40px_rgba(15,15,17,0.08)] lg:hidden" data-nav-panel> <nav class="flex flex-col gap-2"> <a href="/" class="nav-link rounded-2xl px-4 py-3 font-clash text-[16px] font-bold leading-none tracking-normal bg-gray-50 text-[#0f0f11] hover:bg-gray-100"> Home </a><a href="/about" class="nav-link rounded-2xl px-4 py-3 font-clash text-[16px] font-bold leading-none tracking-normal bg-gray-50 text-[#0f0f11] hover:bg-gray-100"> About </a><a href="/brand-strategy" class="nav-link rounded-2xl px-4 py-3 font-clash text-[16px] font-bold leading-none tracking-normal bg-gray-50 text-[#0f0f11] hover:bg-gray-100"> Services </a><a href="/portfolio" class="nav-link rounded-2xl px-4 py-3 font-clash text-[16px] font-bold leading-none tracking-normal bg-gray-50 text-[#0f0f11] hover:bg-gray-100"> Work </a><a href="/blog" class="nav-link rounded-2xl px-4 py-3 font-clash text-[16px] font-bold leading-none tracking-normal bg-gray-50 text-[#0f0f11] hover:bg-gray-100"> Insights </a><a href="/portfolio-inner" aria-current="page" class="nav-link rounded-2xl px-4 py-3 font-clash text-[16px] font-bold leading-none tracking-normal is-active gradient-bg text-white"> Work-Inner </a> </nav> <a href="/contact" class="mt-3 inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-[#0f0f11] px-4 py-3 font-clash text-[16px] font-medium leading-none tracking-normal text-white transition hover:bg-black"> <span class="h-6 w-6 rounded-full gradient-bg"></span> Get in Touch </a> </div> </div> </header> <script>
+  const header = document.querySelector("[data-site-header]");
+  if (header) {
+    const toggle = header.querySelector("[data-nav-toggle]");
+    const panel = header.querySelector("[data-nav-panel]");
+    const topBar = header.querySelector('[data-nav-icon="top"]');
+    const middleBar = header.querySelector('[data-nav-icon="middle"]');
+    const bottomBar = header.querySelector('[data-nav-icon="bottom"]');
+
+    const setOpen = (open) => {
+      if (!toggle || !panel) return;
+      toggle.setAttribute("aria-expanded", String(open));
+      panel.classList.toggle("hidden", !open);
+
+      if (topBar && middleBar && bottomBar) {
+        topBar.classList.toggle("translate-y-1.5", open);
+        topBar.classList.toggle("rotate-45", open);
+        middleBar.classList.toggle("opacity-0", open);
+        bottomBar.classList.toggle("-translate-y-1.5", open);
+        bottomBar.classList.toggle("-rotate-45", open);
+      }
+    };
+
+    toggle?.addEventListener("click", () => {
+      const isOpen = toggle.getAttribute("aria-expanded") === "true";
+      setOpen(!isOpen);
+    });
+
+    panel?.addEventListener("click", (event) => {
+      if (event.target instanceof HTMLAnchorElement) {
+        setOpen(false);
+      }
+    });
+
+    document.addEventListener("click", (event) => {
+      const isOpen = toggle?.getAttribute("aria-expanded") === "true";
+      if (!isOpen) return;
+      const target = event.target;
+      if (target instanceof Node && !header.contains(target)) {
+        setOpen(false);
+      }
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") {
+        setOpen(false);
+      }
+    });
+
+    window.addEventListener("resize", () => {
+      if (window.innerWidth >= 1024) {
+        setOpen(false);
+      }
+    });
+  }
+</script> <section data-portfolio-context-scroll class="relative h-[185svh] w-full bg-white motion-reduce:h-auto" data-astro-cid-yzzepktl> <div data-portfolio-context-stage class="sticky top-0 h-svh w-full overflow-hidden bg-white motion-reduce:relative motion-reduce:h-auto motion-reduce:overflow-visible" data-astro-cid-yzzepktl> <div data-portfolio-context-hero class="absolute inset-0 z-10 overflow-y-auto bg-white will-change-[transform,opacity]" data-astro-cid-yzzepktl> <section class="w-full bg-white"> <div class="mx-auto
+			w-full
+			max-w-7xl
+			px-5
+			py-10
+			md:py-14
+			lg:px-8
+			lg:pb-14
+			lg:pt-16"> <!-- ======================================= --> <!-- BREADCRUMB --> <!-- ======================================= --> <div class="flex
+				items-center
+				gap-3
+				font-geist
+				text-[15px]
+				font-normal
+				text-[#9B9B9B]"> <a href="/portfolio" class="group
+					inline-flex
+					items-center
+					gap-2
+					transition-colors
+					duration-300
+					hover:text-black"> <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" class="transition-transform
+						duration-300
+						group-hover:-translate-x-1"> <path d="M15 9H3M3 9L7 5M3 9L7 13" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path> </svg> <span>All Work</span> </a> <span class="text-[#D0D0D0]">/</span> <span class="uppercase text-[#ADADAD]"> NYMORA </span> </div> <!-- ======================================= --> <!-- CONTENT --> <!-- ======================================= --> <div class="mt-14
+				grid
+				grid-cols-1
+				gap-12
+				md:mt-16
+				lg:mt-[40px]
+				lg:grid-cols-[0.42fr_0.58fr]
+				lg:gap-16
+				xl:grid-cols-[440px_1fr]
+				xl:gap-[95px]"> <!-- =================================== --> <!-- LEFT DETAILS --> <!-- =================================== --> <div> <!-- Category pill --> <div class="inline-flex
+						rounded-full
+						bg-[linear-gradient(90deg,#FF9E3D_0%,#F13B59_47%,#7146E5_100%)]
+						p-[1px]"> <span class="inline-flex
+							h-[30px]
+							items-center
+							justify-center
+							rounded-full
+							bg-white
+							px-[14px]
+							font-clash
+							text-[14px]
+							font-medium
+							uppercase
+							tracking-[0.04em]
+							text-[#8D8D8D]"> BRAND IDENTITY </span> </div> <!-- Details --> <div class="mt-10
+						space-y-8
+						lg:mt-10
+						lg:space-y-9"> <!-- Client --> <div> <p class="mb-2
+								font-geist
+								text-[15px]
+								font-medium
+								uppercase
+								tracking-[0.12em]
+								text-[#AFAFAF]">
+CLIENT
+</p> <p class="font-geist
+								text-[18px]
+								font-normal
+								leading-[1.4]
+								text-[#555555]"> Nymora </p> </div> <!-- Year --> <div> <p class="mb-2
+								font-geist
+								text-[15px]
+								font-medium
+								uppercase
+								tracking-[0.12em]
+								text-[#AFAFAF]">
+YEAR
+</p> <p class="font-geist
+								text-[18px]
+								font-normal
+								leading-[1.4]
+								text-[#555555]"> 2024 </p> </div> <!-- Scope --> <div> <p class="mb-2
+								font-geist
+								text-[15px]
+								font-medium
+								uppercase
+								tracking-[0.12em]
+								text-[#AFAFAF]">
+SCOPE
+</p> <p class="max-w-[390px]
+								font-geist
+								text-[18px]
+								font-normal
+								leading-[1.6]
+								text-[#555555]
+								sm:text-[16px]">  <span>Brand Identity</span> <span class="mx-[5px]">·</span> <span>Packaging</span> <span class="mx-[5px]">·</span> <span>Art Direction</span>  </p> </div> </div> </div> <!-- =================================== --> <!-- RIGHT TITLE --> <!-- =================================== --> <div class="lg:pt-[4px]
+					xl:pl-[10px]"> <h1 class="font-clash
+						text-[64px]
+						font-semibold
+						leading-[0.95]
+						tracking-[-0.055em]
+						text-black
+						md:text-[92px]
+						lg:text-[88px]"> Nymora </h1> <p class="mt-8
+						max-w-[760px]
+						font-geist
+						text-[20px]
+						font-normal
+						leading-[1.5]
+						tracking-[-0.015em]
+						text-[#949494]
+						lg:mt-9
+						lg:text-[27px]"> Luxury brand identity rooted in nature and ritual </p> <!-- <img
+					src="/img/blog.png"
+					class="w-[200px] h-[240px] object-cover ml-auto mt-10"
+				/> --> </div> </div> </div> </section> </div> <div data-portfolio-context-layer class="pointer-events-none absolute inset-0 z-20 overflow-hidden bg-black opacity-0 will-change-[transform,opacity]" aria-hidden="true" data-astro-cid-yzzepktl> <section class="
+		relative
+		min-h-[100svh]
+		w-full
+		overflow-hidden
+		bg-black
+		lg:min-h-[100svh]
+	"> <!-- Background Image --> <img src="/img/portfolioinner.png" alt="Nymora salon storefront" class="
+			absolute
+			inset-0
+			h-full
+			w-full
+			object-cover
+			object-center
+		"> <!-- Overall Dark Overlay --> <div class="absolute inset-0 bg-black/35"></div> <!-- Left Side Strong Dark Gradient --> <div class="
+			absolute
+			inset-0
+			bg-gradient-to-r
+			from-black/80
+			via-black/45
+			to-black/5
+		"></div> <!-- Slight Bottom Shade --> <div class="
+			absolute
+			inset-x-0
+			bottom-0
+			h-[35%]
+			bg-gradient-to-t
+			from-black/45
+			to-transparent
+		"></div> <!-- Content --> <div class="
+			relative
+			z-10
+			mx-auto
+			flex
+			w-full
+			max-w-7xl
+			items-center
+			px-5
+			md:px-8
+			lg:min-h-[620px]
+			lg:px-12
+		"> <div class="
+				max-w-[370px]
+				lg:pt-4
+				pt-30
+				lg:max-w-[560px]
+			"> <!-- Eyebrow --> <p class="
+					mb-5
+					text-[9px]
+					font-medium
+					uppercase
+					tracking-[0.24em]
+					text-white/45
+					sm:text-[10px]
+				"> WORK IN CONTEXT </p> <!-- Heading --> <h2 class="
+					text-[48px]
+					font-semibold
+					leading-[0.94]
+					tracking-[-0.055em]
+					text-white
+					sm:text-[58px]
+					md:text-[64px]
+					lg:text-[70px]
+					xl:text-[76px]
+				"> <span class="block"> Craft that </span> <span class="
+						mt-1
+						block
+						bg-gradient-to-r
+						from-[#ff9b42]
+						via-[#ff2b76]
+						to-[#7448ff]
+						bg-clip-text
+						text-transparent
+					"> endures. </span> </h2> <!-- Description --> <p class="
+					mt-7
+					max-w-[430px]
+					text-[15px]
+					font-normal
+					leading-[1.75]
+					text-white/55
+					sm:text-[16px]
+					md:text-[17px]
+					lg:mt-8
+				"> Every system we build is designed to stay relevant and consistent long after we hand it over. </p> </div> </div> </section> </div> </div> </section> <section class="w-full bg-[#f7f6f2] py-5"> <div class="mx-auto w-full max-w-7xl px-4 lg:px-5"> <!-- =========================
+			DESKTOP / TABLET
+		========================= --> <div class="hidden md:block"> <!-- TOP ROW --> <div class="
+					grid
+					h-[280px]
+					grid-cols-[46%_23%_1fr]
+					gap-[7px]
+
+					lg:h-[340px]
+					xl:h-[420px]
+				"> <!-- Image 1 --> <div class="
+						group
+						relative
+						h-full
+						w-full
+						overflow-hidden
+						rounded-[10px]
+						bg-[#ecebe7]
+					"> <img src="/img/nymora-1.webp" alt="Nymora storefront branding" class="
+							h-full
+							w-full
+							object-cover
+							object-center
+							transition-transform
+							duration-700
+							ease-out
+							group-hover:scale-[1.035]
+						"> </div> <!-- Image 2 --> <div class="
+						group
+						relative
+						h-full
+						w-full
+						overflow-hidden
+						rounded-[10px]
+						bg-[#ecebe7]
+					"> <img src="/img/nymora-2.webp" alt="Nymora salon interior" class="
+							h-full
+							w-full
+							object-cover
+							object-center
+							transition-transform
+							duration-700
+							ease-out
+							group-hover:scale-[1.035]
+						"> </div> <!-- Image 3 --> <div class="
+						group
+						relative
+						h-full
+						w-full
+						overflow-hidden
+						rounded-[10px]
+						bg-[#ecebe7]
+					"> <img src="/img/nymora-3.webp" alt="Nymora product packaging" class="
+							h-full
+							w-full
+							object-cover
+							object-center
+							transition-transform
+							duration-700
+							ease-out
+							group-hover:scale-[1.035]
+						"> </div> </div> <!-- BOTTOM ROW --> <div class="
+					mt-[7px]
+					grid
+					h-[240px]
+					grid-cols-[24%_24%_28%_1fr]
+					gap-[7px]
+
+					lg:h-[300px]
+					xl:h-[380px]
+				"> <!-- Image 4 --> <div class="
+						group
+						relative
+						h-full
+						w-full
+						overflow-hidden
+						rounded-[10px]
+						bg-[#ecebe7]
+					"> <img src="/img/nymora-4.webp" alt="Nymora stationery" class="
+							h-full
+							w-full
+							object-cover
+							object-center
+							transition-transform
+							duration-700
+							ease-out
+							group-hover:scale-[1.035]
+						"> </div> <!-- Image 5 --> <div class="
+						group
+						relative
+						h-full
+						w-full
+						overflow-hidden
+						rounded-[10px]
+						bg-[#ecebe7]
+					"> <img src="/img/nymora-5.webp" alt="Nymora shopping bag" class="
+							h-full
+							w-full
+							object-cover
+							object-center
+							transition-transform
+							duration-700
+							ease-out
+							group-hover:scale-[1.035]
+						"> </div> <!-- Image 6 --> <div class="
+						group
+						relative
+						h-full
+						w-full
+						overflow-hidden
+						rounded-[10px]
+						bg-[#ecebe7]
+					"> <img src="/img/nymora-6.webp" alt="Nymora pattern design" class="
+							h-full
+							w-full
+							object-cover
+							object-center
+							transition-transform
+							duration-700
+							ease-out
+							group-hover:scale-[1.035]
+						"> </div> <!-- Image 7 --> <div class="
+						group
+						relative
+						h-full
+						w-full
+						overflow-hidden
+						rounded-[10px]
+						bg-[#ecebe7]
+					"> <img src="/img/nymora-7.webp" alt="Nymora service menu" class="
+							h-full
+							w-full
+							object-cover
+							object-center
+							transition-transform
+							duration-700
+							ease-out
+							group-hover:scale-[1.035]
+						"> </div> </div> </div> <!-- =========================
+			MOBILE
+		========================= --> <div class="grid grid-cols-2 gap-2 md:hidden"> <!-- Image 1 --> <div class="
+					group
+					col-span-2
+					h-[240px]
+					overflow-hidden
+					rounded-[10px]
+				"> <img src="/img/nymora-1.webp" alt="Nymora storefront branding" class="
+						h-full
+						w-full
+						object-cover
+						object-center
+						transition-transform
+						duration-700
+						group-hover:scale-105
+					"> </div> <!-- Image 2 --> <div class="
+					group
+					h-[200px]
+					overflow-hidden
+					rounded-[10px]
+				"> <img src="/img/nymora-2.webp" alt="Nymora salon interior" class="
+						h-full
+						w-full
+						object-cover
+						object-center
+						transition-transform
+						duration-700
+						group-hover:scale-105
+					"> </div> <!-- Image 3 --> <div class="
+					group
+					h-[200px]
+					overflow-hidden
+					rounded-[10px]
+				"> <img src="/img/nymora-3.webp" alt="Nymora product packaging" class="
+						h-full
+						w-full
+						object-cover
+						object-center
+						transition-transform
+						duration-700
+						group-hover:scale-105
+					"> </div> <!-- Image 4 --> <div class="
+					group
+					h-[190px]
+					overflow-hidden
+					rounded-[10px]
+				"> <img src="/img/nymora-4.webp" alt="Nymora stationery" class="
+						h-full
+						w-full
+						object-cover
+						object-center
+						transition-transform
+						duration-700
+						group-hover:scale-105
+					"> </div> <!-- Image 5 --> <div class="
+					group
+					h-[190px]
+					overflow-hidden
+					rounded-[10px]
+				"> <img src="/img/nymora-5.webp" alt="Nymora shopping bag" class="
+						h-full
+						w-full
+						object-cover
+						object-center
+						transition-transform
+						duration-700
+						group-hover:scale-105
+					"> </div> <!-- Image 6 --> <div class="
+					group
+					col-span-2
+					h-[230px]
+					overflow-hidden
+					rounded-[10px]
+				"> <img src="/img/nymora-6.webp" alt="Nymora pattern design" class="
+						h-full
+						w-full
+						object-cover
+						object-center
+						transition-transform
+						duration-700
+						group-hover:scale-105
+					"> </div> <!-- Image 7 --> <div class="
+					group
+					col-span-2
+					h-[240px]
+					overflow-hidden
+					rounded-[10px]
+				"> <img src="/img/nymora-7.webp" alt="Nymora service menu" class="
+						h-full
+						w-full
+						object-cover
+						object-center
+						transition-transform
+						duration-700
+						group-hover:scale-105
+					"> </div> </div> </div> </section> <section class="w-full py-14 md:py-20 lg:py-24"> <div class="mx-auto max-w-[1280px] px-5 sm:px-6 lg:px-8"> <div class="grid items-start gap-10 md:grid-cols-[160px_minmax(0,1fr)] md:gap-14 lg:grid-cols-[300px_minmax(0,760px)] lg:gap-16"> <!-- Left side --> <div class="flex flex-col"> <div class="flex items-center gap-3"> <span class="text-[10px] font-medium uppercase tracking-[0.22em] text-[#9b9b9b]">
+Overview
+</span> <span class="h-px w-[120px] bg-gradient-to-r from-[#d9c089] via-[#c9a7f3] to-[#7aa2ff]"></span> </div> <div class="mt-5 text-[64px] font-semibold leading-none tracking-[-0.05em] text-[#cfcfcf] lg:text-[78px]">
+01
+</div> </div> <!-- Right side --> <div class=""> <p class="text-[24px] font-normal leading-[1.55] tracking-[-0.02em] text-[#1f1f1f] lg:text-[28px]">
+Mammalua is a premium beauty brand rooted in the belief
+					that nature holds the answers. We built their entire
+					identity from the ground up — naming, visual language,
+					packaging system and brand architecture — to create
+					something that felt both ancient and completely modern.
+</p> <div class="mt-8 flex flex-wrap gap-3"> <span class="inline-flex rounded-full border border-[#eceae6] bg-[#efeeeb] px-4 py-2 text-[12px] font-medium leading-none text-[#8a8a8a] sm:text-[13px]"> Primary &amp; secondary logo system </span><span class="inline-flex rounded-full border border-[#eceae6] bg-[#efeeeb] px-4 py-2 text-[12px] font-medium leading-none text-[#8a8a8a] sm:text-[13px]"> Packaging design across 12 SKUs </span><span class="inline-flex rounded-full border border-[#eceae6] bg-[#efeeeb] px-4 py-2 text-[12px] font-medium leading-none text-[#8a8a8a] sm:text-[13px]"> Brand guidelines (120 pages) </span><span class="inline-flex rounded-full border border-[#eceae6] bg-[#efeeeb] px-4 py-2 text-[12px] font-medium leading-none text-[#8a8a8a] sm:text-[13px]"> Art direction for launch campaign </span><span class="inline-flex rounded-full border border-[#eceae6] bg-[#efeeeb] px-4 py-2 text-[12px] font-medium leading-none text-[#8a8a8a] sm:text-[13px]"> Retail display and POS materials </span><span class="inline-flex rounded-full border border-[#eceae6] bg-[#efeeeb] px-4 py-2 text-[12px] font-medium leading-none text-[#8a8a8a] sm:text-[13px]"> Brand photography direction </span> </div> </div> </div> </div> </section> <section class="w-full bg-[#f7f7f4] py-4"> <div class="mx-auto w-full max-w-7xl px-2 sm:px-4 lg:px-5"> <!-- ============================= --> <!-- DESKTOP COLLAGE --> <!-- ============================= --> <div class="hidden overflow-hidden md:block"> <!-- TOP ROW --> <div class="grid grid-cols-2 gap-[3px]"> <!-- Top Left --> <div class="
+						group
+						h-[330px]
+						overflow-hidden
+						lg:h-[430px]
+						xl:h-[520px]
+					"> <img src="/img/nymora-01.webp" alt="Nymora salon branding" class="
+							h-full
+							w-full
+							object-cover
+							object-center
+							transition-transform
+							duration-700
+							ease-out
+							group-hover:scale-[1.025]
+                            bg-white
+						"> </div> <!-- Top Right --> <div class="
+						group
+						h-[330px]
+						overflow-hidden
+						lg:h-[430px]
+						xl:h-[520px]
+					"> <img src="/img/nymora-02.webp" alt="Nymora packaging" class="
+							h-full
+							w-full
+							object-cover
+							object-center
+							transition-transform
+							duration-700
+							ease-out
+							group-hover:scale-[1.025]
+                             bg-white
+						"> </div> </div> <!-- ============================= --> <!-- BOTTOM ROW --> <!-- ============================= --> <div class="
+					mt-[3px]
+					grid
+					h-[190px]
+					grid-cols-[30%_30%_40%]
+					gap-[3px]
+					lg:h-[235px]
+					xl:h-[275px]
+				"> <!-- Bottom Left --> <div class="group overflow-hidden"> <img src="/img/nymora-03.webp" alt="Nymora stationery" class="
+							h-full
+							w-full
+							object-cover
+							object-center
+							transition-transform
+							duration-700
+							ease-out
+							group-hover:scale-[1.03]
+                             bg-white
+						"> </div> <!-- Bottom Center --> <div class="group overflow-hidden"> <img src="/img/nymora-04.webp" alt="Nymora product collection" class="
+							h-full
+							w-full
+							object-cover
+							object-center
+							transition-transform
+							duration-700
+							ease-out
+							group-hover:scale-[1.03]  bg-white
+						"> </div> <!-- ============================= --> <!-- RIGHT NESTED COLLAGE --> <!-- ============================= --> <div class="grid min-w-0 grid-rows-2 gap-[3px]"> <!-- Pattern - Full Width --> <div class="group overflow-hidden"> <img src="/img/nymora-05.webp" alt="Nymora brand pattern" class="
+								h-full
+								w-full
+								object-cover
+								object-center
+								transition-transform
+								duration-700
+								ease-out
+								group-hover:scale-[1.03]  bg-white
+							"> </div> <!-- 4 SMALL IMAGES --> <div class="
+							grid
+							min-h-0
+							grid-cols-[22%_12%_35%_31%]
+							gap-[3px]
+						"> <!-- Brand Mark --> <div class="group min-w-0 overflow-hidden"> <img src="/img/nymora-06.webp" alt="Nymora monogram" class="
+									h-full
+									w-full
+									object-cover
+									object-center
+									transition-transform
+									duration-700
+									group-hover:scale-[1.04] bg-white
+								"> </div> <!-- Small Interior --> <div class="group min-w-0 overflow-hidden"> <img src="/img/nymora-07.webp" alt="Nymora interior detail" class="
+									h-full
+									w-full
+									object-cover
+									object-center
+									transition-transform
+									duration-700
+									group-hover:scale-[1.04] bg-white
+								"> </div> <!-- Arch --> <div class="group min-w-0 overflow-hidden"> <img src="/img/nymora-08.webp" alt="Nymora salon arch" class="
+									h-full
+									w-full
+									object-cover
+									object-center
+									transition-transform
+									duration-700
+									group-hover:scale-[1.04] bg-white
+								"> </div> <!-- Fabric --> <div class="group min-w-0 overflow-hidden"> <img src="/img/nymora-09.webp" alt="Nymora brand texture" class="
+									h-full
+									w-full
+									object-cover
+									object-center
+									transition-transform
+									duration-700
+									group-hover:scale-[1.04] bg-white
+								"> </div> </div> </div> </div> </div> <!-- ============================= --> <!-- MOBILE --> <!-- ============================= --> <div class="grid grid-cols-2 gap-[3px] md:hidden"> <!-- Main image --> <div class="col-span-2 h-[270px] overflow-hidden"> <img src="/img/nymora-01.webp" alt="Nymora salon branding" class="h-full w-full object-cover"> </div> <!-- Packaging --> <div class="col-span-2 h-[260px] overflow-hidden"> <img src="/img/nymora-02.webp" alt="Nymora packaging" class="h-full w-full object-cover"> </div> <!-- Bottom left --> <div class="h-[210px] overflow-hidden"> <img src="/img/nymora-03.webp" alt="Nymora stationery" class="h-full w-full object-cover"> </div> <!-- Bottom center --> <div class="h-[210px] overflow-hidden"> <img src="/img/nymora-04.webp" alt="Nymora product collection" class="h-full w-full object-cover"> </div> <!-- Pattern --> <div class="col-span-2 h-[130px] overflow-hidden"> <img src="/img/nymora-05.webp" alt="Nymora brand pattern" class="h-full w-full object-cover"> </div> <!-- Four small images --> <div class="h-[150px] overflow-hidden"> <img src="/img/nymora-06.webp" alt="Nymora monogram" class="h-full w-full object-cover"> </div> <div class="h-[150px] overflow-hidden"> <img src="/img/nymora-07.webp" alt="Nymora interior" class="h-full w-full object-cover"> </div> <div class="h-[170px] overflow-hidden"> <img src="/img/nymora-08.webp" alt="Nymora arch" class="h-full w-full object-cover"> </div> <div class="h-[170px] overflow-hidden"> <img src="/img/nymora-09.webp" alt="Nymora texture" class="h-full w-full object-cover"> </div> </div> </div> </section> <section class="w-full py-14 md:py-20 lg:py-24"> <div class="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8"> <div class="grid gap-12 lg:grid-cols-[320px_minmax(0,1fr)] lg:gap-16 xl:grid-cols-[340px_minmax(0,1fr)]"> <!-- Left Side --> <div class="flex flex-col"> <div class="flex items-center gap-3"> <span class="text-[11px] font-medium uppercase tracking-[0.22em] text-[#9e9e9e]">
+Our Process
+</span> </div> <div class="mt-4 h-px w-full max-w-[295px] bg-gradient-to-r from-[#d8bf88] via-[#d38af1] to-[#6a8cff]"></div> <div class="mt-8 text-[72px] font-semibold leading-none tracking-[-0.06em] text-[#cfcfcf] sm:text-[84px] lg:text-[92px]">
+02
+</div> </div> <!-- Right Side --> <div class="grid gap-x-10 gap-y-12 md:grid-cols-2 lg:gap-x-14 lg:gap-y-14"> <div class="min-w-0"> <div class="flex items-center gap-4"> <span class="shrink-0 text-[14px] font-semibold tracking-[0.08em] text-[#b8b8b8]"> 01 </span> <div class="h-px w-full bg-[#dddddd]"></div> </div> <h3 class="mt-8 text-[32px] font-semibold leading-none tracking-[-0.04em] text-black lg:text-[38px]"> Discover </h3> <p class="mt-6 max-w-[500px] text-[18px] font-normal leading-[1.8] tracking-[-0.01em] text-[#7c7c7c] lg:text-[19px]"> We immerse ourselves in your world. Research, competitor mapping and stakeholder conversations give us the full picture before we write a single word or draw a single line. </p> </div><div class="min-w-0"> <div class="flex items-center gap-4"> <span class="shrink-0 text-[14px] font-semibold tracking-[0.08em] text-[#b8b8b8]"> 02 </span> <div class="h-px w-full bg-[#dddddd]"></div> </div> <h3 class="mt-8 text-[32px] font-semibold leading-none tracking-[-0.04em] text-black lg:text-[38px]"> Define </h3> <p class="mt-6 max-w-[500px] text-[18px] font-normal leading-[1.8] tracking-[-0.01em] text-[#7c7c7c] lg:text-[19px]"> Insights become direction. We crystallise the strategy: positioning, architecture, messaging hierarchy and the creative brief that everything else is measured against. </p> </div><div class="min-w-0"> <div class="flex items-center gap-4"> <span class="shrink-0 text-[14px] font-semibold tracking-[0.08em] text-[#b8b8b8]"> 03 </span> <div class="h-px w-full bg-[#dddddd]"></div> </div> <h3 class="mt-8 text-[32px] font-semibold leading-none tracking-[-0.04em] text-black lg:text-[38px]"> Design </h3> <p class="mt-6 max-w-[500px] text-[18px] font-normal leading-[1.8] tracking-[-0.01em] text-[#7c7c7c] lg:text-[19px]"> Where ideas become things. We craft the visual system, build out applications across every touchpoint and refine until every detail earns its place. </p> </div><div class="min-w-0"> <div class="flex items-center gap-4"> <span class="shrink-0 text-[14px] font-semibold tracking-[0.08em] text-[#b8b8b8]"> 04 </span> <div class="h-px w-full bg-[#dddddd]"></div> </div> <h3 class="mt-8 text-[32px] font-semibold leading-none tracking-[-0.04em] text-black lg:text-[38px]"> Deliver </h3> <p class="mt-6 max-w-[500px] text-[18px] font-normal leading-[1.8] tracking-[-0.01em] text-[#7c7c7c] lg:text-[19px]"> Handoff with full intent. Comprehensive guidelines, organised files and a launch plan built to give you long-term consistency without needing us in the room. </p> </div> </div> </div> </div> </section> <section class="w-full bg-[#f5f5f3] py-14 md:py-20 lg:py-24"> <div class="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8"> <div class="grid gap-12 lg:grid-cols-[170px_minmax(0,1fr)] lg:gap-16 xl:grid-cols-[185px_minmax(0,1fr)] xl:gap-20"> <!-- Left side --> <div> <div class="flex items-center gap-3"> <span class="text-[10px] font-medium uppercase tracking-[0.24em] text-[#a4a4a4]"> Thinking </span> <div class="h-px w-[130px] bg-gradient-to-r from-[#d9bf87] via-[#d78cf0] to-[#738dff]"></div> </div> <div class="mt-6 text-[68px] font-semibold leading-none tracking-[-0.06em] text-[#cdcdcd] sm:text-[76px] lg:text-[84px]"> 03 </div> </div> <!-- Right side --> <div class="grid gap-10 md:grid-cols-2 md:gap-12 xl:gap-16"> <div class="min-w-0"> <h3 class="text-[24px] font-semibold leading-none tracking-[-0.03em] text-[#111111] md:text-[26px]"> The Challenge </h3> <div class="mt-5 h-px w-full bg-[#dfdfdf]"></div> <p class="mt-6 max-w-[430px] text-[17px] font-normal leading-[1.9] tracking-[-0.01em] text-[#7f7f7f] lg:text-[18px]"> Create a luxury positioning that felt simultaneously earthy and aspirational, without leaning into tired wellness cliches. The brand needed to feel genuinely premium without feeling cold or clinical. </p> </div><div class="min-w-0"> <h3 class="text-[24px] font-semibold leading-none tracking-[-0.03em] text-[#111111] md:text-[26px]"> Our Approach </h3> <div class="mt-5 h-px w-full bg-[#dfdfdf]"></div> <p class="mt-6 max-w-[430px] text-[17px] font-normal leading-[1.9] tracking-[-0.01em] text-[#7f7f7f] lg:text-[18px]"> We anchored the identity in ritual and texture — letting materiality guide the visual language. Custom display typography, a muted palette of ochre and stone, and tactile embossed packaging finishes made the brand feel unmistakably premium. </p> </div> </div> </div> </div> </section> <section class="w-full py-14 md:py-20 lg:py-24"> <div class="mx-auto max-w-[1440px] px-5 sm:px-6 lg:px-8"> <!-- Heading --> <div class="mb-8 lg:mb-10"> <p class="text-[10px] font-medium uppercase tracking-[0.24em] text-[#a5a5a5]">
+Work Samples
+</p> <div class="mt-3 h-px w-[140px] bg-gradient-to-r from-[#d6bf87] via-[#d98cf0] to-[#6e8dff]"></div> </div> <!-- Desktop / Tablet Layout --> <div class="hidden md:block"> <div class="grid grid-cols-[1.18fr_0.94fr] gap-[4px] lg:gap-[5px]"> <!-- Left big image --> <div class="group overflow-hidden rounded-[4px] bg-[#ece9e4]"> <img src="/img/nymora-bag-main.webp" alt="Nymora shopping bags" class="h-[350px] w-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-[1.03] lg:h-[470px] xl:h-[560px]"> </div> <!-- Right stacked images --> <div class="grid grid-rows-2 gap-[4px] lg:gap-[5px]"> <div class="group overflow-hidden rounded-[4px] bg-[#ece9e4]"> <img src="/img/nymora-shades.webp" alt="Nymora color palette samples" class="h-[173px] w-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-[1.03] lg:h-[232px] xl:h-[277px]"> </div> <div class="group overflow-hidden rounded-[4px] bg-[#ece9e4]"> <img src="/img/nymora-brand-book.webp" alt="Nymora brand book" class="h-[173px] w-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-[1.03] lg:h-[232px] xl:h-[277px]"> </div> </div> </div> <!-- Bottom row --> <div class="mt-[4px] grid grid-cols-[1.18fr_0.94fr] gap-[4px] lg:mt-[5px] lg:gap-[5px]"> <div class="group overflow-hidden rounded-[4px] bg-[#ece9e4]"> <img src="/img/nymora-salon.webp" alt="Nymora salon interior" class="h-[170px] w-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-[1.03] lg:h-[210px] xl:h-[240px]"> </div> <div class="group overflow-hidden rounded-[4px] bg-[#ece9e4]"> <img src="/img/nymora-products.webp" alt="Nymora beauty products" class="h-[170px] w-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-[1.03] lg:h-[210px] xl:h-[240px]"> </div> </div> </div> <!-- Mobile Layout --> <div class="grid grid-cols-1 gap-3 md:hidden"> <div class="group overflow-hidden rounded-[4px] bg-[#ece9e4]"> <img src="/img/nymora-bag-main.webp" alt="Nymora shopping bags" class="h-[300px] w-full object-cover object-center transition-transform duration-700 group-hover:scale-[1.03]"> </div> <div class="group overflow-hidden rounded-[4px] bg-[#ece9e4]"> <img src="/img/nymora-shades.webp" alt="Nymora color palette samples" class="h-[220px] w-full object-cover object-center transition-transform duration-700 group-hover:scale-[1.03]"> </div> <div class="group overflow-hidden rounded-[4px] bg-[#ece9e4]"> <img src="/img/nymora-brand-book.webp" alt="Nymora brand book" class="h-[220px] w-full object-cover object-center transition-transform duration-700 group-hover:scale-[1.03]"> </div> <div class="group overflow-hidden rounded-[4px] bg-[#ece9e4]"> <img src="/img/nymora-salon.webp" alt="Nymora salon interior" class="h-[220px] w-full object-cover object-center transition-transform duration-700 group-hover:scale-[1.03]"> </div> <div class="group overflow-hidden rounded-[4px] bg-[#ece9e4]"> <img src="/img/nymora-products.webp" alt="Nymora beauty products" class="h-[220px] w-full object-cover object-center transition-transform duration-700 group-hover:scale-[1.03]"> </div> </div> </div> </section>  <section class="w-full bg-black"> <div class="
+			mx-auto
+			grid
+			w-full
+			max-w-7xl
+			grid-cols-1
+			gap-y-10
+			px-5
+			py-12
+			md:grid-cols-2
+			md:gap-x-12
+			md:gap-y-12
+			lg:min-h-[250px]
+			lg:grid-cols-[200px_repeat(3,minmax(0,1fr))]
+			lg:items-center
+			lg:gap-x-[60px]
+			lg:px-10
+			lg:py-8
+		"> <!-- Left --> <div class="flex flex-col"> <p class="
+					text-[8px]
+					font-medium
+					uppercase
+					leading-none
+					tracking-[1.8px]
+					text-white/70
+				">
+KEY RESULTS
+</p> <div class="
+					mt-[11px]
+					h-px
+					w-full
+					max-w-[200px]
+					bg-gradient-to-r
+					from-[#DDA52C]
+					via-[#DC214D]
+					to-[#6232C8]
+				"></div> <h2 class="mt-6 text-[68px] font-semibold leading-none tracking-[-0.06em] text-[#cdcdcd] sm:text-[76px] lg:text-[84px]">
+04
+</h2> </div> <!-- Results --> <div class="flex flex-col lg:justify-center"> <h3 class="
+							w-fit
+							bg-[linear-gradient(90deg,#FFBC40_0%,#FF4940_28%,#F3215C_50%,#C91C9D_73%,#7139DC_100%)]
+							bg-clip-text
+							text-[48px]
+							font-bold
+							leading-[0.9]
+							tracking-[-2.5px]
+							text-transparent
+							lg:text-[62px]
+						"> +68% </h3> <h4 class="
+							mt-[17px]
+							lg:text-[18px]
+                            text-[12px]
+							font-semibold
+							leading-none
+							text-white
+						"> Brand recognition </h4> <p class="
+							mt-[11px]
+							text-[14px]
+							font-normal
+							leading-[1.3]
+							text-white/25
+						"> Within 3 months of launch </p> </div><div class="flex flex-col lg:justify-center"> <h3 class="
+							w-fit
+							bg-[linear-gradient(90deg,#FFBC40_0%,#FF4940_28%,#F3215C_50%,#C91C9D_73%,#7139DC_100%)]
+							bg-clip-text
+							text-[48px]
+							font-bold
+							leading-[0.9]
+							tracking-[-2.5px]
+							text-transparent
+							lg:text-[62px]
+						"> 3× </h3> <h4 class="
+							mt-[17px]
+							lg:text-[18px]
+                            text-[12px]
+							font-semibold
+							leading-none
+							text-white
+						"> Retail placement </h4> <p class="
+							mt-[11px]
+							text-[14px]
+							font-normal
+							leading-[1.3]
+							text-white/25
+						"> New stockists acquired </p> </div><div class="flex flex-col lg:justify-center"> <h3 class="
+							w-fit
+							bg-[linear-gradient(90deg,#FFBC40_0%,#FF4940_28%,#F3215C_50%,#C91C9D_73%,#7139DC_100%)]
+							bg-clip-text
+							text-[48px]
+							font-bold
+							leading-[0.9]
+							tracking-[-2.5px]
+							text-transparent
+							lg:text-[62px]
+						"> 12 </h3> <h4 class="
+							mt-[17px]
+							lg:text-[18px]
+                            text-[12px]
+							font-semibold
+							leading-none
+							text-white
+						"> Press features </h4> <p class="
+							mt-[11px]
+							text-[14px]
+							font-normal
+							leading-[1.3]
+							text-white/25
+						"> In design and lifestyle media </p> </div> </div> </section> <section class="w-full bg-[#f3f3f3]"> <div class="mx-auto grid max-w-[1400px] grid-cols-1 gap-10 px-6 py-14 sm:px-8 md:px-10 lg:grid-cols-[220px_minmax(0,1fr)] lg:gap-14 lg:px-12 lg:py-20 xl:px-16"> <!-- Left label --> <div class="flex flex-col lg:pt-2"> <p class="text-[10px] font-medium uppercase tracking-[1.8px] text-black/35"> WHAT THEY SAID </p> <div class="mt-3 h-px w-full max-w-[190px] bg-[linear-gradient(90deg,#f3b33e_0%,#f24f63_45%,#7c5cff_100%)]"></div> </div> <!-- Right content --> <div class="max-w-[860px]"> <div class="text-[64px] font-semibold leading-none text-black/6 lg:text-[90px]" aria-hidden="true">
+“
+</div> <h2 class="font-geist max-w-[860px] text-[28px] font-semibold leading-[1.18] tracking-[-0.02em] text-black text-[34px] lg:text-[33px]"> TOPKLICKZ didn&#39;t just design a logo — they built a world. Every touchpoint feels intentional, premium and completely us. </h2> <div class="mt-10 flex items-center gap-4"> <div class="h-11 w-11 rounded-full bg-[linear-gradient(135deg,#ff8c3a_0%,#ff3f6c_45%,#6e4dff_100%)] shrink-0"></div> <div> <h3 class="text-[16px] font-semibold leading-none text-black"> Priya Sharma </h3> <p class="mt-2 text-[14px] leading-none text-black/30"> Founder, Mammalua Luxe </p> </div> </div> </div> </div> </section> <section class="w-full bg-[#efefef]"> <div class="mx-auto w-full"> <!-- top heading area --> <div class="px-5 pt-8 px-8 lg:px-12 max-w-7xl w-full mx-auto"> <p class="text-[9px] font-medium uppercase tracking-[1.8px] text-black/35"> NEXT PROJECT </p> <div class="mt-3 h-px w-full bg-[linear-gradient(90deg,#e7b24c_0%,#f15e7e_50%,#8767ff_100%)]"></div> </div> <!-- banner --> <div class="relative mt-8 min-h-[320px] overflow-hidden sm:min-h-[420px] lg:min-h-[320px]"> <!-- bg image --> <img src="/img/nextproject.jpg" alt="GLOBOFARM" class="absolute inset-0 h-full w-full object-cover"> <!-- dark overlay --> <div class="absolute inset-0 bg-[linear-gradient(90deg,rgba(0,0,0,0.62)_0%,rgba(0,0,0,0.28)_35%,rgba(0,0,0,0.08)_100%)]"></div> <!-- soft top overlay --> <div class="absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.12)_0%,rgba(255,255,255,0)_35%)]"></div> <!-- content --> <div class="relative z-10 flex min-h-[320px] items-center lg:min-h-[450px] max-w-7xl mx-auto"> <div class=""> <!-- tags --> <div class="mb-5 flex flex-wrap gap-2"> <span class="rounded-full border border-white/20 px-3 py-[7px] text-[9px] font-medium uppercase tracking-[0.8px] text-white/85"> WEBSITE DESIGN </span><span class="rounded-full border border-white/20 px-3 py-[7px] text-[9px] font-medium uppercase tracking-[0.8px] text-white/85"> BRAND STRATEGY </span> </div> <!-- title --> <h2 class="max-w-[720px] text-[42px] font-black uppercase leading-[0.95] tracking-[-0.03em] text-white md:text-[68px] lg:text-[56px]"> GLOBOFARM </h2> <!-- description --> <p class="mt-4 max-w-[520px] text-[15px] font-normal leading-[1.5] text-white/65 sm:text-[16px]"> Brand strategy and website for next-gen agri-tech </p> <!-- button --> <a href="/case-study" class="mt-8 inline-flex items-center gap-3 rounded-full border border-white/35 px-5 py-3 text-[11px] font-semibold uppercase tracking-[0.5px] text-white transition duration-300 hover:border-white hover:bg-white hover:text-black"> <span>VIEW CASE STUDY</span> <span class="text-[14px] leading-none">→</span> </a> </div> </div> </div> </div> </section> <section class="
+        relative
+        w-full
+        overflow-hidden
+        border-b
+        border-white/60
+        bg-black
+        py-16
+        sm:py-20
+        lg:py-24
+      "><div class="
+          mx-auto
+          flex
+          w-full
+          max-w-5xl
+          flex-col
+          items-center
+          px-5
+          text-center
+          sm:px-6
+          lg:px-8
+        "><!-- Heading --><h2 class="
+            font-clash
+            text-[34px]
+            font-semibold
+            uppercase
+            leading-[1.08]
+            tracking-[-0.02em]
+            text-white
+            sm:text-[42px]
+            lg:text-[50px]
+          "><span class="block">LET&#39;S CREATE SOMETHING</span><span class="
+              block
+              bg-gradient-to-r
+              from-red-500
+              via-pink-500
+              to-purple-600
+              bg-clip-text
+              text-transparent
+            ">MEMORABLE.</span></h2><!-- Description --><p class="
+            mx-auto
+            mt-4
+            max-w-2xl
+            font-geist
+            text-[15px]
+            font-light
+            leading-[1.45]
+            text-white/70
+            sm:text-[16px]
+            lg:text-[18px]
+          ">Whether you&#39;re launching a new venture, evolving an existing brand or improving your digital presence, we&#39;d love to hear from you.</p><!-- CTA Button --><a class="
+		group
+		relative
+		mt-10
+		inline-flex
+		items-center
+		justify-center
+		overflow-hidden
+		rounded-full
+		border
+		border-white/50
+		bg-white/5
+		px-10
+		py-4
+		text-white
+		focus-visible:outline-none
+		focus-visible:ring-2
+		focus-visible:ring-white
+		focus-visible:ring-offset-2
+		focus-visible:ring-offset-black
+		lg:px-8
+	"><!-- Gradient Circle / Hover Background --><span aria-hidden="true" class="
+			absolute
+			left-[10px]
+			top-1/2
+			h-8
+			w-8
+			-translate-y-1/2
+			rounded-full
+			bg-[linear-gradient(135deg,#FEC053_0%,#F2203E_33%,#B729A8_65%,#5342D6_100%)]
+			shadow-[0_0_18px_rgba(236,72,153,0.35)]
+
+			transition-[left,top,width,height,transform,border-radius]
+			duration-500
+			ease-[cubic-bezier(0.65,0,0.35,1)]
+
+			group-hover:left-0
+			group-hover:top-0
+			group-hover:h-full
+			group-hover:w-full
+			group-hover:translate-y-0
+			group-hover:rounded-full
+		"></span><!-- Content --><span class="
+			relative
+			z-10
+			flex
+			items-center
+			justify-center
+			gap-3
+			translate-x-[14px]
+
+			transition-transform
+			duration-500
+			ease-[cubic-bezier(0.65,0,0.35,1)]
+
+			group-hover:translate-x-0
+		"><!-- Button Text --><span class="
+				whitespace-nowrap
+				font-geist
+				text-[13px]
+				font-semibold
+				uppercase
+				leading-none
+				sm:text-[14px]
+			">START A PROJECT</span><!-- Arrow --><svg width="1em" height="1em" viewBox="0 0 24 24" class="
+				h-4
+				w-4
+				shrink-0
+				transition-transform
+				duration-300
+				group-hover:translate-x-1
+				sm:h-5
+				sm:w-5
+			" data-icon="mdi:arrow-right">   <symbol id="ai:mdi:arrow-right"><path fill="currentColor" d="M4 11v2h12l-5.5 5.5l1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5L16 11z"/></symbol><use href="#ai:mdi:arrow-right"></use>  </svg></span></a></div></section> <footer class="bg-black text-white"> <div class="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8"> <div class="grid gap-12 sm:grid-cols-2 lg:grid-cols-4"> <!-- Logo --> <div> <img src="/uploads/footer/footer/logo.png" alt="Footer Logo" loading="lazy" decoding="async" width="100" height="100" class="h-16 w-auto"> <div class="mt-6 space-y-2 text-sm text-neutral-300"> <p>hello@topklickz.com</p> <p>+91 XXXXX XXXXX</p> <p>Ahmedabad, India</p> </div> <div class="mt-8 text-xs text-neutral-500"> <p></p> <p>© 2026 TOPKLICKZ</p> </div> </div> <!-- Company --> <div> <h3 class="mb-5 font-semibold">Company</h3> <ul class="space-y-3"> <li> <a class="text-neutral-300 transition hover:text-white" href>About</a> </li><li> <a class="text-neutral-300 transition hover:text-white" href>Work</a> </li><li> <a class="text-neutral-300 transition hover:text-white" href>Careers</a> </li><li> <a class="text-neutral-300 transition hover:text-white" href>Contact</a> </li> </ul> </div> <!-- Services --> <div> <h3 class="mb-5 font-semibold">Services</h3> <ul class="space-y-3"> <li> <a class="text-neutral-300 transition hover:text-white" href>Brand Strategy</a> </li><li> <a class="text-neutral-300 transition hover:text-white" href>Brand Identity</a> </li><li> <a class="text-neutral-300 transition hover:text-white" href>Website Design</a> </li> </ul> </div> <!-- Social --> <div> <h3 class="mb-5 font-semibold">Socials</h3> <ul class="space-y-3"> <li> <a class="text-neutral-300 transition hover:text-white" target="_blank" rel="noopener noreferrer"> Instagram </a> </li><li> <a class="text-neutral-300 transition hover:text-white" target="_blank" rel="noopener noreferrer"> Instagram </a> </li> </ul> </div> </div> </div> <div class="overflow-hidden border-t border-neutral-800 px-4 pb-10 sm:px-6 lg:px-8"> <img src="/uploads/footer/footer/marqueeImage.png" alt="Marquee Image" loading="lazy" decoding="async" width="800" height="300" class="mx-auto mt-10 w-full max-w-2xl object-cover lg:ml-auto lg:mr-0"> <p class="mt-6 text-center text-lg sm:text-xl lg:text-right"> CLICK. GROW. RELISH. </p> </div> </footer>  <script type="module">let l;const m="ABCDEFGHIJKLMNOPQRSTUVWXYZ",T="abcdefghijklmnopqrstuvwxyz",p='.gradient-text:not(.gradient-text-static), [class~="bg-clip-text"][class~="text-transparent"]:not(.gradient-text-static)',b=e=>{const t=e.textContent||"",a=Array.from(t),n=a.reduce((s,o,c)=>(/[A-Za-z]/.test(o)&&s.push(c),s),[]),r=1200,x=performance.now(),d=s=>{const o=Math.min((s-x)/r,1),c=Math.ceil(o*n.length),h=new Set(n.slice(0,c));e.textContent=a.map((i,f)=>{if(/\s/.test(i)||h.has(f))return i;const u=i===i.toUpperCase()?m:T;return u[Math.floor(Math.random()*u.length)]}).join(""),o<1?requestAnimationFrame(d):(e.textContent=t,e.dataset.gradientTextVisible="true")};requestAnimationFrame(d)},g=()=>{const e=Array.from(document.querySelectorAll(p)).filter(t=>t.dataset.gradientTextReady!=="true");if(e.length){if(window.matchMedia("(prefers-reduced-motion: reduce)").matches){e.forEach(t=>{t.dataset.gradientTextReady="true",t.dataset.gradientTextVisible="true"});return}l??=new IntersectionObserver((t,a)=>{t.forEach(n=>{if(!n.isIntersecting)return;const r=n.target;r.dataset.gradientTextVisible="true",a.unobserve(r),!r.querySelector(".counter")&&b(r)})},{threshold:.35}),e.forEach(t=>{t.dataset.gradientTextReady="true",l?.observe(t)})}};g();document.addEventListener("astro:page-load",g);</script></body></html> <script type="module">const s=(e,o=0,t=1)=>Math.min(Math.max(e,o),t),m=e=>1-Math.pow(1-e,3),i=()=>{const e=document.querySelector("[data-portfolio-context-scroll]"),o=document.querySelector("[data-portfolio-context-hero]"),t=document.querySelector("[data-portfolio-context-layer]");if(!e||!o||!t||e.dataset.initialized==="true")return;e.dataset.initialized="true";let r=0;const c=()=>{if(r=0,window.matchMedia("(prefers-reduced-motion: reduce)").matches){o.style.transform="none",o.style.opacity="1",t.style.transform="none",t.style.opacity="1",t.style.pointerEvents="auto",t.setAttribute("aria-hidden","false");return}const l=e.getBoundingClientRect(),d=Math.max(e.offsetHeight-window.innerHeight,1),u=s(-l.top/d),n=m(s((u-.08)/.72));t.style.transform=`translate3d(0, ${(1-n)*100}%, 0)`,t.style.opacity=`${s(n*1.4)}`,t.setAttribute("aria-hidden",n>.15?"false":"true"),o.style.transform=`translate3d(0, ${-n*38}px, 0) scale(${1-n*.025})`,o.style.opacity=`${1-n*.3}`},a=()=>{r||(r=requestAnimationFrame(c))};window.addEventListener("scroll",a,{passive:!0}),window.addEventListener("resize",a,{passive:!0}),a()};i();document.addEventListener("astro:page-load",i);</script>
