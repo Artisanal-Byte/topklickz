@@ -28,8 +28,8 @@ import { config, fields, collection, singleton } from '@keystatic/core';
 
 export default config({
   storage: {
-    kind: 'github',
-    repo: 'Artisanal-Byte/topklickz',
+    kind: 'local',
+    // repo: 'Artisanal-Byte/topklickz',
   },
 
   singletons: {
