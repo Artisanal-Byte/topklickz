@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@astrojs/markdoc": "^1.0.3",
-    "@astrojs/node": "^10.1.4",
+    "@astrojs/node": "^10.0.5",
     "@astrojs/react": "^5.0.3",
     "@iconify-json/mdi": "^1.2.3",
     "@keystatic/astro": "^5.1.0",
