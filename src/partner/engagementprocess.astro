@@ -1,0 +1,212 @@
+---
+// src/components/EngagementProcess.astro
+
+const steps = [
+	{
+		number: "01",
+		title: "DISCOVER",
+		description:
+			"Understand your project, business challenges, and strategic goals.",
+	},
+	{
+		number: "02",
+		title: "STRATEGY ALIGNMENT",
+		description:
+			"Understand your project, business challenges, and strategic goals.",
+	},
+	{
+		number: "03",
+		title: "SOLUTION DESIGN",
+		description:
+			"Understand your project, business challenges, and strategic goals.",
+	},
+	{
+		number: "04",
+		title: "DELIVERY EXECUTION",
+		description:
+			"Understand your project, business challenges, and strategic goals.",
+	},
+	{
+		number: "05",
+		title: "DELIVERY EXECUTION",
+		description:
+			"Understand your project, business challenges, and strategic goals.",
+	},
+];
+---
+
+<section class="w-full bg-[#f8f8f8]">
+	<div
+		class="
+			mx-auto
+			max-w-7xl
+			px-5
+			py-12
+			lg:px-5
+			lg:py-10
+		"
+	>
+		<!-- Heading -->
+		<div>
+			<h2
+				class="
+					font-clash
+					text-[38px]
+					font-medium
+					uppercase
+					leading-[0.95]
+					tracking-[-2px]
+					text-black
+					lg:text-[36px]				"
+			>
+				ENGAGEMENT PROCESS
+			</h2>
+
+			<!-- Gradient underline -->
+			<div
+				class="
+					mt-4
+					h-[5px]
+					w-[168px]
+					bg-gradient-to-r
+					from-[#FFB343]
+					via-[#FF7048]
+					to-[#EF1757]
+				"
+			>
+			</div>
+		</div>
+
+		<!-- Process Grid -->
+		<div
+			class="
+				mt-12
+				grid
+				grid-cols-1
+				sm:grid-cols-2
+				lg:mt-[45px]
+				lg:grid-cols-5
+			"
+		>
+			{
+				steps.map((step, index) => (
+					<div
+						class="
+							relative
+							flex
+							min-h-[148px]
+							flex-col
+							justify-center
+							px-0
+							py-7
+							sm:px-7
+							lg:min-h-[148px]
+							lg:px-[28px]
+							lg:py-5
+						"
+					>
+						<!-- Desktop Vertical Border -->
+						{
+							index !== 0 && (
+								<span
+									class="
+										absolute
+										left-0
+										top-0
+										hidden
+										h-full
+										w-px
+										bg-[#d8d8d8]
+										lg:block
+									"
+								/>
+							)
+						}
+
+						<!-- Tablet Border -->
+						{
+							index % 2 !== 0 && (
+								<span
+									class="
+										absolute
+										left-0
+										top-0
+										hidden
+										h-full
+										w-px
+										bg-[#d8d8d8]
+										sm:block
+										lg:hidden
+									"
+								/>
+							)
+						}
+
+						<!-- Mobile bottom border -->
+						{
+							index !== steps.length - 1 && (
+								<span
+									class="
+										absolute
+										bottom-0
+										left-0
+										right-0
+										h-px
+										bg-[#e4e4e4]
+										sm:hidden
+									"
+								/>
+							)
+						}
+
+						<!-- Number -->
+						<span
+							class="
+								font-satoshi
+								text-[12px]
+								font-normal
+								leading-none
+								text-[#777777]
+							"
+						>
+							{step.number}
+						</span>
+
+						<!-- Title -->
+						<h3
+							class="
+								mt-[22px]
+								font-satoshi
+								text-[15px]
+								font-bold
+								uppercase
+								leading-[1.15]
+								tracking-[-0.25px]
+								text-black
+								xl:text-[16px]
+							"
+						>
+							{step.title}
+						</h3>
+
+						<!-- Description -->
+						<p
+							class="
+								mt-[16px]
+								max-w-[230px]
+								font-satoshi
+								text-[13px]
+								font-normal
+								leading-[1.7]
+								text-[#737373]
+								xl:text-[14px]
+							"
+						>
+							{step.description}
+						</p>
+					</div>
+				))
+			}
+		</div>
+	</div>
+</section>

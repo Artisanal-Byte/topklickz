@@ -1,0 +1,300 @@
+---
+// src/components/OperationalExcellence.astro
+
+const stats = [
+	{
+		value: "28%",
+		label: "Increase in\nProductivity",
+	},
+	{
+		value: "42%",
+		label: "Faster Process\nTurnaround",
+	},
+	{
+		value: "$480K+",
+		label: "Cost Savings\nAchieved",
+	},
+	{
+		value: "100%",
+		label: "Stakeholder\nSatisfaction",
+	},
+];
+
+const caseStudy = {
+	title: "DRIVING OPERATIONAL EXCELLENCE FOR A FEDERAL AGENCY",
+	description:
+		"Implemented process improvements and automation initiatives that streamlined operations and delivered significant measurable outcomes.",
+	image: "/images/operational-excellence.png",
+	buttonText: "View Experience",
+	buttonLink: "/experience",
+};
+---
+
+<section class="w-full bg-white">
+	<div
+		class="
+			mx-auto
+			max-w-7xl
+			px-5
+			py-10
+			lg:px-5
+			lg:py-11
+		"
+	>
+		<div
+			class="
+				grid
+				grid-cols-1
+				gap-7
+				xl:grid-cols-[minmax(0,3fr)_minmax(330px,1fr)]
+				xl:gap-7
+			"
+		>
+			<!-- ===================================================
+				LEFT MAIN CARD
+			=================================================== -->
+			<div
+				class="
+					relative
+					overflow-hidden
+					rounded-[20px]
+					bg-gradient-to-r
+					from-[#FFB13F]
+					via-[#FF7A43]
+					to-[#FF375E]
+					p-[1.5px]
+				"
+			>
+				<div
+					class="
+						grid
+						min-h-[320px]
+						grid-cols-1
+						overflow-hidden
+						rounded-[18px]
+						bg-white
+						lg:grid-cols-[1.15fr_0.85fr]
+					"
+				>
+					<!-- LEFT CONTENT -->
+					<div
+						class="
+							flex
+							flex-col
+							justify-center
+							px-6
+							py-10
+							lg:px-8
+						"
+					>
+						<h2
+							class="
+								max-w-[650px]
+								font-clash
+								text-[31px]
+								font-bold
+								uppercase
+								leading-[1.22]
+								tracking-[-1.3px]
+								text-black
+								lg:text-[25px]
+							"
+						>
+							{caseStudy.title}
+						</h2>
+
+						<p
+							class="
+								mt-4
+								max-w-[520px]
+								font-satoshi
+								text-[15px]
+								font-medium
+								leading-[1.5]
+								tracking-[0.1px]
+								text-[#202020]
+								sm:text-[16px]
+							"
+						>
+							{caseStudy.description}
+						</p>
+
+						<!-- BUTTON -->
+						<div class="mt-5">
+							<a
+								href={caseStudy.buttonLink}
+								class="
+									group
+									inline-flex
+									overflow-hidden
+									rounded-full
+									bg-gradient-to-r
+									from-[#FFB23E]
+									via-[#FF7045]
+									to-[#FF385B]
+									p-[1px]
+									transition-all
+									duration-300
+									hover:shadow-[0_8px_24px_rgba(255,73,80,0.2)]
+								"
+							>
+								<span
+									class="
+										flex
+										min-h-[42px]
+										items-center
+										justify-center
+										rounded-full
+										px-5
+										font-satoshi
+										text-[16px]
+										font-semibold
+										text-white
+									"
+								>
+									{caseStudy.buttonText}
+								</span>
+							</a>
+						</div>
+					</div>
+
+					<!-- RIGHT IMAGE -->
+					<div
+						class="
+							relative
+							flex
+							min-h-[250px]
+							items-center
+							justify-center
+							px-4
+							pb-6
+							lg:min-h-full
+							lg:px-4
+							lg:py-5
+						"
+					>
+						<!-- Optional soft glow -->
+						<div
+							class="
+								pointer-events-none
+								absolute
+								left-1/2
+								top-1/2
+								h-[210px]
+								w-[270px]
+								-translate-x-1/2
+								-translate-y-1/2
+								rounded-full
+								bg-[radial-gradient(circle,rgba(247,53,157,0.12)_0%,rgba(255,255,255,0)_70%)]
+								blur-xl
+							"
+						>
+						</div>
+
+						<img
+							src={caseStudy.image}
+							alt="Operational excellence analytics"
+							loading="lazy"
+							class="
+								relative
+								z-10
+								h-auto
+								w-full
+								max-w-[390px]
+								object-contain
+								lg:max-w-[420px]
+							"
+						/>
+					</div>
+				</div>
+			</div>
+
+			<!-- ===================================================
+				RIGHT STATS
+			=================================================== -->
+			<div
+				class="
+					grid
+					grid-cols-2
+					gap-5
+					sm:gap-6
+					xl:grid-cols-2
+					xl:gap-x-6
+					xl:gap-y-9
+				"
+			>
+				{
+					stats.map((stat) => (
+						<div
+							class="
+								relative
+								overflow-hidden
+								rounded-[16px]
+								bg-gradient-to-br
+								from-[#FFB23F]
+								via-[#FF7742]
+								to-[#FF365A]
+								p-[1.3px]
+								shadow-[0_7px_10px_rgba(0,0,0,0.08)]
+							"
+						>
+							<div
+								class="
+									flex
+									h-full
+									min-h-[132px]
+									flex-col
+									justify-center
+									rounded-[15px]
+									bg-white
+									px-5
+									py-5
+									sm:min-h-[145px]
+									sm:px-6
+									xl:min-h-[132px]
+								"
+							>
+								<!-- Number -->
+								<div
+									class="
+										bg-gradient-to-r
+										from-[#FFA745]
+										via-[#FF7F45]
+										to-[#FF5160]
+										bg-clip-text
+										font-satoshi
+										text-[27px]
+										font-bold
+										leading-none
+										tracking-[-0.8px]
+										text-transparent
+										sm:text-[30px]
+									"
+								>
+									{stat.value}
+								</div>
+
+								<!-- Label -->
+								<p
+									class="
+										mt-3
+										whitespace-pre-line
+										font-satoshi
+										text-[14px]
+										font-medium
+										leading-[1.05]
+										tracking-[-0.15px]
+										text-[#111111]
+										sm:text-[15px]
+									"
+								>
+									{stat.label}
+								</p>
+							</div>
+						</div>
+					))
+				}
+			</div>
+		</div>
+	</div>
+</section>

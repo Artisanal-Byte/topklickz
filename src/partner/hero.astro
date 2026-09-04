@@ -1,0 +1,215 @@
+---
+
+interface Props {
+	image?: string;
+}
+
+const {
+	image = "/images/business-analyst.jpg",
+} = Astro.props;
+---
+
+<section class="w-full bg-white">
+	<div
+		class="
+			mx-auto
+			grid
+			max-w-7xl
+			grid-cols-1
+			items-center
+			gap-12
+			px-5
+			py-14
+			lg:grid-cols-[1.08fr_0.92fr]
+			lg:gap-20
+			lg:px-4
+			lg:py-20
+		"
+	>
+		<!-- =========================
+			LEFT CONTENT
+		========================= -->
+		<div class="w-full">
+	<h1
+		class="
+			
+			font-clash
+			text-[42px]
+			font-normal
+			leading-[1]
+			tracking-[0.02em]
+			text-black
+			lg:text-[45px]
+		"
+	>
+		Need a Senior Business
+		<!-- <br class="hidden sm:block" /> -->
+		Analyst Who Delivers
+
+		<span
+			class="
+				mt-1
+				block
+				bg-gradient-to-r
+				from-[#ff7644]
+				via-[#f52355]
+				to-[#c916a3]
+				bg-clip-text
+				font-bold
+				text-transparent
+			"
+		>
+			Real Outcomes?
+		</span>
+	</h1>
+
+	<!-- Description -->
+	<div
+		class="
+			mt-9
+			max-w-[640px]
+			text-[17px]
+			font-normal
+			leading-[1.45]
+			text-[#171717]
+			lg:mt-8
+			lg:text-[20px]
+		"
+	>
+		<p>What is Lorem Ipsum?</p>
+
+		<p>
+			Lorem Ipsum is simply dummy text of the printing and
+			typesetting industry. Lorem Ipsum has been the industry's
+			standard dummy text ever since the 1500s, when an unknown
+			printer took a gall
+		</p>
+	</div>
+
+	<!-- Buttons -->
+	<div
+		class="
+			mt-10
+			flex
+			flex-wrap
+			items-center
+			gap-4
+			lg:mt-12
+		"
+	>
+		<a
+			href="/contact"
+			class="
+				group
+				inline-flex
+				rounded-full
+				bg-gradient-to-r
+				from-[#ff9945]
+				via-[#ff576b]
+				to-[#6155ff]
+				p-[1.5px]
+				transition-all
+				duration-300
+				hover:shadow-[0_8px_24px_rgba(226,70,100,0.18)]
+			"
+		>
+			<span
+				class="
+					flex
+					min-h-[44px]
+					items-center
+					justify-center
+					rounded-full
+					bg-white
+					px-5
+					text-[15px]
+					font-semibold
+					text-[#ff7d3d]
+					transition-all
+					duration-300
+					group-hover:bg-transparent
+					group-hover:text-white
+					sm:text-[16px]
+				"
+			>
+				Book Consultation
+			</span>
+		</a>
+
+		<a
+			href="/experience"
+			class="
+				group
+				inline-flex
+				rounded-full
+				bg-gradient-to-r
+				from-[#ff9945]
+				via-[#ff576b]
+				to-[#6155ff]
+				p-[1.5px]
+				transition-all
+				duration-300
+				hover:shadow-[0_8px_24px_rgba(226,70,100,0.18)]
+			"
+		>
+			<span
+				class="
+					flex
+					min-h-[44px]
+					items-center
+					justify-center
+					rounded-full
+					bg-white
+					px-5
+					text-[15px]
+					font-semibold
+					text-[#ff7d3d]
+					transition-all
+					duration-300
+					group-hover:bg-transparent
+					group-hover:text-white
+					sm:text-[16px]
+				"
+			>
+				View Experience
+			</span>
+		</a>
+	</div>
+</div>
+
+		<!-- =========================
+			RIGHT IMAGE
+		========================= -->
+		<div class="w-full">
+			<div
+				class="
+					relative
+					aspect-[1.43/1]
+					w-full
+					overflow-hidden
+					rounded-[22px]
+					bg-[#f1f1f1]
+					sm:rounded-[26px]
+					lg:min-h-[430px]
+				"
+			>
+				<img
+					src={image}
+					alt="Senior Business Analyst"
+					loading="lazy"
+					class="
+						absolute
+						inset-0
+						h-full
+						w-full
+						object-cover
+						object-center
+						transition-transform
+						duration-700
+						hover:scale-[1.03]
+					"
+				/>
+			</div>
+		</div>
+	</div>
+</section>
