@@ -1,0 +1,1805 @@
+<!DOCTYPE html><html lang="en" class="scroll-smooth bg-white"> <head><meta charset="UTF-8"><meta name="description" content="Topklickz - Astro"><meta name="keywords" content><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="generator" content="Astro v6.4.8"><title>Topklickz</title><!-- schema --><link rel="stylesheet" href="/_astro/consts.C-duR7NV.css"></head> <body class="min-h-screen overflow-x-hidden bg-[radial-gradient(circle_at_top_left,rgba(255,132,0,0.08),transparent_30%),radial-gradient(circle_at_85%_18%,rgba(124,58,237,0.08),transparent_28%),#ffffff] text-[#0f0f11] antialiased">  <header class="relative z-20" data-site-header> <div class="mx-auto max-w-7xl px-4 py-3 backdrop-blur-md sm:px-5 sm:py-4"> <div class="flex items-center justify-between gap-3 lg:gap-8"> <!-- Logo --> <a href="/" class="shrink-0"> <img src="/uploads/logo/navbar/logo.png" alt="Logo" loading="lazy" decoding="async" width="80" height="80" class="h-12 w-auto sm:h-14 lg:h-16"> </a> <!-- Desktop Navigation --> <nav class="hidden flex-1 items-center justify-center gap-2 lg:flex"> <a href="/" class="nav-link rounded-full px-5 py-2 font-clash text-[18px] font-bold leading-none tracking-normal text-[#0f0f11] hover:bg-gray-100"> Home </a><a href="/about" class="nav-link rounded-full px-5 py-2 font-clash text-[18px] font-bold leading-none tracking-normal text-[#0f0f11] hover:bg-gray-100"> About </a><a href="/brand-strategy" class="nav-link rounded-full px-5 py-2 font-clash text-[18px] font-bold leading-none tracking-normal text-[#0f0f11] hover:bg-gray-100"> Services </a><a href="/portfolio" class="nav-link rounded-full px-5 py-2 font-clash text-[18px] font-bold leading-none tracking-normal text-[#0f0f11] hover:bg-gray-100"> Work </a><a href="/blog" class="nav-link rounded-full px-5 py-2 font-clash text-[18px] font-bold leading-none tracking-normal text-[#0f0f11] hover:bg-gray-100"> Insights </a><a href="/portfolio-inner" class="nav-link rounded-full px-5 py-2 font-clash text-[18px] font-bold leading-none tracking-normal text-[#0f0f11] hover:bg-gray-100"> Work-Inner </a><a href="partner" aria-current="page" class="nav-link rounded-full px-5 py-2 font-clash text-[18px] font-bold leading-none tracking-normal is-active gradient-bg text-white"> Partner </a> </nav> <div class="flex items-center gap-2 sm:gap-3 lg:gap-4"> <!-- Desktop Button --> <a href="/contact" class="gradient-expand-btn group !hidden lg:!inline-flex gradient-border"> <span class="gradient-expand-btn-inner"> <!-- Gradient circle --> <span class="gradient-expand-btn-bg"></span> <!-- Text --> <span class="gradient-expand-btn-text
+          font-clash
+          text-[17px]
+          font-bold
+          leading-none
+          tracking-normal
+          text-black
+          transition-colors
+          duration-300
+          group-hover:text-white"> Get in Touch </span> </span> </a> <!-- Mobile Menu Button --> <button type="button" class="inline-flex h-12 w-12 items-center justify-center rounded-full border border-black/10 bg-white text-[#0f0f11] shadow-sm transition hover:bg-gray-50 lg:hidden" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-navigation" data-nav-toggle> <span class="relative block h-4 w-5"> <span class="absolute left-0 top-0 h-0.5 w-5 rounded-full bg-current transition-transform duration-200" data-nav-icon="top"></span> <span class="absolute left-0 top-1.5 h-0.5 w-5 rounded-full bg-current transition-opacity duration-200" data-nav-icon="middle"></span> <span class="absolute left-0 top-3 h-0.5 w-5 rounded-full bg-current transition-transform duration-200" data-nav-icon="bottom"></span> </span> </button> </div> </div> <!-- Mobile Navigation --> <div id="mobile-navigation" class="mt-4 hidden rounded-2xl border border-black/5 bg-white p-3 shadow-[0_14px_40px_rgba(15,15,17,0.08)] lg:hidden" data-nav-panel> <nav class="flex flex-col gap-2"> <a href="/" class="nav-link rounded-2xl px-4 py-3 font-clash text-[16px] font-bold leading-none tracking-normal bg-gray-50 text-[#0f0f11] hover:bg-gray-100"> Home </a><a href="/about" class="nav-link rounded-2xl px-4 py-3 font-clash text-[16px] font-bold leading-none tracking-normal bg-gray-50 text-[#0f0f11] hover:bg-gray-100"> About </a><a href="/brand-strategy" class="nav-link rounded-2xl px-4 py-3 font-clash text-[16px] font-bold leading-none tracking-normal bg-gray-50 text-[#0f0f11] hover:bg-gray-100"> Services </a><a href="/portfolio" class="nav-link rounded-2xl px-4 py-3 font-clash text-[16px] font-bold leading-none tracking-normal bg-gray-50 text-[#0f0f11] hover:bg-gray-100"> Work </a><a href="/blog" class="nav-link rounded-2xl px-4 py-3 font-clash text-[16px] font-bold leading-none tracking-normal bg-gray-50 text-[#0f0f11] hover:bg-gray-100"> Insights </a><a href="/portfolio-inner" class="nav-link rounded-2xl px-4 py-3 font-clash text-[16px] font-bold leading-none tracking-normal bg-gray-50 text-[#0f0f11] hover:bg-gray-100"> Work-Inner </a><a href="partner" aria-current="page" class="nav-link rounded-2xl px-4 py-3 font-clash text-[16px] font-bold leading-none tracking-normal is-active gradient-bg text-white"> Partner </a> </nav> <a href="/contact" class="mt-3 inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-[#0f0f11] px-4 py-3 font-clash text-[16px] font-medium leading-none tracking-normal text-white transition hover:bg-black"> <span class="h-6 w-6 rounded-full gradient-bg"></span> Get in Touch </a> </div> </div> </header> <script>
+  const header = document.querySelector("[data-site-header]");
+  if (header) {
+    const toggle = header.querySelector("[data-nav-toggle]");
+    const panel = header.querySelector("[data-nav-panel]");
+    const topBar = header.querySelector('[data-nav-icon="top"]');
+    const middleBar = header.querySelector('[data-nav-icon="middle"]');
+    const bottomBar = header.querySelector('[data-nav-icon="bottom"]');
+
+    const setOpen = (open) => {
+      if (!toggle || !panel) return;
+      toggle.setAttribute("aria-expanded", String(open));
+      panel.classList.toggle("hidden", !open);
+
+      if (topBar && middleBar && bottomBar) {
+        topBar.classList.toggle("translate-y-1.5", open);
+        topBar.classList.toggle("rotate-45", open);
+        middleBar.classList.toggle("opacity-0", open);
+        bottomBar.classList.toggle("-translate-y-1.5", open);
+        bottomBar.classList.toggle("-rotate-45", open);
+      }
+    };
+
+    toggle?.addEventListener("click", () => {
+      const isOpen = toggle.getAttribute("aria-expanded") === "true";
+      setOpen(!isOpen);
+    });
+
+    panel?.addEventListener("click", (event) => {
+      if (event.target instanceof HTMLAnchorElement) {
+        setOpen(false);
+      }
+    });
+
+    document.addEventListener("click", (event) => {
+      const isOpen = toggle?.getAttribute("aria-expanded") === "true";
+      if (!isOpen) return;
+      const target = event.target;
+      if (target instanceof Node && !header.contains(target)) {
+        setOpen(false);
+      }
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") {
+        setOpen(false);
+      }
+    });
+
+    window.addEventListener("resize", () => {
+      if (window.innerWidth >= 1024) {
+        setOpen(false);
+      }
+    });
+  }
+</script> <section class="w-full bg-white"> <div class="
+			mx-auto
+			grid
+			max-w-7xl
+			grid-cols-1
+			items-center
+			gap-12
+			px-5
+			py-14
+			lg:grid-cols-[1.08fr_0.92fr]
+			lg:gap-20
+			lg:px-4
+			lg:py-20
+		"> <!-- =========================
+			LEFT CONTENT
+		========================= --> <div class="w-full"> <h1 class="
+			
+			font-clash
+			text-[42px]
+			font-normal
+			leading-[1]
+			tracking-[0.02em]
+			text-black
+			lg:text-[45px]
+		">
+Need a Senior Business
+<!-- <br class="hidden sm:block" /> -->
+Analyst Who Delivers
+<span class="
+				mt-1
+				block
+				bg-gradient-to-r
+				from-[#ff7644]
+				via-[#f52355]
+				to-[#c916a3]
+				bg-clip-text
+				font-bold
+				text-transparent
+			">
+Real Outcomes?
+</span> </h1> <!-- Description --> <div class="
+			mt-9
+			max-w-[640px]
+			text-[17px]
+			font-normal
+			leading-[1.45]
+			text-[#171717]
+			lg:mt-8
+			lg:text-[20px]
+		"> <p>What is Lorem Ipsum?</p> <p>
+Lorem Ipsum is simply dummy text of the printing and
+			typesetting industry. Lorem Ipsum has been the industry's
+			standard dummy text ever since the 1500s, when an unknown
+			printer took a gall
+</p> </div> <!-- Buttons --> <div class="
+			mt-10
+			flex
+			flex-wrap
+			items-center
+			gap-4
+			lg:mt-12
+		"> <a href="/contact" class="
+				group
+				inline-flex
+				rounded-full
+				bg-gradient-to-r
+				from-[#ff9945]
+				via-[#ff576b]
+				to-[#6155ff]
+				p-[1.5px]
+				transition-all
+				duration-300
+				hover:shadow-[0_8px_24px_rgba(226,70,100,0.18)]
+			"> <span class="
+					flex
+					min-h-[44px]
+					items-center
+					justify-center
+					rounded-full
+					bg-white
+					px-5
+					text-[15px]
+					font-semibold
+					text-[#ff7d3d]
+					transition-all
+					duration-300
+					group-hover:bg-transparent
+					group-hover:text-white
+					sm:text-[16px]
+				">
+Book Consultation
+</span> </a> <a href="/experience" class="
+				group
+				inline-flex
+				rounded-full
+				bg-gradient-to-r
+				from-[#ff9945]
+				via-[#ff576b]
+				to-[#6155ff]
+				p-[1.5px]
+				transition-all
+				duration-300
+				hover:shadow-[0_8px_24px_rgba(226,70,100,0.18)]
+			"> <span class="
+					flex
+					min-h-[44px]
+					items-center
+					justify-center
+					rounded-full
+					bg-white
+					px-5
+					text-[15px]
+					font-semibold
+					text-[#ff7d3d]
+					transition-all
+					duration-300
+					group-hover:bg-transparent
+					group-hover:text-white
+					sm:text-[16px]
+				">
+View Experience
+</span> </a> </div> </div> <!-- =========================
+			RIGHT IMAGE
+		========================= --> <div class="w-full"> <div class="
+					relative
+					aspect-[1.43/1]
+					w-full
+					overflow-hidden
+					rounded-[22px]
+					bg-[#f1f1f1]
+					sm:rounded-[26px]
+					lg:min-h-[430px]
+				"> <img src="/images/business-analyst.jpg" alt="Senior Business Analyst" loading="lazy" class="
+						absolute
+						inset-0
+						h-full
+						w-full
+						object-cover
+						object-center
+						transition-transform
+						duration-700
+						hover:scale-[1.03]
+					"> </div> </div> </div> </section> <section class="w-full bg-white"> <div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10"> <!-- Top line --> <div class="border-t border-[#0000001A]"> <div class="
+					grid
+					grid-cols-2
+					lg:grid-cols-5
+				"> <div class="
+									flex
+									min-h-[100px]
+									flex-col
+									justify-center
+									px-4
+									py-6
+									sm:min-h-[115px]
+									lg:px-4
+								"> <h3 class="
+									bg-gradient-to-r
+									from-[#ff6546]
+									via-[#f22054]
+									to-[#c822ae]
+									bg-clip-text
+									text-[27px]
+									font-bold
+									leading-none
+									tracking-[-0.8px]
+									text-transparent
+                                    lg:text-[40px]
+								"> 8+ </h3> <p class="
+									mt-4
+									text-[8px]
+									font-normal
+									uppercase
+									leading-[1.3]
+									tracking-[0.2px]
+									text-[#888888]
+                                    lg:text-[12px]
+								"> YEARS OF EXPERIENCE </p> </div><div class="
+									flex
+									min-h-[100px]
+									flex-col
+									justify-center
+									px-4
+									py-6
+									sm:min-h-[115px]
+									lg:px-4
+								 border-l border-[#0000001A]"> <h3 class="
+									bg-gradient-to-r
+									from-[#ff6546]
+									via-[#f22054]
+									to-[#c822ae]
+									bg-clip-text
+									text-[27px]
+									font-bold
+									leading-none
+									tracking-[-0.8px]
+									text-transparent
+                                    lg:text-[40px]
+								"> 150+ </h3> <p class="
+									mt-4
+									text-[8px]
+									font-normal
+									uppercase
+									leading-[1.3]
+									tracking-[0.2px]
+									text-[#888888]
+                                    lg:text-[12px]
+								"> PROJECTS DELIVERED </p> </div><div class="
+									flex
+									min-h-[100px]
+									flex-col
+									justify-center
+									px-4
+									py-6
+									sm:min-h-[115px]
+									lg:px-4
+								 border-l border-[#0000001A]"> <h3 class="
+									bg-gradient-to-r
+									from-[#ff6546]
+									via-[#f22054]
+									to-[#c822ae]
+									bg-clip-text
+									text-[27px]
+									font-bold
+									leading-none
+									tracking-[-0.8px]
+									text-transparent
+                                    lg:text-[40px]
+								"> 30+ </h3> <p class="
+									mt-4
+									text-[8px]
+									font-normal
+									uppercase
+									leading-[1.3]
+									tracking-[0.2px]
+									text-[#888888]
+                                    lg:text-[12px]
+								"> BRANDS BUILT </p> </div><div class="
+									flex
+									min-h-[100px]
+									flex-col
+									justify-center
+									px-4
+									py-6
+									sm:min-h-[115px]
+									lg:px-4
+								 border-l border-[#0000001A]"> <h3 class="
+									bg-gradient-to-r
+									from-[#ff6546]
+									via-[#f22054]
+									to-[#c822ae]
+									bg-clip-text
+									text-[27px]
+									font-bold
+									leading-none
+									tracking-[-0.8px]
+									text-transparent
+                                    lg:text-[40px]
+								"> 20+ </h3> <p class="
+									mt-4
+									text-[8px]
+									font-normal
+									uppercase
+									leading-[1.3]
+									tracking-[0.2px]
+									text-[#888888]
+                                    lg:text-[12px]
+								"> INDUSTRIES SERVED </p> </div><div class="
+									flex
+									min-h-[100px]
+									flex-col
+									justify-center
+									px-4
+									py-6
+									sm:min-h-[115px]
+									lg:px-4
+								 border-l border-[#0000001A]"> <h3 class="
+									bg-gradient-to-r
+									from-[#ff6546]
+									via-[#f22054]
+									to-[#c822ae]
+									bg-clip-text
+									text-[27px]
+									font-bold
+									leading-none
+									tracking-[-0.8px]
+									text-transparent
+                                    lg:text-[40px]
+								"> 98% </h3> <p class="
+									mt-4
+									text-[8px]
+									font-normal
+									uppercase
+									leading-[1.3]
+									tracking-[0.2px]
+									text-[#888888]
+                                    lg:text-[12px]
+								"> CLIENT RETENTION </p> </div> </div> </div> </div> </section> <section class="w-full bg-white"> <div class="
+			mx-auto
+			max-w-7xl
+			px-5
+			py-14
+			lg:px-10
+			lg:py-20
+		"> <div class="
+				grid
+				grid-cols-1
+				gap-16
+				lg:grid-cols-[minmax(0,2.35fr)_minmax(340px,0.85fr)]
+				lg:gap-[70px]
+			"> <!-- ===================================================
+				LEFT SIDE
+			=================================================== --> <div class="min-w-0"> <!-- Heading --> <div> <h2 class="
+							font-clash
+							text-[42px]
+							font-bold
+							uppercase
+							leading-[0.95]
+							tracking-[-2px]
+							text-black
+							lg:text-[46px]
+						">
+CORE EXPERTISE
+</h2> <div class="
+							mt-5
+							h-[6px]
+							w-[210px]
+							bg-gradient-to-r
+							from-[#FFB343]
+							via-[#FF7346]
+							to-[#EF1757]
+						"></div> </div> <div class="
+						mt-8
+						grid
+						grid-cols-1
+						lg:grid-cols-3
+					"> <div class="
+									relative
+									flex
+									flex-col
+									justify-center
+									px-5
+									py-8
+								"> <span class="
+												absolute
+												bottom-0
+												left-5
+												right-5
+												h-px
+												bg-[#E5E5E5]
+												sm:hidden
+											"></span>   <!-- Content --> <div> <h3 class="
+											font-clash
+											text-[20px]
+											font-medium
+											uppercase
+											leading-[1.12]
+											tracking-[-0.8px]
+											text-[#050505]
+											lg:text-[20px]
+										"> BUSINESS ANALYSIS </h3> <p class="
+											mt-[10px]
+											max-w-[245px]
+											font-satoshi
+											text-[12px]
+											font-normal
+											leading-[1.45]
+											tracking-[-0.2px]
+											text-[#777777]
+										"> BRD, FRD, User Stories, UAT, Stakeholder Management </p> </div> </div><div class="
+									relative
+									flex
+									flex-col
+									justify-center
+									px-5
+									py-8
+								"> <span class="
+												absolute
+												bottom-0
+												left-5
+												right-5
+												h-px
+												bg-[#E5E5E5]
+												sm:hidden
+											"></span> <span class="
+												absolute
+												left-0
+												top-1/2
+												hidden
+												h-[106px]
+												w-px
+												-translate-y-1/2
+												bg-[#D7D7D7]
+												sm:block
+												xl:hidden
+											"></span> <span class="
+												absolute
+												left-0
+												top-1/2
+												hidden
+												h-[106px]
+												w-px
+												-translate-y-1/2
+												bg-[#D3D3D3]
+												xl:block
+											"></span> <!-- Content --> <div> <h3 class="
+											font-clash
+											text-[20px]
+											font-medium
+											uppercase
+											leading-[1.12]
+											tracking-[-0.8px]
+											text-[#050505]
+											lg:text-[20px]
+										"> DIGITAL TRANSFORMATION </h3> <p class="
+											mt-[10px]
+											max-w-[245px]
+											font-satoshi
+											text-[12px]
+											font-normal
+											leading-[1.45]
+											tracking-[-0.2px]
+											text-[#777777]
+										"> BRD, FRD, User Stories, UAT, Stakeholder Management </p> </div> </div><div class="
+									relative
+									flex
+									flex-col
+									justify-center
+									px-5
+									py-8
+								"> <span class="
+												absolute
+												bottom-0
+												left-5
+												right-5
+												h-px
+												bg-[#E5E5E5]
+												sm:hidden
+											"></span>  <span class="
+												absolute
+												left-0
+												top-1/2
+												hidden
+												h-[106px]
+												w-px
+												-translate-y-1/2
+												bg-[#D3D3D3]
+												xl:block
+											"></span> <!-- Content --> <div> <h3 class="
+											font-clash
+											text-[20px]
+											font-medium
+											uppercase
+											leading-[1.12]
+											tracking-[-0.8px]
+											text-[#050505]
+											lg:text-[20px]
+										"> AI &amp; PROMPT ENGINEERING </h3> <p class="
+											mt-[10px]
+											max-w-[245px]
+											font-satoshi
+											text-[12px]
+											font-normal
+											leading-[1.45]
+											tracking-[-0.2px]
+											text-[#777777]
+										"> BRD, FRD, User Stories, UAT, Stakeholder Management </p> </div> </div><div class="
+									relative
+									flex
+									flex-col
+									justify-center
+									px-5
+									py-8
+								"> <span class="
+												absolute
+												bottom-0
+												left-5
+												right-5
+												h-px
+												bg-[#E5E5E5]
+												sm:hidden
+											"></span> <span class="
+												absolute
+												left-0
+												top-1/2
+												hidden
+												h-[106px]
+												w-px
+												-translate-y-1/2
+												bg-[#D7D7D7]
+												sm:block
+												xl:hidden
+											"></span>  <!-- Content --> <div> <h3 class="
+											font-clash
+											text-[20px]
+											font-medium
+											uppercase
+											leading-[1.12]
+											tracking-[-0.8px]
+											text-[#050505]
+											lg:text-[20px]
+										"> CLOUD &amp; AWS </h3> <p class="
+											mt-[10px]
+											max-w-[245px]
+											font-satoshi
+											text-[12px]
+											font-normal
+											leading-[1.45]
+											tracking-[-0.2px]
+											text-[#777777]
+										"> BRD, FRD, User Stories, UAT, Stakeholder Management </p> </div> </div><div class="
+									relative
+									flex
+									flex-col
+									justify-center
+									px-5
+									py-8
+								"> <span class="
+												absolute
+												bottom-0
+												left-5
+												right-5
+												h-px
+												bg-[#E5E5E5]
+												sm:hidden
+											"></span>  <span class="
+												absolute
+												left-0
+												top-1/2
+												hidden
+												h-[106px]
+												w-px
+												-translate-y-1/2
+												bg-[#D3D3D3]
+												xl:block
+											"></span> <!-- Content --> <div> <h3 class="
+											font-clash
+											text-[20px]
+											font-medium
+											uppercase
+											leading-[1.12]
+											tracking-[-0.8px]
+											text-[#050505]
+											lg:text-[20px]
+										"> GIS &amp; SPATIAL INTELLIGENCE </h3> <p class="
+											mt-[10px]
+											max-w-[245px]
+											font-satoshi
+											text-[12px]
+											font-normal
+											leading-[1.45]
+											tracking-[-0.2px]
+											text-[#777777]
+										"> BRD, FRD, User Stories, UAT, Stakeholder Management </p> </div> </div><div class="
+									relative
+									flex
+									flex-col
+									justify-center
+									px-5
+									py-8
+								">  <span class="
+												absolute
+												left-0
+												top-1/2
+												hidden
+												h-[106px]
+												w-px
+												-translate-y-1/2
+												bg-[#D7D7D7]
+												sm:block
+												xl:hidden
+											"></span> <span class="
+												absolute
+												left-0
+												top-1/2
+												hidden
+												h-[106px]
+												w-px
+												-translate-y-1/2
+												bg-[#D3D3D3]
+												xl:block
+											"></span> <!-- Content --> <div> <h3 class="
+											font-clash
+											text-[20px]
+											font-medium
+											uppercase
+											leading-[1.12]
+											tracking-[-0.8px]
+											text-[#050505]
+											lg:text-[20px]
+										"> DATA &amp; ANALYTICS </h3> <p class="
+											mt-[10px]
+											max-w-[245px]
+											font-satoshi
+											text-[12px]
+											font-normal
+											leading-[1.45]
+											tracking-[-0.2px]
+											text-[#777777]
+										"> BRD, FRD, User Stories, UAT, Stakeholder Management </p> </div> </div> </div> </div> <div class="min-w-0 lg:pt-1"> <!-- Heading --> <h2 class="
+						font-clash
+						text-[38px]
+						font-bold
+						uppercase
+						leading-[0.95]
+						tracking-[-1.5px]
+						text-black
+						lg:text-[32px]
+					">
+INDUSTRIES
+					SERVED
+</h2> <div class="
+						mt-12
+						flex
+						lg:mt-[50px]
+					"> <!-- Vertical Orange Line --> <div class="
+							mr-8
+							w-[5px]
+							shrink-0
+							self-stretch
+							rounded-full
+							bg-[#FFAD3D]
+							sm:mr-10
+							lg:mr-[42px]
+						"></div> <!-- Industries --> <div class="
+							flex
+							min-w-0
+							flex-1
+							flex-col
+							gap-[34px]
+						"> <div class="
+										grid
+										grid-cols-[55px_minmax(0,1fr)]
+										items-center
+										gap-6
+									"> <div class="
+											flex
+											h-[48px]
+											w-[55px]
+											shrink-0
+											items-center
+											justify-center
+										" style="color:#FF974B"> <!-- GOVERNMENT --> <svg viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-[46px] w-[46px]"> <path d="M7 16L26 7L45 16" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M9 18H43" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"></path> <path d="M12 43H40" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"></path> <path d="M8 47H44" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"></path> <path d="M15 22V39" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"></path> <path d="M23 22V39" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"></path> <path d="M31 22V39" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"></path> <path d="M39 22V39" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"></path> </svg> <!-- DOCUMENT -->  <!-- TRUCK -->  <!-- EDUCATION -->  <!-- USERS -->  </div> <!-- Industry Text --> <h3 class="
+											max-w-[235px]
+											font-satoshi
+											text-[16px]
+											font-semibold
+											uppercase
+											leading-[1.55]
+											tracking-[-0.3px]
+											text-[#070707]
+											lg:text-[17px]
+										"> FEDERAL &amp; PUBLIC SERVICES </h3> </div><div class="
+										grid
+										grid-cols-[55px_minmax(0,1fr)]
+										items-center
+										gap-6
+									"> <div class="
+											flex
+											h-[48px]
+											w-[55px]
+											shrink-0
+											items-center
+											justify-center
+										" style="color:#F3484B"> <!-- GOVERNMENT -->  <!-- DOCUMENT --> <svg viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-[46px] w-[46px]"> <path d="M15 5H31L40 14V43C40 45.2 38.2 47 36 47H15C12.8 47 11 45.2 11 43V9C11 6.8 12.8 5 15 5Z" stroke="currentColor" stroke-width="3.5" stroke-linejoin="round"></path> <path d="M31 5V15H40" stroke="currentColor" stroke-width="3.5" stroke-linejoin="round"></path> <path d="M18 25H33" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"></path> <path d="M18 33H33" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"></path> </svg> <!-- TRUCK -->  <!-- EDUCATION -->  <!-- USERS -->  </div> <!-- Industry Text --> <h3 class="
+											max-w-[235px]
+											font-satoshi
+											text-[16px]
+											font-semibold
+											uppercase
+											leading-[1.55]
+											tracking-[-0.3px]
+											text-[#070707]
+											lg:text-[17px]
+										"> IMMIGRATION &amp; CITIZENSHIP SERVICES </h3> </div><div class="
+										grid
+										grid-cols-[55px_minmax(0,1fr)]
+										items-center
+										gap-6
+									"> <div class="
+											flex
+											h-[48px]
+											w-[55px]
+											shrink-0
+											items-center
+											justify-center
+										" style="color:#C027A5"> <!-- GOVERNMENT -->  <!-- DOCUMENT -->  <!-- TRUCK --> <svg viewBox="0 0 55 52" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-[48px] w-[48px]"> <path d="M5 14H31V39H5V14Z" stroke="currentColor" stroke-width="3.5" stroke-linejoin="round"></path> <path d="M31 23H40L48 31V39H31V23Z" stroke="currentColor" stroke-width="3.5" stroke-linejoin="round"></path> <circle cx="15" cy="40" r="5" fill="white" stroke="currentColor" stroke-width="3.5"></circle> <circle cx="40" cy="40" r="5" fill="white" stroke="currentColor" stroke-width="3.5"></circle> </svg> <!-- EDUCATION -->  <!-- USERS -->  </div> <!-- Industry Text --> <h3 class="
+											max-w-[235px]
+											font-satoshi
+											text-[16px]
+											font-semibold
+											uppercase
+											leading-[1.55]
+											tracking-[-0.3px]
+											text-[#070707]
+											lg:text-[17px]
+										"> TRANSPORTATION &amp; LOGISTICS </h3> </div><div class="
+										grid
+										grid-cols-[55px_minmax(0,1fr)]
+										items-center
+										gap-6
+									"> <div class="
+											flex
+											h-[48px]
+											w-[55px]
+											shrink-0
+											items-center
+											justify-center
+										" style="color:#6340D8"> <!-- GOVERNMENT -->  <!-- DOCUMENT -->  <!-- TRUCK -->  <!-- EDUCATION --> <svg viewBox="0 0 55 52" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-[48px] w-[48px]"> <path d="M5 18L27 8L49 18L27 28L5 18Z" stroke="currentColor" stroke-width="3.5" stroke-linejoin="round"></path> <path d="M14 23V33C14 33 18 40 27 40C36 40 40 33 40 33V23" stroke="currentColor" stroke-width="3.5" stroke-linejoin="round"></path> <path d="M49 18V31" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"></path> </svg> <!-- USERS -->  </div> <!-- Industry Text --> <h3 class="
+											max-w-[235px]
+											font-satoshi
+											text-[16px]
+											font-semibold
+											uppercase
+											leading-[1.55]
+											tracking-[-0.3px]
+											text-[#070707]
+											lg:text-[17px]
+										"> EDUCATION &amp; PUBLIC INSTITUTIONS </h3> </div><div class="
+										grid
+										grid-cols-[55px_minmax(0,1fr)]
+										items-center
+										gap-6
+									"> <div class="
+											flex
+											h-[48px]
+											w-[55px]
+											shrink-0
+											items-center
+											justify-center
+										" style="color:#F33672"> <!-- GOVERNMENT -->  <!-- DOCUMENT -->  <!-- TRUCK -->  <!-- EDUCATION -->  <!-- USERS --> <svg viewBox="0 0 55 52" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-[48px] w-[48px]"> <circle cx="23" cy="16" r="8" stroke="currentColor" stroke-width="3.5"></circle> <path d="M9 43V37C9 29.3 15.3 23 23 23C30.7 23 37 29.3 37 37V43" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"></path> <path d="M37 10C41.5 10.6 45 14.4 45 19C45 23.6 41.5 27.4 37 28" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"></path> <path d="M40 31C45 33 48 37 48 43" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"></path> </svg> </div> <!-- Industry Text --> <h3 class="
+											max-w-[235px]
+											font-satoshi
+											text-[16px]
+											font-semibold
+											uppercase
+											leading-[1.55]
+											tracking-[-0.3px]
+											text-[#070707]
+											lg:text-[17px]
+										"> PROFESSIONAL SERVICES </h3> </div> </div> </div> </div> </div> </div> </section> <section class="w-full bg-[#f8f8f8]"> <div class="
+			mx-auto
+			max-w-7xl
+			px-5
+			py-12
+			lg:px-5
+			lg:py-10
+		"> <!-- Heading --> <div> <h2 class="
+					font-clash
+					text-[38px]
+					font-medium
+					uppercase
+					leading-[0.95]
+					tracking-[-2px]
+					text-black
+					lg:text-[36px]				">
+ENGAGEMENT PROCESS
+</h2> <!-- Gradient underline --> <div class="
+					mt-4
+					h-[5px]
+					w-[168px]
+					bg-gradient-to-r
+					from-[#FFB343]
+					via-[#FF7048]
+					to-[#EF1757]
+				"></div> </div> <!-- Process Grid --> <div class="
+				mt-12
+				grid
+				grid-cols-1
+				sm:grid-cols-2
+				lg:mt-[45px]
+				lg:grid-cols-5
+			"> <div class="
+							relative
+							flex
+							min-h-[148px]
+							flex-col
+							justify-center
+							px-0
+							py-7
+							sm:px-7
+							lg:min-h-[148px]
+							lg:px-[28px]
+							lg:py-5
+						"> <!-- Desktop Vertical Border -->  <!-- Tablet Border -->  <!-- Mobile bottom border --> <span class="
+										absolute
+										bottom-0
+										left-0
+										right-0
+										h-px
+										bg-[#e4e4e4]
+										sm:hidden
+									"></span> <!-- Number --> <span class="
+								font-satoshi
+								text-[12px]
+								font-normal
+								leading-none
+								text-[#777777]
+							"> 01 </span> <!-- Title --> <h3 class="
+								mt-[22px]
+								font-satoshi
+								text-[15px]
+								font-bold
+								uppercase
+								leading-[1.15]
+								tracking-[-0.25px]
+								text-black
+								xl:text-[16px]
+							"> DISCOVER </h3> <!-- Description --> <p class="
+								mt-[16px]
+								max-w-[230px]
+								font-satoshi
+								text-[13px]
+								font-normal
+								leading-[1.7]
+								text-[#737373]
+								xl:text-[14px]
+							"> Understand your project, business challenges, and strategic goals. </p> </div><div class="
+							relative
+							flex
+							min-h-[148px]
+							flex-col
+							justify-center
+							px-0
+							py-7
+							sm:px-7
+							lg:min-h-[148px]
+							lg:px-[28px]
+							lg:py-5
+						"> <!-- Desktop Vertical Border --> <span class="
+										absolute
+										left-0
+										top-0
+										hidden
+										h-full
+										w-px
+										bg-[#d8d8d8]
+										lg:block
+									"></span> <!-- Tablet Border --> <span class="
+										absolute
+										left-0
+										top-0
+										hidden
+										h-full
+										w-px
+										bg-[#d8d8d8]
+										sm:block
+										lg:hidden
+									"></span> <!-- Mobile bottom border --> <span class="
+										absolute
+										bottom-0
+										left-0
+										right-0
+										h-px
+										bg-[#e4e4e4]
+										sm:hidden
+									"></span> <!-- Number --> <span class="
+								font-satoshi
+								text-[12px]
+								font-normal
+								leading-none
+								text-[#777777]
+							"> 02 </span> <!-- Title --> <h3 class="
+								mt-[22px]
+								font-satoshi
+								text-[15px]
+								font-bold
+								uppercase
+								leading-[1.15]
+								tracking-[-0.25px]
+								text-black
+								xl:text-[16px]
+							"> STRATEGY ALIGNMENT </h3> <!-- Description --> <p class="
+								mt-[16px]
+								max-w-[230px]
+								font-satoshi
+								text-[13px]
+								font-normal
+								leading-[1.7]
+								text-[#737373]
+								xl:text-[14px]
+							"> Understand your project, business challenges, and strategic goals. </p> </div><div class="
+							relative
+							flex
+							min-h-[148px]
+							flex-col
+							justify-center
+							px-0
+							py-7
+							sm:px-7
+							lg:min-h-[148px]
+							lg:px-[28px]
+							lg:py-5
+						"> <!-- Desktop Vertical Border --> <span class="
+										absolute
+										left-0
+										top-0
+										hidden
+										h-full
+										w-px
+										bg-[#d8d8d8]
+										lg:block
+									"></span> <!-- Tablet Border -->  <!-- Mobile bottom border --> <span class="
+										absolute
+										bottom-0
+										left-0
+										right-0
+										h-px
+										bg-[#e4e4e4]
+										sm:hidden
+									"></span> <!-- Number --> <span class="
+								font-satoshi
+								text-[12px]
+								font-normal
+								leading-none
+								text-[#777777]
+							"> 03 </span> <!-- Title --> <h3 class="
+								mt-[22px]
+								font-satoshi
+								text-[15px]
+								font-bold
+								uppercase
+								leading-[1.15]
+								tracking-[-0.25px]
+								text-black
+								xl:text-[16px]
+							"> SOLUTION DESIGN </h3> <!-- Description --> <p class="
+								mt-[16px]
+								max-w-[230px]
+								font-satoshi
+								text-[13px]
+								font-normal
+								leading-[1.7]
+								text-[#737373]
+								xl:text-[14px]
+							"> Understand your project, business challenges, and strategic goals. </p> </div><div class="
+							relative
+							flex
+							min-h-[148px]
+							flex-col
+							justify-center
+							px-0
+							py-7
+							sm:px-7
+							lg:min-h-[148px]
+							lg:px-[28px]
+							lg:py-5
+						"> <!-- Desktop Vertical Border --> <span class="
+										absolute
+										left-0
+										top-0
+										hidden
+										h-full
+										w-px
+										bg-[#d8d8d8]
+										lg:block
+									"></span> <!-- Tablet Border --> <span class="
+										absolute
+										left-0
+										top-0
+										hidden
+										h-full
+										w-px
+										bg-[#d8d8d8]
+										sm:block
+										lg:hidden
+									"></span> <!-- Mobile bottom border --> <span class="
+										absolute
+										bottom-0
+										left-0
+										right-0
+										h-px
+										bg-[#e4e4e4]
+										sm:hidden
+									"></span> <!-- Number --> <span class="
+								font-satoshi
+								text-[12px]
+								font-normal
+								leading-none
+								text-[#777777]
+							"> 04 </span> <!-- Title --> <h3 class="
+								mt-[22px]
+								font-satoshi
+								text-[15px]
+								font-bold
+								uppercase
+								leading-[1.15]
+								tracking-[-0.25px]
+								text-black
+								xl:text-[16px]
+							"> DELIVERY EXECUTION </h3> <!-- Description --> <p class="
+								mt-[16px]
+								max-w-[230px]
+								font-satoshi
+								text-[13px]
+								font-normal
+								leading-[1.7]
+								text-[#737373]
+								xl:text-[14px]
+							"> Understand your project, business challenges, and strategic goals. </p> </div><div class="
+							relative
+							flex
+							min-h-[148px]
+							flex-col
+							justify-center
+							px-0
+							py-7
+							sm:px-7
+							lg:min-h-[148px]
+							lg:px-[28px]
+							lg:py-5
+						"> <!-- Desktop Vertical Border --> <span class="
+										absolute
+										left-0
+										top-0
+										hidden
+										h-full
+										w-px
+										bg-[#d8d8d8]
+										lg:block
+									"></span> <!-- Tablet Border -->  <!-- Mobile bottom border -->  <!-- Number --> <span class="
+								font-satoshi
+								text-[12px]
+								font-normal
+								leading-none
+								text-[#777777]
+							"> 05 </span> <!-- Title --> <h3 class="
+								mt-[22px]
+								font-satoshi
+								text-[15px]
+								font-bold
+								uppercase
+								leading-[1.15]
+								tracking-[-0.25px]
+								text-black
+								xl:text-[16px]
+							"> DELIVERY EXECUTION </h3> <!-- Description --> <p class="
+								mt-[16px]
+								max-w-[230px]
+								font-satoshi
+								text-[13px]
+								font-normal
+								leading-[1.7]
+								text-[#737373]
+								xl:text-[14px]
+							"> Understand your project, business challenges, and strategic goals. </p> </div> </div> </div> </section> <section class="w-full bg-white"> <div class="
+			mx-auto
+			max-w-7xl
+			px-5
+			py-10
+			lg:px-5
+			lg:py-11
+		"> <div class="
+				grid
+				grid-cols-1
+				gap-7
+				xl:grid-cols-[minmax(0,3fr)_minmax(330px,1fr)]
+				xl:gap-7
+			"> <!-- ===================================================
+				LEFT MAIN CARD
+			=================================================== --> <div class="
+					relative
+					overflow-hidden
+					rounded-[20px]
+					bg-gradient-to-r
+					from-[#FFB13F]
+					via-[#FF7A43]
+					to-[#FF375E]
+					p-[1.5px]
+				"> <div class="
+						grid
+						min-h-[320px]
+						grid-cols-1
+						overflow-hidden
+						rounded-[18px]
+						bg-white
+						lg:grid-cols-[1.15fr_0.85fr]
+					"> <!-- LEFT CONTENT --> <div class="
+							flex
+							flex-col
+							justify-center
+							px-6
+							py-10
+							lg:px-8
+						"> <h2 class="
+								max-w-[650px]
+								font-clash
+								text-[31px]
+								font-bold
+								uppercase
+								leading-[1.22]
+								tracking-[-1.3px]
+								text-black
+								lg:text-[25px]
+							"> DRIVING OPERATIONAL EXCELLENCE FOR A FEDERAL AGENCY </h2> <p class="
+								mt-4
+								max-w-[520px]
+								font-satoshi
+								text-[15px]
+								font-medium
+								leading-[1.5]
+								tracking-[0.1px]
+								text-[#202020]
+								sm:text-[16px]
+							"> Implemented process improvements and automation initiatives that streamlined operations and delivered significant measurable outcomes. </p> <!-- BUTTON --> <div class="mt-5"> <a href="/experience" class="
+									group
+									inline-flex
+									overflow-hidden
+									rounded-full
+									bg-gradient-to-r
+									from-[#FFB23E]
+									via-[#FF7045]
+									to-[#FF385B]
+									p-[1px]
+									transition-all
+									duration-300
+									hover:shadow-[0_8px_24px_rgba(255,73,80,0.2)]
+								"> <span class="
+										flex
+										min-h-[42px]
+										items-center
+										justify-center
+										rounded-full
+										px-5
+										font-satoshi
+										text-[16px]
+										font-semibold
+										text-white
+									"> View Experience </span> </a> </div> </div> <!-- RIGHT IMAGE --> <div class="
+							relative
+							flex
+							min-h-[250px]
+							items-center
+							justify-center
+							px-4
+							pb-6
+							lg:min-h-full
+							lg:px-4
+							lg:py-5
+						"> <!-- Optional soft glow --> <div class="
+								pointer-events-none
+								absolute
+								left-1/2
+								top-1/2
+								h-[210px]
+								w-[270px]
+								-translate-x-1/2
+								-translate-y-1/2
+								rounded-full
+								bg-[radial-gradient(circle,rgba(247,53,157,0.12)_0%,rgba(255,255,255,0)_70%)]
+								blur-xl
+							"></div> <img src="/images/operational-excellence.png" alt="Operational excellence analytics" loading="lazy" class="
+								relative
+								z-10
+								h-auto
+								w-full
+								max-w-[390px]
+								object-contain
+								lg:max-w-[420px]
+							"> </div> </div> </div> <!-- ===================================================
+				RIGHT STATS
+			=================================================== --> <div class="
+					grid
+					grid-cols-2
+					gap-5
+					sm:gap-6
+					xl:grid-cols-2
+					xl:gap-x-6
+					xl:gap-y-9
+				"> <div class="
+								relative
+								overflow-hidden
+								rounded-[16px]
+								bg-gradient-to-br
+								from-[#FFB23F]
+								via-[#FF7742]
+								to-[#FF365A]
+								p-[1.3px]
+								shadow-[0_7px_10px_rgba(0,0,0,0.08)]
+							"> <div class="
+									flex
+									h-full
+									min-h-[132px]
+									flex-col
+									justify-center
+									rounded-[15px]
+									bg-white
+									px-5
+									py-5
+									sm:min-h-[145px]
+									sm:px-6
+									xl:min-h-[132px]
+								"> <!-- Number --> <div class="
+										bg-gradient-to-r
+										from-[#FFA745]
+										via-[#FF7F45]
+										to-[#FF5160]
+										bg-clip-text
+										font-satoshi
+										text-[27px]
+										font-bold
+										leading-none
+										tracking-[-0.8px]
+										text-transparent
+										sm:text-[30px]
+									"> 28% </div> <!-- Label --> <p class="
+										mt-3
+										whitespace-pre-line
+										font-satoshi
+										text-[14px]
+										font-medium
+										leading-[1.05]
+										tracking-[-0.15px]
+										text-[#111111]
+										sm:text-[15px]
+									"> Increase in
+Productivity </p> </div> </div><div class="
+								relative
+								overflow-hidden
+								rounded-[16px]
+								bg-gradient-to-br
+								from-[#FFB23F]
+								via-[#FF7742]
+								to-[#FF365A]
+								p-[1.3px]
+								shadow-[0_7px_10px_rgba(0,0,0,0.08)]
+							"> <div class="
+									flex
+									h-full
+									min-h-[132px]
+									flex-col
+									justify-center
+									rounded-[15px]
+									bg-white
+									px-5
+									py-5
+									sm:min-h-[145px]
+									sm:px-6
+									xl:min-h-[132px]
+								"> <!-- Number --> <div class="
+										bg-gradient-to-r
+										from-[#FFA745]
+										via-[#FF7F45]
+										to-[#FF5160]
+										bg-clip-text
+										font-satoshi
+										text-[27px]
+										font-bold
+										leading-none
+										tracking-[-0.8px]
+										text-transparent
+										sm:text-[30px]
+									"> 42% </div> <!-- Label --> <p class="
+										mt-3
+										whitespace-pre-line
+										font-satoshi
+										text-[14px]
+										font-medium
+										leading-[1.05]
+										tracking-[-0.15px]
+										text-[#111111]
+										sm:text-[15px]
+									"> Faster Process
+Turnaround </p> </div> </div><div class="
+								relative
+								overflow-hidden
+								rounded-[16px]
+								bg-gradient-to-br
+								from-[#FFB23F]
+								via-[#FF7742]
+								to-[#FF365A]
+								p-[1.3px]
+								shadow-[0_7px_10px_rgba(0,0,0,0.08)]
+							"> <div class="
+									flex
+									h-full
+									min-h-[132px]
+									flex-col
+									justify-center
+									rounded-[15px]
+									bg-white
+									px-5
+									py-5
+									sm:min-h-[145px]
+									sm:px-6
+									xl:min-h-[132px]
+								"> <!-- Number --> <div class="
+										bg-gradient-to-r
+										from-[#FFA745]
+										via-[#FF7F45]
+										to-[#FF5160]
+										bg-clip-text
+										font-satoshi
+										text-[27px]
+										font-bold
+										leading-none
+										tracking-[-0.8px]
+										text-transparent
+										sm:text-[30px]
+									"> $480K+ </div> <!-- Label --> <p class="
+										mt-3
+										whitespace-pre-line
+										font-satoshi
+										text-[14px]
+										font-medium
+										leading-[1.05]
+										tracking-[-0.15px]
+										text-[#111111]
+										sm:text-[15px]
+									"> Cost Savings
+Achieved </p> </div> </div><div class="
+								relative
+								overflow-hidden
+								rounded-[16px]
+								bg-gradient-to-br
+								from-[#FFB23F]
+								via-[#FF7742]
+								to-[#FF365A]
+								p-[1.3px]
+								shadow-[0_7px_10px_rgba(0,0,0,0.08)]
+							"> <div class="
+									flex
+									h-full
+									min-h-[132px]
+									flex-col
+									justify-center
+									rounded-[15px]
+									bg-white
+									px-5
+									py-5
+									sm:min-h-[145px]
+									sm:px-6
+									xl:min-h-[132px]
+								"> <!-- Number --> <div class="
+										bg-gradient-to-r
+										from-[#FFA745]
+										via-[#FF7F45]
+										to-[#FF5160]
+										bg-clip-text
+										font-satoshi
+										text-[27px]
+										font-bold
+										leading-none
+										tracking-[-0.8px]
+										text-transparent
+										sm:text-[30px]
+									"> 100% </div> <!-- Label --> <p class="
+										mt-3
+										whitespace-pre-line
+										font-satoshi
+										text-[14px]
+										font-medium
+										leading-[1.05]
+										tracking-[-0.15px]
+										text-[#111111]
+										sm:text-[15px]
+									"> Stakeholder
+Satisfaction </p> </div> </div> </div> </div> </div> </section> <section class="w-full bg-white"> <div class="
+			mx-auto
+			max-w-6xl
+			px-5
+			py-12
+			lg:px-5
+			lg:py-14
+		"> <!-- =========================
+			HEADING
+		========================= --> <div> <h2 class="
+					font-clash
+					text-[27px]
+					font-medium
+					uppercase
+					leading-none
+					tracking-[-1px]
+					text-black
+					sm:text-[30px]
+					lg:text-[31px]
+				">
+CERTIFICATIONS & CREDENTIALS
+</h2> <!-- Gradient underline --> <div class="
+					mt-[7px]
+					h-[3px]
+					w-[60px]
+					bg-gradient-to-r
+					from-[#FFAF42]
+					via-[#FF684B]
+					to-[#F0195A]
+				"></div> </div> <!-- =========================
+			CERTIFICATION CARDS
+		========================= --> <div class="
+				mt-5
+				grid
+				grid-cols-2
+				gap-5
+				sm:grid-cols-3
+				lg:grid-cols-5
+				lg:gap-[24px]
+			"> <div class="
+							group
+							relative
+							rounded-[13px]
+							bg-gradient-to-br
+							from-[#FFBD5A]
+							via-[#FFD6C3]
+							to-[#FF4D68]
+							p-[1px]
+							shadow-[0_4px_5px_rgba(0,0,0,0.16)]
+							transition-all
+							duration-300
+							hover:-translate-y-1
+							hover:shadow-[0_8px_18px_rgba(0,0,0,0.14)]
+						"> <div class="
+								flex
+								min-h-[150px]
+								h-full
+								flex-col
+								items-center
+								justify-between
+								rounded-[12px]
+								bg-white
+								px-3
+								py-3
+								sm:min-h-[165px]
+								lg:min-h-[150px]
+							"> <!-- Logo --> <div class="
+									flex
+									h-[78px]
+									w-full
+									items-center
+									justify-center
+								"> <img src="/images/certifications/cbap.png" alt="CBAP — CERTIFIED BUSINESS ANALYSIS PROFESSIONAL" loading="lazy" class="
+										max-h-[70px]
+										max-w-[95px]
+										object-contain
+										transition-transform
+										duration-300
+										group-hover:scale-[1.04]
+									"> </div> <!-- Title --> <h3 class="
+									mt-3
+									max-w-[150px]
+									text-center
+									font-satoshi
+									text-[9px]
+									font-medium
+									uppercase
+									leading-[1.25]
+									tracking-[-0.1px]
+									text-[#242424]
+								"> CBAP — CERTIFIED BUSINESS ANALYSIS PROFESSIONAL </h3> </div> </div><div class="
+							group
+							relative
+							rounded-[13px]
+							bg-gradient-to-br
+							from-[#FFBD5A]
+							via-[#FFD6C3]
+							to-[#FF4D68]
+							p-[1px]
+							shadow-[0_4px_5px_rgba(0,0,0,0.16)]
+							transition-all
+							duration-300
+							hover:-translate-y-1
+							hover:shadow-[0_8px_18px_rgba(0,0,0,0.14)]
+						"> <div class="
+								flex
+								min-h-[150px]
+								h-full
+								flex-col
+								items-center
+								justify-between
+								rounded-[12px]
+								bg-white
+								px-3
+								py-3
+								sm:min-h-[165px]
+								lg:min-h-[150px]
+							"> <!-- Logo --> <div class="
+									flex
+									h-[78px]
+									w-full
+									items-center
+									justify-center
+								"> <img src="/images/certifications/aws-solutions-architect.png" alt="AWS CERTIFIED — SOLUTIONS ARCHITECT" loading="lazy" class="
+										max-h-[70px]
+										max-w-[95px]
+										object-contain
+										transition-transform
+										duration-300
+										group-hover:scale-[1.04]
+									"> </div> <!-- Title --> <h3 class="
+									mt-3
+									max-w-[150px]
+									text-center
+									font-satoshi
+									text-[9px]
+									font-medium
+									uppercase
+									leading-[1.25]
+									tracking-[-0.1px]
+									text-[#242424]
+								"> AWS CERTIFIED — SOLUTIONS ARCHITECT </h3> </div> </div><div class="
+							group
+							relative
+							rounded-[13px]
+							bg-gradient-to-br
+							from-[#FFBD5A]
+							via-[#FFD6C3]
+							to-[#FF4D68]
+							p-[1px]
+							shadow-[0_4px_5px_rgba(0,0,0,0.16)]
+							transition-all
+							duration-300
+							hover:-translate-y-1
+							hover:shadow-[0_8px_18px_rgba(0,0,0,0.14)]
+						"> <div class="
+								flex
+								min-h-[150px]
+								h-full
+								flex-col
+								items-center
+								justify-between
+								rounded-[12px]
+								bg-white
+								px-3
+								py-3
+								sm:min-h-[165px]
+								lg:min-h-[150px]
+							"> <!-- Logo --> <div class="
+									flex
+									h-[78px]
+									w-full
+									items-center
+									justify-center
+								"> <img src="/images/certifications/six-sigma-black-belt.png" alt="6Σ — SIX SIGMA MASTER BLACK BELT" loading="lazy" class="
+										max-h-[70px]
+										max-w-[95px]
+										object-contain
+										transition-transform
+										duration-300
+										group-hover:scale-[1.04]
+									"> </div> <!-- Title --> <h3 class="
+									mt-3
+									max-w-[150px]
+									text-center
+									font-satoshi
+									text-[9px]
+									font-medium
+									uppercase
+									leading-[1.25]
+									tracking-[-0.1px]
+									text-[#242424]
+								"> 6Σ — SIX SIGMA MASTER BLACK BELT </h3> </div> </div><div class="
+							group
+							relative
+							rounded-[13px]
+							bg-gradient-to-br
+							from-[#FFBD5A]
+							via-[#FFD6C3]
+							to-[#FF4D68]
+							p-[1px]
+							shadow-[0_4px_5px_rgba(0,0,0,0.16)]
+							transition-all
+							duration-300
+							hover:-translate-y-1
+							hover:shadow-[0_8px_18px_rgba(0,0,0,0.14)]
+						"> <div class="
+								flex
+								min-h-[150px]
+								h-full
+								flex-col
+								items-center
+								justify-between
+								rounded-[12px]
+								bg-white
+								px-3
+								py-3
+								sm:min-h-[165px]
+								lg:min-h-[150px]
+							"> <!-- Logo --> <div class="
+									flex
+									h-[78px]
+									w-full
+									items-center
+									justify-center
+								"> <img src="/images/certifications/csm.png" alt="CSM CERTIFIED — CERTIFIED SCRUM MASTER" loading="lazy" class="
+										max-h-[70px]
+										max-w-[95px]
+										object-contain
+										transition-transform
+										duration-300
+										group-hover:scale-[1.04]
+									"> </div> <!-- Title --> <h3 class="
+									mt-3
+									max-w-[150px]
+									text-center
+									font-satoshi
+									text-[9px]
+									font-medium
+									uppercase
+									leading-[1.25]
+									tracking-[-0.1px]
+									text-[#242424]
+								"> CSM CERTIFIED — CERTIFIED SCRUM MASTER </h3> </div> </div><div class="
+							group
+							relative
+							rounded-[13px]
+							bg-gradient-to-br
+							from-[#FFBD5A]
+							via-[#FFD6C3]
+							to-[#FF4D68]
+							p-[1px]
+							shadow-[0_4px_5px_rgba(0,0,0,0.16)]
+							transition-all
+							duration-300
+							hover:-translate-y-1
+							hover:shadow-[0_8px_18px_rgba(0,0,0,0.14)]
+						"> <div class="
+								flex
+								min-h-[150px]
+								h-full
+								flex-col
+								items-center
+								justify-between
+								rounded-[12px]
+								bg-white
+								px-3
+								py-3
+								sm:min-h-[165px]
+								lg:min-h-[150px]
+							"> <!-- Logo --> <div class="
+									flex
+									h-[78px]
+									w-full
+									items-center
+									justify-center
+								"> <img src="/images/certifications/pspo.png" alt="PSPO — SCRUM PRODUCT OWNER" loading="lazy" class="
+										max-h-[70px]
+										max-w-[95px]
+										object-contain
+										transition-transform
+										duration-300
+										group-hover:scale-[1.04]
+									"> </div> <!-- Title --> <h3 class="
+									mt-3
+									max-w-[150px]
+									text-center
+									font-satoshi
+									text-[9px]
+									font-medium
+									uppercase
+									leading-[1.25]
+									tracking-[-0.1px]
+									text-[#242424]
+								"> PSPO — SCRUM PRODUCT OWNER </h3> </div> </div> </div> </div> </section>  <section class="w-full bg-black"> <div class="mx-auto
+			grid
+			max-w-7xl
+			grid-cols-1
+			items-center
+			text-center
+			lg:text-left
+			gap-5
+			px-4
+			pt-18
+			md:px-8
+			lg:grid-cols-[1.1fr_0.9fr_auto]
+			lg:gap-16
+			lg:py-14"> <!-- Left Heading --> <div> <h2 class="m-0
+					font-clash-display
+					lg:text-[48px]
+					text-[30px]
+					leading-[1.20]
+					font-semibold
+					uppercase
+					lg:leading-[0.98]
+					tracking-[-0.7px]
+					text-white">
+LET'S CREATE<br>
+SOMETHING<br> <span class="bg-[linear-gradient(90deg,#F2203E_0%,#D5257D_50%,#8A35D5_100%)]
+						bg-clip-text
+						text-transparent">
+MEMORABLE.
+</span> </h2> </div> <!-- Center Description --> <div> <p class="m-0
+					font-satoshi
+					text-[12px]
+					font-normal
+					leading-[20px]
+					tracking-[0px]
+					text-white/55">
+Whether you're launching something new, evolving an existing
+				brand or building a stronger digital presence, we'd love to hear
+				your story.
+</p> </div> <!-- CTA Button --> <div class="lg:justify-self-end"> <a href="/contact" class="group
+		relative
+		inline-flex
+		items-center
+		justify-center
+		overflow-hidden
+		rounded-full
+		border
+		border-white
+		px-8
+		py-4
+		pr-5
+		font-satoshi
+		text-[13px]
+		font-medium
+		uppercase
+		leading-none
+		tracking-[0px]
+		text-white
+		transition-[border-color]
+		duration-300"> <!-- Gradient Circle --> <span aria-hidden="true" class="absolute
+			left-[10px]
+			top-1/2
+			h-[34px]
+			w-[34px]
+			-translate-y-1/2
+			rounded-full
+			bg-[linear-gradient(135deg,#FEC053_0%,#F2203E_33%,#B729A8_65%,#5342D6_100%)]
+			transition-[left,top,width,height,transform,border-radius]
+			duration-500
+			ease-[cubic-bezier(0.65,0,0.35,1)]
+			group-hover:left-0
+			group-hover:top-0
+			group-hover:h-full
+			group-hover:w-full
+			group-hover:translate-y-0
+			group-hover:rounded-full"></span> <!-- Content --> <span class="relative
+			z-10
+			flex
+			items-center
+			justify-center
+			gap-3
+			translate-x-[14px]
+			transition-transform
+			duration-500
+			ease-[cubic-bezier(0.65,0,0.35,1)]
+			group-hover:translate-x-0"> <span class="whitespace-nowrap ml-3"> START A PROJECT </span> <span class="text-[16px]
+				leading-none
+				transition-transform
+				duration-300
+				group-hover:translate-x-1 mr-4">
+→
+</span> </span> </a> </div> </div> </section> <footer class="bg-black text-white"> <div class="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8"> <div class="grid gap-12 sm:grid-cols-2 lg:grid-cols-4"> <!-- Logo --> <div> <img src="/uploads/footer/footer/logo.png" alt="Footer Logo" loading="lazy" decoding="async" width="100" height="100" class="h-16 w-auto"> <div class="mt-6 space-y-2 text-sm text-neutral-300"> <p>hello@topklickz.com</p> <p>+91 XXXXX XXXXX</p> <p>Ahmedabad, India</p> </div> <div class="mt-8 text-xs text-neutral-500"> <p></p> <p>© 2026 TOPKLICKZ</p> </div> </div> <!-- Company --> <div> <h3 class="mb-5 font-semibold">Company</h3> <ul class="space-y-3"> <li> <a class="text-neutral-300 transition hover:text-white" href>About</a> </li><li> <a class="text-neutral-300 transition hover:text-white" href>Work</a> </li><li> <a class="text-neutral-300 transition hover:text-white" href>Careers</a> </li><li> <a class="text-neutral-300 transition hover:text-white" href>Contact</a> </li> </ul> </div> <!-- Services --> <div> <h3 class="mb-5 font-semibold">Services</h3> <ul class="space-y-3"> <li> <a class="text-neutral-300 transition hover:text-white" href>Brand Strategy</a> </li><li> <a class="text-neutral-300 transition hover:text-white" href>Brand Identity</a> </li><li> <a class="text-neutral-300 transition hover:text-white" href>Website Design</a> </li> </ul> </div> <!-- Social --> <div> <h3 class="mb-5 font-semibold">Socials</h3> <ul class="space-y-3"> <li> <a class="text-neutral-300 transition hover:text-white" target="_blank" rel="noopener noreferrer"> Instagram </a> </li><li> <a class="text-neutral-300 transition hover:text-white" target="_blank" rel="noopener noreferrer"> Instagram </a> </li> </ul> </div> </div> </div> <div class="overflow-hidden border-t border-neutral-800 px-4 pb-10 sm:px-6 lg:px-8"> <img src="/uploads/footer/footer/marqueeImage.png" alt="Marquee Image" loading="lazy" decoding="async" width="800" height="300" class="mx-auto mt-10 w-full max-w-2xl object-cover lg:ml-auto lg:mr-0"> <p class="mt-6 text-center text-lg sm:text-xl lg:text-right"> CLICK. GROW. RELISH. </p> </div> </footer>  <script type="module">let l;const m="ABCDEFGHIJKLMNOPQRSTUVWXYZ",T="abcdefghijklmnopqrstuvwxyz",p='.gradient-text:not(.gradient-text-static), [class~="bg-clip-text"][class~="text-transparent"]:not(.gradient-text-static)',b=e=>{const t=e.textContent||"",a=Array.from(t),n=a.reduce((s,o,c)=>(/[A-Za-z]/.test(o)&&s.push(c),s),[]),r=1200,x=performance.now(),d=s=>{const o=Math.min((s-x)/r,1),c=Math.ceil(o*n.length),h=new Set(n.slice(0,c));e.textContent=a.map((i,f)=>{if(/\s/.test(i)||h.has(f))return i;const u=i===i.toUpperCase()?m:T;return u[Math.floor(Math.random()*u.length)]}).join(""),o<1?requestAnimationFrame(d):(e.textContent=t,e.dataset.gradientTextVisible="true")};requestAnimationFrame(d)},g=()=>{const e=Array.from(document.querySelectorAll(p)).filter(t=>t.dataset.gradientTextReady!=="true");if(e.length){if(window.matchMedia("(prefers-reduced-motion: reduce)").matches){e.forEach(t=>{t.dataset.gradientTextReady="true",t.dataset.gradientTextVisible="true"});return}l??=new IntersectionObserver((t,a)=>{t.forEach(n=>{if(!n.isIntersecting)return;const r=n.target;r.dataset.gradientTextVisible="true",a.unobserve(r),!r.querySelector(".counter")&&b(r)})},{threshold:.35}),e.forEach(t=>{t.dataset.gradientTextReady="true",l?.observe(t)})}};g();document.addEventListener("astro:page-load",g);</script></body></html>
