@@ -1,23 +1,28 @@
 ---
 const stats = [
 	{
-		value: "8+",
+		value: 8,
+		suffix: "+",
 		label: "YEARS OF EXPERIENCE",
 	},
 	{
-		value: "150+",
+		value: 150,
+		suffix: "+",
 		label: "PROJECTS DELIVERED",
 	},
 	{
-		value: "30+",
+		value: 30,
+		suffix: "+",
 		label: "BRANDS BUILT",
 	},
 	{
-		value: "20+",
+		value: 20,
+		suffix: "+",
 		label: "INDUSTRIES SERVED",
 	},
 	{
-		value: "98%",
+		value: 98,
+		suffix: "%",
 		label: "CLIENT RETENTION",
 	},
 ];
@@ -55,6 +60,7 @@ const stats = [
 							<h3
 								class="
 									bg-gradient-to-r
+									gradient-text-static
 									from-[#ff6546]
 									via-[#f22054]
 									to-[#c822ae]
@@ -66,8 +72,14 @@ const stats = [
 									text-transparent
                                     lg:text-[40px]
 								"
-							>
-								{stat.value}
+								>
+								<span
+									class="counter tabular-nums"
+									data-target={stat.value}
+									data-suffix={stat.suffix}
+								>
+									0{stat.suffix}
+								</span>
 							</h3>
 
 							<p
