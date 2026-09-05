@@ -125,31 +125,57 @@ const caseStudy = {
 								href={caseStudy.buttonLink}
 								class="
 									group
+									relative
 									inline-flex
+									min-h-[45px]
+									items-center
+									justify-center
 									overflow-hidden
 									rounded-full
-									bg-gradient-to-r
-									from-[#FFB23E]
-									via-[#FF7045]
-									to-[#FF385B]
-									p-[1px]
-									transition-all
-									duration-300
-									hover:shadow-[0_8px_24px_rgba(255,73,80,0.2)]
+									bg-[linear-gradient(135deg,#FEC053_0%,#F2203E_33%,#B729A8_65%,#5342D6_100%)]
+									p-[1.5px]
 								"
 							>
 								<span
 									class="
-										flex
-										min-h-[42px]
-										items-center
-										justify-center
+										absolute
+										inset-[1.5px]
 										rounded-full
+										bg-white
+									"
+								></span>
+								<span
+									aria-hidden="true"
+									class="
+										absolute
+										inset-y-[1.5px]
+										left-[1.5px]
+										z-[2]
+										w-[calc(100%-3px)]
+										origin-left
+										scale-x-0
+										rounded-full
+										bg-[linear-gradient(135deg,#FEC053_0%,#F2203E_33%,#B729A8_65%,#5342D6_100%)]
+										transition-transform
+										duration-500
+										ease-[cubic-bezier(0.65,0,0.35,1)]
+										group-hover:scale-x-100
+									"
+								></span>
+								<span
+									class="
+										relative
+										z-10
+										whitespace-nowrap
 										px-5
 										font-satoshi
 										text-[16px]
 										font-semibold
-										text-white
+										text-[#ff7d3d]
+									transition-all
+										duration-500
+										ease-[cubic-bezier(0.65,0,0.35,1)]
+									group-hover:text-white
 									"
 								>
 									{caseStudy.buttonText}
