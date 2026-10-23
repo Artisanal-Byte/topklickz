@@ -14,7 +14,12 @@ const posts = defineCollection({
       name: z.string().optional(),
       image: z.string().optional(),
     }).optional(),
-    publishedDate: z.string().optional(),
+    // YAML parses unquoted Keystatic dates as Date objects. Normalize them so
+    // posts remain valid whether the date is quoted or not.
+    publishedDate: z.preprocess(
+      (value) => value instanceof Date ? value.toISOString().slice(0, 10) : value,
+      z.string().optional(),
+    ),
     readTime: z.string().optional(),
     tags: z.array(z.string()).optional(),
     heroBadge: z.string().optional(),

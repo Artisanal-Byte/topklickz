@@ -20,6 +20,7 @@ latestInsights:
   viewAllLink: /blog-inner
   posts:
     - slug: first-post
+      image: /uploads/blog/cards/latestInsights/posts/0/image.webp
       imageAlt: How E-E-A-T Influences Your SEO Strategy and Rankings
       badge: NEWS
       title: How E-E-A-T Influences Your SEO Strategy and Rankings
