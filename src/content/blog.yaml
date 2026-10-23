@@ -20,36 +20,13 @@ latestInsights:
   viewAllLink: /blog-inner
   posts:
     - slug: first-post
-      imageAlt: TOPKLICKZ blog insight cover image
+      imageAlt: How E-E-A-T Influences Your SEO Strategy and Rankings
       badge: NEWS
-      title: TOPKLICKZ Expands Creative & AI Services for Growing Businesses
+      title: How E-E-A-T Influences Your SEO Strategy and Rankings
       description: >-
-        Strong brands combine clear positioning, memorable identity and useful
-        content systems to create sustainable growth.
-    - slug: build-systems
-      image: /uploads/blog/cards/latestInsights/posts/1/image.webp
-      badge: NEWS
-      title: Build Systems That Scale
-      description: >-
-        Strong brands use repeatable systems for content, campaigns and customer
-        experiences so every touchpoint stays consistent as the business grows.
-    - slug: second-blog
-      image: /uploads/blog/cards/latestInsights/posts/2/image.png
-      badge: NEWS
-      title: testing
-      description: >-
-        Every brand strategy engagement follows a proven creative process —
-        rigorous enough to deliver real insight, flexible enough to meet you
-        where you are.
-    - slug: Top 10 Skills Every Student Needs in 2026
-      badge: NEWS
-      title: Top 10 Skills Every Student Needs in 2026
-      description: Top 10 Skills Every Student Needs in 2026
-    - slug: Dolore distinctio N
-      imageAlt: 'Expedita quia ipsum '
-      badge: Odit est aut eos tem
-      title: Voluptatem Autem mo
-      description: Tempora fugiat in en
+        Learn how Google’s E-E-A-T principles impact SEO and discover strategies
+        to build expertise, authority, and trust to improve your search
+        visibility.
 newsletter:
   title: Stay ahead of the curve.
   description: >+
