@@ -34,6 +34,7 @@
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
+    "deploy": "npm run build && npx wrangler deploy",
     "preview": "astro preview",
     "astro": "astro"
   }

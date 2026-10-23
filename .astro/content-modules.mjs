@@ -1,5 +1,6 @@
 
 export default new Map([
 ["src/content/posts/build-systems.mdoc", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Fposts%2Fbuild-systems.mdoc&astroContentModuleFlag=true")],
-["src/content/posts/first-post.mdoc", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Fposts%2Ffirst-post.mdoc&astroContentModuleFlag=true")]]);
+["src/content/posts/first-post.mdoc", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Fposts%2Ffirst-post.mdoc&astroContentModuleFlag=true")],
+["src/content/posts/top-10-skills-every-student-needs-in-2026.mdoc", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fcontent%2Fposts%2Ftop-10-skills-every-student-needs-in-2026.mdoc&astroContentModuleFlag=true")]]);
 		
