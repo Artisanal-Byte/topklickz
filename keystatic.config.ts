@@ -12,7 +12,7 @@ export default config({
       path: "src/content/posts/*",
       slugField: "title",
       format: { contentField: "content" },
-      columns: ["title", "category", "publishedDate"],
+      columns: ["title"],
       schema: {
         title: fields.slug({
           name: {
@@ -25,121 +25,26 @@ export default config({
           },
         }),
 
-        category: fields.text({
-          label: "Category",
-          defaultValue: "NEWS",
-        }),
-
-        excerpt: fields.text({
-          label: "Excerpt",
-          description: "Short summary used on blog cards and SEO previews.",
-          multiline: true,
-        }),
-
         coverImage: fields.image({
           label: "Cover Image",
           directory: "public/uploads/blog/posts",
           publicPath: "/uploads/blog/posts",
         }),
 
-        author: fields.object({
-          name: fields.text({ label: "Author Name" }),
-          image: fields.image({
-            label: "Author Image",
-            directory: "public/uploads/blog/authors",
-            publicPath: "/uploads/blog/authors",
-          }),
-        }, { label: "Author" }),
-
-        publishedDate: fields.date({
-          label: "Published Date",
-          description: "The date shown on the article and insight cards.",
-        }),
-
-        readTime: fields.text({
-          label: "Read Time",
-          description: "Example: 6 min read",
-        }),
-
-        tags: fields.array(
-          fields.text({ label: "Tag" }),
-          {
-            label: "Tags",
-            itemLabel: (props) => props.value || "Tag",
-          }
-        ),
-
-        heroBadge: fields.text({
-          label: "Hero Badge",
-          defaultValue: "FEATURED",
-        }),
-
-        heroTitle: fields.text({
-          label: "Hero Title",
-          description: "Optional title displayed over the article hero image.",
-        }),
-
-        contentImage: fields.image({
-          label: "Content Image",
-          directory: "public/uploads/blog/posts",
-          publicPath: "/uploads/blog/posts",
-        }),
-
-        contentImageAlt: fields.text({
-          label: "Content Image Alt Text",
-        }),
-
-        secondaryImage: fields.image({
-          label: "Secondary Image",
-          directory: "public/uploads/blog/posts",
-          publicPath: "/uploads/blog/posts",
-        }),
-
-        secondaryImageAlt: fields.text({
-          label: "Secondary Image Alt Text",
-        }),
-
-        intro: fields.array(
-          fields.text({
-            label: "Paragraph",
-            multiline: true,
-          }),
-          {
-            label: "Introduction Paragraphs",
-          }
-        ),
-
-        sections: fields.array(
-          fields.object({
-            title: fields.text({ label: "Section Title" }),
-            description: fields.text({
-              label: "Section Description",
-              multiline: true,
-            }),
-          }),
-          {
-            label: "Main Article Sections",
-            itemLabel: (props) => props.fields.title.value || "Section",
-          }
-        ),
-
-        secondarySections: fields.array(
-          fields.object({
-            title: fields.text({ label: "Section Title" }),
-            description: fields.text({
-              label: "Section Description",
-              multiline: true,
-            }),
-          }),
-          {
-            label: "Secondary Article Sections",
-            itemLabel: (props) => props.fields.title.value || "Section",
-          }
-        ),
-
         content: fields.markdoc({
           label: "Article Content",
           options: {
+            // Rich text controls stay inside Article Content.
+            bold: true,
+            italic: true,
+            strikethrough: true,
+            code: true,
+            heading: [1, 2, 3, 4, 5, 6],
+            blockquote: true,
+            orderedList: true,
+            unorderedList: true,
+            link: true,
+            divider: true,
             image: {
               directory: "public/uploads/blog/posts",
               publicPath: "/uploads/blog/posts",

@@ -24,25 +24,11 @@ if (!post && !card) throw new Error('No post found for this slug');
 const Content = entry ? (await render(entry)).Content : undefined;
 
 const nonEmpty = (value?: string | null) => value?.trim() || undefined;
-const nonEmptyList = <T>(value?: readonly T[] | null) =>
-	value?.length ? [...value] : undefined;
 
 const displayTitle = nonEmpty(card?.title) ?? nonEmpty(post?.title) ?? 'Blog Article';
-const displayDescription = nonEmpty(card?.description) ?? nonEmpty(post?.excerpt);
+const displayDescription = nonEmpty(card?.description);
 const displayImage = card?.image ?? post?.coverImage ?? undefined;
 const displayImageAlt = nonEmpty(card?.imageAlt) ?? displayTitle;
-
-const formatDate = (value?: string | null) => {
-	if (!value) return undefined;
-	const date = new Date(`${value}T00:00:00`);
-	return Number.isNaN(date.getTime())
-		? value
-		: date.toLocaleDateString('en-US', {
-				month: 'long',
-				day: 'numeric',
-				year: 'numeric',
-		  });
-};
 
 // Generate static pages
 export async function getStaticPaths() {
@@ -62,23 +48,8 @@ export async function getStaticPaths() {
 	<Header navbar={site?.navbar} />
 	<BlogDetail
 		title={displayTitle}
-		description={displayDescription}
-		author={nonEmpty(post?.author?.name)}
-		authorImage={post?.author?.image ?? undefined}
-		date={formatDate(post?.publishedDate)}
-		readTime={nonEmpty(post?.readTime)}
-		tags={nonEmptyList(post?.tags)}
-		heroBadge={nonEmpty(post?.heroBadge) ?? nonEmpty(card?.badge)}
 		heroImage={displayImage}
 		heroImageAlt={displayImageAlt}
-		heroTitle={nonEmpty(post?.heroTitle) ?? displayTitle}
-		contentImage={post?.contentImage ?? undefined}
-		contentImageAlt={nonEmpty(post?.contentImageAlt)}
-		secondaryImage={post?.secondaryImage ?? undefined}
-		secondaryImageAlt={nonEmpty(post?.secondaryImageAlt)}
-		intro={nonEmptyList(post?.intro) ?? (displayDescription ? [displayDescription] : undefined)}
-		sections={nonEmptyList(post?.sections)}
-		secondarySections={nonEmptyList(post?.secondarySections)}
 	>
 		{Content && <Content />}
 	</BlogDetail>

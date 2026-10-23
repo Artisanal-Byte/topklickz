@@ -15,22 +15,6 @@ const postSlug = blog?.featuredPost?.post ?? "first-post";
 const post = await reader.collections.posts.read(postSlug);
 const entry = await getEntry("posts", postSlug);
 const Content = entry ? (await render(entry)).Content : null;
-
-const nonEmpty = (value?: string | null) => value?.trim() || undefined;
-const nonEmptyList = <T>(value?: readonly T[] | null) =>
-     value?.length ? [...value] : undefined;
-
-const formatDate = (value?: string | null) => {
-     if (!value) return undefined;
-     const date = new Date(`${value}T00:00:00`);
-     return Number.isNaN(date.getTime())
-          ? value
-          : date.toLocaleDateString("en-US", {
-                 month: "long",
-                 day: "numeric",
-                 year: "numeric",
-            });
-};
 ---
 
 <Layout
@@ -40,23 +24,8 @@ const formatDate = (value?: string | null) => {
      <Header navbar={site?.navbar} />
      <BlogDetail
           title={post?.title ?? undefined}
-          description={nonEmpty(post?.excerpt)}
-          author={nonEmpty(post?.author?.name)}
-          authorImage={post?.author?.image ?? undefined}
-          date={formatDate(post?.publishedDate)}
-          readTime={nonEmpty(post?.readTime)}
-          tags={nonEmptyList(post?.tags)}
           heroImage={post?.coverImage ?? undefined}
-          heroImageAlt={nonEmpty(post?.title)}
-          heroBadge={nonEmpty(post?.heroBadge) ?? nonEmpty(blog?.featuredPost?.badge)}
-          heroTitle={nonEmpty(post?.heroTitle) ?? post?.title ?? undefined}
-          contentImage={post?.contentImage ?? undefined}
-          contentImageAlt={nonEmpty(post?.contentImageAlt)}
-          secondaryImage={post?.secondaryImage ?? undefined}
-          secondaryImageAlt={nonEmpty(post?.secondaryImageAlt)}
-          intro={nonEmptyList(post?.intro) ?? (nonEmpty(post?.excerpt) ? [post.excerpt] : undefined)}
-          sections={nonEmptyList(post?.sections)}
-          secondarySections={nonEmptyList(post?.secondarySections)}
+          heroImageAlt={post?.title ?? undefined}
      >
           {Content && <Content />}
      </BlogDetail>
