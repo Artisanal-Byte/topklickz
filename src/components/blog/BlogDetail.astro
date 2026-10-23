@@ -6,12 +6,14 @@ interface ContentSection {
 
 interface Props {
 	title?: string;
+	description?: string;
 	author?: string;
 	authorImage?: string;
 	date?: string;
 	readTime?: string;
 	tags?: string[];
 	heroImage?: string;
+	heroImageAlt?: string;
 	heroBadge?: string;
 	heroTitle?: string;
 	contentImage?: string;
@@ -24,57 +26,29 @@ interface Props {
 }
 
 const {
-	title = "TOPKLICKZ Expands Creative & AI Services for Growing Businesses",
-
-	author = "Daniel J. Briggs",
-	authorImage = "/img/author.webp",
-
-	date = "May 10, 2026",
-	readTime = "6 min read",
-
-	tags = ["Branding", "Digital Marketing", "SEO", "AI SEO"],
-
-	heroImage = "/img/bloghero.png",
-	heroBadge = "FEATURED",
-
-	heroTitle = "Why Strong Brands Win in Competitive Markets",
-	contentImage = "/img/blog-middle.png",
-	contentImageAlt = "Three TOPKLICKZ real growth bars",
-	secondaryImage = "/img/blog-middle-oat.png",
-	secondaryImageAlt = "Four colorful oat milk cartons",
-
-	intro = [
-		"Many businesses rely heavily on paid advertising for growth. While ads can deliver immediate traffic and leads, they often stop producing results once the budget ends.",
-		"Long-term success comes from creating marketing systems that continue generating awareness, trust, and conversions even when campaigns aren't running.",
-		"Here are seven strategies we implement to help brands build sustainable digital growth.",
-	],
-
-	sections = [
-		{
-			title: "1. Build a Strong Brand Foundation",
-			description:
-				"A memorable brand is more than a logo. It's the combination of positioning, messaging, identity, and customer experience that creates trust. Businesses that invest in branding consistently outperform those competing only on price.",
-		},
-		{
-			title: "2. Create Content That Builds Authority",
-			description:
-				"Helpful content answers customer questions before they ask. Publishing valuable blogs, videos, guides, and case studies positions your business as an industry leader while improving organic visibility. Content continues working long after it's published.",
-		},
-	],
-
-	secondarySections = [
-		{
-			title: "1. Build a Strong Brand Foundation",
-			description:
-				"A memorable brand is more than a logo. It's the combination of positioning, messaging, identity, and customer experience that creates trust. Businesses that invest in branding consistently outperform those competing only on price.",
-		},
-		{
-			title: "2. Create Content That Builds Authority",
-			description:
-				"Helpful content answers customer questions before they ask. Publishing valuable blogs, videos, guides, and case studies positions your business as an industry leader while improving organic visibility. Content continues working long after it's published.",
-		},
-	],
+	title = "Blog Article",
+	description = "",
+	author = "",
+	authorImage = "",
+	date = "",
+	readTime = "",
+	tags = [],
+	heroImage,
+	heroImageAlt = "",
+	heroBadge = "",
+	heroTitle,
+	contentImage,
+	contentImageAlt = "",
+	secondaryImage,
+	secondaryImageAlt = "",
+	intro = [],
+	sections = [],
+	secondarySections = [],
 } = Astro.props;
+
+const displayHeroTitle = heroTitle || title;
+const hasStructuredContent =
+	intro.length > 0 || sections.length > 0 || secondarySections.length > 0;
 ---
 
 <article class="w-full bg-white">
@@ -114,21 +88,23 @@ const {
 			>
 				<!-- Left -->
 				<div class="flex items-center gap-3">
-					<img
-						src={authorImage}
-						alt={author}
-						class="h-[24px]
+					{author && authorImage && (
+						<img
+							src={authorImage}
+							alt={author}
+							class="h-[24px]
 							w-[24px]
 							shrink-0
 							rounded-full
 							object-cover"
-					/>
+						/>
+					)}
 
-					<span class="text-[15px]
+					{author && <span class="text-[15px]
 							font-medium
 							text-black/70">
 						{author}
-					</span>
+					</span>}
 
 					{
 						tags.map((tag) => (
@@ -155,17 +131,23 @@ const {
 						gap-2
 						text-[15px]
 						text-black/45">
-					<span>{date}</span>
+					{date && <span>{date}</span>}
 					<span>•</span>
-					<span>{readTime}</span>
+					{readTime && <span>{readTime}</span>}
 				</div>
 			</div>
 		</header>
 
+		{description && (
+			<p class="mt-6 max-w-[760px] text-[17px] leading-[1.45] text-black/70">
+				{description}
+			</p>
+		)}
+
 		<!-- =============================
 		     HERO IMAGE
 		============================= -->
-		<div
+		{heroImage && <div
 			class="relative
 				mt-8
 				aspect-[1.75/1]
@@ -176,7 +158,7 @@ const {
 		>
 			<img
 				src={heroImage}
-				alt={heroTitle}
+				alt={heroImageAlt || displayHeroTitle}
 				class="absolute
 					inset-0
 					h-full
@@ -194,7 +176,7 @@ const {
 			</div>
 
 			<!-- Featured -->
-			<span
+			{heroBadge && <span
 				class="absolute
 					left-4
 					top-4
@@ -210,7 +192,7 @@ const {
 					text-white"
 			>
 				{heroBadge}
-			</span>
+			</span>}
 
 			<!-- Hero title -->
 			<div
@@ -228,16 +210,16 @@ const {
 				tracking-[-1.5px]
 				text-white"
 					>
-						{heroTitle}
+						{displayHeroTitle}
 					</h2>
 				</div>
 			</div>
-		</div>
+		</div>}
 
 		<!-- =============================
 		     INTRO
 		============================= -->
-		<div
+		{intro.length > 0 && <div
 			class="mt-9
 				space-y-[2px]
 				text-[17px]
@@ -247,12 +229,12 @@ const {
 				sm:leading-[1.45]"
 		>
 			{intro.map((paragraph) => <p>{paragraph}</p>)}
-		</div>
+		</div>}
 
 		<!-- =============================
 		     ARTICLE SECTIONS
 		============================= -->
-		<div class="mt-8">
+		{hasStructuredContent ? <div class="mt-8">
 			{
 				sections.map((section, index) => (
 					<>
@@ -359,7 +341,11 @@ const {
 
 			<!-- Last line -->
 			<div class="h-px w-full bg-black/20"></div>
-		</div>
+		</div> : (
+			<div class="mt-9 text-[17px] leading-[1.5] text-black/75">
+				<slot />
+			</div>
+		)}
 
 		<!-- =============================
 		     ARTICLE FOOTER

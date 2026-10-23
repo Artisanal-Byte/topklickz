@@ -1,24 +1,87 @@
 ---
 import { getCollection, getEntry, render } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import AboutCtc from '../../components/AboutCtc.astro';
+import BlogDetail from '../../components/blog/BlogDetail.astro';
+import { createReader } from '@keystatic/core/reader';
+import config from '../../../keystatic.config';
 
 export const prerender = true;
 
 const { slug } = Astro.params;
 if (!slug) throw new Error('Slug not found');
-const post = await getEntry('posts', slug);
 
-if (!post) throw new Error('No post found for this slug');
-const { Content } = await render(post);
+const reader = createReader(process.cwd(), config);
+const site = await reader.singletons.site.read();
+const blog = await reader.singletons.blog.read();
+const post = await reader.collections.posts.read(slug);
+const entry = post ? await getEntry('posts', slug) : undefined;
+
+const card = blog?.latestInsights?.posts.find((item) => item.slug === slug);
+if (!post && !card) throw new Error('No post found for this slug');
+const Content = entry ? (await render(entry)).Content : undefined;
+
+const nonEmpty = (value?: string | null) => value?.trim() || undefined;
+const nonEmptyList = <T>(value?: readonly T[] | null) =>
+	value?.length ? [...value] : undefined;
+
+const displayTitle = nonEmpty(card?.title) ?? nonEmpty(post?.title) ?? 'Blog Article';
+const displayDescription = nonEmpty(card?.description) ?? nonEmpty(post?.excerpt);
+const displayImage = card?.image ?? post?.coverImage ?? undefined;
+const displayImageAlt = nonEmpty(card?.imageAlt) ?? displayTitle;
+
+const formatDate = (value?: string | null) => {
+	if (!value) return undefined;
+	const date = new Date(`${value}T00:00:00`);
+	return Number.isNaN(date.getTime())
+		? value
+		: date.toLocaleDateString('en-US', {
+				month: 'long',
+				day: 'numeric',
+				year: 'numeric',
+		  });
+};
 
 // Generate static pages
 export async function getStaticPaths() {
-  const posts = await getCollection('posts');
-  return posts.map(post => ({ params: { slug: post.id } }));
+	const posts = await getCollection('posts');
+	const pathReader = createReader(process.cwd(), config);
+	const blogPage = await pathReader.singletons.blog.read();
+	const slugs = new Set(posts.map((post) => post.id));
+	(blogPage?.latestInsights?.posts ?? []).forEach((card) => slugs.add(card.slug));
+	return [...slugs].map((postSlug) => ({ params: { slug: postSlug } }));
 }
 ---
 
-<Layout title={post.data.title}>
-  <h1>{post.data.title}</h1>
-  <Content />
+<Layout
+	title={`${displayTitle} | TOPKLICKZ`}
+	description={displayDescription}
+>
+	<Header navbar={site?.navbar} />
+	<BlogDetail
+		title={displayTitle}
+		description={displayDescription}
+		author={nonEmpty(post?.author?.name)}
+		authorImage={post?.author?.image ?? undefined}
+		date={formatDate(post?.publishedDate)}
+		readTime={nonEmpty(post?.readTime)}
+		tags={nonEmptyList(post?.tags)}
+		heroBadge={nonEmpty(post?.heroBadge) ?? nonEmpty(card?.badge)}
+		heroImage={displayImage}
+		heroImageAlt={displayImageAlt}
+		heroTitle={nonEmpty(post?.heroTitle) ?? displayTitle}
+		contentImage={post?.contentImage ?? undefined}
+		contentImageAlt={nonEmpty(post?.contentImageAlt)}
+		secondaryImage={post?.secondaryImage ?? undefined}
+		secondaryImageAlt={nonEmpty(post?.secondaryImageAlt)}
+		intro={nonEmptyList(post?.intro) ?? (displayDescription ? [displayDescription] : undefined)}
+		sections={nonEmptyList(post?.sections)}
+		secondarySections={nonEmptyList(post?.secondarySections)}
+	>
+		{Content && <Content />}
+	</BlogDetail>
+	<AboutCtc />
+	<Footer footer={site?.footer} />
 </Layout>

@@ -3,6 +3,7 @@ import Header from "../components/Header.astro";
 import Layout from "../layouts/Layout.astro";
 import BlogHero from "../components/blog/BlogHero.astro";
 import { createReader } from "@keystatic/core/reader";
+import { getCollection } from "astro:content";
 import config from "../../keystatic.config";
 import Footer from "../components/Footer.astro";
 import BlogCard from "../components/blog/BlogCard.astro";
@@ -11,14 +12,93 @@ import Newsletter from "../components/blog/Newsletter.astro";
 import AboutCtc from "../components/AboutCtc.astro";
 const reader = createReader(process.cwd(), config);
 const site = await reader.singletons.site.read();
+const blog = await reader.singletons.blog.read();
+const allPostEntries = await getCollection("posts");
+
+const featuredPostSlug = blog?.featuredPost?.post;
+const featuredPost = featuredPostSlug
+	? await reader.collections.posts.read(featuredPostSlug)
+	: null;
+
+const latestPostEntries = await Promise.all(
+	(blog?.latestInsights?.posts ?? []).map((card) =>
+		reader.collections.posts.read(card.slug).then((post) => ({ card, post })),
+	),
+);
+
+const configuredPostSlugs = new Set(
+	(blog?.latestInsights?.posts ?? []).map((card) => card.slug),
+);
+
+const formatDate = (value?: string | null) => {
+	if (!value) return "";
+	const date = new Date(`${value}T00:00:00`);
+	return Number.isNaN(date.getTime())
+		? value
+		: date.toLocaleDateString("en-US", {
+				month: "long",
+				day: "numeric",
+				year: "numeric",
+		  });
+};
+
+
+const configuredInsights = latestPostEntries
+	.map(({ card, post }) => ({
+		image: card.image ?? post?.coverImage ?? "/img/blog.png",
+		imageAlt: card.imageAlt || post?.title || card.title || card.slug,
+		category: card.badge || post?.category || "NEWS",
+		title: card.title || post?.title || card.slug,
+		description: card.description || post?.excerpt || "",
+		date: formatDate(post?.publishedDate),
+		readTime: post?.readTime ?? "",
+		link: `/posts/${card.slug}`,
+	}));
+
+const automaticInsights = allPostEntries
+	.filter((entry) => !configuredPostSlugs.has(entry.id))
+	.sort((a, b) =>
+		(b.data.publishedDate ?? "").localeCompare(a.data.publishedDate ?? ""),
+	)
+	.map((entry) => ({
+		image: entry.data.coverImage ?? "/img/blog.png",
+		imageAlt: entry.data.title,
+		category: entry.data.category || "NEWS",
+		title: entry.data.title,
+		description: entry.data.excerpt || "",
+		date: formatDate(entry.data.publishedDate),
+		readTime: entry.data.readTime ?? "",
+		link: `/posts/${entry.id}`,
+	}));
+
+const insightPosts = [...configuredInsights, ...automaticInsights];
 ---
 
-<Layout>
+<Layout
+	title={blog?.seo?.title ?? "Blog & Insights | TOPKLICKZ"}
+	description={blog?.seo?.description ?? undefined}
+>
     <Header navbar={site?.navbar} />
-    <BlogHero />
-    <BlogCard />
-    <LatestBlog />
-    <Newsletter />
+	<BlogHero {...(blog?.hero ?? {})} />
+	<BlogCard
+		image={featuredPost?.coverImage ?? undefined}
+		title={featuredPost?.title}
+		badge={blog?.featuredPost?.badge}
+		link={featuredPostSlug ? `/posts/${featuredPostSlug}` : undefined}
+	/>
+	<LatestBlog
+		title={blog?.latestInsights?.title}
+		viewAllText={blog?.latestInsights?.viewAllText}
+		viewAllLink={blog?.latestInsights?.viewAllLink}
+		insights={insightPosts}
+	/>
+	<Newsletter
+		image={blog?.newsletter?.image ?? undefined}
+		title={blog?.newsletter?.title ?? undefined}
+		description={blog?.newsletter?.description ?? undefined}
+		placeholder={blog?.newsletter?.placeholder ?? undefined}
+		buttonText={blog?.newsletter?.buttonText ?? undefined}
+	/>
     <AboutCtc />
     <Footer footer={site?.footer} />
 </Layout>

@@ -1,35 +1,153 @@
 import { config, fields, collection, singleton } from '@keystatic/core';
 
-// export default config({
-//   storage: {
-//     kind: 'local',
-//   },
-//   collections: {
-//     posts: collection({
-//       label: 'Posts',
-//       slugField: 'title',
-//       path: 'src/content/posts/*',
-//       format: { contentField: 'content' },
-//       schema: {
-//         title: fields.slug({ name: { label: 'Title' } }),
-//         content: fields.markdoc({
-//           label: 'Content',
-//           options: {
-//             image: {
-//               directory: 'src/assets/images/posts',
-//               publicPath: '../../assets/images/posts/',
-//             },
-//           },
-//         }),
-//       },
-//     }),
-//   },
-// });
-
 export default config({
   storage: {
     kind: 'local',
     // repo: 'Artisanal-Byte/topklickz',
+  },
+
+  collections: {
+    posts: collection({
+      label: "Blog Posts",
+      path: "src/content/posts/*",
+      slugField: "title",
+      format: { contentField: "content" },
+      columns: ["title", "category", "publishedDate"],
+      schema: {
+        title: fields.slug({
+          name: {
+            label: "Title",
+            validation: { isRequired: true },
+          },
+          slug: {
+            label: "URL Slug",
+            description: "The slug used in the article URL.",
+          },
+        }),
+
+        category: fields.text({
+          label: "Category",
+          defaultValue: "NEWS",
+        }),
+
+        excerpt: fields.text({
+          label: "Excerpt",
+          description: "Short summary used on blog cards and SEO previews.",
+          multiline: true,
+        }),
+
+        coverImage: fields.image({
+          label: "Cover Image",
+          directory: "public/uploads/blog/posts",
+          publicPath: "/uploads/blog/posts",
+        }),
+
+        author: fields.object({
+          name: fields.text({ label: "Author Name" }),
+          image: fields.image({
+            label: "Author Image",
+            directory: "public/uploads/blog/authors",
+            publicPath: "/uploads/blog/authors",
+          }),
+        }, { label: "Author" }),
+
+        publishedDate: fields.date({
+          label: "Published Date",
+          description: "The date shown on the article and insight cards.",
+        }),
+
+        readTime: fields.text({
+          label: "Read Time",
+          description: "Example: 6 min read",
+        }),
+
+        tags: fields.array(
+          fields.text({ label: "Tag" }),
+          {
+            label: "Tags",
+            itemLabel: (props) => props.value || "Tag",
+          }
+        ),
+
+        heroBadge: fields.text({
+          label: "Hero Badge",
+          defaultValue: "FEATURED",
+        }),
+
+        heroTitle: fields.text({
+          label: "Hero Title",
+          description: "Optional title displayed over the article hero image.",
+        }),
+
+        contentImage: fields.image({
+          label: "Content Image",
+          directory: "public/uploads/blog/posts",
+          publicPath: "/uploads/blog/posts",
+        }),
+
+        contentImageAlt: fields.text({
+          label: "Content Image Alt Text",
+        }),
+
+        secondaryImage: fields.image({
+          label: "Secondary Image",
+          directory: "public/uploads/blog/posts",
+          publicPath: "/uploads/blog/posts",
+        }),
+
+        secondaryImageAlt: fields.text({
+          label: "Secondary Image Alt Text",
+        }),
+
+        intro: fields.array(
+          fields.text({
+            label: "Paragraph",
+            multiline: true,
+          }),
+          {
+            label: "Introduction Paragraphs",
+          }
+        ),
+
+        sections: fields.array(
+          fields.object({
+            title: fields.text({ label: "Section Title" }),
+            description: fields.text({
+              label: "Section Description",
+              multiline: true,
+            }),
+          }),
+          {
+            label: "Main Article Sections",
+            itemLabel: (props) => props.fields.title.value || "Section",
+          }
+        ),
+
+        secondarySections: fields.array(
+          fields.object({
+            title: fields.text({ label: "Section Title" }),
+            description: fields.text({
+              label: "Section Description",
+              multiline: true,
+            }),
+          }),
+          {
+            label: "Secondary Article Sections",
+            itemLabel: (props) => props.fields.title.value || "Section",
+          }
+        ),
+
+        content: fields.markdoc({
+          label: "Article Content",
+          options: {
+            image: {
+              directory: "public/uploads/blog/posts",
+              publicPath: "/uploads/blog/posts",
+            },
+          },
+        }),
+      },
+    }),
   },
 
   singletons: {
@@ -695,5 +813,127 @@ export default config({
 
       },
     }),
+
+
+    blog: singleton({
+      label: "Blog Page",
+      path: "src/content/blog",
+      schema: {
+        seo: fields.object({
+          title: fields.text({
+            label: "SEO Title",
+            validation: { length: { max: 60 } },
+          }),
+          description: fields.text({
+            label: "SEO Description",
+            multiline: true,
+            validation: { length: { max: 160 } },
+          }),
+          image: fields.image({
+            label: "Social Share Image",
+            directory: "public/uploads/blog",
+            publicPath: "/uploads/blog",
+          }),
+        }, { label: "========== BLOG SEO ==========" }),
+
+        hero: fields.object({
+          eyebrow: fields.text({ label: "Eyebrow" }),
+          titleLine1: fields.text({ label: "Title Line 1" }),
+          titleLine2: fields.text({ label: "Title Line 2" }),
+          titleLine3: fields.text({ label: "Title Line 3" }),
+          highlight: fields.text({ label: "Highlighted Title" }),
+          description: fields.text({
+            label: "Description",
+            multiline: true,
+          }),
+        }, { label: "========== BLOG HERO ==========" }),
+
+        featuredPost: fields.object({
+          badge: fields.text({
+            label: "Badge",
+            defaultValue: "FEATURED",
+          }),
+          post: fields.relationship({
+            label: "Featured Post",
+            collection: "posts",
+            description: "Choose the post displayed in the large featured card.",
+          }),
+        }, { label: "========== FEATURED POST ==========" }),
+
+        latestInsights: fields.object({
+          title: fields.text({
+            label: "Section Title",
+            defaultValue: "Latest insights",
+          }),
+          viewAllText: fields.text({
+            label: "View All Text",
+            defaultValue: "View all insights",
+          }),
+          viewAllLink: fields.url({
+            label: "View All Link",
+            defaultValue: "/blog-inner",
+          }),
+          posts: fields.array(
+            fields.object({
+              slug: fields.text({
+                label: "Post Slug",
+                description: "First create the article in Blog Posts, then enter the exact same slug here, for example first-post.",
+                validation: { isRequired: true },
+              }),
+              image: fields.image({
+                label: "Card Image",
+                directory: "public/uploads/blog/cards",
+                publicPath: "/uploads/blog/cards",
+                description: "Image shown on this blog card.",
+              }),
+              imageAlt: fields.text({
+                label: "Card Image Alt Text",
+              }),
+              badge: fields.text({
+                label: "Card Badge",
+                defaultValue: "NEWS",
+              }),
+              title: fields.text({
+                label: "Blog Title",
+                validation: { isRequired: true },
+              }),
+              description: fields.text({
+                label: "Blog Description",
+                multiline: true,
+                validation: { isRequired: true },
+              }),
+            }),
+            {
+              label: "Blog Cards",
+              description: "Add cards to customize order, image, title and description. New Blog Posts not listed here are shown automatically.",
+              validation: { length: { min: 1 } },
+              itemLabel: (props) => props.fields.title.value || props.fields.slug.value || "Blog Card",
+            }
+          ),
+        }, { label: "========== LATEST INSIGHTS ==========" }),
+
+        newsletter: fields.object({
+          image: fields.image({
+            label: "Newsletter Image",
+            directory: "public/uploads/blog",
+            publicPath: "/uploads/blog",
+          }),
+          title: fields.text({ label: "Title" }),
+          description: fields.text({
+            label: "Description",
+            multiline: true,
+          }),
+          placeholder: fields.text({
+            label: "Email Placeholder",
+            defaultValue: "Enter your email",
+          }),
+          buttonText: fields.text({
+            label: "Button Text",
+            defaultValue: "SUBSCRIBE",
+          }),
+        }, { label: "========== NEWSLETTER ==========" }),
+      },
+    }),
+
   },
 });

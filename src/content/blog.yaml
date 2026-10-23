@@ -1,0 +1,60 @@
+seo:
+  title: Vel enim consequuntu
+  description: Id voluptatem Iust
+hero:
+  eyebrow: UNCOVER IDEAS,
+  titleLine1: UNCOVER IDEAS,
+  titleLine2: INSIGHTS,
+  titleLine3: 'AND '
+  highlight: GROWTH.
+  description: >-
+    Explore expert perspectives, practical strategies, and creative thinking on
+    branding, digital marketing, web experiences, AI, and business growth.
+    Designed to help ambitious brands stay ahead.
+featuredPost:
+  badge: Ducimus ut Nam inve
+  post: first-post
+latestInsights:
+  title: Latest insights
+  viewAllText: View all insights
+  viewAllLink: /blog-inner
+  posts:
+    - slug: first-post
+      imageAlt: TOPKLICKZ blog insight cover image
+      badge: NEWS
+      title: TOPKLICKZ Expands Creative & AI Services for Growing Businesses
+      description: >-
+        Strong brands combine clear positioning, memorable identity and useful
+        content systems to create sustainable growth.
+    - slug: build-systems
+      image: /uploads/blog/cards/latestInsights/posts/1/image.webp
+      badge: NEWS
+      title: Build Systems That Scale
+      description: >-
+        Strong brands use repeatable systems for content, campaigns and customer
+        experiences so every touchpoint stays consistent as the business grows.
+    - slug: second-blog
+      image: /uploads/blog/cards/latestInsights/posts/2/image.png
+      badge: NEWS
+      title: testing
+      description: >-
+        Every brand strategy engagement follows a proven creative process —
+        rigorous enough to deliver real insight, flexible enough to meet you
+        where you are.
+    - slug: Top 10 Skills Every Student Needs in 2026
+      badge: NEWS
+      title: Top 10 Skills Every Student Needs in 2026
+      description: Top 10 Skills Every Student Needs in 2026
+    - slug: Dolore distinctio N
+      imageAlt: 'Expedita quia ipsum '
+      badge: Odit est aut eos tem
+      title: Voluptatem Autem mo
+      description: Tempora fugiat in en
+newsletter:
+  title: Stay ahead of the curve.
+  description: >+
+    Every brand strategy engagement follows a proven creative process — rigorous
+    enough to deliver real insight, flexible enough to meet you where you are.
+
+  placeholder: pohac@mailinator.com
+  buttonText: Subscribe
