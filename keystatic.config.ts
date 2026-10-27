@@ -1,9 +1,17 @@
 import { config, fields, collection, singleton } from '@keystatic/core';
 
 export default config({
-  storage: {
-    kind: 'local',
-    // repo: 'Artisanal-Byte/topklickz',
+  // storage: {
+  //   kind: 'local',
+  //   // repo: 'Artisanal-Byte/topklickz',
+  // },
+
+  storage: import.meta.env.DEV
+    ? { kind: 'local' }
+    : { kind: 'cloud' },
+
+  cloud: {
+    project: 'artisanalbyte/topklickz',
   },
 
   collections: {
